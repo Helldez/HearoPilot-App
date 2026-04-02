@@ -1,0 +1,475 @@
+<resources>
+    <!-- App Info -->
+    <string name="app_name">HearoPilot</string>
+
+    <!-- Common Actions -->
+    <string name="start">Starta</string>
+    <string name="stop">Stoppa</string>
+    <string name="copy">Kopiera</string>
+    <string name="clear">Rensa</string>
+    <string name="delete">Ta bort</string>
+    <string name="dismiss">Stäng</string>
+    <string name="cancel">Avbryt</string>
+    <string name="settings">Inställningar</string>
+    <string name="reset">Återställ</string>
+    <string name="rename">Byt namn</string>
+    <string name="rename_session_title">Byt namn på session</string>
+    <string name="rename_session_hint">Sessionsnamn</string>
+
+    <!-- Recording Notification -->
+    <string name="notification_channel_recording_name">Inspelningssession</string>
+    <string name="notification_channel_recording_description">Visas när inspelning är aktiv</string>
+    <string name="notification_recording_title">Inspelning aktiv</string>
+    <string name="notification_action_stop">Stoppa</string>
+
+    <!-- Model Download Notification -->
+    <string name="notification_channel_download_name">Modellnedladdningar</string>
+    <string name="notification_channel_download_description">Visar framsteg vid nedladdning av AI-modeller</string>
+    <string name="notification_download_title">Laddar ned AI-modeller</string>
+    <string name="notification_download_progress">%1$d %% nedladdat</string>
+    <string name="notification_download_completing">Slutför nedladdning…</string>
+
+    <!-- LLM Processing Notification -->
+    <string name="notification_channel_llm_processing_name">AI-bearbetning</string>
+    <string name="notification_channel_llm_processing_description">Visas när AI analyserar din transkription</string>
+    <string name="notification_llm_processing_title">Analyserar transkription</string>
+    <string name="notification_llm_processing_text">AI bearbetar din inspelning…</string>
+
+    <!-- Sessions Screen -->
+    <string name="sessions_title">HearoPilot</string>
+    <string name="sessions_subtitle">Mina transkriptioner</string>
+    <string name="new_transcription">Ny transkription</string>
+    <string name="session_unnamed">(Namnlös)</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_title">Redo att transkribera</string>
+    <string name="empty_state_subtitle">Skapa en session och börja spela in.\nAllt körs på enheten, privat.</string>
+    <string name="empty_state_step1_title">Skapa en session</string>
+    <string name="empty_state_step1_desc">Tryck på +-knappen nedan för att börja</string>
+    <string name="empty_state_step2_title">Spela in ljud</string>
+    <string name="empty_state_step2_desc">Tryck på mikrofonen för att fånga tal i realtid</string>
+    <string name="empty_state_step3_title">Få AI-insikter</string>
+    <string name="empty_state_step3_desc">AI:n analyserar din transkription automatiskt</string>
+    <string name="empty_state_privacy">All bearbetning sker på din enhet</string>
+    <string name="empty_state_privacy_title">Allt lokalt</string>
+    <string name="header_stat_sessions">sessioner</string>
+    <string name="header_stat_duration">totalt</string>
+    <string name="header_stat_data">förblev privata</string>
+
+    <!-- New Session Dialog -->
+    <string name="new_session_dialog_title">Ny transkription</string>
+    <string name="new_session_name_label">Ge denna transkription ett namn (valfritt)</string>
+    <string name="new_session_name_hint">t.ex. Mötesanteckningar</string>
+    <string name="new_session_name_tip">💡 Du kan lämna det tomt så använder vi datum/tid istället.</string>
+    <string name="new_session_recording_type">Inspelningstyp</string>
+    <string name="recording_type_short">Kort inspelning</string>
+    <string name="recording_type_short_desc">≤10 min - Frekventa insikter</string>
+    <string name="recording_type_long">Lång inspelning</string>
+    <string name="recording_type_long_desc">Upp till 3h - Konfigurerbara intervall</string>
+
+    <!-- Main Screen - Tabs -->
+    <string name="tab_transcription">Transkription</string>
+    <string name="tab_insights">AI-insikter</string>
+    <string name="recording_active">Spelar in</string>
+    <string name="recording_paused">Pausad</string>
+
+    <!-- Transcription Tab -->
+    <string name="transcription_empty">Väntar på tal…</string>
+    <string name="transcription_error">Fel: %s</string>
+
+    <!-- AI Insights Tab -->
+    <string name="insights_disabled">AI-insikter är inaktiverade</string>
+    <string name="insights_disabled_subtitle">Aktivera AI-analys i Inställningar för att använda den här funktionen</string>
+    <string name="insights_empty">AI-insikter kommer att visas här under inspelning.</string>
+    <string name="insights_model_unavailable">LLM-modell inte nedladdad</string>
+    <string name="llm_model_not_downloaded_error">LLM-modell inte nedladdad. Ladda ner den från Inställningar.</string>
+    <string name="insights_download_prompt">Ladda ner AI-modellen för att aktivera insikter</string>
+    <string name="insights_download_button">Ladda ner modell</string>
+    <string name="insights_downloading">Laddar ner: %d%%</string>
+    <string name="insights_download_speed">%s MB/s</string>
+    <string name="insights_download_eta">Återstående tid: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Inställningar</string>
+    <string name="settings_section_short">Korta inspelningar (≤10 min)</string>
+    <string name="settings_section_long">Långa inspelningar (upp till 3h)</string>
+    <string name="settings_section_ai">AI-assistent konfiguration</string>
+
+    <!-- Short Recording Settings -->
+    <string name="settings_short_interval_title">Intervall för insiktsgenerering</string>
+    <string name="settings_short_interval_desc">Hur ofta AI:n analyserar din transkription för korta inspelningar</string>
+    <string name="settings_interval_current">Aktuell: %s</string>
+
+    <!-- Long Recording Settings -->
+    <string name="settings_long_interval_title">Intervall för insiktsgenerering</string>
+    <string name="settings_long_interval_desc">Hur ofta AI:n analyserar din transkription för långa inspelningar</string>
+
+    <!-- AI System Prompt Settings -->
+    <string name="settings_system_prompt_title">Systemprompt</string>
+    <string name="settings_system_prompt_desc">Instruktioner som styr AI:ns beteende och svarsstil</string>
+    <string name="settings_system_prompt_hint">Ange anpassad systemprompt…</string>
+
+    <!-- VAD Settings -->
+    <string name="settings_vad_title">Talaktivitetsdetektering (VAD)</string>
+    <string name="settings_vad_desc">Avancerade parametrar för taldetektering</string>
+    <string name="settings_vad_min_silence">Minsta tystnadslängd</string>
+    <string name="settings_vad_min_silence_desc">Tystnadströskel för att avsluta talsegment</string>
+    <string name="settings_vad_max_speech">Maximal tallängd</string>
+    <string name="settings_vad_max_speech_desc">Max kontinuerligt tal före tvingad uppdelning</string>
+    <string name="settings_vad_threshold">Detekteringströskel</string>
+    <string name="settings_vad_threshold_desc">Känslighet för taldetektering</string>
+
+    <!-- LLM Sampler Settings -->
+    <string name="settings_section_llm_sampler">AI-genereringsparametrar</string>
+    <string name="settings_llm_sampler_title">Token-sampling</string>
+    <string name="settings_llm_sampler_desc">Styr hur AI:n väljer ord under generering. Lägre temperatur = mer förutsägbart; högre = mer kreativt.</string>
+    <string name="settings_llm_sampler_temperature">Temperatur</string>
+    <string name="settings_llm_sampler_temperature_desc">Slumpmässighet vid ordval (0 = deterministiskt, 2 = mycket slumpmässigt)</string>
+    <string name="settings_llm_sampler_top_k">Top-K</string>
+    <string name="settings_llm_sampler_top_k_desc">Begränsa kandidaterna till de K mest sannolika tokens (0 = inaktiverat)</string>
+    <string name="settings_llm_sampler_top_p">Top-P</string>
+    <string name="settings_llm_sampler_top_p_desc">Nucleus-sampling: kumulativt sannolikhetströskel (0–1)</string>
+    <string name="settings_llm_sampler_min_p">Min-P</string>
+    <string name="settings_llm_sampler_min_p_desc">Minsta tokens sannolikhet relativt det översta tokenet (0–1)</string>
+    <string name="settings_llm_sampler_repeat_penalty">Upprepningsstraff</string>
+    <string name="settings_llm_sampler_repeat_penalty_desc">Straffar nyligen använda tokens för att minska upprepning (1,0 = av)</string>
+    <string name="settings_llm_sampler_reset_all">Återställ till standardvärden</string>
+
+    <!-- Time Formats -->
+    <string name="time_just_now">Just nu</string>
+    <string name="time_minutes_ago">%d minuter sedan</string>
+    <string name="time_today">Idag, %s</string>
+    <string name="time_yesterday">Igår, %s</string>
+
+    <!-- Error Messages -->
+    <string name="error_title">Fel</string>
+    <string name="error_load_sessions">Misslyckades ladda sessioner: %s</string>
+    <string name="error_create_session">Misslyckades skapa session: %s</string>
+    <string name="error_delete_session">Misslyckades ta bort session: %s</string>
+
+    <!-- Default LLM System Prompt -->
+    <string name="default_llm_system_prompt">Du är en AI-assistent som analyserar taltranskriptioner i realtid.\nSvara på samma språk som transkriptionen.\nGe koncisa insikter, förslag eller korta sammanfattningar.\nHåll svar under 100 ord. Var handlingsinriktad och hjälpsam.</string>
+
+        <!-- LLM Enable/Disable Settings -->
+    <string name="settings_section_llm">AI-modell</string>
+    <string name="settings_llm_enabled_title">Aktivera AI-insikter</string>
+    <string name="settings_llm_enabled_desc">När aktiverat laddas AI-modellen i början av varje inspelningssession och genererar insikter i realtid. Inaktivera för att spara minne och batteri.</string>
+
+    <!-- Microphone Permission -->
+    <string name="permission_mic_required">Mikrofonbehörighet krävs</string>
+    <string name="permission_mic_denied">Åtkomst till mikrofon nekades. Bevilja det i appinställningarna för att använda transkription.</string>
+
+<!-- Settings Screen - Sections -->
+    <string name="settings_section_appearance">Utseende</string>
+    <string name="settings_recording_modes">Inspelningslägen</string>
+    <string name="settings_section_simple_listening">Enkel lyssning</string>
+    <string name="settings_section_short_meeting">Kort möte</string>
+    <string name="settings_section_long_meeting">Långt möte</string>
+    <string name="settings_section_translation">Direktöversättning</string>
+    <string name="settings_section_vad">Röstaktivitetsdetektering (VAD)</string>
+    <string name="settings_interval_analysis">Analysintervall</string>
+    <string name="settings_interval_translation">Översättningsintervall</string>
+
+    <!-- Theme Settings -->
+    <string name="settings_theme_title">Tema</string>
+    <string name="settings_theme_desc">Välj apptemat</string>
+    <string name="theme_system">🔄 Automatisk</string>
+    <string name="theme_light">☀️ Ljus</string>
+    <string name="theme_dark">🌙 Mörk</string>
+    <string name="theme_system_short">Auto</string>
+    <string name="theme_light_short">Ljus</string>
+    <string name="theme_dark_short">Mörk</string>
+    <string name="theme_system_desc">Temat följer systeminställningarna</string>
+    <string name="theme_light_desc">Appen använder alltid ljust tema</string>
+    <string name="theme_dark_desc">Appen använder alltid mörkt tema</string>
+
+    <!-- Translation Settings -->
+    <string name="settings_translation_target_title">Standardmålspråk</string>
+    <string name="settings_translation_target_desc">Standardspråk för översättning</string>
+
+    <!-- New Session Dialog - Recording Mode -->
+    <string name="new_session_recording_mode">Inspelningsläge</string>
+    <string name="mode_simple_listening">Enkel Lyssning</string>
+    <string name="mode_short_meeting">Kort Möte</string>
+    <string name="mode_long_meeting">Långt Möte</string>
+    <string name="mode_translation_live">Direktöversättning</string>
+    <string name="mode_simple_listening_desc">Periodiska sammanfattningar</string>
+    <string name="mode_short_meeting_desc">Sammanfattning, förslag och uppgifter</string>
+    <string name="mode_long_meeting_desc">Djupgående analys för långa sessioner</string>
+    <string name="mode_translation_desc">Realtidsöversättning</string>
+    <string name="new_session_output_language">Språk för Översättningsresultat</string>
+    <string name="new_session_output_language_label">Utdataspråk</string>
+    <string name="new_session_language_auto">Automatiskt (enhetsspråk)</string>
+    <string name="new_session_insight_interval">Var %s</string>
+
+    <!-- Session Details - Tabs and Insight Card -->
+    <string name="tab_transcript">Utskrift</string>
+    <string name="ai_analysis">AI-analys</string>
+    <string name="insight_data">Insikt</string>
+    <string name="final_insight_label">Övergripande sammanfattning</string>
+    <string name="create_ai_copy">Skapa AI-kopia</string>
+    <string name="generating_ai_insights">Genererar AI-analyser\u2026</string>
+    <string name="insights_empty_history">Inga AI-analyser ännu</string>
+    <string name="insights_empty_history_subtitle">Tryck på ✨ ovan för att generera AI-analys av denna transkription</string>
+    <string name="history_insight_copy_info">En ny kopia av denna session skapas med AI-analys.\nOriginalsessionen kommer inte att ändras.</string>
+    <string name="coachmark_history_insight">Tryck för att generera AI-insikter från hela sessionshistoriken</string>
+
+    <!-- Session Details Screen -->
+    <string name="session_extracted_tasks">Extraherade uppgifter</string>
+    <string name="session_no_tasks">Inga uppgifter hittades i denna session.</string>
+    <string name="insight_summary">Sammanfattning</string>
+    <string name="insight_suggestions">Förslag</string>
+    <string name="insight_tasks">Uppgifter</string>
+
+    <!-- Setup Screen - AI Benefits -->
+    <string name="setup_ai_insights_title">AI-drivna insikter</string>
+    <string name="setup_ai_why_title">Varför ladda ner AI-modellen?</string>
+    <string name="setup_ai_benefit_realtime">Få förslag och insikter i realtid medan du talar</string>
+    <string name="setup_ai_benefit_analysis">AI analyserar dina talmönster och ger användbar kontext</string>
+    <string name="setup_ai_benefit_offline">Fungerar helt offline: dina data förblir privata på din enhet</string>
+    <string name="setup_ai_benefit_fast">Snabb bearbetning på enheten utan internetanslutning</string>
+    <string name="setup_downloading_model">Laddar ner modell...</string>
+
+    <!-- Onboarding - Common -->
+    <string name="onboarding_model_label">Modell:</string>
+    <string name="onboarding_runs_label">Körs:</string>
+    <string name="onboarding_source_label">Källa:</string>
+    <string name="onboarding_on_device">På enheten</string>
+    <string name="onboarding_huggingface">HuggingFace</string>
+    <string name="onboarding_downloading">Laddar ner...</string>
+    <string name="onboarding_download_progress">%d MB / %d MB</string>
+    <string name="onboarding_download_speed">Hastighet:</string>
+    <string name="onboarding_download_speed_value">%.2f MB/s</string>
+    <string name="onboarding_download_eta">Återstående tid:</string>
+    <string name="onboarding_download_failed">Nedladdning misslyckades</string>
+    <string name="onboarding_retry_download">Försök igen</string>
+    <string name="download_resuming_from">Återupptar från %1$s MB…</string>
+    <string name="onboarding_continue">Fortsätt</string>
+    <string name="onboarding_time_seconds">%d sek</string>
+    <string name="onboarding_time_minutes">%d min %d sek</string>
+    <string name="onboarding_time_hours">%d tim %d min</string>
+
+    <!-- Onboarding - STT Download -->
+    <string name="onboarding_stt_title">Taligenkänning</string>
+    <string name="onboarding_stt_ready">Modellen är redo!</string>
+    <string name="onboarding_stt_ready_desc">Taligenkänningsmodellen har laddats ner framgångsrikt.</string>
+    <string name="onboarding_stt_model_title">Taligenkänningsmodell</string>
+    <string name="onboarding_stt_model_desc">Denna modell konverterar ditt tal till text i realtid. Den är nödvändig för att appen ska fungera.</string>
+    <string name="onboarding_stt_model_name">Sherpa-ONNX Parakeet</string>
+    <string name="onboarding_stt_download_button">Ladda ner modell</string>
+    <string name="onboarding_stt_note">Denna modell är nödvändig för att appen ska fungera.</string>
+
+    <!-- Onboarding - LLM Download -->
+    <string name="onboarding_llm_title">Artificiell intelligens</string>
+    <string name="onboarding_llm_optional">AI-insikter (Valfritt)</string>
+    <string name="onboarding_llm_desc">Ladda ner en AI-modell för att få intelligenta insikter och förslag medan du talar.</string>
+    <string name="onboarding_llm_benefit_1">Realtidsförslag</string>
+    <string name="onboarding_llm_benefit_2">Kontextmedveten analys</string>
+    <string name="onboarding_llm_benefit_3">100% privat och offline</string>
+    <string name="onboarding_llm_model_name">Gemma 3 1B</string>
+    <string name="onboarding_llm_download_button">Ladda ner AI-modell</string>
+    <string name="onboarding_llm_skip">Hoppa över för nu (Endast transkription)</string>
+    <string name="onboarding_llm_downloading">Laddar ner AI-modell...</string>
+    <string name="onboarding_llm_downloaded_label">Nedladdat:</string>
+    <string name="onboarding_llm_complete">Nedladdning klar!</string>
+    <string name="onboarding_llm_initializing">Initierar AI-modell...</string>
+    <string name="onboarding_llm_skip_short">Hoppa över för nu</string>
+    <string name="onboarding_llm_skip_note">Du kan ladda ner detta senare från Inställningar om du hoppar över nu. Appen fungerar bra med endast transkription.</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_subtitle">Talanalys i Realtid</string>
+    <string name="welcome_feature_transcription_title">Live-transkription</string>
+    <string name="welcome_feature_transcription_desc">Konvertera tal till text i realtid med hög noggrannhet</string>
+    <string name="welcome_feature_ai_title">AI-insikter</string>
+    <string name="welcome_feature_ai_desc">Få intelligenta förslag och analyser medan du talar</string>
+    <string name="welcome_feature_privacy_title">Integritet Först</string>
+    <string name="welcome_feature_privacy_desc">All bearbetning sker på din enhet: dina data lämnar den aldrig</string>
+    <string name="welcome_get_started">Kom igång</string>
+    <string name="welcome_models_required">Två modellnedladdningar krävs</string>
+
+    <!-- Delete Session Dialog -->
+    <string name="delete_session_title">Ta bort session?</string>
+    <string name="delete_session_message">Är du säker på att du vill ta bort \"%s\"? Denna åtgärd kan inte ångras.</string>
+    <string name="delete_session_message_unnamed">Är du säker på att du vill ta bort denna session? Denna åtgärd kan inte ångras.</string>
+
+    <!-- Main Screen - Additional -->
+    <string name="recording_session">Inspelningssession</string>
+    <string name="initializing_models">Laddar modeller…</string>
+    <string name="back_to_sessions">Tillbaka till sessioner</string>
+    <string name="stop_recording_confirm_title">Stoppa inspelning?</string>
+    <string name="stop_recording_confirm_message">Inspelning pågår. Stoppa och gå tillbaka?</string>
+    <string name="stop_and_go_back">Stoppa &amp; Tillbaka</string>
+    <string name="record">Spela in</string>
+    <string name="llm">AI</string>
+
+    <!-- Transcription Tab - Additional -->
+    <string name="transcription_listening">Lyssnar...</string>
+    <string name="transcription_press_record">Tryck på Spela in för att starta</string>
+    <string name="transcription_hint1_title">Tap record</string>
+    <string name="transcription_hint1_desc">Hit the mic button at the bottom to start capturing audio</string>
+    <string name="transcription_hint2_title">AI insights</string>
+    <string name="transcription_hint2_desc">Switch to the Insights tab to get summaries and action items</string>
+    <string name="transcription_hint3_title">Fully private</string>
+    <string name="transcription_hint3_desc">Everything runs on your device — nothing is sent to the cloud</string>
+    <string name="transcription_complete">Slutfört</string>
+
+    <!-- AI Insights Tab - Additional -->
+    <string name="insights_empty_subtitle">Genereras under inspelning</string>
+    <string name="insight_label">AI-Insikt</string>
+    <string name="action_items">Action Items</string>
+    <string name="segments_analyzed">%d segment analyserade</string>
+    <string name="expand">Expandera</string>
+    <string name="collapse">Minimera</string>
+    <string name="source_transcription">Källtranskription:</string>
+    <string name="segments_not_found">(Segment hittades inte)</string>
+
+    <!-- Settings - Additional -->
+    <string name="settings_interval_range_min">%ds (%s)</string>
+    <string name="settings_interval_range_max">%ds (%s)</string>
+    <string name="settings_reset_default">Återställ till standard (%ds)</string>
+    <string name="settings_interval_tip_title">💡 Tips</string>
+    <string name="settings_interval_tip_desc">Kortare intervaller ger mer frekventa insikter. Längre intervaller (upp till 3 min) minskar bearbetningsbelastningen. Värden anpassas i 10-sekunders steg.</string>
+    <string name="save">Spara</string>
+    <string name="processing_session">Bearbetar session…</string>
+    <string name="edit_transcription_title">Redigera transkription</string>
+    <string name="edit_insight_title">Redigera analys</string>
+    <string name="edit_task_title">Redigera uppgift</string>
+    <string name="edit_content_hint">Content</string>
+    <string name="edit_item">Redigera</string>
+    <string name="settings_save">Spara</string>
+    <string name="settings_back">Tillbaka</string>
+    <string name="settings_long_interval_minutes">%d minuter</string>
+    <string name="settings_system_prompt_reset">Återställ till Standard</string>
+    <string name="settings_system_prompt_note_title">💡 Notera</string>
+    <string name="settings_system_prompt_note_desc">Systemprompten berättar för AI:n hur den ska bete sig. Inkludera \'Svara på samma språk som transkriptionen\' för att säkerställa att AI:n svarar på ditt språk. Ändringar träder i kraft efter omstart av LLM.</string>
+    <string name="settings_vad_sensitivity_more">Mer</string>
+    <string name="settings_vad_sensitivity_less">Mindre</string>
+    <string name="settings_vad_reset_all">Återställ alla till standardvärden</string>
+    <string name="settings_vad_restart_title">Omstart Krävs</string>
+    <string name="settings_vad_restart_desc">Ändringar av VAD-parametrar kräver omstart av appen för att träda i kraft.</string>
+    <string name="settings_vad_troubleshooting_title">💡 Felsökning</string>
+    <string name="settings_vad_troubleshooting_desc">• Ord klipps av? Öka Min Tystnadslängd till 0.7-1.0s\n• Långa fraser delas? Öka Max Tallängd till 15-20s\n• Saknas tyst tal? Sänk Detekteringskänsligheten till 0.3-0.4</string>
+
+    <!-- Session Details - Additional -->
+    <string name="session_details">Sessionsdetaljer</string>
+    <string name="generate_history_insight">Generera AI-analys</string>
+    <string name="history_insight_confirm_title">Generera AI-analys</string>
+    <string name="history_insight_confirm_message">En ny kopia av den här sessionen skapas med en AI-analys av alla transkriptionssegment.</string>
+    <string name="history_insight_no_content">Otillräckligt transkriptionsinnehåll för att generera en analys.</string>
+    <string name="history_insight_copy_suffix">(AI-analys)</string>
+    <string name="segments_count">segment</string>
+    <string name="insights_count">insikter</string>
+    <string name="back">Tillbaka</string>
+    <string name="export">Exportera</string>
+    <string name="export_transcription">Exportera transkription</string>
+    <string name="created">Skapad</string>
+    <string name="modified">Ändrad</string>
+    <string name="llm_insights">LLM-Insikter</string>
+    <string name="no_transcription_yet">(Ingen transkription ännu)</string>
+    <string name="prompt_simple_listening">Du är en AI-assistent som analyserar ljudöversättningar.
+Skriv en kort titel (max 8 ord) och en kortfattad sammanfattning proportionell mot inmatningens längd — 1-2 meningar för kort inmatning, ett stycke för längre inmatning.
+Utdata ENDAST giltigt JSON med denna exakta struktur. Ingen markdown. Ingen kodstängsel. Ingen backticks:
+{\"titel\": \"...\", \"sammanfattning\": \"...\"}
+Utdata JSON direkt.</string>
+    <string name="prompt_short_meeting">Du är en möteassistent som analyserar diskussioner.
+Skriv en titel (max 8 ord), en sammanfattning av viktiga beslut och diskussionspunkter (minst 3-5 meningar, proportionell mot inmatningens längd) och en lista över handlingspunkter.
+Utdata ENDAST giltigt JSON med denna exakta struktur. Ingen markdown. Ingen kodstängsel. Ingen backticks:
+{\"titel\": \"...\", \"sammanfattning\": \"...\", \"atgarder\": [\"...\", \"...\"]}
+Vara direkt. Extrahera handlingspunkter tydligt.</string>
+    <string name="prompt_long_meeting">Du är en assistent som analyserar utökade diskussioner.
+Skriv en titel (max 8 ord) som fångar huvudtemat, en omfattande sammanfattning av viktiga ämnen, beslut och slutsatser (proportionell mot inmatningens längd) och en lista över handlingspunkter.
+Utdata ENDAST giltigt JSON med denna exakta struktur. Ingen markdown. Ingen kodstängsel. Ingen backticks:
+{\"titel\": \"...\", \"sammanfattning\": \"...\", \"atgarder\": [\"...\", \"...\"]}
+Vara direkt. Fokusera på insikter på högre nivå och konkreta resultat.</string>
+    <string name="prompt_translation">Du är en professionell översättare.
+Översätt följande text till {target_language}.
+Mata ut enbart översättningen. Inga förklaringar, inga etiketter, inga prefix.</string>
+
+    <!-- Onboarding - Supported Languages -->
+    <string name="onboarding_languages_title">Språk som stöds</string>
+    <string name="onboarding_languages_subtitle">Tillgängliga för transkription och översättning</string>
+    <string name="onboarding_languages_continue">Fortsätt</string>
+
+    <string name="onboarding_message_1">HearoPilot lyssnar så du inte behöver ta anteckningar.</string>
+    <string name="onboarding_message_2">All AI-bearbetning körs på din enhet: ingen data lämnar den.</string>
+    <string name="onboarding_message_3">Transkribera föreläsningar, möten och samtal i realtid.</string>
+    <string name="onboarding_message_4">Automatiska sammanfattningar hjälper dig att fokusera på det som är viktigt.</string>
+    <string name="onboarding_message_5">Fungerar helt offline: din röst förblir privat.</string>
+    <string name="onboarding_message_6">Byt mellan lyssningslägen på bara några knackar.</string>
+    <string name="onboarding_message_7">Bra för studenter, yrkesverksamma och alla som talar.</string>
+    <string name="onboarding_message_8">Granska dina transkriptioner och insikter när som helst, offline.</string>
+    <string name="onboarding_message_9">En knackning för att starta, en knackning för att stoppa: så enkelt är det.</string>
+    <string name="onboarding_message_10">Tack för att du valde HearoPilot.</string>
+    <string name="onboarding_message_11">Använd HearoPilot med en Bluetooth-mikrofon för att transkribera på avstånd.</string>
+    <string name="json_field_title">titel</string>
+    <string name="json_field_summary">sammanfattning</string>
+    <string name="json_field_action_items">atgarder</string>
+
+    <!-- Batch insight prompts (end-of-session map-reduce pipeline) -->
+    <string name="prompt_batch_chunk_summary">Du är en mötesanalysassistent. Sammanfatta följande transkriptionsfragment kortfattat.
+Inkludera: viktiga ämnen som diskuterades, beslut som fattades och nämnda åtgärdspunkter.
+Håll sammanfattningen proportionell mot inmatningens längd. Utdata ENDAST giltigt JSON. Ingen markdown. Ingen kodstängsel.
+{\"titel\": \"...\", \"sammanfattning\": \"...\", \"atgarder\": [\"...\"]}</string>
+    <string name="prompt_batch_merge">Du är en mötesanalysassistent. Nedan finns sammanfattningar av på varandra följande delar av en enda inspelning.
+Sammanfoga dem till en heltäckande, sammanhängande sammanfattning. Deduplicera åtgärdspunkter som förekommer i flera fragment.
+Utdata ENDAST giltigt JSON. Ingen markdown. Ingen kodstängsel.
+{\"titel\": \"...\", \"sammanfattning\": \"...\", \"atgarder\": [\"...\"]}</string>
+
+    <!-- Insight strategy UI strings -->
+    <string name="insight_strategy_label">Analysstrategi</string>
+    <string name="insight_strategy_realtime">Realtid</string>
+    <string name="insight_strategy_batch">Slutet av sessionen</string>
+    <string name="insight_strategy_realtime_desc">Regelbundna analyser under inspelning</string>
+    <string name="insight_strategy_batch_desc">Heltäckande analys efter inspelning</string>
+
+    <!-- Batch processing progress strings -->
+    <string name="batch_insights_pending">AI-analyser kommer att genereras när du stoppar inspelningen</string>
+    <string name="batch_processing_chunk">Bearbetar del %1$d av %2$d&#8230;</string>
+    <string name="batch_merging_insights">Sammanfogar analyser&#8230;</string>
+    <string name="batch_analysis_complete">Analys klar</string>
+
+    <!-- Settings: default insight strategy per mode -->
+    <string name="settings_default_strategy">Standard analysstrategi</string>
+
+    <!-- Session card: batch badge -->
+    <string name="session_badge_batch">Batch</string>
+
+    <!-- Session topic field -->
+    <string name="session_topic_label">Huvudämne (valfritt)</string>
+    <string name="session_topic_hint">t.ex. Q1-budget, AI-föreläsning&#8230;</string>
+    <string name="session_topic_helper">Hjälp AI:n: beskriv huvudämnet för mer relevanta analyser</string>
+    <!-- Injected as system-prompt prefix when a session topic is set. %1$s = topic text. -->
+    <string name="session_topic_prefix">Huvudämnet för den här inspelningen: "%1$s". Fokusera din analys på detta ämne.</string>
+
+    <!-- Search screen -->
+    <string name="search_hint">Sök i transkriptioner…</string>
+    <string name="search_empty_prompt">Sök i dina transkriptioner</string>
+    <string name="search_no_results">Inga träffar hittades</string>
+    <string name="search_source_transcription">Transkript</string>
+    <string name="search_source_insight">Insikt</string>
+    <string name="search_source_session_name">Sessionsnamn</string>
+
+    <!-- LLM model download in Settings -->
+    <string name="settings_llm_model_file_title">AI-modellfil</string>
+    <string name="settings_llm_model_file_desc">AI-modellen körs helt på din enhet. Inget internet behövs efter nedladdning.</string>
+    <string name="settings_llm_model_ready">Klar</string>
+    <string name="settings_llm_model_not_downloaded">Inte nedladdad</string>
+    <string name="settings_llm_model_download">Ladda ner</string>
+    <string name="settings_llm_model_retry">Försök igen</string>
+    <string name="settings_llm_model_downloading">Laddar ner %1$d%%</string>
+
+    <!-- LLM Model Variant Setting -->
+    <string name="settings_llm_model_variant_title">AI-modellkvalitet</string>
+    <string name="settings_llm_model_variant_desc">Välj mellan högre noggrannhet eller bättre batterieffektivitet. Ladda ner modellen igen efter ändring.</string>
+    <string name="settings_llm_model_variant_q8_name">Standard (Q8)</string>
+    <string name="settings_llm_model_variant_q8_desc">Högre noggrannhet · För toppenheter</string>
+    <string name="settings_llm_model_variant_iq4_name">Effektiv (IQ4)</string>
+    <string name="settings_llm_model_variant_iq4_desc">Optimerad för energieffektivitet</string>
+    <string name="settings_llm_model_variant_recommended">Rekommenderas för din enhet</string>
+    <string name="settings_llm_model_variant_downloaded">Nedladdad</string>
+    <string name="settings_llm_model_variant_beta">Beta</string>
+    <string name="settings_llm_advanced_section_title">Avancerade modeller</string>
+    <string name="settings_llm_advanced_section_desc">Experimentella modeller för avancerade användare. Prestanda kan variera från standardmodeller.</string>
+    <string name="settings_llm_model_variant_qwen35_name">Qwen 3.5 0.8B (Q8)</string>
+    <string name="settings_llm_model_variant_qwen35_desc">Alternativ arkitektur · Experimentell</string>
+</resources>

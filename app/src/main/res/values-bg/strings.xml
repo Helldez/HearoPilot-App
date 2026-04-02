@@ -1,0 +1,475 @@
+﻿<resources>
+    <!-- App Info -->
+    <string name="app_name">HearoPilot</string>
+
+    <!-- Common Actions -->
+    <string name="start">Старт</string>
+    <string name="stop">Стоп</string>
+    <string name="copy">Копирай</string>
+    <string name="clear">Изчисти</string>
+    <string name="delete">Изтрий</string>
+    <string name="dismiss">Затвори</string>
+    <string name="cancel">Отказ</string>
+    <string name="settings">Настройки</string>
+    <string name="reset">Нулиране</string>
+    <string name="rename">Преименувай</string>
+    <string name="rename_session_title">Преименувайте сесията</string>
+    <string name="rename_session_hint">Ime на сесията</string>
+
+    <!-- Recording Notification -->
+    <string name="notification_channel_recording_name">Сесия за запис</string>
+    <string name="notification_channel_recording_description">Показва се, когато записът е активен</string>
+    <string name="notification_recording_title">Записът е активен</string>
+    <string name="notification_action_stop">Стоп</string>
+
+    <!-- Model Download Notification -->
+    <string name="notification_channel_download_name">Изтегляне на модели</string>
+    <string name="notification_channel_download_description">Показва напредъка при изтегляне на AI модели</string>
+    <string name="notification_download_title">Изтегляне на AI модели</string>
+    <string name="notification_download_progress">%1$d%% изтеглено</string>
+    <string name="notification_download_completing">Финализиране на изтеглянето…</string>
+
+    <!-- LLM Processing Notification -->
+    <string name="notification_channel_llm_processing_name">AI обработка</string>
+    <string name="notification_channel_llm_processing_description">Показва когато AI анализира вашата транскрипция</string>
+    <string name="notification_llm_processing_title">Анализ на транскрипцията</string>
+    <string name="notification_llm_processing_text">AI обработва вашия запис…</string>
+
+    <!-- Sessions Screen -->
+    <string name="sessions_title">HearoPilot</string>
+    <string name="sessions_subtitle">Моите транскрипции</string>
+    <string name="new_transcription">Нова транскрипция</string>
+    <string name="session_unnamed">(Без име)</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_title">Готов за транскрипция</string>
+    <string name="empty_state_subtitle">Създайте сесия и започнете запис.\nВсичко работи на устройството, поверително.</string>
+    <string name="empty_state_step1_title">Създайте сесия</string>
+    <string name="empty_state_step1_desc">Докоснете бутона + отдолу, за да започнете</string>
+    <string name="empty_state_step2_title">Запишете аудио</string>
+    <string name="empty_state_step2_desc">Натиснете микрофона, за да уловите реч в реално време</string>
+    <string name="empty_state_step3_title">Получете AI прозрения</string>
+    <string name="empty_state_step3_desc">AI анализира транскрипцията автоматично</string>
+    <string name="empty_state_privacy">Цялата обработка се извършва на вашето устройство</string>
+    <string name="empty_state_privacy_title">Всичко на устройството</string>
+    <string name="header_stat_sessions">записа</string>
+    <string name="header_stat_duration">общо</string>
+    <string name="header_stat_data">останали частни</string>
+
+    <!-- New Session Dialog -->
+    <string name="new_session_dialog_title">Нова транскрипция</string>
+    <string name="new_session_name_label">Дайте име на тази транскрипция (по избор)</string>
+    <string name="new_session_name_hint">напр. Бележки от среща</string>
+    <string name="new_session_name_tip">💡 Може да го оставите празно и ще използваме дата/час.</string>
+    <string name="new_session_recording_type">Тип запис</string>
+    <string name="recording_type_short">Кратък запис</string>
+    <string name="recording_type_short_desc">≤10 мин - Чести прозрения</string>
+    <string name="recording_type_long">Дълъг запис</string>
+    <string name="recording_type_long_desc">До 3ч - Конфигурируеми интервали</string>
+
+    <!-- Main Screen - Tabs -->
+    <string name="tab_transcription">Транскрипция</string>
+    <string name="tab_insights">AI прозрения</string>
+    <string name="recording_active">Запис</string>
+    <string name="recording_paused">На пауза</string>
+
+    <!-- Transcription Tab -->
+    <string name="transcription_empty">Изчакване на реч…</string>
+    <string name="transcription_error">Грешка: %s</string>
+
+    <!-- AI Insights Tab -->
+    <string name="insights_disabled">AI анализите са деактивирани</string>
+    <string name="insights_disabled_subtitle">Активирайте AI анализа в Настройки, за да използвате тази функция</string>
+    <string name="insights_empty">AI прозренията ще се появят тук по време на запис.</string>
+    <string name="insights_model_unavailable">LLM моделът не е изтеглен</string>
+    <string name="llm_model_not_downloaded_error">LLM моделът не е изтеглен. Моля, изтеглете го от Настройки.</string>
+    <string name="insights_download_prompt">Изтеглете AI модела, за да активирате прозренията</string>
+    <string name="insights_download_button">Изтегли модел</string>
+    <string name="insights_downloading">Изтегляне: %d%%</string>
+    <string name="insights_download_speed">%s MB/s</string>
+    <string name="insights_download_eta">Оставащо време: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_section_short">Кратки записи (≤10 мин)</string>
+    <string name="settings_section_long">Дълги записи (до 3ч)</string>
+    <string name="settings_section_ai">Конфигурация на AI асистента</string>
+
+    <!-- Short Recording Settings -->
+    <string name="settings_short_interval_title">Интервал за генериране на прозрения</string>
+    <string name="settings_short_interval_desc">Колко често AI анализира транскрипцията при кратки записи</string>
+    <string name="settings_interval_current">Текущ: %s</string>
+
+    <!-- Long Recording Settings -->
+    <string name="settings_long_interval_title">Интервал за генериране на прозрения</string>
+    <string name="settings_long_interval_desc">Колко често AI анализира транскрипцията при дълги записи</string>
+
+    <!-- AI System Prompt Settings -->
+    <string name="settings_system_prompt_title">Системна подкана</string>
+    <string name="settings_system_prompt_desc">Инструкции, които ръководят поведението и стила на отговорите на AI</string>
+    <string name="settings_system_prompt_hint">Въведете персонализирана системна подкана…</string>
+
+    <!-- VAD Settings -->
+    <string name="settings_vad_title">Откриване на гласова активност (VAD)</string>
+    <string name="settings_vad_desc">Разширени параметри за откриване на реч</string>
+    <string name="settings_vad_min_silence">Минимална продължителност на тишината</string>
+    <string name="settings_vad_min_silence_desc">Праг на тишината за край на речевия сегмент</string>
+    <string name="settings_vad_max_speech">Максимална продължителност на речта</string>
+    <string name="settings_vad_max_speech_desc">Макс. непрекъсната реч преди принудително разделяне</string>
+    <string name="settings_vad_threshold">Праг на откриване</string>
+    <string name="settings_vad_threshold_desc">Чувствителност за откриване на глас</string>
+
+    <!-- LLM Sampler Settings -->
+    <string name="settings_section_llm_sampler">Параметри за генериране от ИИ</string>
+    <string name="settings_llm_sampler_title">Семплиране на токени</string>
+    <string name="settings_llm_sampler_desc">Управлява как ИИ избира думи по време на генерирането. По-ниска температура = по-предвидимо; по-висока = по-творческо.</string>
+    <string name="settings_llm_sampler_temperature">Температура</string>
+    <string name="settings_llm_sampler_temperature_desc">Случайност при избора на думи (0 = детерминистичен, 2 = много произволен)</string>
+    <string name="settings_llm_sampler_top_k">Top-K</string>
+    <string name="settings_llm_sampler_top_k_desc">Ограничи кандидатите до K най-вероятни токена (0 = изключено)</string>
+    <string name="settings_llm_sampler_top_p">Top-P</string>
+    <string name="settings_llm_sampler_top_p_desc">Nucleus семплиране: кумулативен праг на вероятност (0–1)</string>
+    <string name="settings_llm_sampler_min_p">Min-P</string>
+    <string name="settings_llm_sampler_min_p_desc">Минимална вероятност на токен спрямо топ токена (0–1)</string>
+    <string name="settings_llm_sampler_repeat_penalty">Наказание за повторение</string>
+    <string name="settings_llm_sampler_repeat_penalty_desc">Наказва наскоро използваните токени, за да намали повторенията (1,0 = изключено)</string>
+    <string name="settings_llm_sampler_reset_all">Нулиране до стойности по подразбиране</string>
+
+    <!-- Time Formats -->
+    <string name="time_just_now">Току-що</string>
+    <string name="time_minutes_ago">преди %d минути</string>
+    <string name="time_today">Днес, %s</string>
+    <string name="time_yesterday">Вчера, %s</string>
+
+    <!-- Error Messages -->
+    <string name="error_title">Грешка</string>
+    <string name="error_load_sessions">Неуспешно зареждане на сесии: %s</string>
+    <string name="error_create_session">Неуспешно създаване на сесия: %s</string>
+    <string name="error_delete_session">Неуспешно изтриване на сесия: %s</string>
+
+    <!-- Default LLM System Prompt -->
+    <string name="default_llm_system_prompt">Вие сте AI асистент, анализиращ транскрипции на реч в реално време.\nОтговаряйте на същия език като транскрипцията.\nПредоставяйте кратки прозрения, предложения или кратки резюмета.\nДържете отговорите под 100 думи. Бъдете практични и полезни.</string>
+
+        <!-- LLM Enable/Disable Settings -->
+    <string name="settings_section_llm">AI модел</string>
+    <string name="settings_llm_enabled_title">Активиране на AI прозрения</string>
+    <string name="settings_llm_enabled_desc">Когато е активиран, AI моделът се зарежда в началото на всяка сесия за запис и генерира прозрения в реално време. Деактивирайте, за да спестите памет и батерия.</string>
+
+    <!-- Microphone Permission -->
+    <string name="permission_mic_required">Необходимо е разрешение за микрофон</string>
+    <string name="permission_mic_denied">Достъпът до микрофона беше отказан. Моля, предоставете го в настройките на приложението, за да използвате транскрипцията.</string>
+
+<!-- Settings Screen - Sections -->
+    <string name="settings_section_appearance">Облик</string>
+    <string name="settings_recording_modes">Режими на запис</string>
+    <string name="settings_section_simple_listening">Просто слушане</string>
+    <string name="settings_section_short_meeting">Кратка среща</string>
+    <string name="settings_section_long_meeting">Дълга среща</string>
+    <string name="settings_section_translation">Преводача на живо</string>
+    <string name="settings_section_vad">Откриване на гласова активност (VAD)</string>
+    <string name="settings_interval_analysis">Интервал на анализа</string>
+    <string name="settings_interval_translation">Интервал на превода</string>
+
+    <!-- Theme Settings -->
+    <string name="settings_theme_title">Тема</string>
+    <string name="settings_theme_desc">Изберете темата на приложението</string>
+    <string name="theme_system">🔄 Автоматично</string>
+    <string name="theme_light">☀️ Светло</string>
+    <string name="theme_dark">🌙 Тъмно</string>
+    <string name="theme_system_short">Авто</string>
+    <string name="theme_light_short">Светло</string>
+    <string name="theme_dark_short">Тъмно</string>
+    <string name="theme_system_desc">Темата следва системните настройки</string>
+    <string name="theme_light_desc">Приложението всегда ще използва светла тема</string>
+    <string name="theme_dark_desc">Приложението всегда ще използва тъмна тема</string>
+
+    <!-- Translation Settings -->
+    <string name="settings_translation_target_title">Език на destinция по подразбиране</string>
+    <string name="settings_translation_target_desc">Език по подразбиране за превод</string>
+
+    <!-- New Session Dialog - Recording Mode -->
+    <string name="new_session_recording_mode">Режим на Запис</string>
+    <string name="mode_simple_listening">Просто Слушане</string>
+    <string name="mode_short_meeting">Кратко Събрание</string>
+    <string name="mode_long_meeting">Дълго Събрание</string>
+    <string name="mode_translation_live">Жив Превод</string>
+    <string name="mode_simple_listening_desc">Периодични резюмета</string>
+    <string name="mode_short_meeting_desc">Резюме, предложения и задачи</string>
+    <string name="mode_long_meeting_desc">Задълбочен анализ за дълги сесии</string>
+    <string name="mode_translation_desc">Превод в реално време</string>
+    <string name="new_session_output_language">Език на Превода</string>
+    <string name="new_session_output_language_label">Изходен език</string>
+    <string name="new_session_language_auto">Авт. (език на устройството)</string>
+    <string name="new_session_insight_interval">Всеки %s</string>
+
+    <!-- Session Details - Tabs and Insight Card -->
+    <string name="tab_transcript">Транскрипция</string>
+    <string name="ai_analysis">AI Анализ</string>
+    <string name="insight_data">Прозрение</string>
+    <string name="final_insight_label">Общо резюме</string>
+    <string name="create_ai_copy">Създай AI копие</string>
+    <string name="generating_ai_insights">Генериране на AI анализи\u2026</string>
+    <string name="insights_empty_history">Няма AI анализи</string>
+    <string name="insights_empty_history_subtitle">Докоснете ✨ по-горе, за да генерирате AI анализ от тази транскрипция</string>
+    <string name="history_insight_copy_info">Ще бъде създадено ново копие на тази сесия с AI анализ.\nОригиналната сесия няма да бъде променена.</string>
+    <string name="coachmark_history_insight">Докоснете, за да генерирате AI анализи от цялата история на сесията</string>
+
+    <!-- Session Details Screen -->
+    <string name="session_extracted_tasks">Извлечени задачи</string>
+    <string name="session_no_tasks">Няма намерени задачи в тази сесия.</string>
+    <string name="insight_summary">Резюме</string>
+    <string name="insight_suggestions">Предложения</string>
+    <string name="insight_tasks">Задачи</string>
+
+    <!-- Setup Screen - AI Benefits -->
+    <string name="setup_ai_insights_title">Прозрения, захранвани от AI</string>
+    <string name="setup_ai_why_title">Защо да изтегля AI модела?</string>
+    <string name="setup_ai_benefit_realtime">Получавайте предложения и прозрения в реално време, докато говорите</string>
+    <string name="setup_ai_benefit_analysis">AI анализира вашите модели на речта и предоставя полезен контекст</string>
+    <string name="setup_ai_benefit_offline">Работи напълно офлайн: вашите данни остават приватни на вашето устройство</string>
+    <string name="setup_ai_benefit_fast">Бързо обработване на устройството без нужда от интернет</string>
+    <string name="setup_downloading_model">Изтегляне на модел...</string>
+
+    <!-- Onboarding - Common -->
+    <string name="onboarding_model_label">Модел:</string>
+    <string name="onboarding_runs_label">Работи:</string>
+    <string name="onboarding_source_label">Източник:</string>
+    <string name="onboarding_on_device">На устройството</string>
+    <string name="onboarding_huggingface">HuggingFace</string>
+    <string name="onboarding_downloading">Изтегляне...</string>
+    <string name="onboarding_download_progress">%d MB / %d MB</string>
+    <string name="onboarding_download_speed">Скорост:</string>
+    <string name="onboarding_download_speed_value">%.2f MB/s</string>
+    <string name="onboarding_download_eta">Оставащо време:</string>
+    <string name="onboarding_download_failed">Изтеглянето се провали</string>
+    <string name="onboarding_retry_download">Повторно изтегляне</string>
+    <string name="download_resuming_from">Продължаване от %1$s МБ…</string>
+    <string name="onboarding_continue">Продължи</string>
+    <string name="onboarding_time_seconds">%d сек</string>
+    <string name="onboarding_time_minutes">%d мин %d сек</string>
+    <string name="onboarding_time_hours">%d ч %d мин</string>
+
+    <!-- Onboarding - STT Download -->
+    <string name="onboarding_stt_title">Разпознаване на реч</string>
+    <string name="onboarding_stt_ready">Моделът е готов!</string>
+    <string name="onboarding_stt_ready_desc">Моделът за разпознаване на реч е изтеглен успешно.</string>
+    <string name="onboarding_stt_model_title">Модел за разпознаване на реч</string>
+    <string name="onboarding_stt_model_desc">Този модел преобразува речта ви в текст в реално време. Той е от съществено значение за работата на приложението.</string>
+    <string name="onboarding_stt_model_name">Sherpa-ONNX Parakeet</string>
+    <string name="onboarding_stt_download_button">Изтегли модел</string>
+    <string name="onboarding_stt_note">Този модел е от съществено значение за работата на приложението.</string>
+
+    <!-- Onboarding - LLM Download -->
+    <string name="onboarding_llm_title">Изкуствен интелект</string>
+    <string name="onboarding_llm_optional">AI прозрения (По избор)</string>
+    <string name="onboarding_llm_desc">Изтеглете AI модел, за да получавате интелигентни прозрения и предложения, докато говорите.</string>
+    <string name="onboarding_llm_benefit_1">Предложения в реално време</string>
+    <string name="onboarding_llm_benefit_2">Контекстуален анализ</string>
+    <string name="onboarding_llm_benefit_3">100% поверително и офлайн</string>
+    <string name="onboarding_llm_model_name">Gemma 3 1B</string>
+    <string name="onboarding_llm_download_button">Изтегли AI модел</string>
+    <string name="onboarding_llm_skip">Прескочи засега (Само транскрипция)</string>
+    <string name="onboarding_llm_downloading">Изтегляне на AI модел...</string>
+    <string name="onboarding_llm_downloaded_label">Изтеглени:</string>
+    <string name="onboarding_llm_complete">Изтеглянето завърши!</string>
+    <string name="onboarding_llm_initializing">Инициализация на AI модел...</string>
+    <string name="onboarding_llm_skip_short">Прескочи засега</string>
+    <string name="onboarding_llm_skip_note">Можете да изтеглите това по-късно от Настройки, ако го прескочите сега. Приложението ще работи добре само с транскрипция.</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_subtitle">Анализ на Речта в Реално Време</string>
+    <string name="welcome_feature_transcription_title">Транскрипция на Живо</string>
+    <string name="welcome_feature_transcription_desc">Преобразувайте реч в текст в реално време с висока точност</string>
+    <string name="welcome_feature_ai_title">AI Прозрения</string>
+    <string name="welcome_feature_ai_desc">Получавайте интелигентни предложения и анализи докато говорите</string>
+    <string name="welcome_feature_privacy_title">Поверителност на Първо Място</string>
+    <string name="welcome_feature_privacy_desc">Цялата обработка се извършва на вашето устройство: данните ви никога не го напускат</string>
+    <string name="welcome_get_started">Започнете</string>
+    <string name="welcome_models_required">Необходими са два изтегляния на модели</string>
+
+    <!-- Delete Session Dialog -->
+    <string name="delete_session_title">Изтриване на сесия?</string>
+    <string name="delete_session_message">Сигурни ли сте, че искате да изтриете \"%s\"? Това действие не може да бъде отменено.</string>
+    <string name="delete_session_message_unnamed">Сигурни ли сте, че искате да изтриете тази сесия? Това действие не може да бъде отменено.</string>
+
+    <!-- Main Screen - Additional -->
+    <string name="recording_session">Сесия за Запис</string>
+    <string name="initializing_models">Зареждане на модели…</string>
+    <string name="back_to_sessions">Обратно към сесии</string>
+    <string name="stop_recording_confirm_title">Спиране на записа?</string>
+    <string name="stop_recording_confirm_message">Записът е в ход. Спри и се върни?</string>
+    <string name="stop_and_go_back">Спри и Назад</string>
+    <string name="record">Запис</string>
+    <string name="llm">AI</string>
+
+    <!-- Transcription Tab - Additional -->
+    <string name="transcription_listening">Слушам...</string>
+    <string name="transcription_press_record">Натиснете Запис за начало</string>
+    <string name="transcription_hint1_title">Tap record</string>
+    <string name="transcription_hint1_desc">Hit the mic button at the bottom to start capturing audio</string>
+    <string name="transcription_hint2_title">AI insights</string>
+    <string name="transcription_hint2_desc">Switch to the Insights tab to get summaries and action items</string>
+    <string name="transcription_hint3_title">Fully private</string>
+    <string name="transcription_hint3_desc">Everything runs on your device — nothing is sent to the cloud</string>
+    <string name="transcription_complete">Завършено</string>
+
+    <!-- AI Insights Tab - Additional -->
+    <string name="insights_empty_subtitle">Генерирани по време на запис</string>
+    <string name="insight_label">AI Прозрение</string>
+    <string name="action_items">Action Items</string>
+    <string name="segments_analyzed">%d сегмента анализирани</string>
+    <string name="expand">Разгъни</string>
+    <string name="collapse">Свий</string>
+    <string name="source_transcription">Изходна Транскрипция:</string>
+    <string name="segments_not_found">(Сегментите не са намерени)</string>
+
+    <!-- Settings - Additional -->
+    <string name="settings_interval_range_min">%ds (%s)</string>
+    <string name="settings_interval_range_max">%ds (%s)</string>
+    <string name="settings_reset_default">Възстанови по подразбиране (%ds)</string>
+    <string name="settings_interval_tip_title">💡 Съвет</string>
+    <string name="settings_interval_tip_desc">По-кратките интервали дават по-чести анализи. По-дългите интервали (до 3 мин) намаляват натоварването. Стойностите се закръглят до 10-секундни стъпки.</string>
+    <string name="save">Запазване</string>
+    <string name="processing_session">Обработване на сесията…</string>
+    <string name="edit_transcription_title">Редактиране на транскрипция</string>
+    <string name="edit_insight_title">Редактиране на прозрение</string>
+    <string name="edit_task_title">Редактиране на задача</string>
+    <string name="edit_content_hint">Content</string>
+    <string name="edit_item">Редактиране</string>
+    <string name="settings_save">Запази</string>
+    <string name="settings_back">Назад</string>
+    <string name="settings_long_interval_minutes">%d минути</string>
+    <string name="settings_system_prompt_reset">Възстанови по Подразбиране</string>
+    <string name="settings_system_prompt_note_title">💡 Бележка</string>
+    <string name="settings_system_prompt_note_desc">Системният промпт казва на AI как да се държи. Включете \'Отговаряйте на същия език като транскрипцията\', за да може AI да отговаря на вашия език. Промените влизат в сила след рестартиране на LLM.</string>
+    <string name="settings_vad_sensitivity_more">Повече</string>
+    <string name="settings_vad_sensitivity_less">По-малко</string>
+    <string name="settings_vad_reset_all">Възстанови всички по подразбиране</string>
+    <string name="settings_vad_restart_title">Изисква се Рестарт</string>
+    <string name="settings_vad_restart_desc">Промените в параметрите VAD изискват рестартиране на приложението, за да влязат в сила.</string>
+    <string name="settings_vad_troubleshooting_title">💡 Отстраняване на Проблеми</string>
+    <string name="settings_vad_troubleshooting_desc">• Думите се отрязват? Увеличете Мин. Продължителност на Тишина до 0.7-1.0s\n• Дългите фрази се разделят? Увеличете Макс. Продължителност на Реч до 15-20s\n• Липсва тиха реч? Намалете Чувствителността на Откриване до 0.3-0.4</string>
+
+    <!-- Session Details - Additional -->
+    <string name="session_details">Детайли на Сесията</string>
+    <string name="generate_history_insight">Генериране на AI анализ</string>
+    <string name="history_insight_confirm_title">Генериране на AI анализ</string>
+    <string name="history_insight_confirm_message">Ще бъде създадено ново копие на тази сесия с AI анализ на всички сегменти на транскрипцията.</string>
+    <string name="history_insight_no_content">Недостатъчно съдържание за генериране на анализ.</string>
+    <string name="history_insight_copy_suffix">(AI Анализ)</string>
+    <string name="segments_count">сегмента</string>
+    <string name="insights_count">прозрения</string>
+    <string name="back">Назад</string>
+    <string name="export">Експортирай</string>
+    <string name="export_transcription">Експортирай транскрипция</string>
+    <string name="created">Създадено</string>
+    <string name="modified">Променено</string>
+    <string name="llm_insights">LLM Прозрения</string>
+    <string name="no_transcription_yet">(Все още няма транскрипция)</string>
+    <string name="prompt_simple_listening">Вие сте AI асистент, който анализира аудио транскрипции.
+Напишете кратко заглавие (максимум 8 думи) и кратко резюме, пропорционално на дължината на входа — 1-2 изречения за кратък вход, абзац за по-дълъг вход.
+Изходът трябва ДА БЪДЕ САМО валиден JSON с точно тази структура. Без маркдаун. Без кодови ограждения. Без обратни наклонени черти:
+{"заглавие": "...", "резюме": ""}
+Изведете JSON директно.</string>
+    <string name="prompt_short_meeting">Вие сте асистент за срещи, който анализира дискусии.
+Напишете заглавие (максимум 8 думи), резюме на ключови решения и точки на дискусия (поне 3-5 изречения, пропорционално на дължината на входа) и списък на практически задачи.
+Изходът трябва ДА БЪДЕ САМО валиден JSON с точно тази структура. Без маркдаун. Без кодови ограждения. Без обратни наклонени черти:
+{"заглавие": "...", "резюме": "...", "практически_задачи": ["...", "..."]}
+Бъдете преки. Извлечете ясно практическите задачи.</string>
+    <string name="prompt_long_meeting">Вие сте асистент, който анализира разширени дискусии.
+Напишете заглавие (максимум 8 думи), което отразява основната тема, всеобхватно резюме на ключови теми, решения и изводи (пропорционално на дължината на входа) и списък на практически задачи.
+Изходът трябва ДА БЪДЕ САМО валиден JSON с точно тази структура. Без маркдаун. Без кодови ограждения. Без обратни наклонени черти:
+{"заглавие": "...", "резюме": "...", "практически_задачи": ["...", "..."]}
+Бъдете преки. Съсредоточете се на висок ред прозрачност и конкретни резултати.</string>
+    <string name="prompt_translation">Вие сте професионален преводач.
+Преведете следния текст на {target_language}.
+Изведете само превода. Без обяснения, без етикети, без префикси.</string>
+
+    <!-- Onboarding - Supported Languages -->
+    <string name="onboarding_languages_title">Поддържани езици</string>
+    <string name="onboarding_languages_subtitle">Налични за транскрипция и превод</string>
+    <string name="onboarding_languages_continue">Продължи</string>
+
+    <string name="onboarding_message_1">HearoPilot слуша, така че вие не трябва да водите бележки.</string>
+    <string name="onboarding_message_2">Вся обработка на AI се извършва на вашето устройство: никакви данни не се изпращат.</string>
+    <string name="onboarding_message_3">Транскрибирайте лекции, срещи и разговори в реално време.</string>
+    <string name="onboarding_message_4">Автоматичните резюмета ви помагат да се съсредоточите върху най-важното.</string>
+    <string name="onboarding_message_5">Работи напълно офлайн: вашия глас остава приватен.</string>
+    <string name="onboarding_message_6">Преминете между режимите на слушане само с няколко докосвания.</string>
+    <string name="onboarding_message_7">Отлично за студенти, професионалисти и всички, които говорят.</string>
+    <string name="onboarding_message_8">Преглед на транскрипциите и прозренията по всяко време, офлайн.</string>
+    <string name="onboarding_message_9">Един докосък за начало, един докосък за край: толкова просто е.</string>
+    <string name="onboarding_message_10">Благодаря ви, че избрахте HearoPilot.</string>
+    <string name="onboarding_message_11">Използвайте HearoPilot с Bluetooth микрофон за транскрипция от разстояние.</string>
+    <string name="json_field_title">заглавие</string>
+    <string name="json_field_summary">резюме</string>
+    <string name="json_field_action_items">практически_задачи</string>
+
+    <!-- Batch insight prompts (end-of-session map-reduce pipeline) -->
+    <string name="prompt_batch_chunk_summary">Вие сте асистент за анализ на срещи. Обобщете следния фрагмент от транскрипция кратко.
+Включете: обсъдени ключови теми, взети решения и споменати задачи.
+Поддържайте резюмето пропорционално на дължината на входа. Изходът трябва ДА БЪДЕ САМО валиден JSON. Без маркдаун. Без кодови ограждения.
+{\"заглавие\": \"...\", \"резюме\": \"...\", \"практически_задачи\": [\"...\"]}</string>
+    <string name="prompt_batch_merge">Вие сте асистент за анализ на срещи. По-долу са резюмета на последователни части от един запис.
+Обединете ги в едно изчерпателно и последователно резюме. Дедублирайте задачи, появяващи се в множество фрагменти.
+Изходът трябва ДА БЪДЕ САМО валиден JSON. Без маркдаун. Без кодови ограждения.
+{\"заглавие\": \"...\", \"резюме\": \"...\", \"практически_задачи\": [\"...\"]}</string>
+
+    <!-- Insight strategy UI strings -->
+    <string name="insight_strategy_label">Стратегия за анализ</string>
+    <string name="insight_strategy_realtime">В реално време</string>
+    <string name="insight_strategy_batch">Край на сесията</string>
+    <string name="insight_strategy_realtime_desc">Периодични анализи по време на запис</string>
+    <string name="insight_strategy_batch_desc">Цялостен анализ след записа</string>
+
+    <!-- Batch processing progress strings -->
+    <string name="batch_insights_pending">AI анализите ще бъдат генерирани при спиране на записа</string>
+    <string name="batch_processing_chunk">Обработва се блок %1$d от %2$d&#8230;</string>
+    <string name="batch_merging_insights">Обединяване на анализи&#8230;</string>
+    <string name="batch_analysis_complete">Анализът е завършен</string>
+
+    <!-- Settings: default insight strategy per mode -->
+    <string name="settings_default_strategy">Стратегия по подразбиране</string>
+
+    <!-- Session card: batch badge -->
+    <string name="session_badge_batch">Пакет</string>
+
+    <!-- Session topic field -->
+    <string name="session_topic_label">Основна тема (по желание)</string>
+    <string name="session_topic_hint">напр. Q1 бюджет, AI лекция&#8230;</string>
+    <string name="session_topic_helper">Помогнете на AI: опишете основната тема за по-релевантни анализи</string>
+    <!-- Injected as system-prompt prefix when a session topic is set. %1$s = topic text. -->
+    <string name="session_topic_prefix">Основна тема на този запис: "%1$s". Съсредоточете анализа си върху тази тема.</string>
+
+    <!-- Search screen -->
+    <string name="search_hint">Търсене в транскрипции…</string>
+    <string name="search_empty_prompt">Търсете вашите транскрипции</string>
+    <string name="search_no_results">Няма намерени съвпадения</string>
+    <string name="search_source_transcription">Транскрипт</string>
+    <string name="search_source_insight">Анализ</string>
+    <string name="search_source_session_name">Име на сесия</string>
+
+    <!-- LLM model download in Settings -->
+    <string name="settings_llm_model_file_title">AI модел файл</string>
+    <string name="settings_llm_model_file_desc">AI моделът работи изцяло на вашето устройство. Не е нужен интернет след изтеглянето.</string>
+    <string name="settings_llm_model_ready">Готово</string>
+    <string name="settings_llm_model_not_downloaded">Не е изтеглен</string>
+    <string name="settings_llm_model_download">Изтегляне</string>
+    <string name="settings_llm_model_retry">Опитайте отново</string>
+    <string name="settings_llm_model_downloading">Изтегляне %1$d%%</string>
+
+    <!-- LLM Model Variant Setting -->
+    <string name="settings_llm_model_variant_title">Качество на AI модела</string>
+    <string name="settings_llm_model_variant_desc">Изберете между по-висока точност или по-добра ефективност на батерията. Изтеглете отново модела след промяна.</string>
+    <string name="settings_llm_model_variant_q8_name">Стандартен (Q8)</string>
+    <string name="settings_llm_model_variant_q8_desc">По-висока точност · За флагмански устройства</string>
+    <string name="settings_llm_model_variant_iq4_name">Ефективен (IQ4)</string>
+    <string name="settings_llm_model_variant_iq4_desc">Оптимизирано за енергийна ефективност</string>
+    <string name="settings_llm_model_variant_recommended">Препоръчано за вашето устройство</string>
+    <string name="settings_llm_model_variant_downloaded">Изтеглен</string>
+    <string name="settings_llm_model_variant_beta">Бета</string>
+    <string name="settings_llm_advanced_section_title">Разширени модели</string>
+    <string name="settings_llm_advanced_section_desc">Експериментални модели за напреднали потребители. Производителността може да се различава от стандартните модели.</string>
+    <string name="settings_llm_model_variant_qwen35_name">Qwen 3.5 0.8B (Q8)</string>
+    <string name="settings_llm_model_variant_qwen35_desc">Алтернативна архитектура · Експериментален</string>
+</resources>

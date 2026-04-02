@@ -1,0 +1,466 @@
+<resources>
+    <!-- App Info -->
+    <string name="app_name">HearoPilot</string>
+
+    <!-- Common Actions -->
+    <string name="start">Ibda</string>
+    <string name="stop">Ieqaf</string>
+    <string name="copy">Ikkopja</string>
+    <string name="clear">Neħħi</string>
+    <string name="delete">Ħassar</string>
+    <string name="dismiss">Agħlaq</string>
+    <string name="cancel">Ikkanċella</string>
+    <string name="settings">Settings</string>
+    <string name="reset">Irrisettja</string>
+    <string name="rename">Ibdel l-isem</string>
+    <string name="rename_session_title">Ibdel isem is-sessjoni</string>
+    <string name="rename_session_hint">Isem is-sessjoni</string>
+
+    <!-- Recording Notification -->
+    <string name="notification_channel_recording_name">Sessjoni ta\' reġistrazzjoni</string>
+    <string name="notification_channel_recording_description">Murija meta r-reġistrazzjoni tkun attiva</string>
+    <string name="notification_recording_title">Reġistrazzjoni attiva</string>
+    <string name="notification_action_stop">Ieqaf</string>
+
+    <!-- Model Download Notification -->
+    <string name="notification_channel_download_name">Tniżżil tal-mudelli</string>
+    <string name="notification_channel_download_description">Juri l-progress waqt it-tniżżil tal-mudelli tal-AI</string>
+    <string name="notification_download_title">Qed jitniżżlu l-mudelli tal-AI</string>
+    <string name="notification_download_progress">%1$d%% mniżżel</string>
+    <string name="notification_download_completing">Qed jitlesta t-tniżżil…</string>
+
+    <!-- LLM Processing Notification -->
+    <string name="notification_channel_llm_processing_name">Ipproċessar tal-AI</string>
+    <string name="notification_channel_llm_processing_description">Jidher meta l-AI janalizza t-traskrizzjoni tiegħek</string>
+    <string name="notification_llm_processing_title">Qed janalizza t-traskrizzjoni</string>
+    <string name="notification_llm_processing_text">L-AI qed jipproċessa r-reġistrazzjoni tiegħek…</string>
+
+    <!-- Sessions Screen -->
+    <string name="sessions_title">HearoPilot</string>
+    <string name="sessions_subtitle">It-Traskrizzjonijiet Tiegħi</string>
+    <string name="new_transcription">Traskrizzjoni Ġdida</string>
+    <string name="session_unnamed">(Bla Isem)</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_title">Lest biex jittraskrivvu</string>
+    <string name="empty_state_subtitle">Oħloq sessjoni u ibda r-reġistrazzjoni.\nKollox jaħdem fuq l-apparat, privatament.</string>
+    <string name="empty_state_step1_title">Oħloq sessjoni</string>
+    <string name="empty_state_step1_desc">Agħfas il-buttuna + hawn taħt biex tibda</string>
+    <string name="empty_state_step2_title">Irreġistra awdjo</string>
+    <string name="empty_state_step2_desc">Agħfas il-mikrofonu biex taqbad il-kelma f\'ħin reali</string>
+    <string name="empty_state_step3_title">Ikseb insights tal-AI</string>
+    <string name="empty_state_step3_desc">L-AI janalizza t-traskrizzjoni tiegħek awtomatikament</string>
+    <string name="empty_state_privacy">L-ipproċessar kollu jsir fuq l-apparat tiegħek</string>
+    <string name="empty_state_privacy_title">Kollox fil-apparat</string>
+    <string name="header_stat_sessions">sessjonijiet</string>
+    <string name="header_stat_duration">total</string>
+    <string name="header_stat_data">baqa privati</string>
+
+    <!-- New Session Dialog -->
+    <string name="new_session_dialog_title">Traskrizzjoni Ġdida</string>
+    <string name="new_session_name_label">Agħti isem lil din it-traskrizzjoni (fakultattiv)</string>
+    <string name="new_session_name_hint">eż. Noti tal-Laqgħa</string>
+    <string name="new_session_name_tip">💡 Tista\' tħalli vojt u aħna nużaw id-data/ħin minflok.</string>
+    <string name="new_session_recording_type">Tip ta\' Reġistrazzjoni</string>
+    <string name="recording_type_short">Reġistrazzjoni Qasira</string>
+    <string name="recording_type_short_desc">≤10 min - Insights frekwenti</string>
+    <string name="recording_type_long">Reġistrazzjoni Twila</string>
+    <string name="recording_type_long_desc">Sa 3s - Intervalli konfigurabbli</string>
+
+    <!-- Main Screen - Tabs -->
+    <string name="tab_transcription">Traskrizzjoni</string>
+    <string name="tab_insights">Insights tal-AI</string>
+    <string name="recording_active">Reġistrazzjoni</string>
+    <string name="recording_paused">Pawża</string>
+
+    <!-- Transcription Tab -->
+    <string name="transcription_empty">Qed jistenna l-kelma…</string>
+    <string name="transcription_error">Żball: %s</string>
+
+    <!-- AI Insights Tab -->
+    <string name="insights_disabled">L-intelliġenza artifiċjali hija diżattivata</string>
+    <string name="insights_disabled_subtitle">Attiva l-Analiżi tal-AI fil-Settings biex tuża din il-funzjoni</string>
+    <string name="insights_empty">L-insights tal-AI jidhru hawn waqt ir-reġistrazzjoni.</string>
+    <string name="insights_model_unavailable">Mudell LLM mhux imniżżel</string>
+    <string name="llm_model_not_downloaded_error">Mudell LLM mhux imniżżel. Jekk jogħġbok niżżlu mis-Settings.</string>
+    <string name="insights_download_prompt">Niżżel il-mudell tal-AI biex tippermetti l-insights</string>
+    <string name="insights_download_button">Niżżel il-Mudell</string>
+    <string name="insights_downloading">Qed jniżżel: %d%%</string>
+    <string name="insights_download_speed">%s MB/s</string>
+    <string name="insights_download_eta">Ħin li fadal: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_short">Reġistrazzjonijiet Qosra (≤10 min)</string>
+    <string name="settings_section_long">Reġistrazzjonijiet Twal (sa 3s)</string>
+    <string name="settings_section_ai">Konfigurazzjoni tal-Assistent AI</string>
+
+    <!-- Short Recording Settings -->
+    <string name="settings_short_interval_title">Intervall tal-Ġenerazzjoni tal-Insights</string>
+    <string name="settings_short_interval_desc">Kemm-il darba l-AI janalizza t-traskrizzjoni tiegħek għal reġistrazzjonijiet qosra</string>
+    <string name="settings_interval_current">Kurrenti: %s</string>
+
+    <!-- Long Recording Settings -->
+    <string name="settings_long_interval_title">Intervall tal-Ġenerazzjoni tal-Insights</string>
+    <string name="settings_long_interval_desc">Kemm-il darba l-AI janalizza t-traskrizzjoni tiegħek għal reġistrazzjonijiet twal</string>
+
+    <!-- AI System Prompt Settings -->
+    <string name="settings_system_prompt_title">Prompt tas-Sistema</string>
+    <string name="settings_system_prompt_desc">Istruzzjonijiet li jgwidaw l-imġiba u l-istil tar-risposti tal-AI</string>
+    <string name="settings_system_prompt_hint">Daħħal prompt tas-sistema personalizzat…</string>
+
+    <!-- VAD Settings -->
+    <string name="settings_vad_title">Detezzjoni tal-Attività Vokali (VAD)</string>
+    <string name="settings_vad_desc">Parametri avvanzati għad-detezzjoni tal-kelma</string>
+    <string name="settings_vad_min_silence">Tul Minimu tas-Skiet</string>
+    <string name="settings_vad_min_silence_desc">Limitu tas-skiet biex itemm is-segment tal-kelma</string>
+    <string name="settings_vad_max_speech">Tul Massimu tal-Kelma</string>
+    <string name="settings_vad_max_speech_desc">Maks. kelma kontinwa qabel diviżjoni sfurzata</string>
+    <string name="settings_vad_threshold">Limitu tad-Detezzjoni</string>
+    <string name="settings_vad_threshold_desc">Sensittività għad-detezzjoni tal-vuċi</string>
+
+    <!-- LLM Sampler Settings -->
+    <string name="settings_section_llm_sampler">Parametri tal-Ġenerazzjoni tal-AI</string>
+    <string name="settings_llm_sampler_title">Teħid ta\' Kampjuni ta\' Tokens</string>
+    <string name="settings_llm_sampler_desc">Jikkontrolla kif l\'AI tagħżel il-kliem waqt il-ġenerazzjoni. Temperatura aktar baxxa = aktar prevedibbli; ogħla = aktar kreattiv.</string>
+    <string name="settings_llm_sampler_temperature">Temperatura</string>
+    <string name="settings_llm_sampler_temperature_desc">Każwalità fl-għażla tal-kliem (0 = deterministiku, 2 = każwali ħafna)</string>
+    <string name="settings_llm_sampler_top_k">Top-K</string>
+    <string name="settings_llm_sampler_top_k_desc">Illimita l-kandidati għall-K tokens l-aktar probabbli (0 = diżattivat)</string>
+    <string name="settings_llm_sampler_top_p">Top-P</string>
+    <string name="settings_llm_sampler_top_p_desc">Teħid ta\' kampjuni Nucleus: limitu tal-probabbiltà kumulattiv (0–1)</string>
+    <string name="settings_llm_sampler_min_p">Min-P</string>
+    <string name="settings_llm_sampler_min_p_desc">Probabbiltà minima ta\' token relattiva għat-token tat-tarf (0–1)</string>
+    <string name="settings_llm_sampler_repeat_penalty">Penali għar-Ripetizzjoni</string>
+    <string name="settings_llm_sampler_repeat_penalty_desc">Jippenalizza t-tokens użati reċentement biex inaqqas ir-ripetizzjoni (1,0 = mitfi)</string>
+    <string name="settings_llm_sampler_reset_all">Irrisettja għall-valuri default</string>
+
+    <!-- Time Formats -->
+    <string name="time_just_now">Bħalissa</string>
+    <string name="time_minutes_ago">%d minuti ilu</string>
+    <string name="time_today">Illum, %s</string>
+    <string name="time_yesterday">Ilbieraħ, %s</string>
+
+    <!-- Error Messages -->
+    <string name="error_title">Żball</string>
+    <string name="error_load_sessions">Ma rnexxielx jitgħabbew is-sessjonijiet: %s</string>
+    <string name="error_create_session">Ma rnexxielx jinħoloq is-sessjoni: %s</string>
+    <string name="error_delete_session">Ma rnexxielx jitħassar is-sessjoni: %s</string>
+
+    <!-- Default LLM System Prompt -->
+    <string name="default_llm_system_prompt">Inti assistent AI li janalizza traskrizzjonijiet tal-kelma f\'ħin reali.\nWieġeb bl-istess lingwa bħat-traskrizzjoni.\nIpprovdi insights konċiżi, suġġerimenti jew sommarji qosra.\nŻomm ir-risposti taħt 100 kelma. Kun prattiku u ta\' għajnuna.</string>
+
+        <!-- LLM Enable/Disable Settings -->
+    <string name="settings_section_llm">Mudell tal-AI</string>
+    <string name="settings_llm_enabled_title">Attiva Insights tal-AI</string>
+    <string name="settings_llm_enabled_desc">Meta attivat, il-mudell tal-AI jiġi mgħobbi fil-bidu ta\' kull sessjoni ta\' reġistrazzjoni u jiġġenera insights f\'ħin reali. Iddiżattiva biex tiffranka memorja u batterija.</string>
+
+    <!-- Microphone Permission -->
+    <string name="permission_mic_required">Meħtieġa permess tal-mikrofonu</string>
+    <string name="permission_mic_denied">L-aċċess għall-mikrofonu ġie miċħud. Agħtih fis-settings tal-app biex tuża t-traskrizzjoni.</string>
+
+<!-- Settings Screen - Sections -->
+    <string name="settings_section_appearance">Dehra</string>
+    <string name="settings_recording_modes">Modalitajiet ta\' reġistrazzjoni</string>
+    <string name="settings_section_simple_listening">Ixtiħ Sempliċi</string>
+    <string name="settings_section_short_meeting">Laqgħa Qasira</string>
+    <string name="settings_section_long_meeting">Laqgħa Twila</string>
+    <string name="settings_section_translation">Traduzzjoni Ħajja</string>
+    <string name="settings_section_vad">Deteżjoni ta\' Attività tal-Vuċi (VAD)</string>
+    <string name="settings_interval_analysis">Intervall ta\' Analiżi</string>
+    <string name="settings_interval_translation">Intervall ta\' Traduzzjoni</string>
+
+    <!-- Theme Settings -->
+    <string name="settings_theme_title">Tema</string>
+    <string name="settings_theme_desc">Agħżel tema tal-app</string>
+    <string name="theme_system">🔄 Awtomatiku</string>
+    <string name="theme_light">☀️ Ċari</string>
+    <string name="theme_dark">🌙 Skur</string>
+    <string name="theme_system_short">Auto</string>
+    <string name="theme_light_short">Ċari</string>
+    <string name="theme_dark_short">Skur</string>
+    <string name="theme_system_desc">Tema sswegħi l-issettings tas-sistema</string>
+    <string name="theme_light_desc">L-app dejjem juża t-tema ċara</string>
+    <string name="theme_dark_desc">L-app dejjem juża t-tema skura</string>
+
+    <!-- Translation Settings -->
+    <string name="settings_translation_target_title">Lingwa Fil-Mira Imposta Minn Qabel</string>
+    <string name="settings_translation_target_desc">Lingwa imposta minn qabel għat-traduzzjoni</string>
+
+    <!-- New Session Dialog - Recording Mode -->
+    <string name="new_session_recording_mode">Mod ta\' Reġistrazzjoni</string>
+    <string name="mode_simple_listening">Istudinar Sempliċi</string>
+    <string name="mode_short_meeting">Laqgħa Qasira</string>
+    <string name="mode_long_meeting">Laqgħa Twal</string>
+    <string name="mode_translation_live">Traduzzjoni Ħajja</string>
+    <string name="mode_simple_listening_desc">Sommarji perjodiċi</string>
+    <string name="mode_short_meeting_desc">Sommarju, suġġerimenti u kompiti</string>
+    <string name="mode_long_meeting_desc">Analiżi profunda għal-sessjonijiet twal</string>
+    <string name="mode_translation_desc">Traduzzjoni f\'ħin reali</string>
+    <string name="new_session_output_language">Lingwa tal-Output tat-Traduzzjoni</string>
+    <string name="new_session_output_language_label">Lingwa tal-output</string>
+    <string name="new_session_language_auto">Awtomatiku (lingwa tal-apparat)</string>
+    <string name="new_session_insight_interval">Kull %s</string>
+
+    <!-- Session Details - Tabs and Insight Card -->
+    <string name="tab_transcript">Traskrizzjoni</string>
+    <string name="ai_analysis">Analiżi AI</string>
+    <string name="insight_data">Iswira</string>
+    <string name="final_insight_label">Sommarju ġenerali</string>
+    <string name="create_ai_copy">Oħloq kopja AI</string>
+    <string name="generating_ai_insights">Qed jinġeneraw analiżi AI\u2026</string>
+    <string name="insights_empty_history">L-ebda analiżi AI s\'issa</string>
+    <string name="insights_empty_history_subtitle">Agħfas ✨ fuq biex tiġġenera analiżi AI minn din it-traskrizzjoni</string>
+    <string name="history_insight_copy_info">Se tinħoloq kopja ġdida ta\' din is-sessjoni b\'analiżi AI.\nIs-sessjoni oriġinali ma tiġix modifikata.</string>
+    <string name="coachmark_history_insight">Agħfas biex tiġġenera analiżi AI mill-istorja sħiħa tas-sessjoni</string>
+
+    <!-- Session Details Screen -->
+    <string name="session_extracted_tasks">Kompiti Estratti</string>
+    <string name="session_no_tasks">L-ebda kompiti ma nstab f\'din il-laqgħa.</string>
+    <string name="insight_summary">Sommarju</string>
+    <string name="insight_suggestions">Suġġerimenti</string>
+    <string name="insight_tasks">Kompiti</string>
+
+    <!-- Setup Screen - AI Benefits -->
+    <string name="setup_ai_insights_title">Insights Mogħdija minn AI</string>
+    <string name="setup_ai_why_title">Għaliex tniżżel il-mudell AI?</string>
+    <string name="setup_ai_benefit_realtime">Siġħ suġġerimenti u insights f\'ħin reali filwaqt li tkellam</string>
+    <string name="setup_ai_benefit_analysis">AI tanalizza l-mudell tal-kelma tiegħek u tipprovdi kontess utli</string>
+    <string name="setup_ai_benefit_offline">Taħdem kompletament offline: id-data tiegħek tibqa\' privata fuq il-ġihalka</string>
+    <string name="setup_ai_benefit_fast">Proċessaw mgħaġġel fuq il-ġihak mingħajr bżonn ta\' konnessjoni tal-internet</string>
+    <string name="setup_downloading_model">Qiegħda tonżol mudell...</string>
+
+    <!-- Onboarding - Common -->
+    <string name="onboarding_model_label">Mudell:</string>
+    <string name="onboarding_runs_label">Jaħdem:</string>
+    <string name="onboarding_source_label">Sors:</string>
+    <string name="onboarding_on_device">Fuq l-apparat</string>
+    <string name="onboarding_huggingface">HuggingFace</string>
+    <string name="onboarding_downloading">Qed jniżżel...</string>
+    <string name="onboarding_download_progress">%d MB / %d MB</string>
+    <string name="onboarding_download_speed">Veloċità:</string>
+    <string name="onboarding_download_speed_value">%.2f MB/s</string>
+    <string name="onboarding_download_eta">Ħin li fadal:</string>
+    <string name="onboarding_download_failed">It-tniżżil falla</string>
+    <string name="onboarding_retry_download">Erġa\' pprova</string>
+    <string name="download_resuming_from">Terġa\' tibda minn %1$s MB…</string>
+    <string name="onboarding_continue">Kompli</string>
+    <string name="onboarding_time_seconds">%d sek</string>
+    <string name="onboarding_time_minutes">%d min %d sek</string>
+    <string name="onboarding_time_hours">%d siegħa %d min</string>
+
+    <!-- Onboarding - STT Download -->
+    <string name="onboarding_stt_title">Għarfien tal-kelma</string>
+    <string name="onboarding_stt_ready">Il-mudell lest!</string>
+    <string name="onboarding_stt_ready_desc">Mudell tal-għarfien tal-kelma nniżżel b\'suċċess.</string>
+    <string name="onboarding_stt_model_title">Mudell tal-għarfien tal-kelma</string>
+    <string name="onboarding_stt_model_desc">Dan il-mudell jikkonverti l-kelma tiegħek f\'test f\'ħin reali. Huwa essenzjali biex l-app taħdem.</string>
+    <string name="onboarding_stt_model_name">Sherpa-ONNX Parakeet</string>
+    <string name="onboarding_stt_download_button">Niżżel il-mudell</string>
+    <string name="onboarding_stt_note">Dan il-mudell huwa essenzjali biex l-app taħdem.</string>
+
+    <!-- Onboarding - LLM Download -->
+    <string name="onboarding_llm_title">Intelliġenza artifiċjali</string>
+    <string name="onboarding_llm_optional">Insights tal-AI (Fakultattiv)</string>
+    <string name="onboarding_llm_desc">Niżżel mudell tal-AI biex tikseb insights intelliġenti u suġġerimenti waqt li tkun qed titkellem.</string>
+    <string name="onboarding_llm_benefit_1">Suġġerimenti f\'ħin reali</string>
+    <string name="onboarding_llm_benefit_2">Analiżi bbażata fuq il-kuntest</string>
+    <string name="onboarding_llm_benefit_3">100% privat u offline</string>
+    <string name="onboarding_llm_model_name">Gemma 3 1B</string>
+    <string name="onboarding_llm_download_button">Niżżel mudell tal-AI</string>
+    <string name="onboarding_llm_skip">Aqbeż għalissa (Traskrizzjoni biss)</string>
+    <string name="onboarding_llm_downloading">Qed jniżżel il-mudell tal-AI...</string>
+    <string name="onboarding_llm_downloaded_label">Imniżżel:</string>
+    <string name="onboarding_llm_complete">Tniżżil komplut!</string>
+    <string name="onboarding_llm_initializing">Qed jinizzjalizza l-mudell tal-AI...</string>
+    <string name="onboarding_llm_skip_short">Aqbeż għalissa</string>
+    <string name="onboarding_llm_skip_note">Tista\' tniżżel dan aktar tard mis-Settings jekk taqbeż issa. L-app se taħdem tajjeb bit-traskrizzjoni biss.</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_subtitle">Analiżi tal-Kliem f\'Ħin Reali</string>
+    <string name="welcome_feature_transcription_title">Traskrizzjoni Diretta</string>
+    <string name="welcome_feature_transcription_desc">Ikkonverti l-kliem għal test f\'ħin reali b\'preċiżjoni għolja</string>
+    <string name="welcome_feature_ai_title">Għarfien AI</string>
+    <string name="welcome_feature_ai_desc">Ikseb suġġerimenti intelliġenti u analiżi waqt li titkellem</string>
+    <string name="welcome_feature_privacy_title">Privatezza L-Ewwel</string>
+    <string name="welcome_feature_privacy_desc">Ipproċessar kollu iseħħ fuq l-apparat tiegħek: id-data tiegħek qatt ma tħalliha</string>
+    <string name="welcome_get_started">Ibda</string>
+    <string name="welcome_models_required">Meħtieġa żewġ downloads ta\' mudelli</string>
+
+    <!-- Delete Session Dialog -->
+    <string name="delete_session_title">Ħassar is-Sessjoni?</string>
+    <string name="delete_session_message">Żgur li trid tħassar \"%s\"? Din l-azzjoni ma tistax tiġi annullata.</string>
+    <string name="delete_session_message_unnamed">Żgur li trid tħassar din is-sessjoni? Din l-azzjoni ma tistax tiġi annullata.</string>
+
+    <string name="recording_session">Sessjoni ta\' Reġistrazzjoni</string>
+    <string name="initializing_models">Tagħbija tal-mudelli…</string>
+    <string name="back_to_sessions">Lura għas-sessjonijiet</string>
+    <string name="stop_recording_confirm_title">Twaqqaf ir-reġistrazzjoni?</string>
+    <string name="stop_recording_confirm_message">Ir-reġistrazzjoni qed isseħħ. Twaqqaf u mur lura?</string>
+    <string name="stop_and_go_back">Twaqqaf u Lura</string>
+    <string name="record">Irreġistra</string>
+    <string name="llm">AI</string>
+    <string name="transcription_listening">Qed nisma\'...</string>
+    <string name="transcription_press_record">Agħfas Irreġistra biex tibda</string>
+    <string name="transcription_hint1_title">Tap record</string>
+    <string name="transcription_hint1_desc">Hit the mic button at the bottom to start capturing audio</string>
+    <string name="transcription_hint2_title">AI insights</string>
+    <string name="transcription_hint2_desc">Switch to the Insights tab to get summaries and action items</string>
+    <string name="transcription_hint3_title">Fully private</string>
+    <string name="transcription_hint3_desc">Everything runs on your device — nothing is sent to the cloud</string>
+    <string name="transcription_complete">Lest</string>
+    <string name="insights_empty_subtitle">Iġġenerati waqt ir-reġistrazzjoni</string>
+    <string name="insight_label">Għarfien AI</string>
+    <string name="action_items">Action Items</string>
+    <string name="segments_analyzed">%d segmenti analizzati</string>
+    <string name="expand">Espandi</string>
+    <string name="collapse">Ikkomprimi</string>
+    <string name="source_transcription">Traskrizzjoni tas-Sors:</string>
+    <string name="segments_not_found">(Segmenti ma nstabux)</string>
+    <string name="settings_interval_range_min">%ds (%s)</string>
+    <string name="settings_interval_range_max">%ds (%s)</string>
+    <string name="settings_reset_default">Irresta għall-awtomatiku (%ds)</string>
+    <string name="settings_interval_tip_title">💡 Suġġeriment</string>
+    <string name="settings_interval_tip_desc">Intervalli iqsar jagħtu informazzjonijiet aktar frekwenti. Intervalli itwal (sa 3 min) inaqqsu l-piż tal-ipproċssar. Il-valuri jissettjaw f\'passi ta\' 10 sekondi.</string>
+    <string name="save">Ħżen</string>
+    <string name="processing_session">Qed tipproċessa sessjoni…</string>
+    <string name="edit_transcription_title">Editja t-traskrizzjoni</string>
+    <string name="edit_insight_title">Editja l-analiżi</string>
+    <string name="edit_task_title">Editja l-kompitu</string>
+    <string name="edit_content_hint">Content</string>
+    <string name="edit_item">Editja</string>
+    <string name="settings_save">Issejvja</string>
+    <string name="settings_back">Lura</string>
+    <string name="settings_long_interval_minutes">%d minuti</string>
+    <string name="settings_system_prompt_reset">Irresta għall-Awtomatiku</string>
+    <string name="settings_system_prompt_note_title">💡 Nota</string>
+    <string name="settings_system_prompt_note_desc">Il-prompt tas-sistema tgħid lill-AI kif għandha taġixxi. Inkludi \'Wieġeb bl-istess lingwa tat-traskrizzjoni\' biex l-AI twieġeb bil-lingwa tiegħek. Il-bidliet jidħlu fis-seħħ wara li terġa\' tibda l-LLM.</string>
+    <string name="settings_vad_sensitivity_more">Aktar</string>
+    <string name="settings_vad_sensitivity_less">Inqas</string>
+    <string name="settings_vad_reset_all">Irresta kollox għall-valuri awtomatiċi</string>
+    <string name="settings_vad_restart_title">Meħtieġ Restart</string>
+    <string name="settings_vad_restart_desc">Il-bidliet fil-parametri VAD jeħtieġu restart tal-app biex jidħlu fis-seħħ.</string>
+    <string name="settings_vad_troubleshooting_title">💡 Soluzzjoni ta\' Problemi</string>
+    <string name="settings_vad_troubleshooting_desc">• Kliem qed jinqata\'? Żid it-Tul Min. tas-Skiet għal 0.7-1.0s\n• Frażijiet twal qed jinqasmu? Żid it-Tul Maks. tal-Kelma għal 15-20s\n• Nieqes kelma ħafifa? Naqqas is-Sensittività tad-Detezzjoni għal 0.3-0.4</string>
+    <string name="session_details">Dettalji tas-Sessjoni</string>
+    <string name="generate_history_insight">Iġġenera analiżi AI</string>
+    <string name="history_insight_confirm_title">Iġġenera analiżi AI</string>
+    <string name="history_insight_confirm_message">Tinħoloq kopja ġdida ta\' din is-sessjoni b\'analiżi AI ta\' l-iskoperti kollha tat-traskrizzjoni.</string>
+    <string name="history_insight_no_content">Mhux biżżejjed kontenut biex tiġġenera analiżi.</string>
+    <string name="history_insight_copy_suffix">(Analiżi AI)</string>
+    <string name="segments_count">segmenti</string>
+    <string name="insights_count">għarfien</string>
+    <string name="back">Lura</string>
+    <string name="export">Esporta</string>
+    <string name="export_transcription">Esporta traskrizzjoni</string>
+    <string name="created">Maħluq</string>
+    <string name="modified">Modifikat</string>
+    <string name="llm_insights">Għarfien LLM</string>
+    <string name="no_transcription_yet">(Għadha ma hemmx traskrizzjoni)</string>
+    <string name="prompt_simple_listening">Int assistent AI li tanalizza traskrizzjonijiet tal-awdjo.
+Ikteb titlu qasir (massimu 8 kliem) u riasunti koncis proporzjonali għat-tul tal-input — 1-2 sentenzi għal input qasir, paragrafu għal input itwal.
+Itlaq BISS JSON validu b\'din l-istruttura eżatta. L-ebda markdown. L-ebda fence tal-kodiċi. L-ebda backticks:
+{\"titlu\": \"...\", \"riasunti\": \"...\"}
+Itlaq il-JSON direttament.</string>
+    <string name="prompt_short_meeting">Int assistent ta\' laqgħa li tanalizza diskussjonijiet.
+Ikteb titlu (massimu 8 kliem), riasunti tal-deċizzjonijiet ewlenin u punti ta\' diskussjoni (mill-anqas 3-5 sentenzi, proporzjonali għat-tul tal-input) u lista ta\' ħidmiet azzjoni.
+Itlaq BISS JSON validu b\'din l-istruttura eżatta. L-ebda markdown. L-ebda fence tal-kodiċi. L-ebda backticks:
+{\"titlu\": \"...\", \"riasunti\": \"...\", \"azzjonijiet\": [\"...\", \"...\"]}
+Kun dirett. Estrattika ħidmiet ta\' azzjoni b\'mod ċar.</string>
+    <string name="prompt_long_meeting">Int assistent li tanalizza diskussjonijiet estiżi.
+Ikteb titlu (massimu 8 kliem) li jaqbad is-suġġett ewlieni, riasunti komprensiv ta\' suġġetti ewlenin, deċizzjonijiet u konklużjonijiet (proporzjonali għat-tul tal-input) u lista ta\' ħidmiet ta\' azzjoni.
+Itlaq BISS JSON validu b\'din l-istruttura eżatta. L-ebda markdown. L-ebda fence tal-kodiċi. L-ebda backticks:
+{\"titlu\": \"...\", \"riasunti\": \"...\", \"azzjonijiet\": [\"...\", \"...\"]}
+Kun dirett. Iffoka fuq l-għarfien ta\' livell għoli u riżultati konkreti.</string>
+    <string name="prompt_translation">Inti traduttur professjonali.
+Ittraduċi t-test li ġej għal {target_language}.
+Agħti t-traduzzjoni biss. L-ebda spjegazzjonijiet, l-ebda tikketti, l-ebda prefissi.</string>
+
+    <!-- Onboarding - Supported Languages -->
+    <string name="onboarding_languages_title">Lingwi Appoġġati</string>
+    <string name="onboarding_languages_subtitle">Disponibbli għat-traskrizzjoni u t-traduzzjoni</string>
+    <string name="onboarding_languages_continue">Kompli</string>
+
+    <string name="onboarding_message_1">HearoPilot imlisek biex ma jkollok tikteb noti.</string>
+    <string name="onboarding_message_2">Il-proċessar tal-AI kollu jaħdem fuq il-ġihalka: l-ebda data ma tħalliha.</string>
+    <string name="onboarding_message_3">Traskrivi leħħ, laqgħat u konversazzjonijiet f\'ħin reali.</string>
+    <string name="onboarding_message_4">Sommarji awtomatiċi jgħinuk tiffoka fuq dak li verament importa.</string>
+    <string name="onboarding_message_5">Taħdem kompletament offline: il-vuċi tiegħek tibqa\' privata.</string>
+    <string name="onboarding_message_6">Ibdel bejn il-modi ta\' istbigħ fi ftit piski.</string>
+    <string name="onboarding_message_7">Perfett għal-istudenti, professionisti u kulħadd li jitkellem.</string>
+    <string name="onboarding_message_8">Irrieżamina t-traskrizzjonijiet u l-insights tiegħek fi kwalunque ħin, offline.</string>
+    <string name="onboarding_message_9">Fiski wieħed biex tibda, fiski wieħed biex twaqqaf: daqq semplic.</string>
+    <string name="onboarding_message_10">Grazzi li għażilt HearoPilot.</string>
+    <string name="onboarding_message_11">Uża HearoPilot ma\' mikrofonu Bluetooth biex ttraskrivi mill-bogħod.</string>
+    <string name="json_field_title">titlu</string>
+    <string name="json_field_summary">riasunti</string>
+    <string name="json_field_action_items">azzjonijiet</string>
+
+    <!-- Batch insight prompts (end-of-session map-reduce pipeline) -->
+    <string name="prompt_batch_chunk_summary">Int assistent ta\' analiżi tal-laqgħat. Agħmel riasunti konċiż tal-framment tat-traskrizzjoni li ġej.
+Inkludi: suġġetti ewlenin diskussi, deċiżjonijiet meħudin u ħidmiet imsemmija.
+Żomm ir-riasunti proporzjonali għat-tul tal-input. Itlaq BISS JSON validu. L-ebda markdown. L-ebda fence tal-kodiċi.
+{\"titlu\": \"...\", \"riasunti\": \"...\", \"azzjonijiet\": [\"...\"]}</string>
+    <string name="prompt_batch_merge">Int assistent ta\' analiżi tal-laqgħat. Hawn taħt hemm riasunti ta\' partijiet konsekuttivi ta\' reġistrazzjoni waħda.
+Agħqqadhom f\'riasunti wieħed komprensiv u koerenti. Dedduplika l-ħidmiet li jidhru f\'frammenti multipli.
+Itlaq BISS JSON validu. L-ebda markdown. L-ebda fence tal-kodiċi.
+{\"titlu\": \"...\", \"riasunti\": \"...\", \"azzjonijiet\": [\"...\"]}</string>
+
+    <!-- Insight strategy UI strings -->
+    <string name="insight_strategy_label">Strateġija ta\' analiżi</string>
+    <string name="insight_strategy_realtime">Ħin reali</string>
+    <string name="insight_strategy_batch">Tmiem is-sessjoni</string>
+    <string name="insight_strategy_realtime_desc">Analiżi perjodika matul ir-reġistrazzjoni</string>
+    <string name="insight_strategy_batch_desc">Analiżi komprensiva wara r-reġistrazzjoni</string>
+
+    <!-- Batch processing progress strings -->
+    <string name="batch_insights_pending">L-analiżi tal-AI se jiġu ġġenerati meta tieqaf ir-reġistrazzjoni</string>
+    <string name="batch_processing_chunk">Qed tiġi pproċessata l-parti %1$d minn %2$d&#8230;</string>
+    <string name="batch_merging_insights">Qed jinqabdu l-analiżi&#8230;</string>
+    <string name="batch_analysis_complete">L-analiżi tlestiet</string>
+
+    <!-- Settings: default insight strategy per mode -->
+    <string name="settings_default_strategy">Strateġija ta\' analiżi awtomatika</string>
+
+    <!-- Session card: batch badge -->
+    <string name="session_badge_batch">Batch</string>
+
+    <!-- Session topic field -->
+    <string name="session_topic_label">Suġġett ewlieni (fakultattiv)</string>
+    <string name="session_topic_hint">eż. Baġit Q1, leċċjoni tal-AI&#8230;</string>
+    <string name="session_topic_helper">Għin lill-AI: iddeskrivi s-suġġett ewlieni għal analiżi aktar rilevanti</string>
+    <!-- Injected as system-prompt prefix when a session topic is set. %1$s = topic text. -->
+    <string name="session_topic_prefix">Il-punt ewlieni ta\' din ir-reġistrazzjoni: "%1$s". Iffoka l-analiżi tiegħek fuq dan il-punt.</string>
+
+    <!-- Search screen -->
+    <string name="search_hint">Fittex fit-traskrizzjonijiet…</string>
+    <string name="search_empty_prompt">Fittex fit-traskrizzjonijiet tiegħek</string>
+    <string name="search_no_results">Ma nstabu l-ebda riżultati</string>
+    <string name="search_source_transcription">Traskrizzjoni</string>
+    <string name="search_source_insight">Għarfien</string>
+    <string name="search_source_session_name">Isem is-sessjoni</string>
+
+    <!-- LLM model download in Settings -->
+    <string name="settings_llm_model_file_title">Fajl tal-mudell AI</string>
+    <string name="settings_llm_model_file_desc">Il-mudell AI jaħdem kollu fuq l-apparat tiegħek. Ma hemmx bżonn internet wara l-ħlas.</string>
+    <string name="settings_llm_model_ready">Lest</string>
+    <string name="settings_llm_model_not_downloaded">Mhux imniżżel</string>
+    <string name="settings_llm_model_download">Niżżel</string>
+    <string name="settings_llm_model_retry">Erġa\' pprova</string>
+    <string name="settings_llm_model_downloading">Qed jitniżżel %1$d%%</string>
+
+    <!-- LLM Model Variant Setting -->
+    <string name="settings_llm_model_variant_title">Kwalità tal-Mudell AI</string>
+    <string name="settings_llm_model_variant_desc">Agħżel bejn preċiżjoni ogħla jew effiċjenza aħjar tal-batterija. Erġa niżżel il-mudell wara l-bidla.</string>
+    <string name="settings_llm_model_variant_q8_name">Standard (Q8)</string>
+    <string name="settings_llm_model_variant_q8_desc">Preċiżjoni ogħla · Għal apparati tal-ogħla livell</string>
+    <string name="settings_llm_model_variant_iq4_name">Effiċjenti (IQ4)</string>
+    <string name="settings_llm_model_variant_iq4_desc">Ottimizzat għall-effiċjenza tal-enerġija</string>
+    <string name="settings_llm_model_variant_recommended">Rakkomandat għall-apparat tiegħek</string>
+    <string name="settings_llm_model_variant_downloaded">Mniżżel</string>
+    <string name="settings_llm_model_variant_beta">Beta</string>
+    <string name="settings_llm_advanced_section_title">Mudelli Avvanzati</string>
+    <string name="settings_llm_advanced_section_desc">Mudelli sperimentali għal utenti avvanzati. Il-prestazzjoni tista\' tvarja mill-mudelli standard.</string>
+    <string name="settings_llm_model_variant_qwen35_name">Qwen 3.5 0.8B (Q8)</string>
+    <string name="settings_llm_model_variant_qwen35_desc">Arkitettura alternattiva · Sperimentali</string>
+</resources>

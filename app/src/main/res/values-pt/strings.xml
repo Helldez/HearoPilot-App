@@ -1,0 +1,475 @@
+<resources>
+    <!-- App Info -->
+    <string name="app_name">HearoPilot</string>
+
+    <!-- Common Actions -->
+    <string name="start">Iniciar</string>
+    <string name="stop">Parar</string>
+    <string name="copy">Copiar</string>
+    <string name="clear">Limpar</string>
+    <string name="delete">Eliminar</string>
+    <string name="dismiss">Fechar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="settings">Definições</string>
+    <string name="reset">Repor</string>
+    <string name="rename">Renomear</string>
+    <string name="rename_session_title">Renomear sessão</string>
+    <string name="rename_session_hint">Nome da sessão</string>
+
+    <!-- Recording Notification -->
+    <string name="notification_channel_recording_name">Sessão de Gravação</string>
+    <string name="notification_channel_recording_description">Mostra quando a gravação está ativa</string>
+    <string name="notification_recording_title">Gravação ativa</string>
+    <string name="notification_action_stop">Parar</string>
+
+    <!-- Model Download Notification -->
+    <string name="notification_channel_download_name">Transferências de modelos</string>
+    <string name="notification_channel_download_description">Mostra o progresso durante a transferência dos modelos de IA</string>
+    <string name="notification_download_title">A transferir modelos de IA</string>
+    <string name="notification_download_progress">%1$d %% transferido</string>
+    <string name="notification_download_completing">A concluir transferência…</string>
+
+    <!-- LLM Processing Notification -->
+    <string name="notification_channel_llm_processing_name">Processamento de IA</string>
+    <string name="notification_channel_llm_processing_description">Mostra quando a IA analisa a sua transcrição</string>
+    <string name="notification_llm_processing_title">A analisar transcrição</string>
+    <string name="notification_llm_processing_text">A IA está a processar a sua gravação…</string>
+
+    <!-- Sessions Screen -->
+    <string name="sessions_title">HearoPilot</string>
+    <string name="sessions_subtitle">Minhas Transcrições</string>
+    <string name="new_transcription">Nova Transcrição</string>
+    <string name="session_unnamed">(Sem nome)</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_title">Pronto para transcrever</string>
+    <string name="empty_state_subtitle">Crie uma sessão e comece a gravar.\nTudo é processado no seu dispositivo, de forma privada.</string>
+    <string name="empty_state_step1_title">Criar uma sessão</string>
+    <string name="empty_state_step1_desc">Toque no botão + abaixo para começar</string>
+    <string name="empty_state_step2_title">Gravar áudio</string>
+    <string name="empty_state_step2_desc">Pressione o microfone para capturar fala em tempo real</string>
+    <string name="empty_state_step3_title">Obter insights de IA</string>
+    <string name="empty_state_step3_desc">A IA analisa sua transcrição automaticamente</string>
+    <string name="empty_state_privacy">Todo o processamento acontece no seu dispositivo</string>
+    <string name="empty_state_privacy_title">Tudo no dispositivo</string>
+    <string name="header_stat_sessions">sessões</string>
+    <string name="header_stat_duration">total</string>
+    <string name="header_stat_data">mantidos privados</string>
+
+    <!-- New Session Dialog -->
+    <string name="new_session_dialog_title">Nova Transcrição</string>
+    <string name="new_session_name_label">Dê um nome a esta transcrição (opcional)</string>
+    <string name="new_session_name_hint">ex. Notas da Reunião</string>
+    <string name="new_session_name_tip">💡 Pode deixar em branco e usaremos a data/hora.</string>
+    <string name="new_session_recording_type">Tipo de Gravação</string>
+    <string name="recording_type_short">Gravação Curta</string>
+    <string name="recording_type_short_desc">≤10 min - Insights frequentes</string>
+    <string name="recording_type_long">Gravação Longa</string>
+    <string name="recording_type_long_desc">Até 3h - Intervalos configuráveis</string>
+
+    <!-- Main Screen - Tabs -->
+    <string name="tab_transcription">Transcrição</string>
+    <string name="tab_insights">Insights IA</string>
+    <string name="recording_active">A gravar</string>
+    <string name="recording_paused">Em pausa</string>
+
+    <!-- Transcription Tab -->
+    <string name="transcription_empty">À espera de fala…</string>
+    <string name="transcription_error">Erro: %s</string>
+
+    <!-- AI Insights Tab -->
+    <string name="insights_disabled">As perspectivas de IA estão desativadas</string>
+    <string name="insights_disabled_subtitle">Ative a Análise de IA nas Configurações para usar esta função</string>
+    <string name="insights_empty">Os insights de IA aparecerão aqui durante a gravação.</string>
+    <string name="insights_model_unavailable">Modelo LLM não transferido</string>
+    <string name="llm_model_not_downloaded_error">Modelo LLM não transferido. Por favor, transfira-o nas Definições.</string>
+    <string name="insights_download_prompt">Transfira o modelo de IA para ativar insights</string>
+    <string name="insights_download_button">Transferir Modelo</string>
+    <string name="insights_downloading">A transferir: %d%%</string>
+    <string name="insights_download_speed">%s MB/s</string>
+    <string name="insights_download_eta">Tempo estimado: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Definições</string>
+    <string name="settings_section_short">Gravações Curtas (≤10 min)</string>
+    <string name="settings_section_long">Gravações Longas (até 3h)</string>
+    <string name="settings_section_ai">Configuração do Assistente IA</string>
+
+    <!-- Short Recording Settings -->
+    <string name="settings_short_interval_title">Intervalo de Geração de Insights</string>
+    <string name="settings_short_interval_desc">Com que frequência a IA analisa a sua transcrição para gravações curtas</string>
+    <string name="settings_interval_current">Atual: %s</string>
+
+    <!-- Long Recording Settings -->
+    <string name="settings_long_interval_title">Intervalo de Geração de Insights</string>
+    <string name="settings_long_interval_desc">Com que frequência a IA analisa a sua transcrição para gravações longas</string>
+
+    <!-- AI System Prompt Settings -->
+    <string name="settings_system_prompt_title">Prompt do Sistema</string>
+    <string name="settings_system_prompt_desc">Instruções que orientam o comportamento e estilo de resposta da IA</string>
+    <string name="settings_system_prompt_hint">Introduza um prompt do sistema personalizado…</string>
+
+    <!-- VAD Settings -->
+    <string name="settings_vad_title">Deteção de Atividade de Voz (VAD)</string>
+    <string name="settings_vad_desc">Parâmetros avançados para deteção de fala</string>
+    <string name="settings_vad_min_silence">Duração Mínima de Silêncio</string>
+    <string name="settings_vad_min_silence_desc">Limiar de silêncio para terminar o segmento de fala</string>
+    <string name="settings_vad_max_speech">Duração Máxima de Fala</string>
+    <string name="settings_vad_max_speech_desc">Fala contínua máxima antes da divisão forçada</string>
+    <string name="settings_vad_threshold">Limiar de Deteção</string>
+    <string name="settings_vad_threshold_desc">Sensibilidade para deteção de voz</string>
+
+    <!-- LLM Sampler Settings -->
+    <string name="settings_section_llm_sampler">Parâmetros de Geração de IA</string>
+    <string name="settings_llm_sampler_title">Amostragem de Tokens</string>
+    <string name="settings_llm_sampler_desc">Controla como a IA seleciona palavras durante a geração. Temperatura mais baixa = mais previsível; mais alta = mais criativa.</string>
+    <string name="settings_llm_sampler_temperature">Temperatura</string>
+    <string name="settings_llm_sampler_temperature_desc">Aleatoriedade na seleção de palavras (0 = determinístico, 2 = muito aleatório)</string>
+    <string name="settings_llm_sampler_top_k">Top-K</string>
+    <string name="settings_llm_sampler_top_k_desc">Limitar candidatos aos K tokens mais prováveis (0 = desativado)</string>
+    <string name="settings_llm_sampler_top_p">Top-P</string>
+    <string name="settings_llm_sampler_top_p_desc">Amostragem Nucleus: limiar de probabilidade cumulativa (0–1)</string>
+    <string name="settings_llm_sampler_min_p">Min-P</string>
+    <string name="settings_llm_sampler_min_p_desc">Probabilidade mínima do token relativa ao token superior (0–1)</string>
+    <string name="settings_llm_sampler_repeat_penalty">Penalidade de Repetição</string>
+    <string name="settings_llm_sampler_repeat_penalty_desc">Penaliza tokens usados recentemente para reduzir repetições (1,0 = desativado)</string>
+    <string name="settings_llm_sampler_reset_all">Repor valores predefinidos</string>
+
+    <!-- Time Formats -->
+    <string name="time_just_now">Agora mesmo</string>
+    <string name="time_minutes_ago">Há %d minutos</string>
+    <string name="time_today">Hoje, %s</string>
+    <string name="time_yesterday">Ontem, %s</string>
+
+    <!-- Error Messages -->
+    <string name="error_title">Erro</string>
+    <string name="error_load_sessions">Falha ao carregar sessões: %s</string>
+    <string name="error_create_session">Falha ao criar sessão: %s</string>
+    <string name="error_delete_session">Falha ao eliminar sessão: %s</string>
+
+    <!-- Default LLM System Prompt -->
+    <string name="default_llm_system_prompt">É um assistente de IA que analisa transcrições de voz em tempo real.\nResponda na mesma língua da transcrição.\nForneça insights concisos, sugestões ou breves resumos.\nMantenha as respostas com menos de 100 palavras. Seja prático e útil.</string>
+
+        <!-- LLM Enable/Disable Settings -->
+    <string name="settings_section_llm">Modelo de IA</string>
+    <string name="settings_llm_enabled_title">Ativar insights de IA</string>
+    <string name="settings_llm_enabled_desc">Quando ativado, o modelo de IA é carregado no início de cada sessão de gravação e gera insights em tempo real. Desative para economizar memória e bateria.</string>
+
+    <!-- Microphone Permission -->
+    <string name="permission_mic_required">Permissão de microfone necessária</string>
+    <string name="permission_mic_denied">O acesso ao microfone foi negado. Conceda-o nas configurações do aplicativo para usar a transcrição.</string>
+
+<!-- Settings Screen - Sections -->
+    <string name="settings_section_appearance">Aparência</string>
+    <string name="settings_recording_modes">Modos de gravação</string>
+    <string name="settings_section_simple_listening">Escuta simples</string>
+    <string name="settings_section_short_meeting">Reunião curta</string>
+    <string name="settings_section_long_meeting">Reunião longa</string>
+    <string name="settings_section_translation">Tradução ao vivo</string>
+    <string name="settings_section_vad">Detecção de Atividade de Voz (VAD)</string>
+    <string name="settings_interval_analysis">Intervalo de análise</string>
+    <string name="settings_interval_translation">Intervalo de tradução</string>
+
+    <!-- Theme Settings -->
+    <string name="settings_theme_title">Tema</string>
+    <string name="settings_theme_desc">Escolha o tema do aplicativo</string>
+    <string name="theme_system">🔄 Automático</string>
+    <string name="theme_light">☀️ Claro</string>
+    <string name="theme_dark">🌙 Escuro</string>
+    <string name="theme_system_short">Auto</string>
+    <string name="theme_light_short">Claro</string>
+    <string name="theme_dark_short">Escuro</string>
+    <string name="theme_system_desc">O tema segue as configurações do sistema</string>
+    <string name="theme_light_desc">O aplicativo sempre usará tema claro</string>
+    <string name="theme_dark_desc">O aplicativo sempre usará tema escuro</string>
+
+    <!-- Translation Settings -->
+    <string name="settings_translation_target_title">Idioma de destino padrão</string>
+    <string name="settings_translation_target_desc">Idioma padrão para tradução</string>
+
+    <!-- New Session Dialog - Recording Mode -->
+    <string name="new_session_recording_mode">Modo de Gravação</string>
+    <string name="mode_simple_listening">Escuta Simples</string>
+    <string name="mode_short_meeting">Reunião Breve</string>
+    <string name="mode_long_meeting">Reunião Longa</string>
+    <string name="mode_translation_live">Tradução ao Vivo</string>
+    <string name="mode_simple_listening_desc">Resumos periódicos</string>
+    <string name="mode_short_meeting_desc">Resumo, sugestões e tarefas</string>
+    <string name="mode_long_meeting_desc">Análise aprofundada para sessões longas</string>
+    <string name="mode_translation_desc">Tradução em tempo real</string>
+    <string name="new_session_output_language">Idioma de Saída da Tradução</string>
+    <string name="new_session_output_language_label">Idioma de saída</string>
+    <string name="new_session_language_auto">Automático (idioma do dispositivo)</string>
+    <string name="new_session_insight_interval">A cada %s</string>
+
+    <!-- Session Details - Tabs and Insight Card -->
+    <string name="tab_transcript">Transcrição</string>
+    <string name="ai_analysis">Análise IA</string>
+    <string name="insight_data">Percepção</string>
+    <string name="final_insight_label">Resumo geral</string>
+    <string name="create_ai_copy">Criar cópia com IA</string>
+    <string name="generating_ai_insights">Gerando análises de IA\u2026</string>
+    <string name="insights_empty_history">Sem análises de IA ainda</string>
+    <string name="insights_empty_history_subtitle">Toque em ✨ acima para gerar análise de IA desta transcrição</string>
+    <string name="history_insight_copy_info">Será criada uma nova cópia desta sessão com análise de IA.\nA sessão original não será modificada.</string>
+    <string name="coachmark_history_insight">Toque para gerar análises de IA de todo o histórico da sessão</string>
+
+    <!-- Session Details Screen -->
+    <string name="session_extracted_tasks">Tarefas extraídas</string>
+    <string name="session_no_tasks">Nenhuma tarefa encontrada nesta sessão.</string>
+    <string name="insight_summary">Resumo</string>
+    <string name="insight_suggestions">Sugestões</string>
+    <string name="insight_tasks">Tarefas</string>
+
+    <!-- Setup Screen - AI Benefits -->
+    <string name="setup_ai_insights_title">Insights alimentados por IA</string>
+    <string name="setup_ai_why_title">Por que baixar o modelo de IA?</string>
+    <string name="setup_ai_benefit_realtime">Obtenha sugestões e insights em tempo real enquanto fala</string>
+    <string name="setup_ai_benefit_analysis">A IA analisa seus padrões de fala e fornece contexto útil</string>
+    <string name="setup_ai_benefit_offline">Funciona completamente offline: seus dados permanecem privados no seu dispositivo</string>
+    <string name="setup_ai_benefit_fast">Processamento rápido no dispositivo sem exigir conexão com a internet</string>
+    <string name="setup_downloading_model">Baixando modelo...</string>
+
+    <!-- Onboarding - Common -->
+    <string name="onboarding_model_label">Modelo:</string>
+    <string name="onboarding_runs_label">Executa:</string>
+    <string name="onboarding_source_label">Fonte:</string>
+    <string name="onboarding_on_device">No dispositivo</string>
+    <string name="onboarding_huggingface">HuggingFace</string>
+    <string name="onboarding_downloading">A transferir...</string>
+    <string name="onboarding_download_progress">%d MB / %d MB</string>
+    <string name="onboarding_download_speed">Velocidade:</string>
+    <string name="onboarding_download_speed_value">%.2f MB/s</string>
+    <string name="onboarding_download_eta">Tempo restante:</string>
+    <string name="onboarding_download_failed">Transferência falhada</string>
+    <string name="onboarding_retry_download">Tentar novamente</string>
+    <string name="download_resuming_from">Retomando de %1$s MB…</string>
+    <string name="onboarding_continue">Continuar</string>
+    <string name="onboarding_time_seconds">%d seg</string>
+    <string name="onboarding_time_minutes">%d min %d seg</string>
+    <string name="onboarding_time_hours">%d h %d min</string>
+
+    <!-- Onboarding - STT Download -->
+    <string name="onboarding_stt_title">Reconhecimento de voz</string>
+    <string name="onboarding_stt_ready">Modelo pronto!</string>
+    <string name="onboarding_stt_ready_desc">Modelo de reconhecimento de voz transferido com sucesso.</string>
+    <string name="onboarding_stt_model_title">Modelo de reconhecimento de voz</string>
+    <string name="onboarding_stt_model_desc">Este modelo converte a sua voz em texto em tempo real. É essencial para o funcionamento da aplicação.</string>
+    <string name="onboarding_stt_model_name">Sherpa-ONNX Parakeet</string>
+    <string name="onboarding_stt_download_button">Transferir modelo</string>
+    <string name="onboarding_stt_note">Este modelo é essencial para o funcionamento da aplicação.</string>
+
+    <!-- Onboarding - LLM Download -->
+    <string name="onboarding_llm_title">Inteligência artificial</string>
+    <string name="onboarding_llm_optional">Insights IA (Opcional)</string>
+    <string name="onboarding_llm_desc">Transfira um modelo de IA para obter insights inteligentes e sugestões enquanto fala.</string>
+    <string name="onboarding_llm_benefit_1">Sugestões em tempo real</string>
+    <string name="onboarding_llm_benefit_2">Análise contextual</string>
+    <string name="onboarding_llm_benefit_3">100% privado e offline</string>
+    <string name="onboarding_llm_model_name">Gemma 3 1B</string>
+    <string name="onboarding_llm_download_button">Transferir modelo IA</string>
+    <string name="onboarding_llm_skip">Ignorar por agora (Apenas transcrição)</string>
+    <string name="onboarding_llm_downloading">A transferir modelo IA...</string>
+    <string name="onboarding_llm_downloaded_label">Transferido:</string>
+    <string name="onboarding_llm_complete">Transferência concluída!</string>
+    <string name="onboarding_llm_initializing">A inicializar modelo IA...</string>
+    <string name="onboarding_llm_skip_short">Ignorar por agora</string>
+    <string name="onboarding_llm_skip_note">Pode transferir isto mais tarde nas Definições se ignorar agora. A aplicação funcionará bem apenas com transcrição.</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_subtitle">Análise de Fala em Tempo Real</string>
+    <string name="welcome_feature_transcription_title">Transcrição ao Vivo</string>
+    <string name="welcome_feature_transcription_desc">Converta fala em texto em tempo real com alta precisão</string>
+    <string name="welcome_feature_ai_title">Insights de IA</string>
+    <string name="welcome_feature_ai_desc">Obtenha sugestões e análises inteligentes enquanto fala</string>
+    <string name="welcome_feature_privacy_title">Privacidade em Primeiro Lugar</string>
+    <string name="welcome_feature_privacy_desc">Todo o processamento ocorre no seu dispositivo: seus dados nunca saem</string>
+    <string name="welcome_get_started">Começar</string>
+    <string name="welcome_models_required">Dois downloads de modelos necessários</string>
+
+    <!-- Delete Session Dialog -->
+    <string name="delete_session_title">Eliminar Sessão?</string>
+    <string name="delete_session_message">Tem certeza de que deseja eliminar \"%s\"? Esta ação não pode ser desfeita.</string>
+    <string name="delete_session_message_unnamed">Tem certeza de que deseja eliminar esta sessão? Esta ação não pode ser desfeita.</string>
+
+    <!-- Main Screen - Additional -->
+    <string name="recording_session">Sessão de Gravação</string>
+    <string name="initializing_models">Carregando modelos…</string>
+    <string name="back_to_sessions">Voltar às sessões</string>
+    <string name="stop_recording_confirm_title">Parar gravação?</string>
+    <string name="stop_recording_confirm_message">Gravação em andamento. Parar e voltar?</string>
+    <string name="stop_and_go_back">Parar e Voltar</string>
+    <string name="record">Gravar</string>
+    <string name="llm">AI</string>
+
+    <!-- Transcription Tab - Additional -->
+    <string name="transcription_listening">Ouvindo...</string>
+    <string name="transcription_press_record">Pressione Gravar para iniciar</string>
+    <string name="transcription_hint1_title">Tap record</string>
+    <string name="transcription_hint1_desc">Hit the mic button at the bottom to start capturing audio</string>
+    <string name="transcription_hint2_title">AI insights</string>
+    <string name="transcription_hint2_desc">Switch to the Insights tab to get summaries and action items</string>
+    <string name="transcription_hint3_title">Fully private</string>
+    <string name="transcription_hint3_desc">Everything runs on your device — nothing is sent to the cloud</string>
+    <string name="transcription_complete">Concluído</string>
+
+    <!-- AI Insights Tab - Additional -->
+    <string name="insights_empty_subtitle">Gerados durante a gravação</string>
+    <string name="insight_label">Insight IA</string>
+    <string name="action_items">Action Items</string>
+    <string name="segments_analyzed">%d segmentos analisados</string>
+    <string name="expand">Expandir</string>
+    <string name="collapse">Recolher</string>
+    <string name="source_transcription">Transcrição Fonte:</string>
+    <string name="segments_not_found">(Segmentos não encontrados)</string>
+
+    <!-- Settings - Additional -->
+    <string name="settings_interval_range_min">%ds (%s)</string>
+    <string name="settings_interval_range_max">%ds (%s)</string>
+    <string name="settings_reset_default">Restaurar padrão (%ds)</string>
+    <string name="settings_interval_tip_title">💡 Dica</string>
+    <string name="settings_interval_tip_desc">Intervalos mais curtos fornecem informações mais frequentes. Intervalos mais longos (até 3 min) reduzem a carga de processamento. Os valores ajustam-se em incrementos de 10 segundos.</string>
+    <string name="save">Guardar</string>
+    <string name="processing_session">A processar sessão…</string>
+    <string name="edit_transcription_title">Editar transcrição</string>
+    <string name="edit_insight_title">Editar análise</string>
+    <string name="edit_task_title">Editar tarefa</string>
+    <string name="edit_content_hint">Content</string>
+    <string name="edit_item">Editar</string>
+    <string name="settings_save">Salvar</string>
+    <string name="settings_back">Voltar</string>
+    <string name="settings_long_interval_minutes">%d minutos</string>
+    <string name="settings_system_prompt_reset">Restaurar Padrão</string>
+    <string name="settings_system_prompt_note_title">💡 Nota</string>
+    <string name="settings_system_prompt_note_desc">O prompt do sistema diz à IA como se comportar. Inclua \'Responda no mesmo idioma da transcrição\' para garantir que a IA responda no seu idioma. As alterações entram em vigor após reiniciar o LLM.</string>
+    <string name="settings_vad_sensitivity_more">Mais</string>
+    <string name="settings_vad_sensitivity_less">Menos</string>
+    <string name="settings_vad_reset_all">Restaurar todos para os padrões</string>
+    <string name="settings_vad_restart_title">Reinício Necessário</string>
+    <string name="settings_vad_restart_desc">Alterações nos parâmetros VAD requerem reiniciar o app para ter efeito.</string>
+    <string name="settings_vad_troubleshooting_title">💡 Solução de Problemas</string>
+    <string name="settings_vad_troubleshooting_desc">• Palavras sendo cortadas? Aumente a Duração Mínima do Silêncio para 0.7-1.0s\n• Frases longas sendo divididas? Aumente a Duração Máxima da Fala para 15-20s\n• Fala silenciosa faltando? Reduza a Sensibilidade de Detecção para 0.3-0.4</string>
+
+    <!-- Session Details - Additional -->
+    <string name="session_details">Detalhes da Sessão</string>
+    <string name="generate_history_insight">Gerar análise IA</string>
+    <string name="history_insight_confirm_title">Gerar análise IA</string>
+    <string name="history_insight_confirm_message">Uma nova cópia desta sessão será criada com uma análise de IA de todos os segmentos de transcrição.</string>
+    <string name="history_insight_no_content">Conteúdo de transcrição insuficiente para gerar uma análise.</string>
+    <string name="history_insight_copy_suffix">(Análise IA)</string>
+    <string name="segments_count">segmentos</string>
+    <string name="insights_count">insights</string>
+    <string name="back">Voltar</string>
+    <string name="export">Exportar</string>
+    <string name="export_transcription">Exportar transcrição</string>
+    <string name="created">Criado</string>
+    <string name="modified">Modificado</string>
+    <string name="llm_insights">Insights LLM</string>
+    <string name="no_transcription_yet">(Nenhuma transcrição ainda)</string>
+    <string name="prompt_simple_listening">Você é um assistente de IA que analisa transcrições de áudio.
+Escreva um título breve (máximo 8 palavras) e um resumo conciso proporcional ao comprimento da entrada — 1-2 frases para entrada curta, um parágrafo para entrada mais longa.
+Emita APENAS JSON válido com esta estrutura exata. Sem markdown. Sem cercas de código. Sem backticks:
+{\"titulo\": \"...\", \"resumo\": \"...\"}
+Emita o JSON diretamente.</string>
+    <string name="prompt_short_meeting">Você é um assistente de reunião que analisa discussões.
+Escreva um título (máximo 8 palavras), um resumo de decisões-chave e pontos de discussão (pelo menos 3-5 frases, proporcional ao comprimento da entrada) e uma lista de ações práticas.
+Emita APENAS JSON válido com esta estrutura exata. Sem markdown. Sem cercas de código. Sem backticks:
+{\"titulo\": \"...\", \"resumo\": \"...\", \"acoes\": [\"...\", \"...\"]}
+Seja direto. Extraia ações práticas claramente.</string>
+    <string name="prompt_long_meeting">Você é um assistente que analisa discussões estendidas.
+Escreva um título (máximo 8 palavras) que capture o tema principal, um resumo abrangente de tópicos-chave, decisões e conclusões (proporcional ao comprimento da entrada) e uma lista de ações práticas.
+Emita APENAS JSON válido com esta estrutura exata. Sem markdown. Sem cercas de código. Sem backticks:
+{\"titulo\": \"...\", \"resumo\": \"...\", \"acoes\": [\"...\", \"...\"]}
+Seja direto. Concentre-se em insights de alto nível e resultados concretos.</string>
+    <string name="prompt_translation">És um tradutor profissional.
+Traduz o seguinte texto para {target_language}.
+Apresenta apenas a tradução. Sem explicações, sem rótulos, sem prefixos.</string>
+
+    <!-- Onboarding - Supported Languages -->
+    <string name="onboarding_languages_title">Idiomas suportados</string>
+    <string name="onboarding_languages_subtitle">Disponíveis para transcrição e tradução</string>
+    <string name="onboarding_languages_continue">Continuar</string>
+
+    <string name="onboarding_message_1">HearoPilot escuta para que não tenha de tomar notas.</string>
+    <string name="onboarding_message_2">Todo o processamento de IA ocorre no seu dispositivo: nenhum dado sai.</string>
+    <string name="onboarding_message_3">Transcreva palestras, reuniões e conversas em tempo real.</string>
+    <string name="onboarding_message_4">Resumos automáticos ajudam a focar no que é mais importante.</string>
+    <string name="onboarding_message_5">Funciona completamente offline: sua voz permanece privada.</string>
+    <string name="onboarding_message_6">Alterne entre modos de escuta em apenas alguns toques.</string>
+    <string name="onboarding_message_7">Ótimo para estudantes, profissionais e qualquer pessoa que fale.</string>
+    <string name="onboarding_message_8">Revise suas transcrições e insights a qualquer momento, offline.</string>
+    <string name="onboarding_message_9">Um toque para começar, um toque para parar: é tão simples.</string>
+    <string name="onboarding_message_10">Obrigado por escolher HearoPilot.</string>
+    <string name="onboarding_message_11">Use o HearoPilot com um microfone Bluetooth para transcrever à distância.</string>
+    <string name="json_field_title">titulo</string>
+    <string name="json_field_summary">resumo</string>
+    <string name="json_field_action_items">acoes</string>
+
+    <!-- Batch insight prompts (end-of-session map-reduce pipeline) -->
+    <string name="prompt_batch_chunk_summary">Você é um assistente de análise de reuniões. Resuma de forma concisa o seguinte fragmento de transcrição.
+Inclua: principais tópicos discutidos, decisões tomadas e tarefas mencionadas.
+Mantenha o resumo proporcional ao comprimento da entrada. Emita APENAS JSON válido. Sem markdown. Sem cercas de código.
+{\"titulo\": \"...\", \"resumo\": \"...\", \"acoes\": [\"...\"]}</string>
+    <string name="prompt_batch_merge">Você é um assistente de análise de reuniões. Abaixo estão resumos de partes consecutivas de uma única gravação.
+Junte-os num único resumo abrangente e coerente. Desduplique tarefas que aparecem em múltiplos fragmentos.
+Emita APENAS JSON válido. Sem markdown. Sem cercas de código.
+{\"titulo\": \"...\", \"resumo\": \"...\", \"acoes\": [\"...\"]}</string>
+
+    <!-- Insight strategy UI strings -->
+    <string name="insight_strategy_label">Estratégia de análise</string>
+    <string name="insight_strategy_realtime">Tempo real</string>
+    <string name="insight_strategy_batch">Fim da sessão</string>
+    <string name="insight_strategy_realtime_desc">Análises periódicas durante a gravação</string>
+    <string name="insight_strategy_batch_desc">Análise completa após a gravação</string>
+
+    <!-- Batch processing progress strings -->
+    <string name="batch_insights_pending">As análises de IA serão geradas quando parar a gravação</string>
+    <string name="batch_processing_chunk">A processar parte %1$d de %2$d&#8230;</string>
+    <string name="batch_merging_insights">A combinar análises&#8230;</string>
+    <string name="batch_analysis_complete">Análise concluída</string>
+
+    <!-- Settings: default insight strategy per mode -->
+    <string name="settings_default_strategy">Estratégia de análise predefinida</string>
+
+    <!-- Session card: batch badge -->
+    <string name="session_badge_batch">Lote</string>
+
+    <!-- Session topic field -->
+    <string name="session_topic_label">Tópico principal (opcional)</string>
+    <string name="session_topic_hint">ex., Orçamento Q1, palestra de IA&#8230;</string>
+    <string name="session_topic_helper">Ajude a IA: descreva o tópico principal para análises mais relevantes</string>
+    <!-- Injected as system-prompt prefix when a session topic is set. %1$s = topic text. -->
+    <string name="session_topic_prefix">Tema principal desta gravação: "%1$s". Focalize sua análise neste tema.</string>
+
+    <!-- Search screen -->
+    <string name="search_hint">Pesquisar transcrições…</string>
+    <string name="search_empty_prompt">Pesquise as suas transcrições</string>
+    <string name="search_no_results">Nenhum resultado encontrado</string>
+    <string name="search_source_transcription">Transcrição</string>
+    <string name="search_source_insight">Análise</string>
+    <string name="search_source_session_name">Nome da sessão</string>
+
+    <!-- LLM model download in Settings -->
+    <string name="settings_llm_model_file_title">Ficheiro do modelo IA</string>
+    <string name="settings_llm_model_file_desc">O modelo IA corre inteiramente no seu dispositivo. Não é necessária internet após o download.</string>
+    <string name="settings_llm_model_ready">Pronto</string>
+    <string name="settings_llm_model_not_downloaded">Não descarregado</string>
+    <string name="settings_llm_model_download">Descarregar</string>
+    <string name="settings_llm_model_retry">Repetir download</string>
+    <string name="settings_llm_model_downloading">A descarregar %1$d%%</string>
+
+    <!-- LLM Model Variant Setting -->
+    <string name="settings_llm_model_variant_title">Qualidade do modelo de IA</string>
+    <string name="settings_llm_model_variant_desc">Escolha entre maior precisão ou melhor eficiência de bateria. Faça o download do modelo novamente após a alteração.</string>
+    <string name="settings_llm_model_variant_q8_name">Padrão (Q8)</string>
+    <string name="settings_llm_model_variant_q8_desc">Maior precisão · Para dispositivos topo de gama</string>
+    <string name="settings_llm_model_variant_iq4_name">Eficiente (IQ4)</string>
+    <string name="settings_llm_model_variant_iq4_desc">Otimizado para eficiência energética</string>
+    <string name="settings_llm_model_variant_recommended">Recomendado para o seu dispositivo</string>
+    <string name="settings_llm_model_variant_downloaded">Transferido</string>
+    <string name="settings_llm_model_variant_beta">Beta</string>
+    <string name="settings_llm_advanced_section_title">Modelos avançados</string>
+    <string name="settings_llm_advanced_section_desc">Modelos experimentais para utilizadores avançados. O desempenho pode variar em relação aos modelos padrão.</string>
+    <string name="settings_llm_model_variant_qwen35_name">Qwen 3.5 0.8B (Q8)</string>
+    <string name="settings_llm_model_variant_qwen35_desc">Arquitetura alternativa · Experimental</string>
+</resources>

@@ -1,0 +1,43 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+**/build/
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+*.apk
+*.ap_
+*.dex
+.idea/
+
+# Release bundles and APKs
+app/release/
+*.aab
+
+# Firebase / Google Services — copy google-services.json.example and fill in your credentials
+google-services.json
+
+# Signing keys and certificates
+*.jks
+*.p12
+*.keystore
+secrets.properties
+
+# Environment files
+.env
+.env.*
+
+# Claude Code IDE configuration
+.claude/
+CLAUDE.md
+
+# Build artifacts
+build_log.txt

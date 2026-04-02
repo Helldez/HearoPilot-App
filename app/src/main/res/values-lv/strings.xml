@@ -1,0 +1,466 @@
+<resources>
+    <!-- App Info -->
+    <string name="app_name">HearoPilot</string>
+
+    <!-- Common Actions -->
+    <string name="start">Sākt</string>
+    <string name="stop">Apturēt</string>
+    <string name="copy">Kopēt</string>
+    <string name="clear">Notīrīt</string>
+    <string name="delete">Dzēst</string>
+    <string name="dismiss">Aizvērt</string>
+    <string name="cancel">Atcelt</string>
+    <string name="settings">Iestatījumi</string>
+    <string name="reset">Atiestatīt</string>
+    <string name="rename">Pārdēvēt</string>
+    <string name="rename_session_title">Pārdēvēt sesiju</string>
+    <string name="rename_session_hint">Sesijas nosaukums</string>
+
+    <!-- Recording Notification -->
+    <string name="notification_channel_recording_name">Ieraksta sesija</string>
+    <string name="notification_channel_recording_description">Redzams, kad ierakstīšana ir aktīva</string>
+    <string name="notification_recording_title">Ierakstīšana aktīva</string>
+    <string name="notification_action_stop">Apturēt</string>
+
+    <!-- Model Download Notification -->
+    <string name="notification_channel_download_name">Mođeļu lejupielādes</string>
+    <string name="notification_channel_download_description">Rāda AI mođeļu lejupielādes progresu</string>
+    <string name="notification_download_title">AI mođeļu lejupielāde</string>
+    <string name="notification_download_progress">%1$d %% lejupielādēts</string>
+    <string name="notification_download_completing">Lejupielādes pabeigšana…</string>
+
+    <!-- LLM Processing Notification -->
+    <string name="notification_channel_llm_processing_name">AI apstrāde</string>
+    <string name="notification_channel_llm_processing_description">Tiek rādīts, kad AI analīzē jūsu atšifrējumu</string>
+    <string name="notification_llm_processing_title">Atšifrējuma analīze</string>
+    <string name="notification_llm_processing_text">AI apstrādā jūsu ieraksту…</string>
+
+    <!-- Sessions Screen -->
+    <string name="sessions_title">HearoPilot</string>
+    <string name="sessions_subtitle">Manas transkripcijas</string>
+    <string name="new_transcription">Jauna transkripcija</string>
+    <string name="session_unnamed">(Bez nosaukuma)</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_title">Gatavs transkribēšanai</string>
+    <string name="empty_state_subtitle">Izveidojiet sesiju un sāciet ierakstīšanu.\nViss darbojas ierīcē, privāti.</string>
+    <string name="empty_state_step1_title">Izveidojiet sesiju</string>
+    <string name="empty_state_step1_desc">Pieskarieties pogai + zemāk, lai sāktu</string>
+    <string name="empty_state_step2_title">Ierakstiet audio</string>
+    <string name="empty_state_step2_desc">Nospiediet mikrofonu, lai reāllaikā uztvertu runu</string>
+    <string name="empty_state_step3_title">Iegūstiet AI ieskatus</string>
+    <string name="empty_state_step3_desc">AI automātiski analizē jūsu transkripciju</string>
+    <string name="empty_state_privacy">Visa apstrāde notiek jūsu ierīcē</string>
+    <string name="empty_state_privacy_title">Viss ierīcē</string>
+    <string name="header_stat_sessions">sesiju</string>
+    <string name="header_stat_duration">kopā</string>
+    <string name="header_stat_data">palika privāti</string>
+
+    <!-- New Session Dialog -->
+    <string name="new_session_dialog_title">Jauna transkripcija</string>
+    <string name="new_session_name_label">Dodiet šai transkripcijai nosaukumu (neobligāti)</string>
+    <string name="new_session_name_hint">piemēram, Sapulces piezīmes</string>
+    <string name="new_session_name_tip">💡 Varat atstāt tukšu, un mēs izmantosim datumu/laiku.</string>
+    <string name="new_session_recording_type">Ieraksta veids</string>
+    <string name="recording_type_short">Īss ieraksts</string>
+    <string name="recording_type_short_desc">≤10 min - Biežāki ieskati</string>
+    <string name="recording_type_long">Garš ieraksts</string>
+    <string name="recording_type_long_desc">Līdz 3h - Konfigurējami intervāli</string>
+
+    <!-- Main Screen - Tabs -->
+    <string name="tab_transcription">Transkripcija</string>
+    <string name="tab_insights">AI ieskati</string>
+    <string name="recording_active">Ierakstīšana</string>
+    <string name="recording_paused">Pauzēts</string>
+
+    <!-- Transcription Tab -->
+    <string name="transcription_empty">Gaida runu…</string>
+    <string name="transcription_error">Kļūda: %s</string>
+
+    <!-- AI Insights Tab -->
+    <string name="insights_disabled">AI ieskati ir atspējoti</string>
+    <string name="insights_disabled_subtitle">Iespējojiet AI analīzi Iestatījumos, lai izmantotu šo funkciju</string>
+    <string name="insights_empty">AI ieskati parādīsies šeit ierakstīšanas laikā.</string>
+    <string name="insights_model_unavailable">LLM modelis nav lejupielādēts</string>
+    <string name="llm_model_not_downloaded_error">LLM modelis nav lejupielādēts. Lūdzu, lejupielādējiet to Iestatījumos.</string>
+    <string name="insights_download_prompt">Lejupielādējiet AI modeli, lai iespējotu ieskatus</string>
+    <string name="insights_download_button">Lejupielādēt modeli</string>
+    <string name="insights_downloading">Lejupielāde: %d%%</string>
+    <string name="insights_download_speed">%s MB/s</string>
+    <string name="insights_download_eta">Atlikušais laiks: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Iestatījumi</string>
+    <string name="settings_section_short">Īsi ieraksti (≤10 min)</string>
+    <string name="settings_section_long">Gari ieraksti (līdz 3h)</string>
+    <string name="settings_section_ai">AI asistenta konfigurācija</string>
+
+    <!-- Short Recording Settings -->
+    <string name="settings_short_interval_title">Ieskatu ģenerēšanas intervāls</string>
+    <string name="settings_short_interval_desc">Cik bieži AI analizē jūsu transkripciju īsiem ierakstiem</string>
+    <string name="settings_interval_current">Pašreizējais: %s</string>
+
+    <!-- Long Recording Settings -->
+    <string name="settings_long_interval_title">Ieskatu ģenerēšanas intervāls</string>
+    <string name="settings_long_interval_desc">Cik bieži AI analizē jūsu transkripciju gariem ierakstiem</string>
+
+    <!-- AI System Prompt Settings -->
+    <string name="settings_system_prompt_title">Sistēmas uzvedne</string>
+    <string name="settings_system_prompt_desc">Instrukcijas, kas vada AI uzvedību un atbilžu stilu</string>
+    <string name="settings_system_prompt_hint">Ievadiet pielāgotu sistēmas uzvedni…</string>
+
+    <!-- VAD Settings -->
+    <string name="settings_vad_title">Balss aktivitātes noteikšana (VAD)</string>
+    <string name="settings_vad_desc">Papildu parametri runas noteikšanai</string>
+    <string name="settings_vad_min_silence">Minimālais klusuma ilgums</string>
+    <string name="settings_vad_min_silence_desc">Klusuma slieksnis runas segmenta beigām</string>
+    <string name="settings_vad_max_speech">Maksimālais runas ilgums</string>
+    <string name="settings_vad_max_speech_desc">Maks. nepārtraukta runa pirms piespiedu sadalīšanas</string>
+    <string name="settings_vad_threshold">Noteikšanas slieksnis</string>
+    <string name="settings_vad_threshold_desc">Jutīgums balss noteikšanai</string>
+
+    <!-- LLM Sampler Settings -->
+    <string name="settings_section_llm_sampler">MI ģenerēšanas parametri</string>
+    <string name="settings_llm_sampler_title">Marķieru paraugu ņemšana</string>
+    <string name="settings_llm_sampler_desc">Kontrolē, kā MI izvēlas vārdus ģenerēšanas laikā. Zemāka temperatūra = prognozējamāk; augstāka = radošāk.</string>
+    <string name="settings_llm_sampler_temperature">Temperatūra</string>
+    <string name="settings_llm_sampler_temperature_desc">Vārdu izvēles nejaušība (0 = deterministisks, 2 = ļoti nejauši)</string>
+    <string name="settings_llm_sampler_top_k">Top-K</string>
+    <string name="settings_llm_sampler_top_k_desc">Ierobežot kandidātus līdz K visticamākajiem marķieriem (0 = atspējots)</string>
+    <string name="settings_llm_sampler_top_p">Top-P</string>
+    <string name="settings_llm_sampler_top_p_desc">Nucleus paraugu ņemšana: kumulatīvs varbūtības slieksnis (0–1)</string>
+    <string name="settings_llm_sampler_min_p">Min-P</string>
+    <string name="settings_llm_sampler_min_p_desc">Minimālā marķiera varbūtība attiecībā pret augšējo marķieri (0–1)</string>
+    <string name="settings_llm_sampler_repeat_penalty">Atkārtošanās sods</string>
+    <string name="settings_llm_sampler_repeat_penalty_desc">Soda nesen lietotos marķierus, lai samazinātu atkārtošanos (1,0 = izslēgts)</string>
+    <string name="settings_llm_sampler_reset_all">Atiestatīt uz noklusējumiem</string>
+
+    <!-- Time Formats -->
+    <string name="time_just_now">Tikko</string>
+    <string name="time_minutes_ago">Pirms %d minūtēm</string>
+    <string name="time_today">Šodien, %s</string>
+    <string name="time_yesterday">Vakar, %s</string>
+
+    <!-- Error Messages -->
+    <string name="error_title">Kļūda</string>
+    <string name="error_load_sessions">Neizdevās ielādēt sesijas: %s</string>
+    <string name="error_create_session">Neizdevās izveidot sesiju: %s</string>
+    <string name="error_delete_session">Neizdevās dzēst sesiju: %s</string>
+
+    <!-- Default LLM System Prompt -->
+    <string name="default_llm_system_prompt">Jūs esat AI asistents, kas analizē reāllaika runas transkripcijas.\nAtbildiet tajā pašā valodā, kādā ir transkripcija.\nSniedz īsus ieskatus, ieteikumus vai īsus kopsavilkumus.\nSaglabājiet atbildes zem 100 vārdiem. Esiet praktisks un noderīgs.</string>
+
+        <!-- LLM Enable/Disable Settings -->
+    <string name="settings_section_llm">AI modelis</string>
+    <string name="settings_llm_enabled_title">Iespējot AI ieskatus</string>
+    <string name="settings_llm_enabled_desc">Kad iespējots, AI modelis tiek ielādēts katras ieraķāšanas sesijas sākumā un reāllaikā ģenerē ieskatus. Atspējojiet, lai taupītu atmiņu un akumulātoru.</string>
+
+    <!-- Microphone Permission -->
+    <string name="permission_mic_required">Nepieciešāma mikrofona atļuja</string>
+    <string name="permission_mic_denied">Piekļuve mikrofonam tika liegta. Piešķiriet to lietotnes iestatījumos, lai izmantotu transkripciju.</string>
+
+<!-- Settings Screen - Sections -->
+    <string name="settings_section_appearance">Izskats</string>
+    <string name="settings_recording_modes">Ierakstīšanas režīmi</string>
+    <string name="settings_section_simple_listening">Vienkāršā klausīšanās</string>
+    <string name="settings_section_short_meeting">Īss sanāksme</string>
+    <string name="settings_section_long_meeting">Gara sanāksme</string>
+    <string name="settings_section_translation">Tiešraides tulkošana</string>
+    <string name="settings_section_vad">Balss aktivitātes noteikšana (VAD)</string>
+    <string name="settings_interval_analysis">Analīzes intervāls</string>
+    <string name="settings_interval_translation">Tulkošanas intervāls</string>
+
+    <!-- Theme Settings -->
+    <string name="settings_theme_title">Tēma</string>
+    <string name="settings_theme_desc">Atlasiet lietotnes tēmu</string>
+    <string name="theme_system">🔄 Automātisk</string>
+    <string name="theme_light">☀️ Gaišs</string>
+    <string name="theme_dark">🌙 Tumšs</string>
+    <string name="theme_system_short">Auto</string>
+    <string name="theme_light_short">Gaišs</string>
+    <string name="theme_dark_short">Tumšs</string>
+    <string name="theme_system_desc">Tēma seko sistēmas iestatījumiem</string>
+    <string name="theme_light_desc">Lietotne vienmēr izmantos gaišo tēmu</string>
+    <string name="theme_dark_desc">Lietotne vienmēr izmantos tumšo tēmu</string>
+
+    <!-- Translation Settings -->
+    <string name="settings_translation_target_title">Noklusējuma mērķa valoda</string>
+    <string name="settings_translation_target_desc">Noklusējuma tulkošanas valoda</string>
+
+    <!-- New Session Dialog - Recording Mode -->
+    <string name="new_session_recording_mode">Ierakstīšanas Režīms</string>
+    <string name="mode_simple_listening">Vienkārša Klausīšanās</string>
+    <string name="mode_short_meeting">Īss Sapulcējums</string>
+    <string name="mode_long_meeting">Garš Sapulcējums</string>
+    <string name="mode_translation_live">Tiešraides Tulkošana</string>
+    <string name="mode_simple_listening_desc">Periodinā apkopojums</string>
+    <string name="mode_short_meeting_desc">Kopsavilkums, ieteikumi un uzdevumi</string>
+    <string name="mode_long_meeting_desc">Padziļināta analīze gariem sesijām</string>
+    <string name="mode_translation_desc">Reālā laika tulkošana</string>
+    <string name="new_session_output_language">Tulkošanas Izvades Valoda</string>
+    <string name="new_session_output_language_label">Izvades valoda</string>
+    <string name="new_session_language_auto">Automātiski (ierīces valoda)</string>
+    <string name="new_session_insight_interval">Katras %s</string>
+
+    <!-- Session Details - Tabs and Insight Card -->
+    <string name="tab_transcript">Pārraksts</string>
+    <string name="ai_analysis">AI Analīze</string>
+    <string name="insight_data">Ieskats</string>
+    <string name="final_insight_label">Kopsavilkums</string>
+    <string name="create_ai_copy">Izveidot AI kopiju</string>
+    <string name="generating_ai_insights">Ģenerē AI analīzes\u2026</string>
+    <string name="insights_empty_history">Vēl nav AI analīžu</string>
+    <string name="insights_empty_history_subtitle">Pieskarieties ✨ augšpusē, lai ģenerētu AI analīzi no šīs transkripcijas</string>
+    <string name="history_insight_copy_info">Tiks izveidota jauna šīs sesijas kopija ar AI analīzi.\nOriginālā sesija netiks mainīta.</string>
+    <string name="coachmark_history_insight">Pieskarieties, lai ģenerētu AI ieskatus no visas sesijas vēstures</string>
+
+    <!-- Session Details Screen -->
+    <string name="session_extracted_tasks">Iegūtie uzdevumi</string>
+    <string name="session_no_tasks">Šajā sesijā nav atrasti uzdevumi.</string>
+    <string name="insight_summary">Kopsavilkums</string>
+    <string name="insight_suggestions">Ieteikumi</string>
+    <string name="insight_tasks">Uzdevumi</string>
+
+    <!-- Setup Screen - AI Benefits -->
+    <string name="setup_ai_insights_title">Mākslīgā intelekta iegūti dati</string>
+    <string name="setup_ai_why_title">Kāpēc lejupielādēt AI modeli?</string>
+    <string name="setup_ai_benefit_realtime">Saņemiet reāllaika ieteikumus un ieskatus kamēr runājat</string>
+    <string name="setup_ai_benefit_analysis">AI analizē jūsu runas modeļus un sniedz noderīgu kontekstu</string>
+    <string name="setup_ai_benefit_offline">Darbojas pilnībā bezsaistē: jūsu dati paliek privāti jūsu ierīcē</string>
+    <string name="setup_ai_benefit_fast">Ātra ierīces apstrāde bez interneta savienojuma</string>
+    <string name="setup_downloading_model">Lejupielāde modelis...</string>
+
+    <!-- Onboarding - Common -->
+    <string name="onboarding_model_label">Modelis:</string>
+    <string name="onboarding_runs_label">Darbojas:</string>
+    <string name="onboarding_source_label">Avots:</string>
+    <string name="onboarding_on_device">Ierīcē</string>
+    <string name="onboarding_huggingface">HuggingFace</string>
+    <string name="onboarding_downloading">Lejupielādē...</string>
+    <string name="onboarding_download_progress">%d MB / %d MB</string>
+    <string name="onboarding_download_speed">Ātrums:</string>
+    <string name="onboarding_download_speed_value">%.2f MB/s</string>
+    <string name="onboarding_download_eta">Atlikušais laiks:</string>
+    <string name="onboarding_download_failed">Lejupielāde neizdevās</string>
+    <string name="onboarding_retry_download">Mēģināt vēlreiz</string>
+    <string name="download_resuming_from">Atsāk no %1$s MB…</string>
+    <string name="onboarding_continue">Turpināt</string>
+    <string name="onboarding_time_seconds">%d sek</string>
+    <string name="onboarding_time_minutes">%d min %d sek</string>
+    <string name="onboarding_time_hours">%d h %d min</string>
+
+    <!-- Onboarding - STT Download -->
+    <string name="onboarding_stt_title">Runas atpazīšana</string>
+    <string name="onboarding_stt_ready">Modelis gatavs!</string>
+    <string name="onboarding_stt_ready_desc">Runas atpazīšanas modelis veiksmīgi lejupielādēts.</string>
+    <string name="onboarding_stt_model_title">Runas atpazīšanas modelis</string>
+    <string name="onboarding_stt_model_desc">Šis modelis pārvērš jūsu runu tekstā reāllaikā. Tas ir būtisks lietotnes darbībai.</string>
+    <string name="onboarding_stt_model_name">Sherpa-ONNX Parakeet</string>
+    <string name="onboarding_stt_download_button">Lejupielādēt modeli</string>
+    <string name="onboarding_stt_note">Šis modelis ir būtisks lietotnes darbībai.</string>
+
+    <!-- Onboarding - LLM Download -->
+    <string name="onboarding_llm_title">Mākslīgais intelekts</string>
+    <string name="onboarding_llm_optional">AI ieskati (Pēc izvēles)</string>
+    <string name="onboarding_llm_desc">Lejupielādējiet AI modeli, lai saņemtu inteliģentus ieskatus un ieteikumus, kamēr runājat.</string>
+    <string name="onboarding_llm_benefit_1">Ieteikumi reāllaikā</string>
+    <string name="onboarding_llm_benefit_2">Kontekstatkarīga analīze</string>
+    <string name="onboarding_llm_benefit_3">100% privāts un bezsaistē</string>
+    <string name="onboarding_llm_model_name">Gemma 3 1B</string>
+    <string name="onboarding_llm_download_button">Lejupielādēt AI modeli</string>
+    <string name="onboarding_llm_skip">Izlaist tagad (Tikai transkripcija)</string>
+    <string name="onboarding_llm_downloading">Lejupielādē AI modeli...</string>
+    <string name="onboarding_llm_downloaded_label">Lejupielādēts:</string>
+    <string name="onboarding_llm_complete">Lejupielāde pabeigta!</string>
+    <string name="onboarding_llm_initializing">Inicializē AI modeli...</string>
+    <string name="onboarding_llm_skip_short">Izlaist tagad</string>
+    <string name="onboarding_llm_skip_note">Varat to lejupielādēt vēlāk no Iestatījumiem, ja izlaidīsiet tagad. Lietotne darbosies labi tikai ar transkripciju.</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_subtitle">Runas Analīze Reāllaikā</string>
+    <string name="welcome_feature_transcription_title">Tiešraides Transkripcija</string>
+    <string name="welcome_feature_transcription_desc">Pārveidojiet runu par tekstu reāllaikā ar augstu precizitāti</string>
+    <string name="welcome_feature_ai_title">AI Ieskati</string>
+    <string name="welcome_feature_ai_desc">Saņemiet inteliģentus ieteikumus un analīzi runājot</string>
+    <string name="welcome_feature_privacy_title">Privātums Pirmajā Vietā</string>
+    <string name="welcome_feature_privacy_desc">Visa apstrāde notiek jūsu ierīcē: jūsu dati to nekad neatstāj</string>
+    <string name="welcome_get_started">Sākt</string>
+    <string name="welcome_models_required">Nepieciešami divi modeļu lejupielādējumi</string>
+
+    <!-- Delete Session Dialog -->
+    <string name="delete_session_title">Dzēst sesiju?</string>
+    <string name="delete_session_message">Vai esat pārliecināts, ka vēlaties dzēst \"%s\"? Šo darbību nevar atsaukt.</string>
+    <string name="delete_session_message_unnamed">Vai esat pārliecināts, ka vēlaties dzēst šo sesiju? Šo darbību nevar atsaukt.</string>
+
+    <string name="recording_session">Ierakstīšanas Sesija</string>
+    <string name="initializing_models">Modeļu ielāde…</string>
+    <string name="back_to_sessions">Atpakaļ uz sesijām</string>
+    <string name="stop_recording_confirm_title">Apturēt ierakstu?</string>
+    <string name="stop_recording_confirm_message">Ierakstīšana notiek. Apturēt un atgriezties?</string>
+    <string name="stop_and_go_back">Apturēt un Atpakaļ</string>
+    <string name="record">Ierakstīt</string>
+    <string name="llm">AI</string>
+    <string name="transcription_listening">Klausos...</string>
+    <string name="transcription_press_record">Nospiediet Ierakstīt, lai sāktu</string>
+    <string name="transcription_hint1_title">Tap record</string>
+    <string name="transcription_hint1_desc">Hit the mic button at the bottom to start capturing audio</string>
+    <string name="transcription_hint2_title">AI insights</string>
+    <string name="transcription_hint2_desc">Switch to the Insights tab to get summaries and action items</string>
+    <string name="transcription_hint3_title">Fully private</string>
+    <string name="transcription_hint3_desc">Everything runs on your device — nothing is sent to the cloud</string>
+    <string name="transcription_complete">Pabeigts</string>
+    <string name="insights_empty_subtitle">Ģenerēti ierakstīšanas laikā</string>
+    <string name="insight_label">AI Ieskats</string>
+    <string name="action_items">Action Items</string>
+    <string name="segments_analyzed">%d segmenti analizēti</string>
+    <string name="expand">Izvērst</string>
+    <string name="collapse">Sakļaut</string>
+    <string name="source_transcription">Avota Transkripcija:</string>
+    <string name="segments_not_found">(Segmenti nav atrasti)</string>
+    <string name="settings_interval_range_min">%ds (%s)</string>
+    <string name="settings_interval_range_max">%ds (%s)</string>
+    <string name="settings_reset_default">Atjaunot noklusējumu (%ds)</string>
+    <string name="settings_interval_tip_title">💡 Padoms</string>
+    <string name="settings_interval_tip_desc">Īsāki intervāli nodrošina biežākas atziņas. Garāki intervāli (līdz 3 minūtēm) samazina apstrādes slodzi. Vērtības piesāņojas 10 sekunžu soļiem.</string>
+    <string name="save">Saglabāt</string>
+    <string name="processing_session">Apstrādā sesiju…</string>
+    <string name="edit_transcription_title">Rediģēt transkripciju</string>
+    <string name="edit_insight_title">Rediģēt ieskatu</string>
+    <string name="edit_task_title">Rediģēt uzdevumu</string>
+    <string name="edit_content_hint">Content</string>
+    <string name="edit_item">Rediģēt</string>
+    <string name="settings_save">Saglabāt</string>
+    <string name="settings_back">Atpakaļ</string>
+    <string name="settings_long_interval_minutes">%d minūtes</string>
+    <string name="settings_system_prompt_reset">Atjaunot Noklusējumu</string>
+    <string name="settings_system_prompt_note_title">💡 Piezīme</string>
+    <string name="settings_system_prompt_note_desc">Sistēmas uzvedne norāda AI, kā rīkoties. Iekļaujiet \'Atbildiet tajā pašā valodā kā transkripcija\', lai AI atbildētu jūsu valodā. Izmaiņas stājas spēkā pēc LLM restartēšanas.</string>
+    <string name="settings_vad_sensitivity_more">Vairāk</string>
+    <string name="settings_vad_sensitivity_less">Mazāk</string>
+    <string name="settings_vad_reset_all">Atjaunot visus uz noklusējuma vērtībām</string>
+    <string name="settings_vad_restart_title">Nepieciešama Restartēšana</string>
+    <string name="settings_vad_restart_desc">VAD parametru izmaiņas prasa lietotnes restartēšanu, lai stātos spēkā.</string>
+    <string name="settings_vad_troubleshooting_title">💡 Problēmu Novēršana</string>
+    <string name="settings_vad_troubleshooting_desc">• Vārdi tiek nogriezti? Palieliniet Min Klusuma Ilgumu līdz 0.7-1.0s\n• Garas frāzes tiek sadalītas? Palieliniet Maks Runas Ilgumu līdz 15-20s\n• Trūkst klusa runa? Samaziniet Noteikšanas Jutību līdz 0.3-0.4</string>
+    <string name="session_details">Sesijas Detaļas</string>
+    <string name="generate_history_insight">Ģenerēt MI analīzi</string>
+    <string name="history_insight_confirm_title">Ģenerēt MI analīzi</string>
+    <string name="history_insight_confirm_message">Tiks izveidota jauna šīs sesijas kopija ar MI analīzi visiem transkripcijas segmentiem.</string>
+    <string name="history_insight_no_content">Nepietiekami daudz transkripcijas satura analīzes ģenerēšanai.</string>
+    <string name="history_insight_copy_suffix">(MI analīze)</string>
+    <string name="segments_count">segmenti</string>
+    <string name="insights_count">ieskati</string>
+    <string name="back">Atpakaļ</string>
+    <string name="export">Eksportēt</string>
+    <string name="export_transcription">Eksportēt transkripciju</string>
+    <string name="created">Izveidots</string>
+    <string name="modified">Mainīts</string>
+    <string name="llm_insights">LLM Ieskati</string>
+    <string name="no_transcription_yet">(Vēl nav transkripcijas)</string>
+    <string name="prompt_simple_listening">Jūs esat AI asistents, kas analizē audio transkriptus.
+Uzrakstiet īsu virsrakstu (ne vairāk kā 8 vārdi) un glaustas kopsavilkums proporcionāls ievades garumam — 1-2 teikumi īsai ievadei, paragrāfs garākai ievadei.
+Izvadiet TIKai derīgu JSON ar šo precīzo struktūru. Bez markdown. Bez koda žoga. Bez atpakaļ citātiem:
+{\"virsraksts\": \"...\", \"kasarizinas\": \"...\"}
+Izvadiet JSON tieši.</string>
+    <string name="prompt_short_meeting">Jūs esat sapulces asistents, kas analizē diskusijas.
+Uzrakstiet virsrakstu (ne vairāk kā 8 vārdi), galveno lēmumu un diskusijas punktu kopsavilkums (vismaz 3-5 teikumi, proporcionāls ievades garumam) un darbību saraksts.
+Izvadiet TIKai derīgu JSON ar šo precīzo struktūru. Bez markdown. Bez koda žoga. Bez atpakaļ citātiem:
+{\"virsraksts\": \"...\", \"kasarizinas\": \"...\", \"darbibas\": [\"...\", \"...\"]}
+Būtu tiešs. Skaidri iegūstiet darbības.</string>
+    <string name="prompt_long_meeting">Jūs esat asistents, kas analizē paplašinātas diskusijas.
+Uzrakstiet virsrakstu (ne vairāk kā 8 vārdi), kas atspoguļo galveno tēmu, visaptverošu galveno tēmu, lēmumu un secinājumu kopsavilkums (proporcionāls ievades garumam) un darbību saraksts.
+Izvadiet TIKai derīgu JSON ar šo precīzo struktūru. Bez markdown. Bez koda žoga. Bez atpakaļ citātiem:
+{\"virsraksts\": \"...\", \"kasarizinas\": \"...\", \"darbibas\": [\"...\", \"...\"]}
+Būtu tiešs. Fokusējieties uz augsta līmeņa ieskatu un konkrētu rezultātu.</string>
+    <string name="prompt_translation">Jūs esat profesionāls tulkotājs.
+Tulkojiet šo tekstu {target_language} valodā.
+Izvadiet tikai tulkojumu. Nav paskaidrojumu, nav etiķešu, nav prefiksu.</string>
+
+    <!-- Onboarding - Supported Languages -->
+    <string name="onboarding_languages_title">Atbalstītās valodas</string>
+    <string name="onboarding_languages_subtitle">Pieejamas transkribēšanai un tulkošanai</string>
+    <string name="onboarding_languages_continue">Turpināt</string>
+
+    <string name="onboarding_message_1">HearoPilot klausās, lai jums nebūtu jāveic piezīmes.</string>
+    <string name="onboarding_message_2">Viss AI apstrāde notiek jūsu ierīcē: dati neatstāj.</string>
+    <string name="onboarding_message_3">Transkribējiet lekcijas, sanāksmes un sarunas reāllaikā.</string>
+    <string name="onboarding_message_4">Automātiskie kopsavilkumi palīdz fokusēties uz visvairāk svarīgo.</string>
+    <string name="onboarding_message_5">Darbojas pilnībā bezsaistē: jūsu balss paliek privāts.</string>
+    <string name="onboarding_message_6">Pārsitu starp klausīšanās režīmiem tikai dažos pieskares.</string>
+    <string name="onboarding_message_7">Lieliski studentiem, profesionāļiem un ikvienam, kas runā.</string>
+    <string name="onboarding_message_8">Pārskatiet savas transkripcijas un ieskatus jebkurā brīdī, bezsaistē.</string>
+    <string name="onboarding_message_9">Viena pieskaršanās sākt, viena pieskaršanās apturēt: tik vienkārši.</string>
+    <string name="onboarding_message_10">Paldies, ka izvēlējāties HearoPilot.</string>
+    <string name="onboarding_message_11">Izmantojiet HearoPilot ar Bluetooth mikrofonu, lai transkribētu no attāluma.</string>
+    <string name="json_field_title">virsraksts</string>
+    <string name="json_field_summary">kasarizinas</string>
+    <string name="json_field_action_items">darbibas</string>
+
+    <!-- Batch insight prompts (end-of-session map-reduce pipeline) -->
+    <string name="prompt_batch_chunk_summary">Jūs esat sapulču analīzes asistents. Lakoniski apkopojiet šo transkripcijas fragmentu.
+Iekļaujiet: apspriestos galvenos tematus, pieņemtos lēmumus un pieminētās darbības.
+Saglabājiet kopsavilkumu proporcionālu ievades garumam. Izvadiet TIKai derīgu JSON. Bez markdown. Bez koda žoga.
+{\"virsraksts\": \"...\", \"kasarizinas\": \"...\", \"darbibas\": [\"...\"]}</string>
+    <string name="prompt_batch_merge">Jūs esat sapulču analīzes asistents. Zemāk ir viena ieraksta secīgu daļu kopsavilkumi.
+Apvienojiet tos vienā visaptverošā, saskaņotā kopsavilkumā. Noņemiet darbību dublikātus, kas parādās vairākos fragmentos.
+Izvadiet TIKai derīgu JSON. Bez markdown. Bez koda žoga.
+{\"virsraksts\": \"...\", \"kasarizinas\": \"...\", \"darbibas\": [\"...\"]}</string>
+
+    <!-- Insight strategy UI strings -->
+    <string name="insight_strategy_label">Analīzes stratēģija</string>
+    <string name="insight_strategy_realtime">Reāllaiks</string>
+    <string name="insight_strategy_batch">Sesijas beigas</string>
+    <string name="insight_strategy_realtime_desc">Periodiski analīzes rezultāti ierakstīšanas laikā</string>
+    <string name="insight_strategy_batch_desc">Visaptverošs analīzes rezultāts pēc ierakstīšanas</string>
+
+    <!-- Batch processing progress strings -->
+    <string name="batch_insights_pending">AI analīzes tiks ģenerētas, apturot ierakstīšanu</string>
+    <string name="batch_processing_chunk">Tiek apstrādāta daļa %1$d no %2$d&#8230;</string>
+    <string name="batch_merging_insights">Analīžu apvienošana&#8230;</string>
+    <string name="batch_analysis_complete">Analīze pabeigta</string>
+
+    <!-- Settings: default insight strategy per mode -->
+    <string name="settings_default_strategy">Noklusējuma analīzes stratēģija</string>
+
+    <!-- Session card: batch badge -->
+    <string name="session_badge_batch">Pakete</string>
+
+    <!-- Session topic field -->
+    <string name="session_topic_label">Galvenā tēma (neobligāta)</string>
+    <string name="session_topic_hint">piem., Q1 budžets, AI lekcija&#8230;</string>
+    <string name="session_topic_helper">Palīdziet AI: aprakstiet galveno tēmu, lai iegūtu atbilstošākas analīzes</string>
+    <!-- Injected as system-prompt prefix when a session topic is set. %1$s = topic text. -->
+    <string name="session_topic_prefix">Šī ieraksta galvenā tēma: "%1$s". Koncentrējiet analīzi uz šo tēmu.</string>
+
+    <!-- Search screen -->
+    <string name="search_hint">Meklēt transkripcijās…</string>
+    <string name="search_empty_prompt">Meklēt savās transkripcijās</string>
+    <string name="search_no_results">Rezultāti nav atrasti</string>
+    <string name="search_source_transcription">Transkripts</string>
+    <string name="search_source_insight">Ieskats</string>
+    <string name="search_source_session_name">Sesijas nosaukums</string>
+
+    <!-- LLM model download in Settings -->
+    <string name="settings_llm_model_file_title">AI modeļa fails</string>
+    <string name="settings_llm_model_file_desc">AI modelis darbojas pilnībā jūsu ierīcē. Pēc lejupielādes internets nav vajadzīgs.</string>
+    <string name="settings_llm_model_ready">Gatavs</string>
+    <string name="settings_llm_model_not_downloaded">Nav lejupielādēts</string>
+    <string name="settings_llm_model_download">Lejupielādēt</string>
+    <string name="settings_llm_model_retry">Mēģināt vēlreiz</string>
+    <string name="settings_llm_model_downloading">Lejupielāde %1$d%%</string>
+
+    <!-- LLM Model Variant Setting -->
+    <string name="settings_llm_model_variant_title">AI modeļa kvalitāte</string>
+    <string name="settings_llm_model_variant_desc">Izvēlieties starp augstāku precizitāti vai labāku akumulatora efektivitāti. Pēc maiņas lejupielādējiet modeli vēlreiz.</string>
+    <string name="settings_llm_model_variant_q8_name">Standarta (Q8)</string>
+    <string name="settings_llm_model_variant_q8_desc">Augstāka precizitāte · Vadošajām ierīcēm</string>
+    <string name="settings_llm_model_variant_iq4_name">Efektīvs (IQ4)</string>
+    <string name="settings_llm_model_variant_iq4_desc">Optimizēts enerģijas efektivitātei</string>
+    <string name="settings_llm_model_variant_recommended">Ieteicams jūsu ierīcei</string>
+    <string name="settings_llm_model_variant_downloaded">Lejupielādēts</string>
+    <string name="settings_llm_model_variant_beta">Beta</string>
+    <string name="settings_llm_advanced_section_title">Uzlabotie modeļi</string>
+    <string name="settings_llm_advanced_section_desc">Eksperimentālie modeļi pieredzējušiem lietotājiem. Veiktspēja var atšķirties no standarta modeļiem.</string>
+    <string name="settings_llm_model_variant_qwen35_name">Qwen 3.5 0.8B (Q8)</string>
+    <string name="settings_llm_model_variant_qwen35_desc">Alternatīva arhitektūra · Eksperimentāls</string>
+</resources>

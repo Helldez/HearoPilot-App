@@ -1,0 +1,475 @@
+<resources>
+    <!-- App Info -->
+    <string name="app_name">HearoPilot</string>
+
+    <!-- Common Actions -->
+    <string name="start">Începe</string>
+    <string name="stop">Oprește</string>
+    <string name="copy">Copiază</string>
+    <string name="clear">Șterge</string>
+    <string name="delete">Elimină</string>
+    <string name="dismiss">Închide</string>
+    <string name="cancel">Anulează</string>
+    <string name="settings">Setări</string>
+    <string name="reset">Resetează</string>
+    <string name="rename">Redenumire</string>
+    <string name="rename_session_title">Redenumire sesiune</string>
+    <string name="rename_session_hint">Numele sesiunii</string>
+
+    <!-- Recording Notification -->
+    <string name="notification_channel_recording_name">Sesiune de înregistrare</string>
+    <string name="notification_channel_recording_description">Afișat când înregistrarea este activă</string>
+    <string name="notification_recording_title">Înregistrare activă</string>
+    <string name="notification_action_stop">Oprește</string>
+
+    <!-- Model Download Notification -->
+    <string name="notification_channel_download_name">Descărcări de modele</string>
+    <string name="notification_channel_download_description">Afișează progresul descărcării modelelor AI</string>
+    <string name="notification_download_title">Descărcare modele AI</string>
+    <string name="notification_download_progress">%1$d %% descărcat</string>
+    <string name="notification_download_completing">Finalizare descărcare…</string>
+
+    <!-- LLM Processing Notification -->
+    <string name="notification_channel_llm_processing_name">Procesare AI</string>
+    <string name="notification_channel_llm_processing_description">Afișat când AI analizează transcrierea dvs.</string>
+    <string name="notification_llm_processing_title">Analizare transcriere</string>
+    <string name="notification_llm_processing_text">AI procesează înregistrarea dvs.…</string>
+
+    <!-- Sessions Screen -->
+    <string name="sessions_title">HearoPilot</string>
+    <string name="sessions_subtitle">Transcrierile mele</string>
+    <string name="new_transcription">Transcriere nouă</string>
+    <string name="session_unnamed">(Fără nume)</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_title">Gata de transcriere</string>
+    <string name="empty_state_subtitle">Creați o sesiune și începeți înregistrarea.\nTot se execută pe dispozitiv, privat.</string>
+    <string name="empty_state_step1_title">Creați o sesiune</string>
+    <string name="empty_state_step1_desc">Atingeți butonul + de mai jos pentru a începe</string>
+    <string name="empty_state_step2_title">Înregistrați audio</string>
+    <string name="empty_state_step2_desc">Apăsați microfonul pentru a captura vorbirea în timp real</string>
+    <string name="empty_state_step3_title">Obțineți informații AI</string>
+    <string name="empty_state_step3_desc">AI analizează transcrierea automat</string>
+    <string name="empty_state_privacy">Toată procesarea se întâmplă pe dispozitivul dvs.</string>
+    <string name="empty_state_privacy_title">Totul local</string>
+    <string name="header_stat_sessions">sesiuni</string>
+    <string name="header_stat_duration">total</string>
+    <string name="header_stat_data">rămași privați</string>
+
+    <!-- New Session Dialog -->
+    <string name="new_session_dialog_title">Transcriere nouă</string>
+    <string name="new_session_name_label">Dați un nume acestei transcrieri (opțional)</string>
+    <string name="new_session_name_hint">de ex. Notițe de întâlnire</string>
+    <string name="new_session_name_tip">💡 Puteți lăsa gol și vom folosi data/ora.</string>
+    <string name="new_session_recording_type">Tip de înregistrare</string>
+    <string name="recording_type_short">Înregistrare scurtă</string>
+    <string name="recording_type_short_desc">≤10 min - Informații frecvente</string>
+    <string name="recording_type_long">Înregistrare lungă</string>
+    <string name="recording_type_long_desc">Până la 3h - Intervale configurabile</string>
+
+    <!-- Main Screen - Tabs -->
+    <string name="tab_transcription">Transcriere</string>
+    <string name="tab_insights">Informații AI</string>
+    <string name="recording_active">Înregistrare</string>
+    <string name="recording_paused">Pauză</string>
+
+    <!-- Transcription Tab -->
+    <string name="transcription_empty">Se așteaptă vorbirea…</string>
+    <string name="transcription_error">Eroare: %s</string>
+
+    <!-- AI Insights Tab -->
+    <string name="insights_disabled">Perspectivele AI sunt dezactivate</string>
+    <string name="insights_disabled_subtitle">Activați Analiza AI în Setări pentru a utiliza această funcție</string>
+    <string name="insights_empty">Informațiile AI vor apărea aici în timpul înregistrării.</string>
+    <string name="insights_model_unavailable">Modelul LLM nu este descărcat</string>
+    <string name="llm_model_not_downloaded_error">Modelul LLM nu este descărcat. Descarcă-l din Setări.</string>
+    <string name="insights_download_prompt">Descărcați modelul AI pentru a activa informațiile</string>
+    <string name="insights_download_button">Descarcă modelul</string>
+    <string name="insights_downloading">Descărcare: %d%%</string>
+    <string name="insights_download_speed">%s MB/s</string>
+    <string name="insights_download_eta">Timp rămas: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Setări</string>
+    <string name="settings_section_short">Înregistrări scurte (≤10 min)</string>
+    <string name="settings_section_long">Înregistrări lungi (până la 3h)</string>
+    <string name="settings_section_ai">Configurare asistent AI</string>
+
+    <!-- Short Recording Settings -->
+    <string name="settings_short_interval_title">Interval generare informații</string>
+    <string name="settings_short_interval_desc">Cât de des AI analizează transcrierea pentru înregistrări scurte</string>
+    <string name="settings_interval_current">Actual: %s</string>
+
+    <!-- Long Recording Settings -->
+    <string name="settings_long_interval_title">Interval generare informații</string>
+    <string name="settings_long_interval_desc">Cât de des AI analizează transcrierea pentru înregistrări lungi</string>
+
+    <!-- AI System Prompt Settings -->
+    <string name="settings_system_prompt_title">Prompt sistem</string>
+    <string name="settings_system_prompt_desc">Instrucțiuni care ghidează comportamentul și stilul de răspuns al AI</string>
+    <string name="settings_system_prompt_hint">Introduceți prompt sistem personalizat…</string>
+
+    <!-- VAD Settings -->
+    <string name="settings_vad_title">Detectare activitate vocală (VAD)</string>
+    <string name="settings_vad_desc">Parametri avansați pentru detectarea vorbirii</string>
+    <string name="settings_vad_min_silence">Durată minimă tăcere</string>
+    <string name="settings_vad_min_silence_desc">Pragul de tăcere pentru finalizarea segmentului de vorbire</string>
+    <string name="settings_vad_max_speech">Durată maximă vorbire</string>
+    <string name="settings_vad_max_speech_desc">Max. vorbire continuă înainte de divizare forțată</string>
+    <string name="settings_vad_threshold">Prag de detectare</string>
+    <string name="settings_vad_threshold_desc">Sensibilitate pentru detectarea vocii</string>
+
+    <!-- LLM Sampler Settings -->
+    <string name="settings_section_llm_sampler">Parametrii de generare AI</string>
+    <string name="settings_llm_sampler_title">Eșantionare Token</string>
+    <string name="settings_llm_sampler_desc">Controlează cum AI selectează cuvintele în timpul generării. Temperatură mai mică = mai previzibil; mai mare = mai creativ.</string>
+    <string name="settings_llm_sampler_temperature">Temperatură</string>
+    <string name="settings_llm_sampler_temperature_desc">Aleatoriu în selecția cuvintelor (0 = determinist, 2 = foarte aleatoriu)</string>
+    <string name="settings_llm_sampler_top_k">Top-K</string>
+    <string name="settings_llm_sampler_top_k_desc">Limitați candidații la cei mai probabili K tokens (0 = dezactivat)</string>
+    <string name="settings_llm_sampler_top_p">Top-P</string>
+    <string name="settings_llm_sampler_top_p_desc">Eșantionare Nucleus: prag de probabilitate cumulativă (0–1)</string>
+    <string name="settings_llm_sampler_min_p">Min-P</string>
+    <string name="settings_llm_sampler_min_p_desc">Probabilitate minimă a token-ului față de token-ul de top (0–1)</string>
+    <string name="settings_llm_sampler_repeat_penalty">Penalizare Repetare</string>
+    <string name="settings_llm_sampler_repeat_penalty_desc">Penalizează token-urile utilizate recent pentru a reduce repetițiile (1,0 = dezactivat)</string>
+    <string name="settings_llm_sampler_reset_all">Resetați la valorile implicite</string>
+
+    <!-- Time Formats -->
+    <string name="time_just_now">Chiar acum</string>
+    <string name="time_minutes_ago">acum %d minute</string>
+    <string name="time_today">Astăzi, %s</string>
+    <string name="time_yesterday">Ieri, %s</string>
+
+    <!-- Error Messages -->
+    <string name="error_title">Eroare</string>
+    <string name="error_load_sessions">Încărcarea sesiunilor a eșuat: %s</string>
+    <string name="error_create_session">Crearea sesiunii a eșuat: %s</string>
+    <string name="error_delete_session">Ștergerea sesiunii a eșuat: %s</string>
+
+    <!-- Default LLM System Prompt -->
+    <string name="default_llm_system_prompt">Sunteți un asistent AI care analizează transcrieri de vorbire în timp real.\nRăspundeți în aceeași limbă ca transcrierea.\nOferiți informații concise, sugestii sau rezumate scurte.\nMențineți răspunsurile sub 100 de cuvinte. Fiți practic și util.</string>
+
+        <!-- LLM Enable/Disable Settings -->
+    <string name="settings_section_llm">Model AI</string>
+    <string name="settings_llm_enabled_title">Activați perspectivele AI</string>
+    <string name="settings_llm_enabled_desc">Când este activat, modelul AI este încărcat la începutul fiecărei sesiuni de înregistrare şi generează perspective în timp real. Dezactivați pentru a economisi memorie şi baterie.</string>
+
+    <!-- Microphone Permission -->
+    <string name="permission_mic_required">Permisiunea microfonului este necesară</string>
+    <string name="permission_mic_denied">Accesul la microfon a fost refuzat. Acordați-l în setările aplicației pentru a utiliza transcriere.</string>
+
+<!-- Settings Screen - Sections -->
+    <string name="settings_section_appearance">Aspect</string>
+    <string name="settings_recording_modes">Moduri de înregistrare</string>
+    <string name="settings_section_simple_listening">Ascultare simplă</string>
+    <string name="settings_section_short_meeting">Întâlnire scurtă</string>
+    <string name="settings_section_long_meeting">Întâlnire lungă</string>
+    <string name="settings_section_translation">Traducere în direct</string>
+    <string name="settings_section_vad">Detecția activității vocale (VAD)</string>
+    <string name="settings_interval_analysis">Interval de analiză</string>
+    <string name="settings_interval_translation">Interval de traducere</string>
+
+    <!-- Theme Settings -->
+    <string name="settings_theme_title">Temă</string>
+    <string name="settings_theme_desc">Selectați tema aplicației</string>
+    <string name="theme_system">🔄 Automat</string>
+    <string name="theme_light">☀️ Luminos</string>
+    <string name="theme_dark">🌙 Întunecat</string>
+    <string name="theme_system_short">Auto</string>
+    <string name="theme_light_short">Luminos</string>
+    <string name="theme_dark_short">Întunecat</string>
+    <string name="theme_system_desc">Tema urmărește setările sistemului</string>
+    <string name="theme_light_desc">Aplicația va folosi mereu tema luminoasă</string>
+    <string name="theme_dark_desc">Aplicația va folosi mereu tema întunecată</string>
+
+    <!-- Translation Settings -->
+    <string name="settings_translation_target_title">Limba țintă implicită</string>
+    <string name="settings_translation_target_desc">Limba implicită pentru traducere</string>
+
+    <!-- New Session Dialog - Recording Mode -->
+    <string name="new_session_recording_mode">Mod de Înregistrare</string>
+    <string name="mode_simple_listening">Ascultare Simplă</string>
+    <string name="mode_short_meeting">Întâlnire Scurtă</string>
+    <string name="mode_long_meeting">Întâlnire Lungă</string>
+    <string name="mode_translation_live">Traducere în Direct</string>
+    <string name="mode_simple_listening_desc">Rezumate periodice</string>
+    <string name="mode_short_meeting_desc">Rezumat, sugestii și sarcini</string>
+    <string name="mode_long_meeting_desc">Analiză aprofundată pentru sesiuni lungi</string>
+    <string name="mode_translation_desc">Traducere în timp real</string>
+    <string name="new_session_output_language">Limbă de Ieșire Traducere</string>
+    <string name="new_session_output_language_label">Limbă de ieșire</string>
+    <string name="new_session_language_auto">Automat (limba dispozitivului)</string>
+    <string name="new_session_insight_interval">La fiecare %s</string>
+
+    <!-- Session Details - Tabs and Insight Card -->
+    <string name="tab_transcript">Transcriere</string>
+    <string name="ai_analysis">Analiză IA</string>
+    <string name="insight_data">Perspectivă</string>
+    <string name="final_insight_label">Rezumat general</string>
+    <string name="create_ai_copy">Creează copie AI</string>
+    <string name="generating_ai_insights">Se generează analize AI\u2026</string>
+    <string name="insights_empty_history">Fără analize AI încă</string>
+    <string name="insights_empty_history_subtitle">Apasă ✨ de sus pentru a genera o analiză AI din această transcriere</string>
+    <string name="history_insight_copy_info">Va fi creată o nouă copie a acestei sesiuni cu analiză AI.\nSesiunea originală nu va fi modificată.</string>
+    <string name="coachmark_history_insight">Atingeți pentru a genera analize AI din întregul istoric al sesiunii</string>
+
+    <!-- Session Details Screen -->
+    <string name="session_extracted_tasks">Sarcini extrase</string>
+    <string name="session_no_tasks">Nicio sarcină găsită în această sesiune.</string>
+    <string name="insight_summary">Rezumat</string>
+    <string name="insight_suggestions">Sugestii</string>
+    <string name="insight_tasks">Sarcini</string>
+
+    <!-- Setup Screen - AI Benefits -->
+    <string name="setup_ai_insights_title">Perspective alimentate de IA</string>
+    <string name="setup_ai_why_title">De ce să descărcați modelul AI?</string>
+    <string name="setup_ai_benefit_realtime">Obțineți sugestii și perspective în timp real în timp ce vorbiți</string>
+    <string name="setup_ai_benefit_analysis">AI analizează modelele de vorbire și oferă context util</string>
+    <string name="setup_ai_benefit_offline">Funcționează complet offline: datele dvs. rămân private pe dispozitiv</string>
+    <string name="setup_ai_benefit_fast">Prelucrare rapidă pe dispozitiv fără nevoie de conexiune internet</string>
+    <string name="setup_downloading_model">Se descarcă modelul...</string>
+
+    <!-- Onboarding - Common -->
+    <string name="onboarding_model_label">Model:</string>
+    <string name="onboarding_runs_label">Se execută:</string>
+    <string name="onboarding_source_label">Sursă:</string>
+    <string name="onboarding_on_device">Pe dispozitiv</string>
+    <string name="onboarding_huggingface">HuggingFace</string>
+    <string name="onboarding_downloading">Se descarcă...</string>
+    <string name="onboarding_download_progress">%d MB / %d MB</string>
+    <string name="onboarding_download_speed">Viteză:</string>
+    <string name="onboarding_download_speed_value">%.2f MB/s</string>
+    <string name="onboarding_download_eta">Timp rămas:</string>
+    <string name="onboarding_download_failed">Descărcare eșuată</string>
+    <string name="onboarding_retry_download">Reîncearcă descărcarea</string>
+    <string name="download_resuming_from">Reluare de la %1$s MB…</string>
+    <string name="onboarding_continue">Continuă</string>
+    <string name="onboarding_time_seconds">%d sec</string>
+    <string name="onboarding_time_minutes">%d min %d sec</string>
+    <string name="onboarding_time_hours">%d ore %d min</string>
+
+    <!-- Onboarding - STT Download -->
+    <string name="onboarding_stt_title">Recunoaștere vocală</string>
+    <string name="onboarding_stt_ready">Model gata!</string>
+    <string name="onboarding_stt_ready_desc">Modelul de recunoaștere vocală descărcat cu succes.</string>
+    <string name="onboarding_stt_model_title">Model de recunoaștere vocală</string>
+    <string name="onboarding_stt_model_desc">Acest model convertește vorbirea în text în timp real. Este esențial pentru funcționarea aplicației.</string>
+    <string name="onboarding_stt_model_name">Sherpa-ONNX Parakeet</string>
+    <string name="onboarding_stt_download_button">Descarcă modelul</string>
+    <string name="onboarding_stt_note">Acest model este esențial pentru funcționarea aplicației.</string>
+
+    <!-- Onboarding - LLM Download -->
+    <string name="onboarding_llm_title">Inteligență artificială</string>
+    <string name="onboarding_llm_optional">Informații AI (Opțional)</string>
+    <string name="onboarding_llm_desc">Descărcați un model AI pentru a obține informații inteligente și sugestii în timp ce vorbiți.</string>
+    <string name="onboarding_llm_benefit_1">Sugestii în timp real</string>
+    <string name="onboarding_llm_benefit_2">Analiză contextuală</string>
+    <string name="onboarding_llm_benefit_3">100% privat și offline</string>
+    <string name="onboarding_llm_model_name">Gemma 3 1B</string>
+    <string name="onboarding_llm_download_button">Descarcă model AI</string>
+    <string name="onboarding_llm_skip">Omite deocamdată (Doar transcriere)</string>
+    <string name="onboarding_llm_downloading">Se descarcă modelul AI...</string>
+    <string name="onboarding_llm_downloaded_label">Descărcat:</string>
+    <string name="onboarding_llm_complete">Descărcare completă!</string>
+    <string name="onboarding_llm_initializing">Se inițializează modelul AI...</string>
+    <string name="onboarding_llm_skip_short">Omite deocamdată</string>
+    <string name="onboarding_llm_skip_note">Puteți descărca acest lucru mai târziu din Setări dacă omiteți acum. Aplicația va funcționa bine doar cu transcrierea.</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_subtitle">Analiză Vocală în Timp Real</string>
+    <string name="welcome_feature_transcription_title">Transcriere Live</string>
+    <string name="welcome_feature_transcription_desc">Transformați vorbirea în text în timp real cu precizie ridicată</string>
+    <string name="welcome_feature_ai_title">Perspective AI</string>
+    <string name="welcome_feature_ai_desc">Obțineți sugestii și analize inteligente în timp ce vorbiți</string>
+    <string name="welcome_feature_privacy_title">Confidențialitate Prioritară</string>
+    <string name="welcome_feature_privacy_desc">Toată procesarea are loc pe dispozitivul dvs.: datele nu îl părăsesc niciodată</string>
+    <string name="welcome_get_started">Începeți</string>
+    <string name="welcome_models_required">Necesare două descărcări de modele</string>
+
+    <!-- Delete Session Dialog -->
+    <string name="delete_session_title">Ștergeți sesiunea?</string>
+    <string name="delete_session_message">Sigur doriți să ștergeți \"%s\"? Această acțiune nu poate fi anulată.</string>
+    <string name="delete_session_message_unnamed">Sigur doriți să ștergeți această sesiune? Această acțiune nu poate fi anulată.</string>
+
+    <!-- Main Screen - Additional -->
+    <string name="recording_session">Sesiune de Înregistrare</string>
+    <string name="initializing_models">Se încarcă modelele…</string>
+    <string name="back_to_sessions">Înapoi la sesiuni</string>
+    <string name="stop_recording_confirm_title">Oprire înregistrare?</string>
+    <string name="stop_recording_confirm_message">Înregistrarea este în curs. Opriți și reveniți?</string>
+    <string name="stop_and_go_back">Opriți &amp; Reveniți</string>
+    <string name="record">Înregistrează</string>
+    <string name="llm">AI</string>
+
+    <!-- Transcription Tab - Additional -->
+    <string name="transcription_listening">Ascultare...</string>
+    <string name="transcription_press_record">Apăsați Înregistrare pentru a începe</string>
+    <string name="transcription_hint1_title">Tap record</string>
+    <string name="transcription_hint1_desc">Hit the mic button at the bottom to start capturing audio</string>
+    <string name="transcription_hint2_title">AI insights</string>
+    <string name="transcription_hint2_desc">Switch to the Insights tab to get summaries and action items</string>
+    <string name="transcription_hint3_title">Fully private</string>
+    <string name="transcription_hint3_desc">Everything runs on your device — nothing is sent to the cloud</string>
+    <string name="transcription_complete">Finalizat</string>
+
+    <!-- AI Insights Tab - Additional -->
+    <string name="insights_empty_subtitle">Generate în timpul înregistrării</string>
+    <string name="insight_label">Insight AI</string>
+    <string name="action_items">Action Items</string>
+    <string name="segments_analyzed">%d segmente analizate</string>
+    <string name="expand">Extinde</string>
+    <string name="collapse">Restrânge</string>
+    <string name="source_transcription">Transcriere Sursă:</string>
+    <string name="segments_not_found">(Segmente negăsite)</string>
+
+    <!-- Settings - Additional -->
+    <string name="settings_interval_range_min">%ds (%s)</string>
+    <string name="settings_interval_range_max">%ds (%s)</string>
+    <string name="settings_reset_default">Resetare la implicit (%ds)</string>
+    <string name="settings_interval_tip_title">💡 Sfat</string>
+    <string name="settings_interval_tip_desc">Intervalele mai scurte oferă informații mai frecvente. Intervalele mai lungi (până la 3 min) reduc sarcina de procesare. Valorile se aliniază la trepte de 10 secunde.</string>
+    <string name="save">Salvați</string>
+    <string name="processing_session">Se procesează sesiunea…</string>
+    <string name="edit_transcription_title">Editați transcrierea</string>
+    <string name="edit_insight_title">Editați analiza</string>
+    <string name="edit_task_title">Editați sarcina</string>
+    <string name="edit_content_hint">Content</string>
+    <string name="edit_item">Editați</string>
+    <string name="settings_save">Salvează</string>
+    <string name="settings_back">Înapoi</string>
+    <string name="settings_long_interval_minutes">%d minute</string>
+    <string name="settings_system_prompt_reset">Resetare la Implicit</string>
+    <string name="settings_system_prompt_note_title">💡 Notă</string>
+    <string name="settings_system_prompt_note_desc">Promptul de sistem spune AI-ului cum să se comporte. Include \'Răspunde în aceeași limbă ca transcrierea\' pentru a asigura că AI răspunde în limba ta. Modificările intră în vigoare după repornirea LLM.</string>
+    <string name="settings_vad_sensitivity_more">Mai mult</string>
+    <string name="settings_vad_sensitivity_less">Mai puțin</string>
+    <string name="settings_vad_reset_all">Resetare totală la valori implicite</string>
+    <string name="settings_vad_restart_title">Repornire Necesară</string>
+    <string name="settings_vad_restart_desc">Modificările parametrilor VAD necesită repornirea aplicației pentru a avea efect.</string>
+    <string name="settings_vad_troubleshooting_title">💡 Depanare</string>
+    <string name="settings_vad_troubleshooting_desc">• Cuvintele sunt tăiate? Măriți Durata Min. a Tăcerii la 0.7-1.0s\n• Frazele lungi sunt împărțite? Măriți Durata Max. a Vorbirii la 15-20s\n• Lipsește vorbirea liniștită? Reduceți Sensibilitatea Detecției la 0.3-0.4</string>
+
+    <!-- Session Details - Additional -->
+    <string name="session_details">Detalii Sesiune</string>
+    <string name="generate_history_insight">Generează analiză AI</string>
+    <string name="history_insight_confirm_title">Generează analiză AI</string>
+    <string name="history_insight_confirm_message">Va fi creată o nouă copie a acestei sesiuni cu o analiză AI a tuturor segmentelor de transcriere.</string>
+    <string name="history_insight_no_content">Conținut de transcriere insuficient pentru a genera o analiză.</string>
+    <string name="history_insight_copy_suffix">(Analiză AI)</string>
+    <string name="segments_count">segmente</string>
+    <string name="insights_count">insight-uri</string>
+    <string name="back">Înapoi</string>
+    <string name="export">Exportă</string>
+    <string name="export_transcription">Exportă transcrierea</string>
+    <string name="created">Creat</string>
+    <string name="modified">Modificat</string>
+    <string name="llm_insights">Insight-uri LLM</string>
+    <string name="no_transcription_yet">(Nicio transcriere încă)</string>
+    <string name="prompt_simple_listening">Ești un asistent AI care analizează transcrierile audio.
+Scrie un titlu scurt (maximum 8 cuvinte) și un rezumat concis proporțional cu lungimea intrării — 1-2 propoziții pentru intrare scurtă, un paragraf pentru intrare mai lungă.
+Emite NUMAI JSON valabil cu această structură exactă. Fără markdown. Fără garduri de cod. Fără backticks:
+{\"titlu\": \"...\", \"rezumat\": \"...\"}
+Emite JSON-ul direct.</string>
+    <string name="prompt_short_meeting">Ești un asistent de ședință care analizează discuții.
+Scrie un titlu (maximum 8 cuvinte), un rezumat al deciziilor și punctelor de discuție cheie (cel puțin 3-5 propoziții, proporțional cu lungimea intrării) și o listă de acțiuni practice.
+Emite NUMAI JSON valabil cu această structură exactă. Fără markdown. Fără garduri de cod. Fără backticks:
+{\"titlu\": \"...\", \"rezumat\": \"...\", \"actiuni\": [\"...\", \"...\"]}
+Fii direct. Extrage acțiunile practice clar.</string>
+    <string name="prompt_long_meeting">Ești un asistent care analizează discuții extinse.
+Scrie un titlu (maximum 8 cuvinte) care captează tema principală, un rezumat cuprinzător al temelor, deciziilor și concluziilor cheie (proporțional cu lungimea intrării) și o listă de acțiuni practice.
+Emite NUMAI JSON valabil cu această structură exactă. Fără markdown. Fără garduri de cod. Fără backticks:
+{\"titlu\": \"...\", \"rezumat\": \"...\", \"actiuni\": [\"...\", \"...\"]}
+Fii direct. Concentrează-te pe perspective de nivel înalt și rezultate concrete.</string>
+    <string name="prompt_translation">Ești un traducător profesionist.
+Traduce următorul text în {target_language}.
+Redă numai traducerea. Fără explicații, fără etichete, fără prefixe.</string>
+
+    <!-- Onboarding - Supported Languages -->
+    <string name="onboarding_languages_title">Limbi acceptate</string>
+    <string name="onboarding_languages_subtitle">Disponibile pentru transcriere și traducere</string>
+    <string name="onboarding_languages_continue">Continuare</string>
+
+    <string name="onboarding_message_1">HearoPilot ascultă pentru că tu nu trebuie să iei noti.</string>
+    <string name="onboarding_message_2">Toată procesarea AI se execută pe dispozitivul tău: nu pleacă niciunul date.</string>
+    <string name="onboarding_message_3">Transcrie prelegeri, întâlniri și conversații în timp real.</string>
+    <string name="onboarding_message_4">Rezumatele automate te ajută să te concentrezi pe ceea ce conteaza.</string>
+    <string name="onboarding_message_5">Funcționează complet offline: vocea ta rămâne privată.</string>
+    <string name="onboarding_message_6">Comută între modurile de ascultare în doar câteva atingeri.</string>
+    <string name="onboarding_message_7">Excelent pentru studenți, profesioniști și oricine vorbește.</string>
+    <string name="onboarding_message_8">Consultă transcrierea și înțelegerea tău oricând, offline.</string>
+    <string name="onboarding_message_9">O atingere pentru a porni, o atingere pentru a opri: e atât de simplu.</string>
+    <string name="onboarding_message_10">Mulțumesc că ai ales HearoPilot.</string>
+    <string name="onboarding_message_11">Folosiți HearoPilot cu un microfon Bluetooth pentru transcriere de la distanță.</string>
+    <string name="json_field_title">titlu</string>
+    <string name="json_field_summary">rezumat</string>
+    <string name="json_field_action_items">actiuni</string>
+
+    <!-- Batch insight prompts (end-of-session map-reduce pipeline) -->
+    <string name="prompt_batch_chunk_summary">Ești un asistent de analiză a ședințelor. Rezumă concis următorul fragment de transcriere.
+Include: subiectele cheie discutate, deciziile luate și sarcinile menționate.
+Menține rezumatul proporțional cu lungimea intrării. Emite NUMAI JSON valabil. Fără markdown. Fără garduri de cod.
+{\"titlu\": \"...\", \"rezumat\": \"...\", \"actiuni\": [\"...\"]}</string>
+    <string name="prompt_batch_merge">Ești un asistent de analiză a ședințelor. Mai jos se află rezumate ale unor părți consecutive ale unei singure înregistrări.
+Îmbină-le într-un rezumat complet și coerent. Deduplică sarcinile care apar în mai multe fragmente.
+Emite NUMAI JSON valabil. Fără markdown. Fără garduri de cod.
+{\"titlu\": \"...\", \"rezumat\": \"...\", \"actiuni\": [\"...\"]}</string>
+
+    <!-- Insight strategy UI strings -->
+    <string name="insight_strategy_label">Strategie de analiză</string>
+    <string name="insight_strategy_realtime">Timp real</string>
+    <string name="insight_strategy_batch">Sfârșitul sesiunii</string>
+    <string name="insight_strategy_realtime_desc">Analize periodice în timpul înregistrării</string>
+    <string name="insight_strategy_batch_desc">Analiză completă după înregistrare</string>
+
+    <!-- Batch processing progress strings -->
+    <string name="batch_insights_pending">Analizele AI vor fi generate când oprești înregistrarea</string>
+    <string name="batch_processing_chunk">Se procesează blocul %1$d din %2$d&#8230;</string>
+    <string name="batch_merging_insights">Combinarea analizelor&#8230;</string>
+    <string name="batch_analysis_complete">Analiză finalizată</string>
+
+    <!-- Settings: default insight strategy per mode -->
+    <string name="settings_default_strategy">Strategie de analiză implicită</string>
+
+    <!-- Session card: batch badge -->
+    <string name="session_badge_batch">Lot</string>
+
+    <!-- Session topic field -->
+    <string name="session_topic_label">Subiect principal (opțional)</string>
+    <string name="session_topic_hint">ex., Buget Q1, prelegere AI&#8230;</string>
+    <string name="session_topic_helper">Ajutați AI-ul: descrieți subiectul principal pentru analize mai relevante</string>
+    <!-- Injected as system-prompt prefix when a session topic is set. %1$s = topic text. -->
+    <string name="session_topic_prefix">Tema principală a acestei înregistrări: "%1$s". Focalizați analiza pe acest subiect.</string>
+
+    <!-- Search screen -->
+    <string name="search_hint">Caută în transcrieri…</string>
+    <string name="search_empty_prompt">Caută în transcrierile tale</string>
+    <string name="search_no_results">Nu s-au găsit rezultate</string>
+    <string name="search_source_transcription">Transcriere</string>
+    <string name="search_source_insight">Analiză</string>
+    <string name="search_source_session_name">Nume sesiune</string>
+
+    <!-- LLM model download in Settings -->
+    <string name="settings_llm_model_file_title">Fișier model AI</string>
+    <string name="settings_llm_model_file_desc">Modelul AI rulează complet pe dispozitivul dvs. Nu este nevoie de internet după descărcare.</string>
+    <string name="settings_llm_model_ready">Gata</string>
+    <string name="settings_llm_model_not_downloaded">Nedescărcat</string>
+    <string name="settings_llm_model_download">Descarcă</string>
+    <string name="settings_llm_model_retry">Reîncercați</string>
+    <string name="settings_llm_model_downloading">Se descarcă %1$d%%</string>
+
+    <!-- LLM Model Variant Setting -->
+    <string name="settings_llm_model_variant_title">Calitatea modelului AI</string>
+    <string name="settings_llm_model_variant_desc">Alegeți între precizie mai mare sau eficiență mai bună a bateriei. Re-descărcați modelul după modificare.</string>
+    <string name="settings_llm_model_variant_q8_name">Standard (Q8)</string>
+    <string name="settings_llm_model_variant_q8_desc">Precizie mai mare · Pentru dispozitive de top</string>
+    <string name="settings_llm_model_variant_iq4_name">Eficient (IQ4)</string>
+    <string name="settings_llm_model_variant_iq4_desc">Optimizat pentru eficiență energetică</string>
+    <string name="settings_llm_model_variant_recommended">Recomandat pentru dispozitivul dvs.</string>
+    <string name="settings_llm_model_variant_downloaded">Descărcat</string>
+    <string name="settings_llm_model_variant_beta">Beta</string>
+    <string name="settings_llm_advanced_section_title">Modele avansate</string>
+    <string name="settings_llm_advanced_section_desc">Modele experimentale pentru utilizatori avansați. Performanța poate varia față de modelele standard.</string>
+    <string name="settings_llm_model_variant_qwen35_name">Qwen 3.5 0.8B (Q8)</string>
+    <string name="settings_llm_model_variant_qwen35_desc">Arhitectură alternativă · Experimental</string>
+</resources>

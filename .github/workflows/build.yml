@@ -1,0 +1,54 @@
+name: Build Debug APK
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository (with LFS)
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Set up Android NDK
+        run: |
+          echo "y" | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager "ndk;29.0.13113456"
+
+      - name: Clone llama.cpp (pinned to b8390)
+        run: |
+          git clone --depth 1 --branch b8390 https://github.com/ggerganov/llama.cpp.git $GITHUB_WORKSPACE/../llama.cpp-master
+
+      - name: Remove prebuilt native libs (compiled from source in CI)
+        run: rm -rf lib-llama-android/src/main/jniLibs
+
+      - name: Copy google-services.json from example
+        run: cp app/google-services.json.example app/google-services.json
+
+      - name: Grant Gradle wrapper permission
+        run: chmod +x gradlew
+
+      - name: Build debug APK
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 7

@@ -1,0 +1,475 @@
+<resources>
+    <!-- App Info -->
+    <string name="app_name">HearoPilot</string>
+
+    <!-- Common Actions -->
+    <string name="start">Začni</string>
+    <string name="stop">Ustavi</string>
+    <string name="copy">Kopiraj</string>
+    <string name="clear">Počisti</string>
+    <string name="delete">Izbriši</string>
+    <string name="dismiss">Zapri</string>
+    <string name="cancel">Prekliči</string>
+    <string name="settings">Nastavitve</string>
+    <string name="reset">Ponastavi</string>
+    <string name="rename">Preimenuj</string>
+    <string name="rename_session_title">Preimenuj sejo</string>
+    <string name="rename_session_hint">Ime seje</string>
+
+    <!-- Recording Notification -->
+    <string name="notification_channel_recording_name">Seja snemanja</string>
+    <string name="notification_channel_recording_description">Prikazano, ko je snemanje aktivno</string>
+    <string name="notification_recording_title">Snemanje aktivno</string>
+    <string name="notification_action_stop">Ustavi</string>
+
+    <!-- Model Download Notification -->
+    <string name="notification_channel_download_name">Prenosi modelov</string>
+    <string name="notification_channel_download_description">Prikazuje napredek prenosa AI modelov</string>
+    <string name="notification_download_title">Prenos AI modelov</string>
+    <string name="notification_download_progress">%1$d %% preneseno</string>
+    <string name="notification_download_completing">Dokončevanje prenosa…</string>
+
+    <!-- LLM Processing Notification -->
+    <string name="notification_channel_llm_processing_name">Obdelava AI</string>
+    <string name="notification_channel_llm_processing_description">Prikazano, ko AI analizira vaš prepis</string>
+    <string name="notification_llm_processing_title">Analiza prepisa</string>
+    <string name="notification_llm_processing_text">AI obdeluje vaš posnetek…</string>
+
+    <!-- Sessions Screen -->
+    <string name="sessions_title">HearoPilot</string>
+    <string name="sessions_subtitle">Moji prepisi</string>
+    <string name="new_transcription">Nov prepis</string>
+    <string name="session_unnamed">(Brez imena)</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_title">Pripravljeno za prepis</string>
+    <string name="empty_state_subtitle">Ustvarite sejo in začnite snemanje.\nVse deluje na napravi, zasebno.</string>
+    <string name="empty_state_step1_title">Ustvarite sejo</string>
+    <string name="empty_state_step1_desc">Dotaknite se gumba + spodaj za začetek</string>
+    <string name="empty_state_step2_title">Posnemite zvok</string>
+    <string name="empty_state_step2_desc">Pritisnite mikrofon za zajemanje govora v realnem času</string>
+    <string name="empty_state_step3_title">Pridobite vpoglede AI</string>
+    <string name="empty_state_step3_desc">AI samodejno analizira vaš prepis</string>
+    <string name="empty_state_privacy">Vsa obdelava se izvaja na vaši napravi</string>
+    <string name="empty_state_privacy_title">Vse lokalno</string>
+    <string name="header_stat_sessions">sej</string>
+    <string name="header_stat_duration">skupaj</string>
+    <string name="header_stat_data">ostali zasebni</string>
+
+    <!-- New Session Dialog -->
+    <string name="new_session_dialog_title">Nov prepis</string>
+    <string name="new_session_name_label">Poimenujte ta prepis (neobvezno)</string>
+    <string name="new_session_name_hint">npr. Zapiski s sestanka</string>
+    <string name="new_session_name_tip">💡 Lahko pustite prazno in uporabili bomo datum/čas.</string>
+    <string name="new_session_recording_type">Vrsta snemanja</string>
+    <string name="recording_type_short">Kratko snemanje</string>
+    <string name="recording_type_short_desc">≤10 min - Pogosti vpogledi</string>
+    <string name="recording_type_long">Dolgo snemanje</string>
+    <string name="recording_type_long_desc">Do 3h - Nastavljivi intervali</string>
+
+    <!-- Main Screen - Tabs -->
+    <string name="tab_transcription">Prepis</string>
+    <string name="tab_insights">Vpogledi AI</string>
+    <string name="recording_active">Snemanje</string>
+    <string name="recording_paused">Ustavljeno</string>
+
+    <!-- Transcription Tab -->
+    <string name="transcription_empty">Čakanje na govor…</string>
+    <string name="transcription_error">Napaka: %s</string>
+
+    <!-- AI Insights Tab -->
+    <string name="insights_disabled">AI vpogledi so onemogočeni</string>
+    <string name="insights_disabled_subtitle">Omogočite AI analizo v Nastavitvah za uporabo te funkcije</string>
+    <string name="insights_empty">Vpogledi AI se bodo prikazali tukaj med snemanjem.</string>
+    <string name="insights_model_unavailable">Model LLM ni prenesen</string>
+    <string name="llm_model_not_downloaded_error">Model LLM ni prenesen. Prenesite ga v Nastavitvah.</string>
+    <string name="insights_download_prompt">Prenesite model AI za omogočanje vpogledov</string>
+    <string name="insights_download_button">Prenesi model</string>
+    <string name="insights_downloading">Prenos: %d%%</string>
+    <string name="insights_download_speed">%s MB/s</string>
+    <string name="insights_download_eta">Preostali čas: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Nastavitve</string>
+    <string name="settings_section_short">Kratka snemanja (≤10 min)</string>
+    <string name="settings_section_long">Dolga snemanja (do 3h)</string>
+    <string name="settings_section_ai">Konfiguracija asistenta AI</string>
+
+    <!-- Short Recording Settings -->
+    <string name="settings_short_interval_title">Interval generiranja vpogledov</string>
+    <string name="settings_short_interval_desc">Kako pogosto AI analizira vaš prepis pri kratkih snemanjih</string>
+    <string name="settings_interval_current">Trenutno: %s</string>
+
+    <!-- Long Recording Settings -->
+    <string name="settings_long_interval_title">Interval generiranja vpogledov</string>
+    <string name="settings_long_interval_desc">Kako pogosto AI analizira vaš prepis pri dolgih snemanjih</string>
+
+    <!-- AI System Prompt Settings -->
+    <string name="settings_system_prompt_title">Sistemski poziv</string>
+    <string name="settings_system_prompt_desc">Navodila, ki usmerjajo vedenje in slog odgovorov AI</string>
+    <string name="settings_system_prompt_hint">Vnesite prilagojen sistemski poziv…</string>
+
+    <!-- VAD Settings -->
+    <string name="settings_vad_title">Zaznavanje glasovne aktivnosti (VAD)</string>
+    <string name="settings_vad_desc">Napredni parametri za zaznavanje govora</string>
+    <string name="settings_vad_min_silence">Minimalna dolžina tišine</string>
+    <string name="settings_vad_min_silence_desc">Prag tišine za zaključek govornega segmenta</string>
+    <string name="settings_vad_max_speech">Maksimalna dolžina govora</string>
+    <string name="settings_vad_max_speech_desc">Maks. neprekinjen govor pred prisilno delitvijo</string>
+    <string name="settings_vad_threshold">Prag zaznave</string>
+    <string name="settings_vad_threshold_desc">Občutljivost za zaznavanje glasu</string>
+
+    <!-- LLM Sampler Settings -->
+    <string name="settings_section_llm_sampler">Parametri generiranja UI</string>
+    <string name="settings_llm_sampler_title">Vzorčenje žetonov</string>
+    <string name="settings_llm_sampler_desc">Nadzira, kako UI izbira besede med generiranjem. Nižja temperatura = bolj predvidljivo; višja = bolj ustvarjalno.</string>
+    <string name="settings_llm_sampler_temperature">Temperatura</string>
+    <string name="settings_llm_sampler_temperature_desc">Naključnost pri izbiri besed (0 = deterministično, 2 = zelo naključno)</string>
+    <string name="settings_llm_sampler_top_k">Top-K</string>
+    <string name="settings_llm_sampler_top_k_desc">Omejite kandidate na K najverjetnejših žetonov (0 = onemogočeno)</string>
+    <string name="settings_llm_sampler_top_p">Top-P</string>
+    <string name="settings_llm_sampler_top_p_desc">Nucleus vzorčenje: kumulativni prag verjetnosti (0–1)</string>
+    <string name="settings_llm_sampler_min_p">Min-P</string>
+    <string name="settings_llm_sampler_min_p_desc">Minimalna verjetnost žetona glede na vrhnji žeton (0–1)</string>
+    <string name="settings_llm_sampler_repeat_penalty">Kazen za ponavljanje</string>
+    <string name="settings_llm_sampler_repeat_penalty_desc">Kaznuje nedavno uporabljene žetone za zmanjšanje ponavljanja (1,0 = izklopljeno)</string>
+    <string name="settings_llm_sampler_reset_all">Ponastavi na privzete vrednosti</string>
+
+    <!-- Time Formats -->
+    <string name="time_just_now">Pravkar</string>
+    <string name="time_minutes_ago">pred %d minutami</string>
+    <string name="time_today">Danes, %s</string>
+    <string name="time_yesterday">Včeraj, %s</string>
+
+    <!-- Error Messages -->
+    <string name="error_title">Napaka</string>
+    <string name="error_load_sessions">Nalaganje sej ni uspelo: %s</string>
+    <string name="error_create_session">Ustvarjanje seje ni uspelo: %s</string>
+    <string name="error_delete_session">Brisanje seje ni uspelo: %s</string>
+
+    <!-- Default LLM System Prompt -->
+    <string name="default_llm_system_prompt">Ste asistent AI, ki analizira prepise govora v realnem času.\nOdgovarjajte v istem jeziku kot prepis.\nPoskrbite za jedrnate vpoglede, predloge ali kratke povzetke.\nOdgovore omejite na manj kot 100 besed. Bodite praktični in koristni.</string>
+
+        <!-- LLM Enable/Disable Settings -->
+    <string name="settings_section_llm">Model AI</string>
+    <string name="settings_llm_enabled_title">Omogoči AI vpoglede</string>
+    <string name="settings_llm_enabled_desc">Ko je omogočeno, se model AI naloži na začetku vsake seje snemanja in v realnem času ustvarja vpoglede. Onemogučite za prihranek pomnilnika in baterije.</string>
+
+    <!-- Microphone Permission -->
+    <string name="permission_mic_required">Zahtevano dovoljenje za mikrofon</string>
+    <string name="permission_mic_denied">Dostop do mikrofona je bil zavrnjen. Dodelite ga v nastavitvah aplikacije za uporabo transkripcije.</string>
+
+<!-- Settings Screen - Sections -->
+    <string name="settings_section_appearance">Videz</string>
+    <string name="settings_recording_modes">Načini snemanja</string>
+    <string name="settings_section_simple_listening">Preprosto poslušanje</string>
+    <string name="settings_section_short_meeting">Kratko srečanje</string>
+    <string name="settings_section_long_meeting">Dolgo srečanje</string>
+    <string name="settings_section_translation">Neposreden prevod</string>
+    <string name="settings_section_vad">Zaznavanje glasovne aktivnosti (VAD)</string>
+    <string name="settings_interval_analysis">Interval analize</string>
+    <string name="settings_interval_translation">Interval prevoda</string>
+
+    <!-- Theme Settings -->
+    <string name="settings_theme_title">Tema</string>
+    <string name="settings_theme_desc">Izberite temo aplikacije</string>
+    <string name="theme_system">🔄 Samodejno</string>
+    <string name="theme_light">☀️ Svetlo</string>
+    <string name="theme_dark">🌙 Temno</string>
+    <string name="theme_system_short">Avto</string>
+    <string name="theme_light_short">Svetlo</string>
+    <string name="theme_dark_short">Temno</string>
+    <string name="theme_system_desc">Tema sledi nastavitvam sistema</string>
+    <string name="theme_light_desc">Aplikacija bo vedno uporabila svetlo temo</string>
+    <string name="theme_dark_desc">Aplikacija bo vedno uporabila temno temo</string>
+
+    <!-- Translation Settings -->
+    <string name="settings_translation_target_title">Privzet ciljni jezik</string>
+    <string name="settings_translation_target_desc">Privzeti jezik za prevod</string>
+
+    <!-- New Session Dialog - Recording Mode -->
+    <string name="new_session_recording_mode">Način Snemanja</string>
+    <string name="mode_simple_listening">Preprosto Poslušanje</string>
+    <string name="mode_short_meeting">Kratka Sjednica</string>
+    <string name="mode_long_meeting">Dolga Sjednica</string>
+    <string name="mode_translation_live">Neposredni Prevod</string>
+    <string name="mode_simple_listening_desc">Periodični povzetki</string>
+    <string name="mode_short_meeting_desc">Povzetek, predlogi in opravki</string>
+    <string name="mode_long_meeting_desc">Poglobljena analiza za dolge seje</string>
+    <string name="mode_translation_desc">Prevod v realnem času</string>
+    <string name="new_session_output_language">Izhodna Jezik Prevoda</string>
+    <string name="new_session_output_language_label">Izhodni jezik</string>
+    <string name="new_session_language_auto">Samodejno (jezik naprave)</string>
+    <string name="new_session_insight_interval">Vsakih %s</string>
+
+    <!-- Session Details - Tabs and Insight Card -->
+    <string name="tab_transcript">Prepis</string>
+    <string name="ai_analysis">Analiza UI</string>
+    <string name="insight_data">Vpogled</string>
+    <string name="final_insight_label">Splošni povzetek</string>
+    <string name="create_ai_copy">Ustvari kopijo AI</string>
+    <string name="generating_ai_insights">Ustvarjanje analiz AI\u2026</string>
+    <string name="insights_empty_history">Še ni analiz AI</string>
+    <string name="insights_empty_history_subtitle">Dotaknite se ✨ zgoraj za ustvarjanje AI analize te transkripcije</string>
+    <string name="history_insight_copy_info">Ustvarjena bo nova kopija te seje z analizo AI.\nIzvirna seja ne bo spremenjena.</string>
+    <string name="coachmark_history_insight">Dotaknite se za ustvarjanje AI vpogledov iz celotne zgodovine seje</string>
+
+    <!-- Session Details Screen -->
+    <string name="session_extracted_tasks">Izvlečeni opravki</string>
+    <string name="session_no_tasks">V tej seji ni bilo najdenih nobenih opravkov.</string>
+    <string name="insight_summary">Povzetek</string>
+    <string name="insight_suggestions">Predlogi</string>
+    <string name="insight_tasks">Opravki</string>
+
+    <!-- Setup Screen - AI Benefits -->
+    <string name="setup_ai_insights_title">Vpogledi, ki jih poganja UI</string>
+    <string name="setup_ai_why_title">Zakaj prenesti model UI?</string>
+    <string name="setup_ai_benefit_realtime">Pridobite predloge in vpoglede v realnem času, ko govorite</string>
+    <string name="setup_ai_benefit_analysis">UI analizira vaše govorne vzorce in zagotavlja koristen kontekst</string>
+    <string name="setup_ai_benefit_offline">Deluje povsem brez dostopa: vaši podatki ostanejo zasebni na vaši napravi</string>
+    <string name="setup_ai_benefit_fast">Hitro obdelovanje na napravi brez potrebe po internetni povezavi</string>
+    <string name="setup_downloading_model">Prenos modela...</string>
+
+    <!-- Onboarding - Common -->
+    <string name="onboarding_model_label">Model:</string>
+    <string name="onboarding_runs_label">Deluje:</string>
+    <string name="onboarding_source_label">Vir:</string>
+    <string name="onboarding_on_device">Na napravi</string>
+    <string name="onboarding_huggingface">HuggingFace</string>
+    <string name="onboarding_downloading">Prenašanje...</string>
+    <string name="onboarding_download_progress">%d MB / %d MB</string>
+    <string name="onboarding_download_speed">Hitrost:</string>
+    <string name="onboarding_download_speed_value">%.2f MB/s</string>
+    <string name="onboarding_download_eta">Preostali čas:</string>
+    <string name="onboarding_download_failed">Prenos ni uspel</string>
+    <string name="onboarding_retry_download">Poskusi znova</string>
+    <string name="download_resuming_from">Nadaljevanje od %1$s MB…</string>
+    <string name="onboarding_continue">Nadaljuj</string>
+    <string name="onboarding_time_seconds">%d sek</string>
+    <string name="onboarding_time_minutes">%d min %d sek</string>
+    <string name="onboarding_time_hours">%d ure %d min</string>
+
+    <!-- Onboarding - STT Download -->
+    <string name="onboarding_stt_title">Prepoznavanje govora</string>
+    <string name="onboarding_stt_ready">Model pripravljen!</string>
+    <string name="onboarding_stt_ready_desc">Model prepoznavanja govora uspešno prenesen.</string>
+    <string name="onboarding_stt_model_title">Model prepoznavanja govora</string>
+    <string name="onboarding_stt_model_desc">Ta model pretvarja vaš govor v besedilo v realnem času. Je bistven za delovanje aplikacije.</string>
+    <string name="onboarding_stt_model_name">Sherpa-ONNX Parakeet</string>
+    <string name="onboarding_stt_download_button">Prenesi model</string>
+    <string name="onboarding_stt_note">Ta model je bistven za delovanje aplikacije.</string>
+
+    <!-- Onboarding - LLM Download -->
+    <string name="onboarding_llm_title">Umetna inteligenca</string>
+    <string name="onboarding_llm_optional">Vpogledi AI (Izbirno)</string>
+    <string name="onboarding_llm_desc">Prenesite model AI za pridobivanje inteligentnih vpogledov in predlogov med govorom.</string>
+    <string name="onboarding_llm_benefit_1">Predlogi v realnem času</string>
+    <string name="onboarding_llm_benefit_2">Kontekstualna analiza</string>
+    <string name="onboarding_llm_benefit_3">100% zasebno in brez povezave</string>
+    <string name="onboarding_llm_model_name">Gemma 3 1B</string>
+    <string name="onboarding_llm_download_button">Prenesi model AI</string>
+    <string name="onboarding_llm_skip">Preskoči za zdaj (Samo prepis)</string>
+    <string name="onboarding_llm_downloading">Prenašanje modela AI...</string>
+    <string name="onboarding_llm_downloaded_label">Preneseno:</string>
+    <string name="onboarding_llm_complete">Prenos dokončan!</string>
+    <string name="onboarding_llm_initializing">Inicializacija modela AI...</string>
+    <string name="onboarding_llm_skip_short">Preskoči za zdaj</string>
+    <string name="onboarding_llm_skip_note">To lahko prenesete pozneje v Nastavitvah, če zdaj preskočite. Aplikacija bo dobro delovala samo s prepisom.</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_subtitle">Analiza Govora v Realnem Času</string>
+    <string name="welcome_feature_transcription_title">Pretvorba v Živo</string>
+    <string name="welcome_feature_transcription_desc">Pretvorite govor v besedilo v realnem času z visoko natančnostjo</string>
+    <string name="welcome_feature_ai_title">AI Vpogledi</string>
+    <string name="welcome_feature_ai_desc">Pridobite inteligentne predloge in analize med govorom</string>
+    <string name="welcome_feature_privacy_title">Zasebnost Najprej</string>
+    <string name="welcome_feature_privacy_desc">Vsa obdelava poteka na vaši napravi: vaši podatki je nikoli ne zapustijo</string>
+    <string name="welcome_get_started">Začni</string>
+    <string name="welcome_models_required">Potrebna prenos dveh modelov</string>
+
+    <!-- Delete Session Dialog -->
+    <string name="delete_session_title">Izbriši sejo?</string>
+    <string name="delete_session_message">Ali ste prepričani, da želite izbrisati \"%s\"? Tega dejanja ni mogoče razveljaviti.</string>
+    <string name="delete_session_message_unnamed">Ali ste prepričani, da želite izbrisati to sejo? Tega dejanja ni mogoče razveljaviti.</string>
+
+    <!-- Main Screen - Additional -->
+    <string name="recording_session">Seja Snemanja</string>
+    <string name="initializing_models">Nalaganje modelov…</string>
+    <string name="back_to_sessions">Nazaj na seje</string>
+    <string name="stop_recording_confirm_title">Ustavi snemanje?</string>
+    <string name="stop_recording_confirm_message">Snemanje poteka. Ustavi in se vrni?</string>
+    <string name="stop_and_go_back">Ustavi in Nazaj</string>
+    <string name="record">Snemaj</string>
+    <string name="llm">AI</string>
+
+    <!-- Transcription Tab - Additional -->
+    <string name="transcription_listening">Poslušam...</string>
+    <string name="transcription_press_record">Pritisnite Snemaj za začetek</string>
+    <string name="transcription_hint1_title">Tap record</string>
+    <string name="transcription_hint1_desc">Hit the mic button at the bottom to start capturing audio</string>
+    <string name="transcription_hint2_title">AI insights</string>
+    <string name="transcription_hint2_desc">Switch to the Insights tab to get summaries and action items</string>
+    <string name="transcription_hint3_title">Fully private</string>
+    <string name="transcription_hint3_desc">Everything runs on your device — nothing is sent to the cloud</string>
+    <string name="transcription_complete">Zaključeno</string>
+
+    <!-- AI Insights Tab - Additional -->
+    <string name="insights_empty_subtitle">Generirano med snemanjem</string>
+    <string name="insight_label">AI Vpogled</string>
+    <string name="action_items">Action Items</string>
+    <string name="segments_analyzed">%d segmentov analiziranih</string>
+    <string name="expand">Razširi</string>
+    <string name="collapse">Skrči</string>
+    <string name="source_transcription">Izvorna Transkripcija:</string>
+    <string name="segments_not_found">(Segmenti niso najdeni)</string>
+
+    <!-- Settings - Additional -->
+    <string name="settings_interval_range_min">%ds (%s)</string>
+    <string name="settings_interval_range_max">%ds (%s)</string>
+    <string name="settings_reset_default">Ponastavi na privzeto (%ds)</string>
+    <string name="settings_interval_tip_title">💡 Nasvet</string>
+    <string name="settings_interval_tip_desc">Krajši intervali zagotavljajo pogostejše vpoglede. Daljši intervali (do 3 min) zmanjšujejo obremenitev obdelave. Vrednosti se uskladijo v korakih po 10 sekund.</string>
+    <string name="save">Shrani</string>
+    <string name="processing_session">Obdelava seje…</string>
+    <string name="edit_transcription_title">Uredi prepis</string>
+    <string name="edit_insight_title">Uredi uvid</string>
+    <string name="edit_task_title">Uredi nalogo</string>
+    <string name="edit_content_hint">Content</string>
+    <string name="edit_item">Uredi</string>
+    <string name="settings_save">Shrani</string>
+    <string name="settings_back">Nazaj</string>
+    <string name="settings_long_interval_minutes">%d minut</string>
+    <string name="settings_system_prompt_reset">Ponastavi na Privzeto</string>
+    <string name="settings_system_prompt_note_title">💡 Opomba</string>
+    <string name="settings_system_prompt_note_desc">Sistemski poziv pove AI, kako se naj obnaša. Vključite \'Odgovorite v istem jeziku kot transkripcija\', da AI odgovarja v vašem jeziku. Spremembe začnejo veljati po ponovnem zagonu LLM.</string>
+    <string name="settings_vad_sensitivity_more">Več</string>
+    <string name="settings_vad_sensitivity_less">Manj</string>
+    <string name="settings_vad_reset_all">Ponastavi vse na privzete vrednosti</string>
+    <string name="settings_vad_restart_title">Potreben Ponovni Zagon</string>
+    <string name="settings_vad_restart_desc">Spremembe parametrov VAD zahtevajo ponovni zagon aplikacije, da začnejo veljati.</string>
+    <string name="settings_vad_troubleshooting_title">💡 Odpravljanje Težav</string>
+    <string name="settings_vad_troubleshooting_desc">• Besede so odrezane? Povečajte Min. Trajanje Tišine na 0.7-1.0s\n• Dolgi stavki se delijo? Povečajte Maks. Trajanje Govora na 15-20s\n• Manjka tihi govor? Znižajte Občutljivost Zaznave na 0.3-0.4</string>
+
+    <!-- Session Details - Additional -->
+    <string name="session_details">Podrobnosti Seje</string>
+    <string name="generate_history_insight">Ustvari analizo UI</string>
+    <string name="history_insight_confirm_title">Ustvari analizo UI</string>
+    <string name="history_insight_confirm_message">Ustvarila se bo nova kopija te seje z analizo UI vseh segmentov prepisa.</string>
+    <string name="history_insight_no_content">Premalo vsebine prepisa za ustvarjanje analize.</string>
+    <string name="history_insight_copy_suffix">(Analiza UI)</string>
+    <string name="segments_count">segmentov</string>
+    <string name="insights_count">vpogledov</string>
+    <string name="back">Nazaj</string>
+    <string name="export">Izvozi</string>
+    <string name="export_transcription">Izvozi transkripcijo</string>
+    <string name="created">Ustvarjeno</string>
+    <string name="modified">Spremenjeno</string>
+    <string name="llm_insights">LLM Vpogledi</string>
+    <string name="no_transcription_yet">(Še ni transkripcije)</string>
+    <string name="prompt_simple_listening">Ste pomočnik AI, ki analizira zvočne prepise.
+Napišite kratek naslov (največ 8 besed) in jedrnat povzetek sorazmeren dolžini vnosa — 1-2 stavek za kratek vnos, odstavec za daljši vnos.
+Izpustite SAMO veljaven JSON s to natančno strukturo. Brez markdown. Brez ograje kode. Brez povratnih navodkov:
+{\"naslov\": \"...\", \"povzetek\": \"...\"}
+Izpustite JSON neposredno.</string>
+    <string name="prompt_short_meeting">Ste pomočnik sestanka, ki analizira razprave.
+Napišite naslov (največ 8 besed), povzetek ključnih odločitev in točk razprave (najmanj 3-5 stavkov, sorazmeren dolžini vnosa) in seznam dejanskih nalog.
+Izpustite SAMO veljaven JSON s to natančno strukturo. Brez markdown. Brez ograje kode. Brez povratnih navodkov:
+{\"naslov\": \"...\", \"povzetek\": \"...\", \"dejanja\": [\"...\", \"...\"]}
+Bodite neposredni. Jasno izdvojite dejanska dejanja.</string>
+    <string name="prompt_long_meeting">Ste pomočnik, ki analizira razširjene razprave.
+Napišite naslov (največ 8 besed), ki zajema glavno temo, celovit povzetek ključnih tem, odločitev in zaključkov (sorazmeren dolžini vnosa) in seznam dejanskih nalog.
+Izpustite SAMO veljaven JSON s to natančno strukturo. Brez markdown. Brez ograje kode. Brez povratnih navodkov:
+{\"naslov\": \"...\", \"povzetek\": \"...\", \"dejanja\": [\"...\", \"...\"]}
+Bodite neposredni. Osredotočite se na vpoglede na visoki ravni in konkretne rezultate.</string>
+    <string name="prompt_translation">Ste profesionalni prevajalec.
+Prevedite naslednje besedilo v {target_language}.
+Izpišite samo prevod. Brez pojasnil, brez oznak, brez predpon.</string>
+
+    <!-- Onboarding - Supported Languages -->
+    <string name="onboarding_languages_title">Podprti jeziki</string>
+    <string name="onboarding_languages_subtitle">Dostopni za transkripcijo in prevod</string>
+    <string name="onboarding_languages_continue">Nadaljuj</string>
+
+    <string name="onboarding_message_1">HearoPilot poslušal, zato vam ni treba delati opomb.</string>
+    <string name="onboarding_message_2">Vsa obdelava AI se izvaja na vaši napravi: nobeni podatki ne zapustijo.</string>
+    <string name="onboarding_message_3">Prepišite predavanja, srečanja in pogovore v realnem času.</string>
+    <string name="onboarding_message_4">Avtomatični povzetki vam pomagajo osredotočiti se na tisto, kar je pomembno.</string>
+    <string name="onboarding_message_5">Deluje v celoti brez povezave: vaš glas ostane zaseben.</string>
+    <string name="onboarding_message_6">Preklapljajte med načini poslušanja v nekaj pikih.</string>
+    <string name="onboarding_message_7">Odlično za študente, strokovnjake in vse, ki govorijo.</string>
+    <string name="onboarding_message_8">Preglejte svoje prepise in vpoglede kadarkoli, brez povezave.</string>
+    <string name="onboarding_message_9">En pik za start, en pik za stop: tako preprosto je.</string>
+    <string name="onboarding_message_10">Hvala, ker ste izbrali HearoPilot.</string>
+    <string name="onboarding_message_11">Uporabljajte HearoPilot z Bluetooth mikrofonom za transkripcijo na daljavo.</string>
+    <string name="json_field_title">naslov</string>
+    <string name="json_field_summary">povzetek</string>
+    <string name="json_field_action_items">dejanja</string>
+
+    <!-- Batch insight prompts (end-of-session map-reduce pipeline) -->
+    <string name="prompt_batch_chunk_summary">Ste pomočnik za analizo sestankov. Jedrnato povzemite naslednji fragment transkripcije.
+Vključite: obravnavane ključne teme, sprejete odločitve in omenjene naloge.
+Ohranite povzetek sorazmeren dolžini vnosa. Izpustite SAMO veljaven JSON. Brez markdown. Brez ograje kode.
+{\"naslov\": \"...\", \"povzetek\": \"...\", \"dejanja\": [\"...\"]}</string>
+    <string name="prompt_batch_merge">Ste pomočnik za analizo sestankov. Spodaj so povzetki zaporednih delov enega posnetka.
+Združite jih v en celovit in kohérentni povzetek. Deduplicirajte naloge, ki se pojavljajo v več fragmentih.
+Izpustite SAMO veljaven JSON. Brez markdown. Brez ograje kode.
+{\"naslov\": \"...\", \"povzetek\": \"...\", \"dejanja\": [\"...\"]}</string>
+
+    <!-- Insight strategy UI strings -->
+    <string name="insight_strategy_label">Strategija analize</string>
+    <string name="insight_strategy_realtime">Realni čas</string>
+    <string name="insight_strategy_batch">Konec seje</string>
+    <string name="insight_strategy_realtime_desc">Periodične analize med snemanjem</string>
+    <string name="insight_strategy_batch_desc">Celovita analiza po snemanju</string>
+
+    <!-- Batch processing progress strings -->
+    <string name="batch_insights_pending">Analize AI bodo ustvarjene, ko ustavite snemanje</string>
+    <string name="batch_processing_chunk">Obdelava dela %1$d od %2$d&#8230;</string>
+    <string name="batch_merging_insights">Združevanje analiz&#8230;</string>
+    <string name="batch_analysis_complete">Analiza zaključena</string>
+
+    <!-- Settings: default insight strategy per mode -->
+    <string name="settings_default_strategy">Privzeta strategija analize</string>
+
+    <!-- Session card: batch badge -->
+    <string name="session_badge_batch">Paket</string>
+
+    <!-- Session topic field -->
+    <string name="session_topic_label">Glavna tema (neobvezno)</string>
+    <string name="session_topic_hint">npr. proračun Q1, predavanje AI&#8230;</string>
+    <string name="session_topic_helper">Pomagajte AI: opišite glavno temo za bolj relevantne analize</string>
+    <!-- Injected as system-prompt prefix when a session topic is set. %1$s = topic text. -->
+    <string name="session_topic_prefix">Glavna tema tega posnetka: "%1$s". Osredotočite analizo na to temo.</string>
+
+    <!-- Search screen -->
+    <string name="search_hint">Iskanje v prepisih…</string>
+    <string name="search_empty_prompt">Iščite v svojih prepisih</string>
+    <string name="search_no_results">Ni najdenih zadetkov</string>
+    <string name="search_source_transcription">Prepis</string>
+    <string name="search_source_insight">Uvid</string>
+    <string name="search_source_session_name">Ime seje</string>
+
+    <!-- LLM model download in Settings -->
+    <string name="settings_llm_model_file_title">Datoteka modela AI</string>
+    <string name="settings_llm_model_file_desc">Model AI deluje v celoti na vaši napravi. Po prenosu internet ni potreben.</string>
+    <string name="settings_llm_model_ready">Pripravljeno</string>
+    <string name="settings_llm_model_not_downloaded">Ni preneseno</string>
+    <string name="settings_llm_model_download">Prenesi</string>
+    <string name="settings_llm_model_retry">Poskusi znova</string>
+    <string name="settings_llm_model_downloading">Prenašanje %1$d%%</string>
+
+    <!-- LLM Model Variant Setting -->
+    <string name="settings_llm_model_variant_title">Kakovost AI modela</string>
+    <string name="settings_llm_model_variant_desc">Izberite med višjo natančnostjo ali boljšo učinkovitostjo baterije. Po spremembi znova prenesite model.</string>
+    <string name="settings_llm_model_variant_q8_name">Standardni (Q8)</string>
+    <string name="settings_llm_model_variant_q8_desc">Večja natančnost · Za vodilne naprave</string>
+    <string name="settings_llm_model_variant_iq4_name">Učinkovit (IQ4)</string>
+    <string name="settings_llm_model_variant_iq4_desc">Optimizirano za energetsko učinkovitost</string>
+    <string name="settings_llm_model_variant_recommended">Priporočeno za vašo napravo</string>
+    <string name="settings_llm_model_variant_downloaded">Preneseno</string>
+    <string name="settings_llm_model_variant_beta">Beta</string>
+    <string name="settings_llm_advanced_section_title">Napredni modeli</string>
+    <string name="settings_llm_advanced_section_desc">Eksperimentalni modeli za napredne uporabnike. Zmogljivost se lahko razlikuje od standardnih modelov.</string>
+    <string name="settings_llm_model_variant_qwen35_name">Qwen 3.5 0.8B (Q8)</string>
+    <string name="settings_llm_model_variant_qwen35_desc">Alternativna arhitektura · Eksperimentalen</string>
+</resources>

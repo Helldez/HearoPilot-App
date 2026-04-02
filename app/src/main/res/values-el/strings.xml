@@ -1,0 +1,475 @@
+﻿<resources>
+    <!-- App Info -->
+    <string name="app_name">HearoPilot</string>
+
+    <!-- Common Actions -->
+    <string name="start">Έναρξη</string>
+    <string name="stop">Διακοπή</string>
+    <string name="copy">Αντιγραφή</string>
+    <string name="clear">Εκκαθάριση</string>
+    <string name="delete">Διαγραφή</string>
+    <string name="dismiss">Κλείσιμο</string>
+    <string name="cancel">Ακύρωση</string>
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="reset">Επαναφορά</string>
+    <string name="rename">Μετονομασία</string>
+    <string name="rename_session_title">Μετονομασία συνεδρίας</string>
+    <string name="rename_session_hint">Όνομα συνεδρίας</string>
+
+    <!-- Recording Notification -->
+    <string name="notification_channel_recording_name">Συνεδρία εγγραφής</string>
+    <string name="notification_channel_recording_description">Εμφανίζεται όταν η εγγραφή είναι ενεργή</string>
+    <string name="notification_recording_title">Εγγραφή ενεργή</string>
+    <string name="notification_action_stop">Διακοπή</string>
+
+    <!-- Model Download Notification -->
+    <string name="notification_channel_download_name">Λήψεις μοντέλων</string>
+    <string name="notification_channel_download_description">Εμφανίζει την πρόοδο κατά τη λήψη μοντέλων AI</string>
+    <string name="notification_download_title">Λήψη μοντέλων AI</string>
+    <string name="notification_download_progress">%1$d%% ληφθέν</string>
+    <string name="notification_download_completing">Ολοκλήρωση λήψης…</string>
+
+    <!-- LLM Processing Notification -->
+    <string name="notification_channel_llm_processing_name">Επεξεργασία AI</string>
+    <string name="notification_channel_llm_processing_description">Εμφανίζεται όταν το AI αναλύει τη μεταγραφή σας</string>
+    <string name="notification_llm_processing_title">Ανάλυση μεταγραφής</string>
+    <string name="notification_llm_processing_text">Το AI επεξεργάζεται την ηχογράφησή σας…</string>
+
+    <!-- Sessions Screen -->
+    <string name="sessions_title">HearoPilot</string>
+    <string name="sessions_subtitle">Οι μεταγραφές μου</string>
+    <string name="new_transcription">Νέα μεταγραφή</string>
+    <string name="session_unnamed">(Χωρίς όνομα)</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_title">Έτοιμο για μεταγραφή</string>
+    <string name="empty_state_subtitle">Δημιουργήστε μια συνεδρία και ξεκινήστε την εγγραφή.\nΌλα εκτελούνται στη συσκευή, ιδιωτικά.</string>
+    <string name="empty_state_step1_title">Δημιουργήστε συνεδρία</string>
+    <string name="empty_state_step1_desc">Πατήστε το κουμπί + παρακάτω για να ξεκινήσετε</string>
+    <string name="empty_state_step2_title">Εγγράψτε ήχο</string>
+    <string name="empty_state_step2_desc">Πατήστε το μικρόφωνο για να καταγράψετε ομιλία σε πραγματικό χρόνο</string>
+    <string name="empty_state_step3_title">Λάβετε πληροφορίες AI</string>
+    <string name="empty_state_step3_desc">Η AI αναλύει αυτόματα τη μεταγραφή σας</string>
+    <string name="empty_state_privacy">Όλη η επεξεργασία γίνεται στη συσκευή σας</string>
+    <string name="empty_state_privacy_title">Όλα στη συσκευή</string>
+    <string name="header_stat_sessions">συνεδρίες</string>
+    <string name="header_stat_duration">σύνολο</string>
+    <string name="header_stat_data">έμειναν ιδιωτικά</string>
+
+    <!-- New Session Dialog -->
+    <string name="new_session_dialog_title">Νέα μεταγραφή</string>
+    <string name="new_session_name_label">Δώστε ένα όνομα σε αυτή τη μεταγραφή (προαιρετικό)</string>
+    <string name="new_session_name_hint">π.χ. Σημειώσεις σύσκεψης</string>
+    <string name="new_session_name_tip">💡 Μπορείτε να το αφήσετε κενό και θα χρησιμοποιήσουμε την ημερομηνία/ώρα.</string>
+    <string name="new_session_recording_type">Τύπος εγγραφής</string>
+    <string name="recording_type_short">Σύντομη εγγραφή</string>
+    <string name="recording_type_short_desc">≤10 λεπτά - Συχνές πληροφορίες</string>
+    <string name="recording_type_long">Μακρά εγγραφή</string>
+    <string name="recording_type_long_desc">Έως 3ω - Διαμορφώσιμα διαστήματα</string>
+
+    <!-- Main Screen - Tabs -->
+    <string name="tab_transcription">Μεταγραφή</string>
+    <string name="tab_insights">Πληροφορίες AI</string>
+    <string name="recording_active">Εγγραφή</string>
+    <string name="recording_paused">Παύση</string>
+
+    <!-- Transcription Tab -->
+    <string name="transcription_empty">Αναμονή για ομιλία…</string>
+    <string name="transcription_error">Σφάλμα: %s</string>
+
+    <!-- AI Insights Tab -->
+    <string name="insights_disabled">Οι αναλύσεις AI είναι απενεργοποιημένες</string>
+    <string name="insights_disabled_subtitle">Ενεργοποιήστε την ανάλυση AI στις Ρυθμίσεις για να χρησιμοποιήσετε αυτή τη λειτουργία</string>
+    <string name="insights_empty">Οι πληροφορίες AI θα εμφανιστούν εδώ κατά τη διάρκεια της εγγραφής.</string>
+    <string name="insights_model_unavailable">Το μοντέλο LLM δεν έχει ληφθεί</string>
+    <string name="llm_model_not_downloaded_error">Το μοντέλο LLM δεν έχει ληφθεί. Κατεβάστε το από τις Ρυθμίσεις.</string>
+    <string name="insights_download_prompt">Κατεβάστε το μοντέλο AI για να ενεργοποιήσετε τις πληροφορίες</string>
+    <string name="insights_download_button">Λήψη μοντέλου</string>
+    <string name="insights_downloading">Λήψη: %d%%</string>
+    <string name="insights_download_speed">%s MB/s</string>
+    <string name="insights_download_eta">Υπολειπόμενος χρόνος: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Ρυθμίσεις</string>
+    <string name="settings_section_short">Σύντομες εγγραφές (≤10 λεπτά)</string>
+    <string name="settings_section_long">Μακρές εγγραφές (έως 3ω)</string>
+    <string name="settings_section_ai">Διαμόρφωση βοηθού AI</string>
+
+    <!-- Short Recording Settings -->
+    <string name="settings_short_interval_title">Διάστημα δημιουργίας πληροφοριών</string>
+    <string name="settings_short_interval_desc">Πόσο συχνά η AI αναλύει τη μεταγραφή σας για σύντομες εγγραφές</string>
+    <string name="settings_interval_current">Τρέχον: %s</string>
+
+    <!-- Long Recording Settings -->
+    <string name="settings_long_interval_title">Διάστημα δημιουργίας πληροφοριών</string>
+    <string name="settings_long_interval_desc">Πόσο συχνά η AI αναλύει τη μεταγραφή σας για μακρές εγγραφές</string>
+
+    <!-- AI System Prompt Settings -->
+    <string name="settings_system_prompt_title">Προτροπή συστήματος</string>
+    <string name="settings_system_prompt_desc">Οδηγίες που καθοδηγούν τη συμπεριφορά και το στυλ απάντησης της AI</string>
+    <string name="settings_system_prompt_hint">Εισαγάγετε προσαρμοσμένη προτροπή συστήματος…</string>
+
+    <!-- VAD Settings -->
+    <string name="settings_vad_title">Ανίχνευση φωνητικής δραστηριότητας (VAD)</string>
+    <string name="settings_vad_desc">Προηγμένες παράμετροι για ανίχνευση ομιλίας</string>
+    <string name="settings_vad_min_silence">Ελάχιστη διάρκεια σιωπής</string>
+    <string name="settings_vad_min_silence_desc">Όριο σιωπής για τερματισμό τμήματος ομιλίας</string>
+    <string name="settings_vad_max_speech">Μέγιστη διάρκεια ομιλίας</string>
+    <string name="settings_vad_max_speech_desc">Μέγιστη συνεχής ομιλία πριν από αναγκαστικό διαχωρισμό</string>
+    <string name="settings_vad_threshold">Όριο ανίχνευσης</string>
+    <string name="settings_vad_threshold_desc">Ευαισθησία για ανίχνευση φωνής</string>
+
+    <!-- LLM Sampler Settings -->
+    <string name="settings_section_llm_sampler">Παράμετροι δημιουργίας ΤΝ</string>
+    <string name="settings_llm_sampler_title">Δειγματοληψία Token</string>
+    <string name="settings_llm_sampler_desc">Ελέγχει πώς η ΤΝ επιλέγει λέξεις κατά τη δημιουργία. Χαμηλότερη θερμοκρασία = πιο προβλέψιμο· υψηλότερη = πιο δημιουργικό.</string>
+    <string name="settings_llm_sampler_temperature">Θερμοκρασία</string>
+    <string name="settings_llm_sampler_temperature_desc">Τυχαιότητα επιλογής λέξεων (0 = ντετερμινιστικό, 2 = πολύ τυχαίο)</string>
+    <string name="settings_llm_sampler_top_k">Top-K</string>
+    <string name="settings_llm_sampler_top_k_desc">Περιορισμός υποψηφίων στα K πιο πιθανά tokens (0 = απενεργοποιημένο)</string>
+    <string name="settings_llm_sampler_top_p">Top-P</string>
+    <string name="settings_llm_sampler_top_p_desc">Δειγματοληψία Nucleus: αθροιστικό κατώφλι πιθανότητας (0–1)</string>
+    <string name="settings_llm_sampler_min_p">Min-P</string>
+    <string name="settings_llm_sampler_min_p_desc">Ελάχιστη πιθανότητα token σε σχέση με το κορυφαίο token (0–1)</string>
+    <string name="settings_llm_sampler_repeat_penalty">Ποινή Επανάληψης</string>
+    <string name="settings_llm_sampler_repeat_penalty_desc">Επιβάλλει ποινή στα πρόσφατα χρησιμοποιημένα tokens για μείωση επαναλήψεων (1,0 = ανενεργό)</string>
+    <string name="settings_llm_sampler_reset_all">Επαναφορά στις προεπιλογές</string>
+
+    <!-- Time Formats -->
+    <string name="time_just_now">Μόλις τώρα</string>
+    <string name="time_minutes_ago">%d λεπτά πριν</string>
+    <string name="time_today">Σήμερα, %s</string>
+    <string name="time_yesterday">Χθες, %s</string>
+
+    <!-- Error Messages -->
+    <string name="error_title">Σφάλμα</string>
+    <string name="error_load_sessions">Αποτυχία φόρτωσης συνεδριών: %s</string>
+    <string name="error_create_session">Αποτυχία δημιουργίας συνεδρίας: %s</string>
+    <string name="error_delete_session">Αποτυχία διαγραφής συνεδρίας: %s</string>
+
+    <!-- Default LLM System Prompt -->
+    <string name="default_llm_system_prompt">Είστε ένας βοηθός AI που αναλύει μεταγραφές ομιλίας σε πραγματικό χρόνο.\nΑπαντήστε στην ίδια γλώσσα με τη μεταγραφή.\nΠαρέχετε συνοπτικές πληροφορίες, προτάσεις ή σύντομες περιλήψεις.\nΚρατήστε τις απαντήσεις κάτω από 100 λέξεις. Να είστε πρακτικός και χρήσιμος.</string>
+
+        <!-- LLM Enable/Disable Settings -->
+    <string name="settings_section_llm">Μοντέλο AI</string>
+    <string name="settings_llm_enabled_title">Ενεργοποίηση AI Insights</string>
+    <string name="settings_llm_enabled_desc">Όταν είναι ενεργοποιημένο, το μοντέλο AI φορτώνεται στην αρχή κάθε συνεδρίας εγγραφής και παράγει insights σε πραγματικό χρόνο. Απενεργοποιήστε για εξοικονόμηση μνήμης και μπαταρίας.</string>
+
+    <!-- Microphone Permission -->
+    <string name="permission_mic_required">Απαιτείται άδεια μικροφώνου</string>
+    <string name="permission_mic_denied">Η πρόσβαση στο μικρόφωνο αρνήθηκε. Παραχωρήστε την στις ρυθμίσεις εφαρμογής για να χρησιμοποιήσετε τη μεταγραφή.</string>
+
+<!-- Settings Screen - Sections -->
+    <string name="settings_section_appearance">Εμφάνιση</string>
+    <string name="settings_recording_modes">Λειτουργίες εγγραφής</string>
+    <string name="settings_section_simple_listening">Απλή ακρόαση</string>
+    <string name="settings_section_short_meeting">Σύντομη συνάντηση</string>
+    <string name="settings_section_long_meeting">Μακρά συνάντηση</string>
+    <string name="settings_section_translation">Ζωντανή μετάφραση</string>
+    <string name="settings_section_vad">Ανίχνευση φωνητικής δραστηριότητας (VAD)</string>
+    <string name="settings_interval_analysis">Διάστημα ανάλυσης</string>
+    <string name="settings_interval_translation">Διάστημα μετάφρασης</string>
+
+    <!-- Theme Settings -->
+    <string name="settings_theme_title">Θέμα</string>
+    <string name="settings_theme_desc">Επιλέξτε το θέμα της εφαρμογής</string>
+    <string name="theme_system">🔄 Αυτόματο</string>
+    <string name="theme_light">☀️ Ανοιχτό</string>
+    <string name="theme_dark">🌙 Σκοτεινό</string>
+    <string name="theme_system_short">Αυτό</string>
+    <string name="theme_light_short">Ανοιχτό</string>
+    <string name="theme_dark_short">Σκοτεινό</string>
+    <string name="theme_system_desc">Το θέμα ακολουθεί τις ρυθμίσεις του συστήματος</string>
+    <string name="theme_light_desc">Η εφαρμογή θα χρησιμοποιεί πάντα ανοιχτό θέμα</string>
+    <string name="theme_dark_desc">Η εφαρμογή θα χρησιμοποιεί πάντα σκοτεινό θέμα</string>
+
+    <!-- Translation Settings -->
+    <string name="settings_translation_target_title">Προεπιλεγμένη γλώσσα προορισμού</string>
+    <string name="settings_translation_target_desc">Προεπιλεγμένη γλώσσα για μετάφραση</string>
+
+    <!-- New Session Dialog - Recording Mode -->
+    <string name="new_session_recording_mode">Λειτουργία Εγγραφής</string>
+    <string name="mode_simple_listening">Απλή Ακρόαση</string>
+    <string name="mode_short_meeting">Σύντομη Συνάντηση</string>
+    <string name="mode_long_meeting">Μεγάλη Συνάντηση</string>
+    <string name="mode_translation_live">Άμεση Μετάφραση</string>
+    <string name="mode_simple_listening_desc">Περιοδικές περιλήψεις</string>
+    <string name="mode_short_meeting_desc">Περίληψη, προτάσεις και εργασίες</string>
+    <string name="mode_long_meeting_desc">Σε βάθος ανάλυση για μεγάλες συνεδρίες</string>
+    <string name="mode_translation_desc">Μετάφραση σε πραγματικό χρόνο</string>
+    <string name="new_session_output_language">Γλώσσα Εξόδου Μετάφρασης</string>
+    <string name="new_session_output_language_label">Γλώσσα εξόδου</string>
+    <string name="new_session_language_auto">Αυτόματα (γλώσσα συσκευής)</string>
+    <string name="new_session_insight_interval">Κάθε %s</string>
+
+    <!-- Session Details - Tabs and Insight Card -->
+    <string name="tab_transcript">Μεταγραφή</string>
+    <string name="ai_analysis">Ανάλυση ΑΙ</string>
+    <string name="insight_data">Εξήγηση</string>
+    <string name="final_insight_label">Συνολική σύνοψη</string>
+    <string name="create_ai_copy">Δημιουργία αντιγράφου AI</string>
+    <string name="generating_ai_insights">Δημιουργία αναλύσεων AI\u2026</string>
+    <string name="insights_empty_history">Δεν υπάρχουν αναλύσεις AI</string>
+    <string name="insights_empty_history_subtitle">Πατήστε ✨ παραπάνω για δημιουργία AI ανάλυσης από αυτή τη μεταγραφή</string>
+    <string name="history_insight_copy_info">Θα δημιουργηθεί νέο αντίγραφο αυτής της περιόδου με ανάλυση AI.\nΗ αρχική περίοδος δεν θα τροποποιηθεί.</string>
+    <string name="coachmark_history_insight">Πατήστε για να δημιουργήσετε AI αναλύσεις από ολόκληρο το ιστορικό περιόδου</string>
+
+    <!-- Session Details Screen -->
+    <string name="session_extracted_tasks">Εξαγωγή εργασιών</string>
+    <string name="session_no_tasks">Δεν βρέθηκαν εργασίες σε αυτή την συνεδρία.</string>
+    <string name="insight_summary">Περίληψη</string>
+    <string name="insight_suggestions">Προτάσεις</string>
+    <string name="insight_tasks">Εργασίες</string>
+
+    <!-- Setup Screen - AI Benefits -->
+    <string name="setup_ai_insights_title">Πληροφορίες από AI</string>
+    <string name="setup_ai_why_title">Γιατί να κατεβάσετε το μοντέλο AI;</string>
+    <string name="setup_ai_benefit_realtime">Λάβετε προτάσεις και πληροφορίες σε πραγματικό χρόνο ενώ μιλάτε</string>
+    <string name="setup_ai_benefit_analysis">Η AI αναλύει τα μοτίβα ομιλίας σας και παρέχει χρήσιμο πλαίσιο</string>
+    <string name="setup_ai_benefit_offline">Λειτουργεί πλήρως χωρίς σύνδεση: τα δεδομένα σας παραμένουν ιδιωτικά στη συσκευή σας</string>
+    <string name="setup_ai_benefit_fast">Γρήγορη επεξεργασία στη συσκευή χωρίς απαίτηση διαδικτύου</string>
+    <string name="setup_downloading_model">Λήψη μοντέλου...</string>
+
+    <!-- Onboarding - Common -->
+    <string name="onboarding_model_label">Μοντέλο:</string>
+    <string name="onboarding_runs_label">Εκτελείται:</string>
+    <string name="onboarding_source_label">Πηγή:</string>
+    <string name="onboarding_on_device">Στη συσκευή</string>
+    <string name="onboarding_huggingface">HuggingFace</string>
+    <string name="onboarding_downloading">Λήψη...</string>
+    <string name="onboarding_download_progress">%d MB / %d MB</string>
+    <string name="onboarding_download_speed">Ταχύτητα:</string>
+    <string name="onboarding_download_speed_value">%.2f MB/s</string>
+    <string name="onboarding_download_eta">Υπολειπόμενος χρόνος:</string>
+    <string name="onboarding_download_failed">Η λήψη απέτυχε</string>
+    <string name="onboarding_retry_download">Επανάληψη λήψης</string>
+    <string name="download_resuming_from">Συνέχεια από %1$s MB…</string>
+    <string name="onboarding_continue">Συνέχεια</string>
+    <string name="onboarding_time_seconds">%d δευτ</string>
+    <string name="onboarding_time_minutes">%d λεπ %d δευτ</string>
+    <string name="onboarding_time_hours">%d ώρ %d λεπ</string>
+
+    <!-- Onboarding - STT Download -->
+    <string name="onboarding_stt_title">Αναγνώριση ομιλίας</string>
+    <string name="onboarding_stt_ready">Το μοντέλο είναι έτοιμο!</string>
+    <string name="onboarding_stt_ready_desc">Το μοντέλο αναγνώρισης ομιλίας ληφθηκε με επιτυχία.</string>
+    <string name="onboarding_stt_model_title">Μοντέλο αναγνώρισης ομιλίας</string>
+    <string name="onboarding_stt_model_desc">Αυτό το μοντέλο μετατρέπει την ομιλία σας σε κείμενο σε πραγματικό χρόνο. Είναι απαραίτητο για τη λειτουργία της εφαρμογής.</string>
+    <string name="onboarding_stt_model_name">Sherpa-ONNX Parakeet</string>
+    <string name="onboarding_stt_download_button">Λήψη μοντέλου</string>
+    <string name="onboarding_stt_note">Αυτό το μοντέλο είναι απαραίτητο για τη λειτουργία της εφαρμογής.</string>
+
+    <!-- Onboarding - LLM Download -->
+    <string name="onboarding_llm_title">Τεχνητή νοημοσύνη</string>
+    <string name="onboarding_llm_optional">Πληροφορίες AI (Προαιρετικό)</string>
+    <string name="onboarding_llm_desc">Κατεβάστε ένα μοντέλο AI για να λαμβάνετε έξυπνες πληροφορίες και προτάσεις καθώς μιλάτε.</string>
+    <string name="onboarding_llm_benefit_1">Προτάσεις σε πραγματικό χρόνο</string>
+    <string name="onboarding_llm_benefit_2">Ανάλυση με βάση το πλαίσιο</string>
+    <string name="onboarding_llm_benefit_3">100% ιδιωτικό και εκτός σύνδεσης</string>
+    <string name="onboarding_llm_model_name">Gemma 3 1B</string>
+    <string name="onboarding_llm_download_button">Λήψη μοντέλου AI</string>
+    <string name="onboarding_llm_skip">Παράλειψη προς το παρόν (Μόνο μεταγραφή)</string>
+    <string name="onboarding_llm_downloading">Λήψη μοντέλου AI...</string>
+    <string name="onboarding_llm_downloaded_label">Ληφθέν:</string>
+    <string name="onboarding_llm_complete">Η λήψη ολοκληρώθηκε!</string>
+    <string name="onboarding_llm_initializing">Αρχικοποίηση μοντέλου AI...</string>
+    <string name="onboarding_llm_skip_short">Παράλειψη προς το παρόν</string>
+    <string name="onboarding_llm_skip_note">Μπορείτε να το κατεβάσετε αργότερα από τις Ρυθμίσεις αν το παραλείψετε τώρα. Η εφαρμογή θα λειτουργεί κανονικά μόνο με μεταγραφή.</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_subtitle">Ανάλυση Ομιλίας σε Πραγματικό Χρόνο</string>
+    <string name="welcome_feature_transcription_title">Ζωντανή Μεταγραφή</string>
+    <string name="welcome_feature_transcription_desc">Μετατρέψτε την ομιλία σε κείμενο σε πραγματικό χρόνο με υψηλή ακρίβεια</string>
+    <string name="welcome_feature_ai_title">AI Πληροφορίες</string>
+    <string name="welcome_feature_ai_desc">Λάβετε έξυπνες προτάσεις και αναλύσεις ενώ μιλάτε</string>
+    <string name="welcome_feature_privacy_title">Προτεραιότητα στην Ιδιωτικότητα</string>
+    <string name="welcome_feature_privacy_desc">Όλη η επεξεργασία γίνεται στη συσκευή σας: τα δεδομένα σας δεν την εγκαταλείπουν ποτέ</string>
+    <string name="welcome_get_started">Ξεκινήστε</string>
+    <string name="welcome_models_required">Απαιτούνται δύο λήψεις μοντέλων</string>
+
+    <!-- Delete Session Dialog -->
+    <string name="delete_session_title">Διαγραφή συνεδρίας;</string>
+    <string name="delete_session_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε το \"%s\"; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
+    <string name="delete_session_message_unnamed">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτήν τη συνεδρία; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
+
+    <!-- Main Screen - Additional -->
+    <string name="recording_session">Συνεδρία Εγγραφής</string>
+    <string name="initializing_models">Φόρτωση μοντέλων…</string>
+    <string name="back_to_sessions">Πίσω στις συνεδρίες</string>
+    <string name="stop_recording_confirm_title">Διακοπή εγγραφής;</string>
+    <string name="stop_recording_confirm_message">Η εγγραφή βρίσκεται σε εξέλιξη. Διακοπή και επιστροφή;</string>
+    <string name="stop_and_go_back">Διακοπή &amp; Επιστροφή</string>
+    <string name="record">Εγγραφή</string>
+    <string name="llm">AI</string>
+
+    <!-- Transcription Tab - Additional -->
+    <string name="transcription_listening">Ακρόαση...</string>
+    <string name="transcription_press_record">Πατήστε Εγγραφή για έναρξη</string>
+    <string name="transcription_hint1_title">Tap record</string>
+    <string name="transcription_hint1_desc">Hit the mic button at the bottom to start capturing audio</string>
+    <string name="transcription_hint2_title">AI insights</string>
+    <string name="transcription_hint2_desc">Switch to the Insights tab to get summaries and action items</string>
+    <string name="transcription_hint3_title">Fully private</string>
+    <string name="transcription_hint3_desc">Everything runs on your device — nothing is sent to the cloud</string>
+    <string name="transcription_complete">Ολοκληρώθηκε</string>
+
+    <!-- AI Insights Tab - Additional -->
+    <string name="insights_empty_subtitle">Δημιουργούνται κατά την εγγραφή</string>
+    <string name="insight_label">AI Ιδέα</string>
+    <string name="action_items">Action Items</string>
+    <string name="segments_analyzed">%d τμήματα αναλύθηκαν</string>
+    <string name="expand">Ανάπτυξη</string>
+    <string name="collapse">Σύμπτυξη</string>
+    <string name="source_transcription">Πηγαία Μεταγραφή:</string>
+    <string name="segments_not_found">(Τα τμήματα δεν βρέθηκαν)</string>
+
+    <!-- Settings - Additional -->
+    <string name="settings_interval_range_min">%ds (%s)</string>
+    <string name="settings_interval_range_max">%ds (%s)</string>
+    <string name="settings_reset_default">Επαναφορά σε προεπιλογή (%ds)</string>
+    <string name="settings_interval_tip_title">💡 Συμβουλή</string>
+    <string name="settings_interval_tip_desc">Μικρότερα διαστήματα δίνουν συχνότερες αναλύσεις. Μεγαλύτερα διαστήματα (έως 3 λεπτά) μειώνουν τον φόρτο επεξεργασίας. Οι τιμές συγχρονίζονται σε βήματα 10 δευτερολέπτων.</string>
+    <string name="save">Αποθήκευση</string>
+    <string name="processing_session">Επεξεργασία συνεδρίας…</string>
+    <string name="edit_transcription_title">Επεξεργασία μεταγραφής</string>
+    <string name="edit_insight_title">Επεξεργασία ανάλυσης</string>
+    <string name="edit_task_title">Επεξεργασία εργασίας</string>
+    <string name="edit_content_hint">Content</string>
+    <string name="edit_item">Επεξεργασία</string>
+    <string name="settings_save">Αποθήκευση</string>
+    <string name="settings_back">Πίσω</string>
+    <string name="settings_long_interval_minutes">%d λεπτά</string>
+    <string name="settings_system_prompt_reset">Επαναφορά στην Προεπιλογή</string>
+    <string name="settings_system_prompt_note_title">💡 Σημείωση</string>
+    <string name="settings_system_prompt_note_desc">Το prompt συστήματος λέει στο AI πώς να συμπεριφέρεται. Συμπεριλάβετε \'Απαντήστε στην ίδια γλώσσα με τη μεταγραφή\' για να εξασφαλίσετε ότι το AI απαντά στη γλώσσα σας. Οι αλλαγές ισχύουν μετά την επανεκκίνηση του LLM.</string>
+    <string name="settings_vad_sensitivity_more">Περισσότερο</string>
+    <string name="settings_vad_sensitivity_less">Λιγότερο</string>
+    <string name="settings_vad_reset_all">Επαναφορά όλων στις προεπιλογές</string>
+    <string name="settings_vad_restart_title">Απαιτείται Επανεκκίνηση</string>
+    <string name="settings_vad_restart_desc">Οι αλλαγές στις παραμέτρους VAD απαιτούν επανεκκίνηση της εφαρμογής για να ισχύσουν.</string>
+    <string name="settings_vad_troubleshooting_title">💡 Αντιμετώπιση Προβλημάτων</string>
+    <string name="settings_vad_troubleshooting_desc">• Λέξεις κόβονται; Αυξήστε την Ελάχ. Διάρκεια Σιωπής σε 0.7-1.0s\n• Μακριές φράσεις χωρίζονται; Αυξήστε τη Μέγ. Διάρκεια Ομιλίας σε 15-20s\n• Λείπει η χαμηλόφωνη ομιλία; Μειώστε την Ευαισθησία Ανίχνευσης σε 0.3-0.4</string>
+
+    <!-- Session Details - Additional -->
+    <string name="session_details">Λεπτομέρειες Συνεδρίας</string>
+    <string name="generate_history_insight">Δημιουργία ανάλυσης ΤΝ</string>
+    <string name="history_insight_confirm_title">Δημιουργία ανάλυσης ΤΝ</string>
+    <string name="history_insight_confirm_message">Θα δημιουργηθεί νέο αντίγραφο αυτής της συνεδρίας με ανάλυση ΤΝ όλων των τμημάτων μεταγραφής.</string>
+    <string name="history_insight_no_content">Ανεπαρκές περιεχόμενο μεταγραφής για δημιουργία ανάλυσης.</string>
+    <string name="history_insight_copy_suffix">(Ανάλυση ΤΝ)</string>
+    <string name="segments_count">τμήματα</string>
+    <string name="insights_count">ιδέες</string>
+    <string name="back">Πίσω</string>
+    <string name="export">Εξαγωγή</string>
+    <string name="export_transcription">Εξαγωγή μεταγραφής</string>
+    <string name="created">Δημιουργήθηκε</string>
+    <string name="modified">Τροποποιήθηκε</string>
+    <string name="llm_insights">LLM Ιδέες</string>
+    <string name="no_transcription_yet">(Δεν υπάρχει μεταγραφή ακόμα)</string>
+    <string name="prompt_simple_listening">Είστε ένας βοηθός AI που αναλύει ηχητικές μεταγραφές.
+Γράψτε έναν σύντομο τίτλο (μέγ. 8 λέξεις) και μια συνοπτική περίληψη ανάλογη με το μήκος της εισόδου — 1-2 προτάσεις για σύντομη είσοδο, ένα παράγραφο για μεγαλύτερη είσοδο.
+Εξάγετε ΜΟΝΟ έγκυρο JSON με αυτή την ακριβή δομή. Χωρίς markdown. Χωρίς φράχτη κώδικα. Χωρίς backticks:
+{\"τίτλος\": \"...\", \"περίληψη\": \"...\"}
+Εξάγετε το JSON απευθείας.</string>
+    <string name="prompt_short_meeting">Είστε ένας βοηθός συσκέψεων που αναλύει συζητήσεις.
+Γράψτε έναν τίτλο (μέγ. 8 λέξεις), μια περίληψη των κύριων αποφάσεων και σημείων συζήτησης (τουλάχιστον 3-5 προτάσεις, ανάλογη με το μήκος της εισόδου) και μια λίστα δράσιμων εργασιών.
+Εξάγετε ΜΟΝΟ έγκυρο JSON με αυτή την ακριβή δομή. Χωρίς markdown. Χωρίς φράχτη κώδικα. Χωρίς backticks:
+{\"τίτλος\": \"...\", \"περίληψη\": \"...\", \"ενέργειες\": [\"...\", \"...\"]}
+Βείτε άμεσοι. Εξάγετε δράσιμες εργασίες με σαφήνεια.</string>
+    <string name="prompt_long_meeting">Είστε ένας βοηθός που αναλύει εκτεταμένες συζητήσεις.
+Γράψτε έναν τίτλο (μέγ. 8 λέξεις) που αποτυπώνει το κύριο θέμα, μια ολοκληρωμένη περίληψη των κύριων θεμάτων, αποφάσεων και συμπερασμάτων (ανάλογη με το μήκος της εισόδου) και μια λίστα δράσιμων εργασιών.
+Εξάγετε ΜΟΝΟ έγκυρο JSON με αυτή την ακριβή δομή. Χωρίς markdown. Χωρίς φράχτη κώδικα. Χωρίς backticks:
+{\"τίτλος\": \"...\", \"περίληψη\": \"...\", \"ενέργειες\": [\"...\", \"...\"]}
+Βείτε άμεσοι. Εστιάστε σε ευρείας κλίμακας γνώσεις και συγκεκριμένα αποτελέσματα.</string>
+    <string name="prompt_translation">Είστε επαγγελματίας μεταφραστής.
+Μεταφράστε το παρακάτω κείμενο στα {target_language}.
+Εξάγετε μόνο τη μετάφραση. Χωρίς εξηγήσεις, χωρίς ετικέτες, χωρίς προθέματα.</string>
+
+    <!-- Onboarding - Supported Languages -->
+    <string name="onboarding_languages_title">Υποστηριζόμενες γλώσσες</string>
+    <string name="onboarding_languages_subtitle">Διαθέσιμες για μεταγραφή και μετάφραση</string>
+    <string name="onboarding_languages_continue">Συνέχεια</string>
+
+    <string name="onboarding_message_1">Η HearoPilot ακούει, ώστε εσείς να μην χρειάζεται να κρατήσετε σημειώσεις.</string>
+    <string name="onboarding_message_2">Όλη η επεξεργασία AI εκτελείται στη συσκευή σας: κανένα δεδομένο δεν εγκαταλείπει.</string>
+    <string name="onboarding_message_3">Μεταγράψτε διαλέξεις, συσκέψεις και συνομιλίες σε πραγματικό χρόνο.</string>
+    <string name="onboarding_message_4">Οι αυτόματες περιλήψεις σας βοηθούν να εστιάσετε σε αυτό που είναι σημαντικό.</string>
+    <string name="onboarding_message_5">Λειτουργεί εντελώς χωρίς σύνδεση: η φωνή σας παραμένει ιδιωτική.</string>
+    <string name="onboarding_message_6">Αλλάξτε μεταξύ λειτουργιών ακρόασης με λίγα πατήματα.</string>
+    <string name="onboarding_message_7">Ιδανικό για φοιτητές, επαγγελματίες και όλους όσοι μιλούν.</string>
+    <string name="onboarding_message_8">Ανατρέξτε τις μεταγραφές και τις ιδέες σας ανά πάσα στιγμή, χωρίς σύνδεση.</string>
+    <string name="onboarding_message_9">Ένα πάτημα για έναρξη, ένα πάτημα για τέλος: είναι τόσο απλό.</string>
+    <string name="onboarding_message_10">Ευχαριστώ που επιλέξατε την HearoPilot.</string>
+    <string name="onboarding_message_11">Χρησιμοποιήστε το HearoPilot με μικρόφωνο Bluetooth για μεταγραφή από απόσταση.</string>
+    <string name="json_field_title">τίτλος</string>
+    <string name="json_field_summary">περίληψη</string>
+    <string name="json_field_action_items">ενέργειες</string>
+
+    <!-- Batch insight prompts (end-of-session map-reduce pipeline) -->
+    <string name="prompt_batch_chunk_summary">Είστε ένας βοηθός ανάλυσης συσκέψεων. Συνοψίστε συνοπτικά το παρακάτω τμήμα μεταγραφής.
+Συμπεριλάβετε: κύρια θέματα που συζητήθηκαν, αποφάσεις που ελήφθησαν και εργασίες που αναφέρθηκαν.
+Διατηρήστε την περίληψη ανάλογη με το μήκος της εισόδου. Εξάγετε ΜΟΝΟ έγκυρο JSON. Χωρίς markdown. Χωρίς φράχτη κώδικα.
+{\"τίτλος\": \"...\", \"περίληψη\": \"...\", \"ενέργειες\": [\"...\"]}</string>
+    <string name="prompt_batch_merge">Είστε ένας βοηθός ανάλυσης συσκέψεων. Παρακάτω είναι περιλήψεις διαδοχικών τμημάτων μιας ενιαίας εγγραφής.
+Συγχωνεύστε τα σε μία ολοκληρωμένη, συνεκτική περίληψη. Αφαιρέστε διπλές εργασίες που εμφανίζονται σε πολλαπλά τμήματα.
+Εξάγετε ΜΟΝΟ έγκυρο JSON. Χωρίς markdown. Χωρίς φράχτη κώδικα.
+{\"τίτλος\": \"...\", \"περίληψη\": \"...\", \"ενέργειες\": [\"...\"]}</string>
+
+    <!-- Insight strategy UI strings -->
+    <string name="insight_strategy_label">Στρατηγική ανάλυσης</string>
+    <string name="insight_strategy_realtime">Σε πραγματικό χρόνο</string>
+    <string name="insight_strategy_batch">Τέλος συνεδρίας</string>
+    <string name="insight_strategy_realtime_desc">Περιοδικές αναλύσεις κατά τη διάρκεια εγγραφής</string>
+    <string name="insight_strategy_batch_desc">Ολοκληρωμένη ανάλυση μετά την εγγραφή</string>
+
+    <!-- Batch processing progress strings -->
+    <string name="batch_insights_pending">Οι αναλύσεις AI θα δημιουργηθούν όταν σταματήσετε την εγγραφή</string>
+    <string name="batch_processing_chunk">Επεξεργασία τμήματος %1$d από %2$d&#8230;</string>
+    <string name="batch_merging_insights">Συγχώνευση αναλύσεων&#8230;</string>
+    <string name="batch_analysis_complete">Ανάλυση ολοκληρώθηκε</string>
+
+    <!-- Settings: default insight strategy per mode -->
+    <string name="settings_default_strategy">Προεπιλεγμένη στρατηγική ανάλυσης</string>
+
+    <!-- Session card: batch badge -->
+    <string name="session_badge_batch">Μαζική</string>
+
+    <!-- Session topic field -->
+    <string name="session_topic_label">Κύριο θέμα (προαιρετικό)</string>
+    <string name="session_topic_hint">π.χ. Προϋπολογισμός Q1, διάλεξη AI&#8230;</string>
+    <string name="session_topic_helper">Βοηθήστε την AI: περιγράψτε το κύριο θέμα για πιο σχετικές αναλύσεις</string>
+    <!-- Injected as system-prompt prefix when a session topic is set. %1$s = topic text. -->
+    <string name="session_topic_prefix">Κύριο θέμα αυτής της εγγραφής: "%1$s". Εστιάστε την ανάλυσή σας σε αυτό το θέμα.</string>
+
+    <!-- Search screen -->
+    <string name="search_hint">Αναζήτηση στις μεταγραφές…</string>
+    <string name="search_empty_prompt">Αναζητήστε τις μεταγραφές σας</string>
+    <string name="search_no_results">Δεν βρέθηκαν αποτελέσματα</string>
+    <string name="search_source_transcription">Μεταγραφή</string>
+    <string name="search_source_insight">Ανάλυση</string>
+    <string name="search_source_session_name">Όνομα συνεδρίας</string>
+
+    <!-- LLM model download in Settings -->
+    <string name="settings_llm_model_file_title">Αρχείο μοντέλου AI</string>
+    <string name="settings_llm_model_file_desc">Το μοντέλο AI εκτελείται εξ ολοκλήρου στη συσκευή σας. Δεν χρειάζεται internet μετά τη λήψη.</string>
+    <string name="settings_llm_model_ready">Έτοιμο</string>
+    <string name="settings_llm_model_not_downloaded">Δεν έχει ληφθεί</string>
+    <string name="settings_llm_model_download">Λήψη</string>
+    <string name="settings_llm_model_retry">Επανάληψη λήψης</string>
+    <string name="settings_llm_model_downloading">Λήψη %1$d%%</string>
+
+    <!-- LLM Model Variant Setting -->
+    <string name="settings_llm_model_variant_title">Ποιότητα μοντέλου AI</string>
+    <string name="settings_llm_model_variant_desc">Επιλέξτε μεταξύ υψηλότερης ακρίβειας ή καλύτερης απόδοσης μπαταρίας. Επαναλάβετε τη λήψη του μοντέλου μετά την αλλαγή.</string>
+    <string name="settings_llm_model_variant_q8_name">Τυπικό (Q8)</string>
+    <string name="settings_llm_model_variant_q8_desc">Υψηλότερη ακρίβεια · Για ναυαρχίδες συσκευές</string>
+    <string name="settings_llm_model_variant_iq4_name">Αποδοτικό (IQ4)</string>
+    <string name="settings_llm_model_variant_iq4_desc">Βελτιστοποιημένο για ενεργειακή απόδοση</string>
+    <string name="settings_llm_model_variant_recommended">Συνιστάται για τη συσκευή σας</string>
+    <string name="settings_llm_model_variant_downloaded">Ληφθέν</string>
+    <string name="settings_llm_model_variant_beta">Βήτα</string>
+    <string name="settings_llm_advanced_section_title">Προηγμένα μοντέλα</string>
+    <string name="settings_llm_advanced_section_desc">Πειραματικά μοντέλα για προχωρημένους χρήστες. Η απόδοση μπορεί να διαφέρει από τα τυπικά μοντέλα.</string>
+    <string name="settings_llm_model_variant_qwen35_name">Qwen 3.5 0.8B (Q8)</string>
+    <string name="settings_llm_model_variant_qwen35_desc">Εναλλακτική αρχιτεκτονική · Πειραματικό</string>
+</resources>

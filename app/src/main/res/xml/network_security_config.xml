@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Network Security Config for HearoPilot.
+    minSdk=32 already disables cleartext by default, but this file makes the
+    policy explicit and prevents accidental regressions if minSdk is ever lowered.
+
+    The app only communicates over HTTPS (model downloads from HuggingFace CDN).
+    No cleartext traffic is permitted in any build variant.
+
+    Certificate pinning is intentionally omitted: HuggingFace is a third-party public
+    CDN whose certificates rotate annually and whose CDN infrastructure is outside our
+    control. Pinning a third-party CDN creates availability risk (broken downloads on
+    cert rotation or model URL changes) that outweighs the security benefit.
+    Protection is provided by HTTPS with system CAs only (no user-installed certs).
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!-- Trust system CAs only — no user-installed certificates -->
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

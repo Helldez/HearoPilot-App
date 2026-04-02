@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Restrict distribution to phone form factors only; tablets (large/xlarge screens) are excluded -->
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="false"
+        android:xlargeScreens="false" />
+
+    <!-- Explicitly remove the AD_ID permission injected by Firebase Analytics.
+         The app does not use advertising ID; collection is disabled via meta-data. -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"
+        android:minSdkVersion="31" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"
+        android:minSdkVersion="34" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+        android:minSdkVersion="34" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:name="com.hearopilot.app.HearoPilotApplication"
+        android:allowBackup="false"
+        android:extractNativeLibs="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SimulateStreamingAsr"
+        tools:targetApi="31">
+
+        <!--
+        required by qnn
+
+        If you don't add it, you would get an error from the deviceCreate() API
+        and the error code is 14001
+
+        It is located at /vendor/lib64/libcdsprpc.so on your Phone
+        -->
+        <!-- Disable Firebase Analytics advertising ID collection and ad personalization.
+             The app does not use ads; this avoids the Play Console AD_ID declaration
+             requirement and aligns with the app's privacy-first positioning. -->
+        <meta-data
+            android:name="google_analytics_adid_collection_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="google_analytics_ssaid_collection_enabled"
+            android:value="false" />
+
+        <uses-native-library
+            android:name="libcdsprpc.so"
+            android:required="false"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SimulateStreamingAsr">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.hearopilot.app.service.RecordingService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="microphone" />
+
+        <!-- Foreground service for model downloads (STT + LLM).
+             Uses dataSync type so the download survives the app being backgrounded.
+             Play Store requirement: declared here and FOREGROUND_SERVICE_DATA_SYNC
+             permission declared above (API 34+). -->
+        <service
+            android:name="com.hearopilot.app.service.ModelDownloadService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
+        <!-- Foreground service for on-device LLM inference (batch / history insights).
+             Keeps the CPU-bound inference alive when the user backgrounds the app. -->
+        <service
+            android:name="com.hearopilot.app.service.LlmProcessingService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+    </application>
+
+</manifest>

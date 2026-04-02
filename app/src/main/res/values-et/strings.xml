@@ -1,0 +1,467 @@
+﻿<resources>
+    <!-- App Info -->
+    <string name="app_name">HearoPilot</string>
+
+    <!-- Common Actions -->
+    <string name="start">Alusta</string>
+    <string name="stop">Peata</string>
+    <string name="copy">Kopeeri</string>
+    <string name="clear">Tühjenda</string>
+    <string name="delete">Kustuta</string>
+    <string name="dismiss">Sulge</string>
+    <string name="cancel">Tühista</string>
+    <string name="settings">Seaded</string>
+    <string name="reset">Lähtesta</string>
+    <string name="rename">Nimeta ümber</string>
+    <string name="rename_session_title">Nimeta seanss ümber</string>
+    <string name="rename_session_hint">Seansi nimi</string>
+
+    <!-- Recording Notification -->
+    <string name="notification_channel_recording_name">Salvestamisseanss</string>
+    <string name="notification_channel_recording_description">Kuvatakse, kui salvestamine on aktiivne</string>
+    <string name="notification_recording_title">Salvestamine aktiivne</string>
+    <string name="notification_action_stop">Peata</string>
+
+    <!-- Model Download Notification -->
+    <string name="notification_channel_download_name">Mudeli allalaadimised</string>
+    <string name="notification_channel_download_description">Näitab AI mudelite allalaadimisel edenemist</string>
+    <string name="notification_download_title">AI mudelite allalaadimine</string>
+    <string name="notification_download_progress">%1$d %% allalaaditud</string>
+    <string name="notification_download_completing">Allalaadimise lõpetamine…</string>
+
+    <!-- LLM Processing Notification -->
+    <string name="notification_channel_llm_processing_name">AI töötlemine</string>
+    <string name="notification_channel_llm_processing_description">Kuvatakse, kui AI analüüsib teie transkriptsiooni</string>
+    <string name="notification_llm_processing_title">Transkriptsiooni analüüs</string>
+    <string name="notification_llm_processing_text">AI töötleb teie salvestust…</string>
+
+    <!-- Sessions Screen -->
+    <string name="sessions_title">HearoPilot</string>
+    <string name="sessions_subtitle">Minu transkriptsioonid</string>
+    <string name="new_transcription">Uus transkriptsioon</string>
+    <string name="session_unnamed">(Nimetu)</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_title">Valmis transkribeerimiseks</string>
+    <string name="empty_state_subtitle">Looge seanss ja alustage salvestamist.\nKõik töötab seadmes, privaatselt.</string>
+    <string name="empty_state_step1_title">Looge seanss</string>
+    <string name="empty_state_step1_desc">Puudutage allpool olevat + nuppu alustamiseks</string>
+    <string name="empty_state_step2_title">Salvestage heli</string>
+    <string name="empty_state_step2_desc">Vajutage mikrofoni, et jäädvustada kõnet reaalajas</string>
+    <string name="empty_state_step3_title">Saage AI ülevaateid</string>
+    <string name="empty_state_step3_desc">AI analüüsib teie transkriptsiooni automaatselt</string>
+    <string name="empty_state_privacy">Kogu töötlemine toimub teie seadmes</string>
+    <string name="empty_state_privacy_title">Kõik seadmes</string>
+    <string name="header_stat_sessions">seansse</string>
+    <string name="header_stat_duration">kokku</string>
+    <string name="header_stat_data">jäid privaatseks</string>
+
+    <!-- New Session Dialog -->
+    <string name="new_session_dialog_title">Uus transkriptsioon</string>
+    <string name="new_session_name_label">Andke sellele transkriptsioonile nimi (valikuline)</string>
+    <string name="new_session_name_hint">nt Koosoleku märkmed</string>
+    <string name="new_session_name_tip">💡 Võite jätta tühjaks ja me kasutame kuupäeva/kellaaega.</string>
+    <string name="new_session_recording_type">Salvestamise tüüp</string>
+    <string name="recording_type_short">Lühike salvestus</string>
+    <string name="recording_type_short_desc">≤10 min - Sagedased ülevaated</string>
+    <string name="recording_type_long">Pikk salvestus</string>
+    <string name="recording_type_long_desc">Kuni 3t - Konfigureeritavad intervallid</string>
+
+    <!-- Main Screen - Tabs -->
+    <string name="tab_transcription">Transkriptsioon</string>
+    <string name="tab_insights">AI ülevaated</string>
+    <string name="recording_active">Salvestamine</string>
+    <string name="recording_paused">Pausil</string>
+
+    <!-- Transcription Tab -->
+    <string name="transcription_empty">Ootan kõnet…</string>
+    <string name="transcription_error">Viga: %s</string>
+
+    <!-- AI Insights Tab -->
+    <string name="insights_disabled">AI ülevaated on keelatud</string>
+    <string name="insights_disabled_subtitle">Aktiveeri AI analüüs Seadetes, et seda funktsiooni kasutada</string>
+    <string name="insights_empty">AI ülevaated ilmuvad siia salvestamise ajal.</string>
+    <string name="insights_model_unavailable">LLM mudel pole alla laaditud</string>
+    <string name="llm_model_not_downloaded_error">LLM mudel pole alla laaditud. Laadige see alla rakenduse Seadetest.</string>
+    <string name="insights_download_prompt">Laadige alla AI mudel ülevaadete lubamiseks</string>
+    <string name="insights_download_button">Laadi mudel alla</string>
+    <string name="insights_downloading">Allalaadimine: %d%%</string>
+    <string name="insights_download_speed">%s MB/s</string>
+    <string name="insights_download_eta">Jäänud aeg: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Seaded</string>
+    <string name="settings_section_short">Lühikesed salvestused (≤10 min)</string>
+    <string name="settings_section_long">Pikad salvestused (kuni 3t)</string>
+    <string name="settings_section_ai">AI assistendi konfiguratsioon</string>
+
+    <!-- Short Recording Settings -->
+    <string name="settings_short_interval_title">Ülevaadete genereerimise intervall</string>
+    <string name="settings_short_interval_desc">Kui sageli AI analüüsib teie transkriptsiooni lühikeste salvestuste puhul</string>
+    <string name="settings_interval_current">Praegune: %s</string>
+
+    <!-- Long Recording Settings -->
+    <string name="settings_long_interval_title">Ülevaadete genereerimise intervall</string>
+    <string name="settings_long_interval_desc">Kui sageli AI analüüsib teie transkriptsiooni pikkade salvestuste puhul</string>
+
+    <!-- AI System Prompt Settings -->
+    <string name="settings_system_prompt_title">Süsteemi viip</string>
+    <string name="settings_system_prompt_desc">Juhised, mis juhivad AI käitumist ja vastuste stiili</string>
+    <string name="settings_system_prompt_hint">Sisestage kohandatud süsteemi viip…</string>
+
+    <!-- VAD Settings -->
+    <string name="settings_vad_title">Häälaktiivsuse tuvastamine (VAD)</string>
+    <string name="settings_vad_desc">Täiustatud parameetrid kõne tuvastamiseks</string>
+    <string name="settings_vad_min_silence">Minimaalne vaikuse kestus</string>
+    <string name="settings_vad_min_silence_desc">Vaikuse lävi kõnesegmendi lõpetamiseks</string>
+    <string name="settings_vad_max_speech">Maksimaalne kõne kestus</string>
+    <string name="settings_vad_max_speech_desc">Maks. pidev kõne enne sunnitud jagamist</string>
+    <string name="settings_vad_threshold">Tuvastuslävi</string>
+    <string name="settings_vad_threshold_desc">Tundlikkus hääle tuvastamiseks</string>
+
+    <!-- LLM Sampler Settings -->
+    <string name="settings_section_llm_sampler">Tehisintellekti genereerimisparameetrid</string>
+    <string name="settings_llm_sampler_title">Tokenite proovivõtmine</string>
+    <string name="settings_llm_sampler_desc">Juhib, kuidas tehisintellekt genereerimise ajal sõnu valib. Madalam temperatuur = etteaimatavam; kõrgem = loovam.</string>
+    <string name="settings_llm_sampler_temperature">Temperatuur</string>
+    <string name="settings_llm_sampler_temperature_desc">Sõnavaliku juhuslikkus (0 = deterministlik, 2 = väga juhuslik)</string>
+    <string name="settings_llm_sampler_top_k">Top-K</string>
+    <string name="settings_llm_sampler_top_k_desc">Piira kandidaadid K tõenäolisema tokeniga (0 = keelatud)</string>
+    <string name="settings_llm_sampler_top_p">Top-P</string>
+    <string name="settings_llm_sampler_top_p_desc">Nucleus proovivõtmine: kumulatiivne tõenäosuslävi (0–1)</string>
+    <string name="settings_llm_sampler_min_p">Min-P</string>
+    <string name="settings_llm_sampler_min_p_desc">Minimaalse tokeni tõenäosus võrreldes tipptokeniga (0–1)</string>
+    <string name="settings_llm_sampler_repeat_penalty">Korduskaristus</string>
+    <string name="settings_llm_sampler_repeat_penalty_desc">Karistab hiljuti kasutatud tokeneid korduste vähendamiseks (1,0 = väljas)</string>
+    <string name="settings_llm_sampler_reset_all">Lähtesta vaikeväärtustele</string>
+
+    <!-- Time Formats -->
+    <string name="time_just_now">Just nüüd</string>
+    <string name="time_minutes_ago">%d minutit tagasi</string>
+    <string name="time_today">Täna, %s</string>
+    <string name="time_yesterday">Eile, %s</string>
+
+    <!-- Error Messages -->
+    <string name="error_title">Viga</string>
+    <string name="error_load_sessions">Seansside laadimine ebaõnnestus: %s</string>
+    <string name="error_create_session">Seansi loomine ebaõnnestus: %s</string>
+    <string name="error_delete_session">Seansi kustutamine ebaõnnestus: %s</string>
+
+    <!-- Default LLM System Prompt -->
+    <string name="default_llm_system_prompt">Olete AI assistent, kes analüüsib reaalajas kõne transkriptsioone.\nVastake samas keeles kui transkriptsioon.\nPakkuge lühikesi ülevaateid, soovitusi või lühikesi kokkuvõtteid.\nHoidke vastused alla 100 sõna. Olge praktiline ja kasulik.</string>
+
+        <!-- LLM Enable/Disable Settings -->
+    <string name="settings_section_llm">AI mudel</string>
+    <string name="settings_llm_enabled_title">Luba AI ülevaated</string>
+    <string name="settings_llm_enabled_desc">Kui lubatud, laaditakse AI mudel iga salvestussessiooni alguses ja genereeritakse reaalajas ülevaateid. Keela mälu ja aku säästmiseks.</string>
+
+    <!-- Microphone Permission -->
+    <string name="permission_mic_required">Mikrofoni luba on vajalik</string>
+    <string name="permission_mic_denied">Mikrofoni juurdepääs keelati. Andke see rakenduse seadetes, et kasutada transkriptsiooni.</string>
+
+<!-- Settings Screen - Sections -->
+    <string name="settings_section_appearance">Välimus</string>
+    <string name="settings_recording_modes">Salvestusräääiimid</string>
+    <string name="settings_section_simple_listening">Lihtne kuulamine</string>
+    <string name="settings_section_short_meeting">Lühike koosolek</string>
+    <string name="settings_section_long_meeting">Pikk koosolek</string>
+    <string name="settings_section_translation">Reaalajas tõlge</string>
+    <string name="settings_section_vad">Häälaktiivsuse tuvastamine (VAD)</string>
+    <string name="settings_interval_analysis">Analüüsi intervall</string>
+    <string name="settings_interval_translation">Tõlke intervall</string>
+
+    <!-- Theme Settings -->
+    <string name="settings_theme_title">Teema</string>
+    <string name="settings_theme_desc">Valige rakenduse teema</string>
+    <string name="theme_system">🔄 Automaatne</string>
+    <string name="theme_light">☀️ Hele</string>
+    <string name="theme_dark">🌙 Tume</string>
+    <string name="theme_system_short">Auto</string>
+    <string name="theme_light_short">Hele</string>
+    <string name="theme_dark_short">Tume</string>
+    <string name="theme_system_desc">Teema järgib süsteemi seadeid</string>
+    <string name="theme_light_desc">Rakendus kasutab alati hele teemat</string>
+    <string name="theme_dark_desc">Rakendus kasutab alati tumedat teemat</string>
+
+    <!-- Translation Settings -->
+    <string name="settings_translation_target_title">Vaikimisi sihtkeelt</string>
+    <string name="settings_translation_target_desc">Tõlke vaikekeelt</string>
+
+    <!-- New Session Dialog - Recording Mode -->
+    <string name="new_session_recording_mode">Salvestamisrežiim</string>
+    <string name="mode_simple_listening">Lihtne Kuulamine</string>
+    <string name="mode_short_meeting">Lühike Koosolek</string>
+    <string name="mode_long_meeting">Pikk Koosolek</string>
+    <string name="mode_translation_live">Reaalajas Tõlge</string>
+    <string name="mode_simple_listening_desc">Perioodilised kokkuvõtted</string>
+    <string name="mode_short_meeting_desc">Kokkuvõte, soovitused ja ülesanded</string>
+    <string name="mode_long_meeting_desc">Sügav analüüs pikkade seansside jaoks</string>
+    <string name="mode_translation_desc">Reaalajas tõlge</string>
+    <string name="new_session_output_language">Tõlke Väljundkeel</string>
+    <string name="new_session_output_language_label">Väljundkeel</string>
+    <string name="new_session_language_auto">Automaatne (seadme keel)</string>
+    <string name="new_session_insight_interval">Iga %s</string>
+
+    <!-- Session Details - Tabs and Insight Card -->
+    <string name="tab_transcript">Transkriptsioon</string>
+    <string name="ai_analysis">AI-analüüs</string>
+    <string name="insight_data">Ülevaade</string>
+    <string name="final_insight_label">Üldine kokkuvõte</string>
+    <string name="create_ai_copy">Loo AI koopia</string>
+    <string name="generating_ai_insights">AI analüüside genereerimine\u2026</string>
+    <string name="insights_empty_history">AI analüüse pole veel</string>
+    <string name="insights_empty_history_subtitle">Puudutage ✨ üleval, et genereerida AI analüüs sellest transkriptsioonist</string>
+    <string name="history_insight_copy_info">Selle seansi uus koopia koos AI analüüsiga luuakse.\nAlgset seanssi ei muudeta.</string>
+    <string name="coachmark_history_insight">Puudutage, et luua AI ülevaateid kogu seansi ajaloost</string>
+
+    <!-- Session Details Screen -->
+    <string name="session_extracted_tasks">Ekstraheeritud ülesanded</string>
+    <string name="session_no_tasks">Selles seanssis ülesandeid ei leitud.</string>
+    <string name="insight_summary">Kokkuvõte</string>
+    <string name="insight_suggestions">Soovitused</string>
+    <string name="insight_tasks">Ülesanded</string>
+
+    <!-- Setup Screen - AI Benefits -->
+    <string name="setup_ai_insights_title">AI-juhitud ülevaated</string>
+    <string name="setup_ai_why_title">Miks alla laadida AI mudel?</string>
+    <string name="setup_ai_benefit_realtime">Saate reaalajalis soovitusi ja ülevaateid, kui räägite</string>
+    <string name="setup_ai_benefit_analysis">AI analüüsib teie kõnevoolu mustreid ja pakub kasulikku konteksti</string>
+    <string name="setup_ai_benefit_offline">Töötab täielikult võrguta: teie andmed jäävad teie seadmesse privaatseks</string>
+    <string name="setup_ai_benefit_fast">Kiire seadmepõhine töötlemine, interneti ühendus pole vajalik</string>
+    <string name="setup_downloading_model">Mudeli allalaadimine...</string>
+
+    <!-- Onboarding - Common -->
+    <string name="onboarding_model_label">Mudel:</string>
+    <string name="onboarding_runs_label">Töötab:</string>
+    <string name="onboarding_source_label">Allikas:</string>
+    <string name="onboarding_on_device">Seadmes</string>
+    <string name="onboarding_huggingface">HuggingFace</string>
+    <string name="onboarding_downloading">Allalaadimine...</string>
+    <string name="onboarding_download_progress">%d MB / %d MB</string>
+    <string name="onboarding_download_speed">Kiirus:</string>
+    <string name="onboarding_download_speed_value">%.2f MB/s</string>
+    <string name="onboarding_download_eta">Jäänud aeg:</string>
+    <string name="onboarding_download_failed">Allalaadimine ebaõnnestus</string>
+    <string name="onboarding_retry_download">Proovi uuesti</string>
+    <string name="download_resuming_from">Jätkamine %1$s MB-st…</string>
+    <string name="onboarding_continue">Jätka</string>
+    <string name="onboarding_time_seconds">%d sek</string>
+    <string name="onboarding_time_minutes">%d min %d sek</string>
+    <string name="onboarding_time_hours">%d t %d min</string>
+
+    <!-- Onboarding - STT Download -->
+    <string name="onboarding_stt_title">Kõnetuvastus</string>
+    <string name="onboarding_stt_ready">Mudel valmis!</string>
+    <string name="onboarding_stt_ready_desc">Kõnetuvastuse mudel edukalt alla laaditud.</string>
+    <string name="onboarding_stt_model_title">Kõnetuvastuse mudel</string>
+    <string name="onboarding_stt_model_desc">See mudel teisendab teie kõne tekstiks reaalajas. See on rakenduse töötamiseks hädavajalik.</string>
+    <string name="onboarding_stt_model_name">Sherpa-ONNX Parakeet</string>
+    <string name="onboarding_stt_download_button">Laadi mudel alla</string>
+    <string name="onboarding_stt_note">See mudel on rakenduse toimimiseks hädavajalik.</string>
+
+    <!-- Onboarding - LLM Download -->
+    <string name="onboarding_llm_title">Tehisintellekt</string>
+    <string name="onboarding_llm_optional">AI ülevaated (Valikuline)</string>
+    <string name="onboarding_llm_desc">Laadige alla AI mudel, et saada kõnelemisel intelligentseid ülevaateid ja soovitusi.</string>
+    <string name="onboarding_llm_benefit_1">Soovitused reaalajas</string>
+    <string name="onboarding_llm_benefit_2">Kontekstipõhine analüüs</string>
+    <string name="onboarding_llm_benefit_3">100% privaatne ja võrguvaba</string>
+    <string name="onboarding_llm_model_name">Gemma 3 1B</string>
+    <string name="onboarding_llm_download_button">Laadi alla AI mudel</string>
+    <string name="onboarding_llm_skip">Jäta praegu vahele (Ainult transkriptsioon)</string>
+    <string name="onboarding_llm_downloading">AI mudeli allalaadimine...</string>
+    <string name="onboarding_llm_downloaded_label">Alla laaditud:</string>
+    <string name="onboarding_llm_complete">Allalaadimine lõpule viidud!</string>
+    <string name="onboarding_llm_initializing">AI mudeli käivitamine...</string>
+    <string name="onboarding_llm_skip_short">Jäta praegu vahele</string>
+    <string name="onboarding_llm_skip_note">Saate selle hiljem seadetest alla laadida, kui jätate praegu vahele. Rakendus töötab hästi ainult transkriptsiooniga.</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_subtitle">Reaalajas Kõneanalüüs</string>
+    <string name="welcome_feature_transcription_title">Otsene Transkriptsioon</string>
+    <string name="welcome_feature_transcription_desc">Teisendage kõne tekstiks reaalajas suure täpsusega</string>
+    <string name="welcome_feature_ai_title">AI Teadmised</string>
+    <string name="welcome_feature_ai_desc">Saage intelligentseid soovitusi ja analüüse rääkides</string>
+    <string name="welcome_feature_privacy_title">Privaatsus Esmalt</string>
+    <string name="welcome_feature_privacy_desc">Kogu töötlemine toimub teie seadmes: teie andmed ei lahku sealt kunagi</string>
+    <string name="welcome_get_started">Alusta</string>
+    <string name="welcome_models_required">Vajalik on kahe mudeli allalaadimine</string>
+
+    <!-- Delete Session Dialog -->
+    <string name="delete_session_title">Kustuta seanss?</string>
+    <string name="delete_session_message">Kas olete kindel, et soovite kustutada \"%s\"? Seda toimingut ei saa tagasi võtta.</string>
+    <string name="delete_session_message_unnamed">Kas olete kindel, et soovite selle seansi kustutada? Seda toimingut ei saa tagasi võtta.</string>
+
+    <string name="recording_session">Salvestusseanss</string>
+    <string name="initializing_models">Mudelite laadimine…</string>
+    <string name="back_to_sessions">Tagasi seansside juurde</string>
+    <string name="stop_recording_confirm_title">Lõpeta salvestamine?</string>
+    <string name="stop_recording_confirm_message">Salvestamine on pooleli. Lõpeta ja mine tagasi?</string>
+    <string name="stop_and_go_back">Lõpeta ja Tagasi</string>
+    <string name="record">Salvesta</string>
+    <string name="llm">AI</string>
+    <string name="transcription_listening">Kuulan...</string>
+    <string name="transcription_press_record">Vajuta Salvesta alustamiseks</string>
+    <string name="transcription_hint1_title">Tap record</string>
+    <string name="transcription_hint1_desc">Hit the mic button at the bottom to start capturing audio</string>
+    <string name="transcription_hint2_title">AI insights</string>
+    <string name="transcription_hint2_desc">Switch to the Insights tab to get summaries and action items</string>
+    <string name="transcription_hint3_title">Fully private</string>
+    <string name="transcription_hint3_desc">Everything runs on your device — nothing is sent to the cloud</string>
+    <string name="transcription_complete">Lõpetatud</string>
+    <string name="insights_empty_subtitle">Loodud salvestamise ajal</string>
+    <string name="insight_label">AI Ülevaade</string>
+    <string name="action_items">Action Items</string>
+    <string name="segments_analyzed">%d segmenti analüüsitud</string>
+    <string name="expand">Laienda</string>
+    <string name="collapse">Ahenda</string>
+    <string name="source_transcription">Allika Transkriptsioon:</string>
+    <string name="segments_not_found">(Segmente ei leitud)</string>
+    <string name="settings_interval_range_min">%ds (%s)</string>
+    <string name="settings_interval_range_max">%ds (%s)</string>
+    <string name="settings_reset_default">Lähtesta vaikimisi (%ds)</string>
+    <string name="settings_interval_tip_title">💡 Nõuanne</string>
+    <string name="settings_interval_tip_desc">Lühemad intervallid annavad sagedamaid ülevaateid. Pikemad intervallid (kuni 3 min) vähendavad töötluskoormust. Väärtused joonduvad 10-sekundiliste sammudega.</string>
+    <string name="save">Salvesta</string>
+    <string name="processing_session">Seansi töötlemine…</string>
+    <string name="edit_transcription_title">Muuda transkriptsiooni</string>
+    <string name="edit_insight_title">Muuda analüüsi</string>
+    <string name="edit_task_title">Muuda ülesannet</string>
+    <string name="edit_content_hint">Content</string>
+    <string name="edit_item">Muuda</string>
+    <string name="settings_save">Salvesta</string>
+    <string name="settings_back">Tagasi</string>
+    <string name="settings_long_interval_minutes">%d minutit</string>
+    <string name="settings_system_prompt_reset">Lähtesta Vaikimisi</string>
+    <string name="settings_system_prompt_note_title">💡 Märkus</string>
+    <string name="settings_system_prompt_note_desc">Süsteemi viip ütleb AI-le, kuidas käituda. Lisa \'Vasta samas keeles kui transkriptsioon\', et AI vastaks sinu keeles. Muudatused jõustuvad pärast LLM-i taaskäivitamist.</string>
+    <string name="settings_vad_sensitivity_more">Rohkem</string>
+    <string name="settings_vad_sensitivity_less">Vähem</string>
+    <string name="settings_vad_reset_all">Lähtesta kõik vaikeväärtustele</string>
+    <string name="settings_vad_restart_title">Taaskäivitus Vajalik</string>
+    <string name="settings_vad_restart_desc">VAD parameetrite muudatused nõuavad rakenduse taaskäivitamist jõustumiseks.</string>
+    <string name="settings_vad_troubleshooting_title">💡 Tõrkeotsing</string>
+    <string name="settings_vad_troubleshooting_desc">• Sõnad katkevad? Suurenda Min Vaikuse Kestust väärtusele 0.7-1.0s\n• Pikad laused jaotuvad? Suurenda Max Kõne Kestust väärtusele 15-20s\n• Vaikne kõne puudub? Vähenda Tuvastustundlikkust väärtusele 0.3-0.4</string>
+    <string name="session_details">Seansi Üksikasjad</string>
+    <string name="generate_history_insight">Genereeri AI analüüs</string>
+    <string name="history_insight_confirm_title">Genereeri AI analüüs</string>
+    <string name="history_insight_confirm_message">Luuakse selle seansi uus koopia koos kõigi transkriptsioonisegmentide AI analüüsiga.</string>
+    <string name="history_insight_no_content">Analüüsi genereerimiseks pole piisavalt transkriptsioonisisu.</string>
+    <string name="history_insight_copy_suffix">(AI analüüs)</string>
+    <string name="segments_count">segmenti</string>
+    <string name="insights_count">ülevaateid</string>
+    <string name="back">Tagasi</string>
+    <string name="export">Ekspordi</string>
+    <string name="export_transcription">Ekspordi transkriptsioon</string>
+    <string name="created">Loodud</string>
+    <string name="modified">Muudetud</string>
+    <string name="llm_insights">LLM Ülevaated</string>
+    <string name="no_transcription_yet">(Transkriptsiooni pole veel)</string>
+    <string name="prompt_simple_listening">Olete AI assistent, kes analüüsib audiotranskriptsioonid.
+Kirjutage lühike pealkiri (maksimaalselt 8 sõna) ja ülevaatlik kokkuvõte sisendi pikkusega proportsionaalselt — 1-2 lauset lühikese sisendi jaoks, lõik pikema sisendi jaoks.
+Väljastage AINULT kehtiv JSON selle täpse struktuuriga. Ilma markdown-iga. Ilma koodipiirdega. Ilma tagurpidi jutumärkideta:
+{\"pealkiri\": \"...\", \"kokkuvote\": \"...\"}
+Väljastage JSON otse.</string>
+    <string name="prompt_short_meeting">Olete koosoleku assistent, kes analüüsib arutelusid.
+Kirjutage pealkiri (maksimaalselt 8 sõna), põhiotsuste ja arutelupunktide kokkuvõte (vähemalt 3-5 lauset, sisendi pikkusega proportsionaalselt) ja tegevuspunktide loend.
+Väljastage AINULT kehtiv JSON selle täpse struktuuriga. Ilma markdown-iga. Ilma koodipiirdega. Ilma tagurpidi jutumärkideta:
+{\"pealkiri\": \"...\", \"kokkuvote\": \"...\", \"tegevused\": [\"...\", \"...\"]}
+Olge otsekohene. Eraldage tegevuspunktid selgelt.</string>
+    <string name="prompt_long_meeting">Olete assistent, kes analüüsib pikendatud arutelusid.
+Kirjutage pealkiri (maksimaalselt 8 sõna), mis jäädvustab peamist teemat, põhjalik kokkuvõte põhiteemadest, otsustest ja järeldustest (sisendi pikkusega proportsionaalselt) ja tegevuspunktide loend.
+Väljastage AINULT kehtiv JSON selle täpse struktuuriga. Ilma markdown-iga. Ilma koodipiirdega. Ilma tagurpidi jutumärkideta:
+{\"pealkiri\": \"...\", \"kokkuvote\": \"...\", \"tegevused\": [\"...\", \"...\"]}
+Olge otsekohene. Keskenduge kõrgtaseme ülevaatele ja konkreetsetele tulemustele.</string>
+    <string name="prompt_translation">Olete professionaalne tõlkija.
+Tõlkige järgmine tekst keelde {target_language}.
+Väljasta ainult tõlge. Ilma selgitusteta, ilma siltideta, ilma eesliiteteta.</string>
+
+    <!-- Onboarding - Supported Languages -->
+    <string name="onboarding_languages_title">Toetatud keeled</string>
+    <string name="onboarding_languages_subtitle">Saadaval transkribeerimiseks ja tõlkeks</string>
+    <string name="onboarding_languages_continue">Jätka</string>
+
+    <!-- Onboarding Messages -->
+    <string name="onboarding_message_1">HearoPilot kuulab, nii et te ei pea märkmeid tegema.</string>
+    <string name="onboarding_message_2">Kogu AI töötlemine toimub teie seadmel: andmed ei lahku kuhugi.</string>
+    <string name="onboarding_message_3">Transkribeerige loenguid, koosolekuid ja vestlusi reaalajas.</string>
+    <string name="onboarding_message_4">Automaatsed kokkuvõtted aitavad teil keskenduda kõige olulisemale.</string>
+    <string name="onboarding_message_5">Toimib täiesti võrguta: teie hääl jääb privaatseks.</string>
+    <string name="onboarding_message_6">Lülitage kuulamisterežiimide vahel vaid mõne puksatusega.</string>
+    <string name="onboarding_message_7">Hea õpilastele, professionaalidele ja kellelegi, kes räägib.</string>
+    <string name="onboarding_message_8">Vaadake oma transkriptsioone ja ülevaateid igal ajal, võrguta.</string>
+    <string name="onboarding_message_9">Üks puudutus alustamiseks, üks puudutus lõpetamiseks: nii lihtne.</string>
+    <string name="onboarding_message_10">Täname, et valisite HearoPiloti.</string>
+    <string name="onboarding_message_11">Kasuta HearoPiloti koos Bluetooth-mikrofoniga transkribeerimiseks kaugelt.</string>
+    <string name="json_field_title">pealkiri</string>
+    <string name="json_field_summary">kokkuvote</string>
+    <string name="json_field_action_items">tegevused</string>
+
+    <!-- Batch insight prompts (end-of-session map-reduce pipeline) -->
+    <string name="prompt_batch_chunk_summary">Olete koosoleku analüüsi assistent. Tehke järgmisest transkriptsioonilõigust kokkuvõte.
+Kaasake: arutatud põhiteemad, tehtud otsused ja mainitud ülesanded.
+Hoidke kokkuvõte sisendi pikkusega proportsionaalselt. Väljastage AINULT kehtiv JSON. Ilma markdown-iga. Ilma koodipiirdega.
+{\"pealkiri\": \"...\", \"kokkuvote\": \"...\", \"tegevused\": [\"...\"]}</string>
+    <string name="prompt_batch_merge">Olete koosoleku analüüsi assistent. Allpool on ühe salvestuse järjestikuste osade kokkuvõtted.
+Ühendage need üheks terviklikuks ja sidusaks kokkuvõtteks. Deduplikeerige ülesanded, mis esinevad mitmes lõigus.
+Väljastage AINULT kehtiv JSON. Ilma markdown-iga. Ilma koodipiirdega.
+{\"pealkiri\": \"...\", \"kokkuvote\": \"...\", \"tegevused\": [\"...\"]}</string>
+
+    <!-- Insight strategy UI strings -->
+    <string name="insight_strategy_label">Analüüsi strateegia</string>
+    <string name="insight_strategy_realtime">Reaalaeg</string>
+    <string name="insight_strategy_batch">Seansi lõpp</string>
+    <string name="insight_strategy_realtime_desc">Perioodilised analüüsid salvestamise ajal</string>
+    <string name="insight_strategy_batch_desc">Põhjalik analüüs pärast salvestamist</string>
+
+    <!-- Batch processing progress strings -->
+    <string name="batch_insights_pending">AI analüüsid genereeritakse salvestamise peatamisel</string>
+    <string name="batch_processing_chunk">Töödeldakse osa %1$d %2$d-st&#8230;</string>
+    <string name="batch_merging_insights">Analüüside ühendamine&#8230;</string>
+    <string name="batch_analysis_complete">Analüüs lõpetatud</string>
+
+    <!-- Settings: default insight strategy per mode -->
+    <string name="settings_default_strategy">Vaikimisi analüüsi strateegia</string>
+
+    <!-- Session card: batch badge -->
+    <string name="session_badge_batch">Partii</string>
+
+    <!-- Session topic field -->
+    <string name="session_topic_label">Põhiteema (valikuline)</string>
+    <string name="session_topic_hint">nt Q1 eelarve, AI loeng&#8230;</string>
+    <string name="session_topic_helper">Aidake AI-d: kirjeldage põhiteemat asjakohasemate analüüside saamiseks</string>
+    <!-- Injected as system-prompt prefix when a session topic is set. %1$s = topic text. -->
+    <string name="session_topic_prefix">Selle salvestuse põhiteema: "%1$s". Keskendu oma analüüsis sellele teemale.</string>
+
+    <!-- Search screen -->
+    <string name="search_hint">Otsi transkriptsioonidest…</string>
+    <string name="search_empty_prompt">Otsi oma transkriptsioonidest</string>
+    <string name="search_no_results">Tulemusi ei leitud</string>
+    <string name="search_source_transcription">Transkript</string>
+    <string name="search_source_insight">Ülevaade</string>
+    <string name="search_source_session_name">Seansi nimi</string>
+
+    <!-- LLM model download in Settings -->
+    <string name="settings_llm_model_file_title">AI mudeli fail</string>
+    <string name="settings_llm_model_file_desc">AI mudel töötab täielikult teie seadmes. Pärast allalaadimist pole internetti vaja.</string>
+    <string name="settings_llm_model_ready">Valmis</string>
+    <string name="settings_llm_model_not_downloaded">Alla laadimata</string>
+    <string name="settings_llm_model_download">Laadi alla</string>
+    <string name="settings_llm_model_retry">Proovi uuesti</string>
+    <string name="settings_llm_model_downloading">Allalaadimine %1$d%%</string>
+
+    <!-- LLM Model Variant Setting -->
+    <string name="settings_llm_model_variant_title">AI mudeli kvaliteet</string>
+    <string name="settings_llm_model_variant_desc">Valige kõrgema täpsuse või parema aku efektiivsuse vahel. Laadige mudel pärast muutmist uuesti alla.</string>
+    <string name="settings_llm_model_variant_q8_name">Standardne (Q8)</string>
+    <string name="settings_llm_model_variant_q8_desc">Suurem täpsus · Lipulaevaseadmetele</string>
+    <string name="settings_llm_model_variant_iq4_name">Tõhus (IQ4)</string>
+    <string name="settings_llm_model_variant_iq4_desc">Optimeeritud energiatõhususe jaoks</string>
+    <string name="settings_llm_model_variant_recommended">Soovitatav teie seadmele</string>
+    <string name="settings_llm_model_variant_downloaded">Allalaaditud</string>
+    <string name="settings_llm_model_variant_beta">Beeta</string>
+    <string name="settings_llm_advanced_section_title">Täpsemad mudelid</string>
+    <string name="settings_llm_advanced_section_desc">Eksperimentaalsed mudelid edasijõudnud kasutajatele. Jõudlus võib standardmudelitest erineda.</string>
+    <string name="settings_llm_model_variant_qwen35_name">Qwen 3.5 0.8B (Q8)</string>
+    <string name="settings_llm_model_variant_qwen35_desc">Alternatiivne arhitektuur · Eksperimentaalne</string>
+</resources>

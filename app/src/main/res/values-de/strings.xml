@@ -1,0 +1,477 @@
+﻿<resources>
+    <!-- App Info -->
+    <string name="app_name">HearoPilot</string>
+
+    <!-- Common Actions -->
+    <string name="start">Starten</string>
+    <string name="stop">Stoppen</string>
+    <string name="copy">Kopieren</string>
+    <string name="clear">Löschen</string>
+    <string name="delete">Entfernen</string>
+    <string name="dismiss">Schließen</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="settings">Einstellungen</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="rename">Umbenennen</string>
+    <string name="rename_session_title">Sitzung umbenennen</string>
+    <string name="rename_session_hint">Sitzungsname</string>
+
+    <!-- Recording Notification -->
+    <string name="notification_channel_recording_name">Aufnahmesitzung</string>
+    <string name="notification_channel_recording_description">Wird angezeigt, wenn die Aufnahme aktiv ist</string>
+    <string name="notification_recording_title">Aufnahme aktiv</string>
+    <string name="notification_action_stop">Stoppen</string>
+
+    <!-- Model Download Notification -->
+    <string name="notification_channel_download_name">Modell-Downloads</string>
+    <string name="notification_channel_download_description">Zeigt den Fortschritt beim Herunterladen von KI-Modellen</string>
+    <string name="notification_download_title">KI-Modelle werden heruntergeladen</string>
+    <string name="notification_download_progress">%1$d %% heruntergeladen</string>
+    <string name="notification_download_completing">Download wird abgeschlossen…</string>
+
+    <!-- LLM Processing Notification -->
+    <string name="notification_channel_llm_processing_name">KI-Verarbeitung</string>
+    <string name="notification_channel_llm_processing_description">Zeigt an, wenn die KI Ihre Transkription analysiert</string>
+    <string name="notification_llm_processing_title">Transkription wird analysiert</string>
+    <string name="notification_llm_processing_text">KI verarbeitet Ihre Aufnahme…</string>
+
+    <!-- Sessions Screen -->
+    <string name="sessions_title">HearoPilot</string>
+    <string name="sessions_subtitle">Meine Transkriptionen</string>
+    <string name="new_transcription">Neue Transkription</string>
+    <string name="session_unnamed">(Unbenannt)</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_title">Bereit zum Transkribieren</string>
+    <string name="empty_state_subtitle">Erstellen Sie eine Sitzung und beginnen Sie mit der Aufnahme.\nAlles wird auf Ihrem Gerät verarbeitet, privat.</string>
+    <string name="empty_state_step1_title">Sitzung erstellen</string>
+    <string name="empty_state_step1_desc">Tippen Sie auf die Schaltfläche + unten, um zu beginnen</string>
+    <string name="empty_state_step2_title">Audio aufnehmen</string>
+    <string name="empty_state_step2_desc">Drücken Sie das Mikrofon, um Sprache in Echtzeit aufzunehmen</string>
+    <string name="empty_state_step3_title">KI-Einblicke erhalten</string>
+    <string name="empty_state_step3_desc">Die KI analysiert Ihre Transkription automatisch</string>
+    <string name="empty_state_privacy">Alle Verarbeitung erfolgt auf Ihrem Gerät</string>
+    <string name="empty_state_privacy_title">Alles lokal</string>
+    <string name="header_stat_sessions">Aufnahmen</string>
+    <string name="header_stat_duration">gesamt</string>
+    <string name="header_stat_data">privat behalten</string>
+
+    <!-- New Session Dialog -->
+    <string name="new_session_dialog_title">Neue Transkription</string>
+    <string name="new_session_name_label">Geben Sie dieser Transkription einen Namen (optional)</string>
+    <string name="new_session_name_hint">z.B. Meeting-Notizen</string>
+    <string name="new_session_name_tip">💡 Sie können es leer lassen, wir verwenden dann Datum/Uhrzeit.</string>
+    <string name="new_session_recording_type">Aufnahmetyp</string>
+    <string name="recording_type_short">Kurze Aufnahme</string>
+    <string name="recording_type_short_desc">≤10 Min. - Häufige Einblicke</string>
+    <string name="recording_type_long">Lange Aufnahme</string>
+    <string name="recording_type_long_desc">Bis zu 3 Std. - Konfigurierbare Intervalle</string>
+
+    <!-- Main Screen - Tabs -->
+    <string name="tab_transcription">Transkription</string>
+    <string name="tab_insights">KI-Einblicke</string>
+    <string name="recording_active">Aufnahme</string>
+    <string name="recording_paused">Pausiert</string>
+
+    <!-- Transcription Tab -->
+    <string name="transcription_empty">Warte auf Sprache…</string>
+    <string name="transcription_error">Fehler: %s</string>
+
+    <!-- AI Insights Tab -->
+    <string name="insights_disabled">KI-Einblicke sind deaktiviert</string>
+    <string name="insights_disabled_subtitle">Aktiviere KI-Analyse in den Einstellungen, um diese Funktion zu nutzen</string>
+    <string name="insights_empty">KI-Einblicke werden hier während der Aufnahme angezeigt.</string>
+    <string name="insights_model_unavailable">LLM-Modell nicht heruntergeladen</string>
+    <string name="llm_model_not_downloaded_error">LLM-Modell nicht heruntergeladen. Bitte lade es in den Einstellungen herunter.</string>
+    <string name="insights_download_prompt">Laden Sie das KI-Modell herunter, um Einblicke zu aktivieren</string>
+    <string name="insights_download_button">Modell Herunterladen</string>
+    <string name="insights_downloading">Download: %d%%</string>
+    <string name="insights_download_speed">%s MB/s</string>
+    <string name="insights_download_eta">Verbleibende Zeit: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Einstellungen</string>
+    <string name="settings_section_short">Kurze Aufnahmen (≤10 Min.)</string>
+    <string name="settings_section_long">Lange Aufnahmen (bis zu 3 Std.)</string>
+    <string name="settings_section_ai">KI-Assistenten-Konfiguration</string>
+
+    <!-- Short Recording Settings -->
+    <string name="settings_short_interval_title">Intervall für Einblickgenerierung</string>
+    <string name="settings_short_interval_desc">Wie oft die KI Ihre Transkription für kurze Aufnahmen analysiert</string>
+    <string name="settings_interval_current">Aktuell: %s</string>
+
+    <!-- Long Recording Settings -->
+    <string name="settings_long_interval_title">Intervall für Einblickgenerierung</string>
+    <string name="settings_long_interval_desc">Wie oft die KI Ihre Transkription für lange Aufnahmen analysiert</string>
+
+    <!-- AI System Prompt Settings -->
+    <string name="settings_system_prompt_title">System-Prompt</string>
+    <string name="settings_system_prompt_desc">Anweisungen, die das Verhalten und den Antwortstil der KI leiten</string>
+    <string name="settings_system_prompt_hint">Benutzerdefinierten System-Prompt eingeben…</string>
+
+    <!-- VAD Settings -->
+    <string name="settings_vad_title">Sprachaktivitätserkennung (VAD)</string>
+    <string name="settings_vad_desc">Erweiterte Parameter für die Spracherkennung</string>
+    <string name="settings_vad_min_silence">Minimale Stille-Dauer</string>
+    <string name="settings_vad_min_silence_desc">Stilleschwelle zum Beenden des Sprachsegments</string>
+    <string name="settings_vad_max_speech">Maximale Sprachdauer</string>
+    <string name="settings_vad_max_speech_desc">Maximale kontinuierliche Sprache vor erzwungener Aufteilung</string>
+    <string name="settings_vad_threshold">Erkennungsschwelle</string>
+    <string name="settings_vad_threshold_desc">Empfindlichkeit für Spracherkennung</string>
+
+    <!-- LLM Sampler Settings -->
+    <string name="settings_section_llm_sampler">KI-Generierungsparameter</string>
+    <string name="settings_llm_sampler_title">Token-Sampling</string>
+    <string name="settings_llm_sampler_desc">Steuert, wie die KI bei der Generierung Wörter auswählt. Niedrigere Temperatur = vorhersehbarer; höher = kreativer.</string>
+    <string name="settings_llm_sampler_temperature">Temperatur</string>
+    <string name="settings_llm_sampler_temperature_desc">Zufälligkeit der Wortauswahl (0 = deterministisch, 2 = sehr zufällig)</string>
+    <string name="settings_llm_sampler_top_k">Top-K</string>
+    <string name="settings_llm_sampler_top_k_desc">Kandidaten auf die K wahrscheinlichsten Token begrenzen (0 = deaktiviert)</string>
+    <string name="settings_llm_sampler_top_p">Top-P</string>
+    <string name="settings_llm_sampler_top_p_desc">Nucleus-Sampling: kumulativer Wahrscheinlichkeitsschwellenwert (0–1)</string>
+    <string name="settings_llm_sampler_min_p">Min-P</string>
+    <string name="settings_llm_sampler_min_p_desc">Minimale Token-Wahrscheinlichkeit relativ zum Top-Token (0–1)</string>
+    <string name="settings_llm_sampler_repeat_penalty">Wiederholungsstrafe</string>
+    <string name="settings_llm_sampler_repeat_penalty_desc">Bestraft kürzlich verwendete Token, um Wiederholungen zu reduzieren (1,0 = aus)</string>
+    <string name="settings_llm_sampler_reset_all">Auf Standardwerte zurücksetzen</string>
+
+    <!-- Time Formats -->
+    <string name="time_just_now">Gerade eben</string>
+    <string name="time_minutes_ago">Vor %d Minuten</string>
+    <string name="time_today">Heute, %s</string>
+    <string name="time_yesterday">Gestern, %s</string>
+
+    <!-- Error Messages -->
+    <string name="error_title">Fehler</string>
+    <string name="error_load_sessions">Fehler beim Laden der Sitzungen: %s</string>
+    <string name="error_create_session">Fehler beim Erstellen der Sitzung: %s</string>
+    <string name="error_delete_session">Fehler beim Löschen der Sitzung: %s</string>
+
+    <!-- Default LLM System Prompt -->
+    <string name="default_llm_system_prompt">Sie sind ein KI-Assistent, der Echtzeit-Sprachtranskriptionen analysiert.\nAntworten Sie in derselben Sprache wie die Transkription.\nGeben Sie prägnante Einblicke, Vorschläge oder kurze Zusammenfassungen.\nHalten Sie Antworten unter 100 Wörtern. Seien Sie praktisch und hilfreich.</string>
+
+        <!-- LLM Enable/Disable Settings -->
+    <string name="settings_section_llm">KI-Modell</string>
+    <string name="settings_llm_enabled_title">KI-Einblicke aktivieren</string>
+    <string name="settings_llm_enabled_desc">Wenn aktiviert, wird das KI-Modell zu Beginn jeder Aufzeichnungssitzung geladen und generiert Einblicke in Echtzeit. Deaktivieren, um Arbeitsspeicher und Akku zu sparen.</string>
+
+    <!-- Microphone Permission -->
+    <string name="permission_mic_required">Mikrofonberechtigung erforderlich</string>
+    <string name="permission_mic_denied">Mikrofonzugriff wurde verweigert. Bitte erteilen Sie ihn in den App-Einstellungen, um die Transkription zu verwenden.</string>
+
+<!-- Settings Screen - Sections -->
+    <string name="settings_section_appearance">Erscheinungsbild</string>
+    <string name="settings_recording_modes">Aufnahmemodi</string>
+    <string name="settings_section_simple_listening">Einfaches Hören</string>
+    <string name="settings_section_short_meeting">Kurzes Meeting</string>
+    <string name="settings_section_long_meeting">Langes Meeting</string>
+    <string name="settings_section_translation">Live-Übersetzung</string>
+    <string name="settings_section_vad">Sprachaktivitätserkennung (VAD)</string>
+    <string name="settings_interval_analysis">Analyse-Intervall</string>
+    <string name="settings_interval_translation">Übersetzungs-Intervall</string>
+
+    <!-- Theme Settings -->
+    <string name="settings_theme_title">Design</string>
+    <string name="settings_theme_desc">Wählen Sie das App-Design</string>
+    <string name="theme_system">🔄 Automatisch</string>
+    <string name="theme_light">☀️ Hell</string>
+    <string name="theme_dark">🌙 Dunkel</string>
+    <string name="theme_system_short">Auto</string>
+    <string name="theme_light_short">Hell</string>
+    <string name="theme_dark_short">Dunkel</string>
+    <string name="theme_system_desc">Design folgt den Systemeinstellungen</string>
+    <string name="theme_light_desc">Die App verwendet immer das helle Design</string>
+    <string name="theme_dark_desc">Die App verwendet immer das dunkle Design</string>
+
+    <!-- Translation Settings -->
+    <string name="settings_translation_target_title">Standard-Zielsprache</string>
+    <string name="settings_translation_target_desc">Standardsprache für Übersetzungen</string>
+
+    <!-- New Session Dialog - Recording Mode -->
+    <string name="new_session_recording_mode">Aufnahmemodus</string>
+    <string name="mode_simple_listening">Einfaches Hören</string>
+    <string name="mode_short_meeting">Kurzes Treffen</string>
+    <string name="mode_long_meeting">Langes Treffen</string>
+    <string name="mode_translation_live">Live-Übersetzung</string>
+    <string name="mode_simple_listening_desc">Regelmäßige Zusammenfassungen</string>
+    <string name="mode_short_meeting_desc">Zusammenfassung, Vorschläge und Aufgaben</string>
+    <string name="mode_long_meeting_desc">Detaillierte Analyse für lange Sitzungen</string>
+    <string name="mode_translation_desc">Echtzeitübersetzung</string>
+    <string name="new_session_output_language">Übersetzungs-Ausgabesprache</string>
+    <string name="new_session_output_language_label">Ausgabesprache</string>
+    <string name="new_session_language_auto">Automatisch (Gerätesprache)</string>
+    <string name="new_session_insight_interval">Alle %s</string>
+
+    <!-- Session Details - Tabs and Insight Card -->
+    <string name="tab_transcript">Transkription</string>
+    <string name="ai_analysis">KI-Analyse</string>
+    <string name="insight_data">Einsicht</string>
+    <string name="final_insight_label">Gesamtzusammenfassung</string>
+    <string name="create_ai_copy">KI-Kopie erstellen</string>
+    <string name="generating_ai_insights">KI-Analysen werden erstellt\u2026</string>
+    <string name="insights_empty_history">Noch keine KI-Analysen</string>
+    <string name="insights_empty_history_subtitle">Tippen Sie auf ✨ oben, um eine KI-Analyse dieser Transkription zu erstellen</string>
+    <string name="history_insight_copy_info">Es wird eine neue Kopie dieser Sitzung mit KI-Analyse erstellt.\nDie Originalsitzung wird nicht verändert.</string>
+    <string name="coachmark_history_insight">Tippen, um KI-Erkenntnisse aus dem gesamten Sitzungsverlauf zu generieren</string>
+
+    <!-- Session Details Screen -->
+    <string name="session_extracted_tasks">Extrahierte Aufgaben</string>
+    <string name="session_no_tasks">Keine Aufgaben in dieser Sitzung gefunden.</string>
+    <string name="insight_summary">Zusammenfassung</string>
+    <string name="insight_suggestions">Vorschläge</string>
+    <string name="insight_tasks">Aufgaben</string>
+
+    <!-- Setup Screen - AI Benefits -->
+    <string name="setup_ai_insights_title">KI-gestützte Einblicke</string>
+    <string name="setup_ai_why_title">Warum das KI-Modell herunterladen?</string>
+    <string name="setup_ai_benefit_realtime">Erhalten Sie Echtzeit-Vorschläge und Einblicke während Sie sprechen</string>
+    <string name="setup_ai_benefit_analysis">Die KI analysiert Ihre Sprachmuster und liefert hilfreiche Kontextinformationen</string>
+    <string name="setup_ai_benefit_offline">Funktioniert vollständig offline: Ihre Daten bleiben privat auf Ihrem Gerät</string>
+    <string name="setup_ai_benefit_fast">Schnelle Verarbeitung auf dem Gerät ohne Internetverbindung erforderlich</string>
+    <string name="setup_downloading_model">Modell wird heruntergeladen...</string>
+
+    <!-- Onboarding - Common -->
+    <string name="onboarding_model_label">Modell:</string>
+    <string name="onboarding_runs_label">Läuft:</string>
+    <string name="onboarding_source_label">Quelle:</string>
+    <string name="onboarding_on_device">Auf dem Gerät</string>
+    <string name="onboarding_huggingface">HuggingFace</string>
+    <string name="onboarding_downloading">Wird heruntergeladen...</string>
+    <string name="onboarding_download_progress">%d MB / %d MB</string>
+    <string name="onboarding_download_speed">Geschwindigkeit:</string>
+    <string name="onboarding_download_speed_value">%.2f MB/s</string>
+    <string name="onboarding_download_eta">Verbleibende Zeit:</string>
+    <string name="onboarding_download_failed">Download fehlgeschlagen</string>
+    <string name="onboarding_retry_download">Download wiederholen</string>
+    <string name="download_resuming_from">Fortsetzen ab %1$s MB…</string>
+    <string name="onboarding_continue">Weiter</string>
+    <string name="onboarding_time_seconds">%d Sek.</string>
+    <string name="onboarding_time_minutes">%d Min. %d Sek.</string>
+    <string name="onboarding_time_hours">%d Std. %d Min.</string>
+
+    <!-- Onboarding - STT Download -->
+    <string name="onboarding_stt_title">Spracherkennung</string>
+    <string name="onboarding_stt_ready">Modell bereit!</string>
+    <string name="onboarding_stt_ready_desc">Spracherkennungsmodell erfolgreich heruntergeladen.</string>
+    <string name="onboarding_stt_model_title">Spracherkennungsmodell</string>
+    <string name="onboarding_stt_model_desc">Dieses Modell wandelt Ihre Sprache in Echtzeit in Text um. Es ist für die Funktion der App unerlässlich.</string>
+    <string name="onboarding_stt_model_name">Sherpa-ONNX Parakeet</string>
+    <string name="onboarding_stt_download_button">Modell herunterladen</string>
+    <string name="onboarding_stt_note">Dieses Modell ist für die Funktion der App unerlässlich.</string>
+
+    <!-- Onboarding - LLM Download -->
+    <string name="onboarding_llm_title">KI-Intelligenz</string>
+    <string name="onboarding_llm_optional">KI-Einblicke (Optional)</string>
+    <string name="onboarding_llm_desc">Laden Sie ein KI-Modell herunter, um intelligente Einblicke und Vorschläge zu erhalten, während Sie sprechen.</string>
+    <string name="onboarding_llm_benefit_1">Echtzeit-Vorschläge</string>
+    <string name="onboarding_llm_benefit_2">Kontextbasierte Analyse</string>
+    <string name="onboarding_llm_benefit_3">100% privat und offline</string>
+    <string name="onboarding_llm_model_name">Gemma 3 1B</string>
+    <string name="onboarding_llm_download_button">KI-Modell herunterladen</string>
+    <string name="onboarding_llm_skip">Jetzt überspringen (Nur Transkription)</string>
+    <string name="onboarding_llm_downloading">KI-Modell wird heruntergeladen...</string>
+    <string name="onboarding_llm_downloaded_label">Heruntergeladen:</string>
+    <string name="onboarding_llm_complete">Download abgeschlossen!</string>
+    <string name="onboarding_llm_initializing">KI-Modell wird initialisiert...</string>
+    <string name="onboarding_llm_skip_short">Jetzt überspringen</string>
+    <string name="onboarding_llm_skip_note">Sie können dies später in den Einstellungen herunterladen, wenn Sie es jetzt überspringen. Die App funktioniert auch nur mit Transkription.</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_subtitle">Echtzeit-Sprachanalyse</string>
+    <string name="welcome_feature_transcription_title">Live-Transkription</string>
+    <string name="welcome_feature_transcription_desc">Wandeln Sie Sprache in Echtzeit mit hoher Genauigkeit in Text um</string>
+    <string name="welcome_feature_ai_title">KI-Einblicke</string>
+    <string name="welcome_feature_ai_desc">Erhalten Sie intelligente Vorschläge und Analysen während Sie sprechen</string>
+    <string name="welcome_feature_privacy_title">Datenschutz zuerst</string>
+    <string name="welcome_feature_privacy_desc">Alle Verarbeitung erfolgt auf Ihrem Gerät: Ihre Daten verlassen es nie</string>
+    <string name="welcome_get_started">Loslegen</string>
+    <string name="welcome_models_required">Zwei Modell-Downloads erforderlich</string>
+
+    <!-- Delete Session Dialog -->
+    <string name="delete_session_title">Sitzung löschen?</string>
+    <string name="delete_session_message">Sind Sie sicher, dass Sie \"%s\" löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.</string>
+    <string name="delete_session_message_unnamed">Sind Sie sicher, dass Sie diese Sitzung löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.</string>
+
+    <!-- Main Screen - Additional -->
+    <string name="recording_session">Aufnahmesitzung</string>
+    <string name="initializing_models">Modelle werden geladen…</string>
+    <string name="back_to_sessions">Zurück zu Sitzungen</string>
+    <string name="stop_recording_confirm_title">Aufnahme beenden?</string>
+    <string name="stop_recording_confirm_message">Aufnahme läuft. Aufnahme beenden und zurückgehen?</string>
+    <string name="stop_and_go_back">Beenden &amp; Zurück</string>
+    <string name="record">Aufnehmen</string>
+    <string name="llm">AI</string>
+
+    <!-- Transcription Tab - Additional -->
+    <string name="transcription_listening">Hört zu...</string>
+    <string name="transcription_press_record">Drücke Aufnehmen zum Starten</string>
+    <string name="transcription_hint1_title">Tap record</string>
+    <string name="transcription_hint1_desc">Hit the mic button at the bottom to start capturing audio</string>
+    <string name="transcription_hint2_title">AI insights</string>
+    <string name="transcription_hint2_desc">Switch to the Insights tab to get summaries and action items</string>
+    <string name="transcription_hint3_title">Fully private</string>
+    <string name="transcription_hint3_desc">Everything runs on your device — nothing is sent to the cloud</string>
+    <string name="transcription_complete">Abgeschlossen</string>
+
+    <!-- AI Insights Tab - Additional -->
+    <string name="insights_empty_subtitle">Während der Aufnahme generiert</string>
+    <string name="insight_label">KI-Insight</string>
+    <string name="action_items">Action Items</string>
+    <string name="segments_analyzed">%d Segmente analysiert</string>
+    <string name="expand">Erweitern</string>
+    <string name="collapse">Einklappen</string>
+    <string name="source_transcription">Quell-Transkription:</string>
+    <string name="segments_not_found">(Segmente nicht gefunden)</string>
+
+    <!-- System Prompts (Localized) -->
+    <string name="prompt_simple_listening">Du bist ein KI-Assistent, der Audiotranskriptionen analysiert.
+Schreiben Sie einen kurzen Titel (max. 8 Wörter) und eine prägnante Zusammenfassung proportional zur Eingabelänge — 1-2 Sätze für kurze Eingaben, einen Absatz für längere Eingaben.
+Geben Sie NUR gültiges JSON mit dieser exakten Struktur aus. Kein Markdown. Keine Code-Zäune. Keine Backticks:
+{\"titel\": \"...\", \"zusammenfassung\": \"...\"}
+Geben Sie das JSON direkt aus.</string>
+    <string name="prompt_short_meeting">Du bist ein Besprechungsassistent, der Diskussionen analysiert.
+Schreiben Sie einen Titel (max. 8 Wörter), eine Zusammenfassung wichtiger Entscheidungen und Diskussionspunkte (mindestens 3-5 Sätze, proportional zur Eingabelänge) und eine Liste umsetzbarer Aufgaben.
+Geben Sie NUR gültiges JSON mit dieser exakten Struktur aus. Kein Markdown. Keine Code-Zäune. Keine Backticks:
+{\"titel\": \"...\", \"zusammenfassung\": \"...\", \"aktionen\": [\"...\", \"...\"]}
+Seien Sie direkt. Extrahieren Sie umsetzbbare Aufgaben klar.</string>
+    <string name="prompt_long_meeting">Du bist ein Assistent, der erweiterte Diskussionen analysiert.
+Schreiben Sie einen Titel (max. 8 Wörter), der das Hauptthema erfasst, eine umfassende Zusammenfassung wichtiger Themen, Entscheidungen und Schlussfolgerungen (proportional zur Eingabelänge) und eine Liste umsetzbarer Aufgaben.
+Geben Sie NUR gültiges JSON mit dieser exakten Struktur aus. Kein Markdown. Keine Code-Zäune. Keine Backticks:
+{\"titel\": \"...\", \"zusammenfassung\": \"...\", \"aktionen\": [\"...\", \"...\"]}
+Seien Sie direkt. Konzentrieren Sie sich auf hochrangige Erkenntnisse und konkrete Ergebnisse.</string>
+    <string name="prompt_translation">Sie sind ein professioneller Übersetzer.
+Übersetzen Sie den folgenden Text ins {target_language}.
+Geben Sie nur die Übersetzung aus. Keine Erklärungen, keine Bezeichnungen, keine Präfixe.</string>
+
+    <!-- Settings - Additional -->
+    <string name="settings_interval_range_min">%ds (%s)</string>
+    <string name="settings_interval_range_max">%ds (%s)</string>
+    <string name="settings_reset_default">Auf Standard zurücksetzen (%ds)</string>
+    <string name="settings_interval_tip_title">💡 Tipp</string>
+    <string name="settings_interval_tip_desc">Kürzere Intervalle liefern häufigere Einblicke. Längere Intervalle (bis zu 3 Min.) reduzieren die Verarbeitungslast. Werte rasten in 10-Sekunden-Schritten ein.</string>
+    <string name="save">Speichern</string>
+    <string name="processing_session">Sitzung wird verarbeitet…</string>
+    <string name="edit_transcription_title">Transkription bearbeiten</string>
+    <string name="edit_insight_title">Einblick bearbeiten</string>
+    <string name="edit_task_title">Aufgabe bearbeiten</string>
+    <string name="edit_content_hint">Content</string>
+    <string name="edit_item">Bearbeiten</string>
+    <string name="settings_save">Speichern</string>
+    <string name="settings_back">Zurück</string>
+    <string name="settings_long_interval_minutes">%d Minuten</string>
+    <string name="settings_system_prompt_reset">Auf Standard zurücksetzen</string>
+    <string name="settings_system_prompt_note_title">💡 Hinweis</string>
+    <string name="settings_system_prompt_note_desc">Der System-Prompt sagt der KI, wie sie sich verhalten soll. Füge \'Antworte in derselben Sprache wie die Transkription\' hinzu, damit die KI in deiner Sprache antwortet. Änderungen werden nach Neustart des LLM wirksam.</string>
+    <string name="settings_vad_sensitivity_more">Mehr</string>
+    <string name="settings_vad_sensitivity_less">Weniger</string>
+    <string name="settings_vad_reset_all">Alle auf Standardwerte zurücksetzen</string>
+    <string name="settings_vad_restart_title">Neustart Erforderlich</string>
+    <string name="settings_vad_restart_desc">Änderungen an VAD-Parametern erfordern einen Neustart der App.</string>
+    <string name="settings_vad_troubleshooting_title">💡 Fehlerbehebung</string>
+    <string name="settings_vad_troubleshooting_desc">• Wörter werden abgeschnitten? Erhöhe die Min. Stille-Dauer auf 0.7-1.0s\n• Lange Sätze werden geteilt? Erhöhe die Max. Sprechdauer auf 15-20s\n• Leise Sprache fehlt? Senke die Erkennungsempfindlichkeit auf 0.3-0.4</string>
+
+    <!-- Session Details - Additional -->
+    <string name="session_details">Sitzungsdetails</string>
+    <string name="generate_history_insight">KI-Einblick generieren</string>
+    <string name="history_insight_confirm_title">KI-Einblick generieren</string>
+    <string name="history_insight_confirm_message">Eine neue Kopie dieser Sitzung wird mit einer KI-Analyse aller Transkriptionssegmente erstellt.</string>
+    <string name="history_insight_no_content">Nicht genug Inhalt für einen KI-Einblick.</string>
+    <string name="history_insight_copy_suffix">(KI-Analyse)</string>
+    <string name="segments_count">Segmente</string>
+    <string name="insights_count">Insights</string>
+    <string name="back">Zurück</string>
+    <string name="export">Exportieren</string>
+    <string name="export_transcription">Transkription exportieren</string>
+    <string name="created">Erstellt</string>
+    <string name="modified">Geändert</string>
+    <string name="llm_insights">LLM-Insights</string>
+    <string name="no_transcription_yet">(Noch keine Transkription)</string>
+
+    <!-- Onboarding - Supported Languages -->
+    <string name="onboarding_languages_title">Unterstützte Sprachen</string>
+    <string name="onboarding_languages_subtitle">Verfügbar für Transkription und Übersetzung</string>
+    <string name="onboarding_languages_continue">Fortfahren</string>
+
+    <string name="onboarding_message_1">HearoPilot hört zu, damit Sie keine Notizen machen müssen.</string>
+    <string name="onboarding_message_2">Die gesamte KI-Verarbeitung läuft auf Ihrem Gerät: keine Daten verlassen es.</string>
+    <string name="onboarding_message_3">Transkribieren Sie Vorlesungen, Besprechungen und Unterhaltungen in Echtzeit.</string>
+    <string name="onboarding_message_4">Automatische Zusammenfassungen helfen Ihnen, sich auf das Wesentliche zu konzentrieren.</string>
+    <string name="onboarding_message_5">Funktioniert vollständig offline: Ihre Stimme bleibt privat.</string>
+    <string name="onboarding_message_6">Wechseln Sie zwischen Listenmodi mit wenigen Taps.</string>
+    <string name="onboarding_message_7">Ideal für Schüler, Profis und alle, die sprechen.</string>
+    <string name="onboarding_message_8">Jederzeit Ihre Transkriptionen und Erkenntnisse offline überprüfen.</string>
+    <string name="onboarding_message_9">Ein Tap zum Starten, ein Tap zum Stoppen: so einfach ist es.</string>
+    <string name="onboarding_message_10">Danke, dass Sie sich für HearoPilot entschieden haben.</string>
+    <string name="onboarding_message_11">Nutze HearoPilot mit einem Bluetooth-Mikrofon, um aus der Distanz zu transkribieren.</string>
+    <string name="json_field_title">titel</string>
+    <string name="json_field_summary">zusammenfassung</string>
+    <string name="json_field_action_items">aktionen</string>
+
+    <!-- Batch insight prompts (end-of-session map-reduce pipeline) -->
+    <string name="prompt_batch_chunk_summary">Du bist ein Besprechungsanalyse-Assistent. Fasse den folgenden Transkriptionsabschnitt prägnant zusammen.
+Enthalte: besprochene Schlüsselthemen, getroffene Entscheidungen und genannte Aufgaben.
+Halte die Zusammenfassung proportional zur Eingabelänge. Geben Sie NUR gültiges JSON aus. Kein Markdown. Keine Code-Zäune.
+{\"titel\": \"...\", \"zusammenfassung\": \"...\", \"aktionen\": [\"...\"]}</string>
+    <string name="prompt_batch_merge">Du bist ein Besprechungsanalyse-Assistent. Unten sind Zusammenfassungen aufeinanderfolgender Teile einer einzelnen Aufnahme.
+Füge sie zu einer umfassenden, kohärenten Zusammenfassung zusammen. Dedupliziere Aufgaben, die in mehreren Abschnitten erscheinen.
+Geben Sie NUR gültiges JSON aus. Kein Markdown. Keine Code-Zäune.
+{\"titel\": \"...\", \"zusammenfassung\": \"...\", \"aktionen\": [\"...\"]}</string>
+
+    <!-- Insight strategy UI strings -->
+    <string name="insight_strategy_label">Analyse-Strategie</string>
+    <string name="insight_strategy_realtime">Echtzeit</string>
+    <string name="insight_strategy_batch">Sitzungsende</string>
+    <string name="insight_strategy_realtime_desc">Regelmäßige Einblicke während der Aufnahme</string>
+    <string name="insight_strategy_batch_desc">Umfassende Analyse nach der Aufnahme</string>
+
+    <!-- Batch processing progress strings -->
+    <string name="batch_insights_pending">KI-Einblicke werden beim Stoppen der Aufnahme generiert</string>
+    <string name="batch_processing_chunk">Verarbeite Teil %1$d von %2$d&#8230;</string>
+    <string name="batch_merging_insights">Einblicke zusammenführen&#8230;</string>
+    <string name="batch_analysis_complete">Analyse abgeschlossen</string>
+
+    <!-- Settings: default insight strategy per mode -->
+    <string name="settings_default_strategy">Standard-Analyse-Strategie</string>
+
+    <!-- Session card: batch badge -->
+    <string name="session_badge_batch">Batch</string>
+
+    <!-- Session topic field -->
+    <string name="session_topic_label">Hauptthema (optional)</string>
+    <string name="session_topic_hint">z.B. Q1-Budget, KI-Vorlesung&#8230;</string>
+    <string name="session_topic_helper">Helfen Sie der KI: Beschreiben Sie das Hauptthema für relevantere Einblicke</string>
+    <!-- Injected as system-prompt prefix when a session topic is set. %1$s = topic text. -->
+    <string name="session_topic_prefix">Hauptthema dieser Aufnahme: "%1$s". Richten Sie Ihre Analyse auf dieses Thema aus.</string>
+
+    <!-- Search screen -->
+    <string name="search_hint">Transkriptionen durchsuchen…</string>
+    <string name="search_empty_prompt">Transkriptionen durchsuchen</string>
+    <string name="search_no_results">Keine Treffer gefunden</string>
+    <string name="search_source_transcription">Transkript</string>
+    <string name="search_source_insight">Erkenntnis</string>
+    <string name="search_source_session_name">Sitzungsname</string>
+
+    <!-- LLM model download in Settings -->
+    <string name="settings_llm_model_file_title">KI-Modelldatei</string>
+    <string name="settings_llm_model_file_desc">Das KI-Modell läuft vollständig auf Ihrem Gerät. Nach dem Download ist kein Internet erforderlich.</string>
+    <string name="settings_llm_model_ready">Bereit</string>
+    <string name="settings_llm_model_not_downloaded">Nicht heruntergeladen</string>
+    <string name="settings_llm_model_download">Herunterladen</string>
+    <string name="settings_llm_model_retry">Erneut versuchen</string>
+    <string name="settings_llm_model_downloading">Herunterladen %1$d%%</string>
+
+    <!-- LLM Model Variant Setting -->
+    <string name="settings_llm_model_variant_title">KI-Modellqualität</string>
+    <string name="settings_llm_model_variant_desc">Wählen Sie zwischen höherer Genauigkeit oder besserem Akkuverbrauch. Laden Sie das Modell nach einer Änderung erneut herunter.</string>
+    <string name="settings_llm_model_variant_q8_name">Standard (Q8)</string>
+    <string name="settings_llm_model_variant_q8_desc">Höhere Genauigkeit · Für Flaggschiff-Geräte</string>
+    <string name="settings_llm_model_variant_iq4_name">Effizient (IQ4)</string>
+    <string name="settings_llm_model_variant_iq4_desc">Optimiert für Energieeffizienz</string>
+    <string name="settings_llm_model_variant_recommended">Für Ihr Gerät empfohlen</string>
+    <string name="settings_llm_model_variant_downloaded">Heruntergeladen</string>
+    <string name="settings_llm_model_variant_beta">Beta</string>
+    <string name="settings_llm_advanced_section_title">Erweiterte Modelle</string>
+    <string name="settings_llm_advanced_section_desc">Experimentelle Modelle für erfahrene Nutzer. Die Leistung kann von Standardmodellen abweichen.</string>
+    <string name="settings_llm_model_variant_qwen35_name">Qwen 3.5 0.8B (Q8)</string>
+    <string name="settings_llm_model_variant_qwen35_desc">Alternative Architektur · Experimentell</string>
+</resources>

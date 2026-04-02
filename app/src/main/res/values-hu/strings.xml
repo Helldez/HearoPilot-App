@@ -1,0 +1,476 @@
+﻿<resources>
+    <!-- App Info -->
+    <string name="app_name">HearoPilot</string>
+
+    <!-- Common Actions -->
+    <string name="start">Indítás</string>
+    <string name="stop">Leállítás</string>
+    <string name="copy">Másolás</string>
+    <string name="clear">Törlés</string>
+    <string name="delete">Törlés</string>
+    <string name="dismiss">Bezárás</string>
+    <string name="cancel">Mégse</string>
+    <string name="settings">Beállítások</string>
+    <string name="reset">Visszaállítás</string>
+    <string name="rename">Átnevez</string>
+    <string name="rename_session_title">Munkamenet átnevezése</string>
+    <string name="rename_session_hint">Munkamenet neve</string>
+
+    <!-- Recording Notification -->
+    <string name="notification_channel_recording_name">Felvételi munkamenet</string>
+    <string name="notification_channel_recording_description">Megjelenik, amikor a felvétel aktív</string>
+    <string name="notification_recording_title">Felvétel aktív</string>
+    <string name="notification_action_stop">Leállítás</string>
+
+    <!-- Model Download Notification -->
+    <string name="notification_channel_download_name">Modell-letöltések</string>
+    <string name="notification_channel_download_description">Megjeleníti az AI-modellek letöltési folyamatát</string>
+    <string name="notification_download_title">AI-modellek letöltése</string>
+    <string name="notification_download_progress">%1$d %% letöltve</string>
+    <string name="notification_download_completing">Letöltés befejezése…</string>
+
+    <!-- LLM Processing Notification -->
+    <string name="notification_channel_llm_processing_name">AI-feldolgozás</string>
+    <string name="notification_channel_llm_processing_description">Megjelenik, amikor az AI elemzi az átírást</string>
+    <string name="notification_llm_processing_title">Átírás elemzése</string>
+    <string name="notification_llm_processing_text">Az AI feldolgozza a felvételt…</string>
+
+    <!-- Sessions Screen -->
+    <string name="sessions_title">HearoPilot</string>
+    <string name="sessions_subtitle">Átírásaim</string>
+    <string name="new_transcription">Új átírás</string>
+    <string name="session_unnamed">(Névtelen)</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_title">Készen áll az átírásra</string>
+    <string name="empty_state_subtitle">Hozzon létre egy munkamenetet és kezdje el a felvételt.\nMinden eszközön fut, privát módon.</string>
+    <string name="empty_state_step1_title">Hozzon létre munkamenetet</string>
+    <string name="empty_state_step1_desc">Érintse meg a + gombot alul a kezdéshez</string>
+    <string name="empty_state_step2_title">Hangfelvétel készítése</string>
+    <string name="empty_state_step2_desc">Nyomja meg a mikrofont a beszéd valós idejű rögzítéséhez</string>
+    <string name="empty_state_step3_title">AI-betekintések beszerzése</string>
+    <string name="empty_state_step3_desc">Az AI automatikusan elemzi az átírást</string>
+    <string name="empty_state_privacy">Minden feldolgozás az eszközén történik</string>
+    <string name="empty_state_privacy_title">Minden helyi</string>
+    <string name="header_stat_sessions">munkamenet</string>
+    <string name="header_stat_duration">összesen</string>
+    <string name="header_stat_data">maradtak privátak</string>
+
+    <!-- New Session Dialog -->
+    <string name="new_session_dialog_title">Új átírás</string>
+    <string name="new_session_name_label">Adjon nevet ennek az átírásnak (opcionális)</string>
+    <string name="new_session_name_hint">pl. Találkozó jegyzetek</string>
+    <string name="new_session_name_tip">💡 Üresen is hagyhatja, és a dátumot/időt használjuk.</string>
+    <string name="new_session_recording_type">Felvétel típusa</string>
+    <string name="recording_type_short">Rövid felvétel</string>
+    <string name="recording_type_short_desc">≤10 perc - Gyakori betekintések</string>
+    <string name="recording_type_long">Hosszú felvétel</string>
+    <string name="recording_type_long_desc">Akár 3 óra - Konfigurálható időközök</string>
+
+    <!-- Main Screen - Tabs -->
+    <string name="tab_transcription">Átírás</string>
+    <string name="tab_insights">AI-betekintések</string>
+    <string name="recording_active">Felvétel</string>
+    <string name="recording_paused">Szüneteltetve</string>
+
+    <!-- Transcription Tab -->
+    <string name="transcription_empty">Várakozás beszédre…</string>
+    <string name="transcription_error">Hiba: %s</string>
+
+    <!-- AI Insights Tab -->
+    <string name="insights_disabled">Az AI elemzések le vannak tiltva</string>
+    <string name="insights_disabled_subtitle">Engedélyezd az AI elemzést a Beállításokban a funkció használatához</string>
+    <string name="insights_empty">Az AI-betekintések itt jelennek meg a felvétel során.</string>
+    <string name="insights_model_unavailable">Az LLM modell nincs letöltve</string>
+    <string name="llm_model_not_downloaded_error">Az LLM modell nincs letöltve. Töltse le a Beállítások menüből.</string>
+    <string name="insights_download_prompt">Töltse le az AI modellt a betekintések engedélyezéséhez</string>
+    <string name="insights_download_button">Modell letöltése</string>
+    <string name="insights_downloading">Letöltés: %d%%</string>
+    <string name="insights_download_speed">%s MB/s</string>
+    <string name="insights_download_eta">Hátralévő idő: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Beállítások</string>
+    <string name="settings_section_short">Rövid felvételek (≤10 perc)</string>
+    <string name="settings_section_long">Hosszú felvételek (akár 3 óra)</string>
+    <string name="settings_section_ai">AI asszisztens konfiguráció</string>
+
+    <!-- Short Recording Settings -->
+    <string name="settings_short_interval_title">Betekintés-generálási időköz</string>
+    <string name="settings_short_interval_desc">Milyen gyakran elemzi az AI az átírást rövid felvételeknél</string>
+    <string name="settings_interval_current">Jelenlegi: %s</string>
+
+    <!-- Long Recording Settings -->
+    <string name="settings_long_interval_title">Betekintés-generálási időköz</string>
+    <string name="settings_long_interval_desc">Milyen gyakran elemzi az AI az átírást hosszú felvételeknél</string>
+
+    <!-- AI System Prompt Settings -->
+    <string name="settings_system_prompt_title">Rendszer prompt</string>
+    <string name="settings_system_prompt_desc">Utasítások, amelyek irányítják az AI viselkedését és válaszstílusát</string>
+    <string name="settings_system_prompt_hint">Adjon meg egyéni rendszer promptot…</string>
+
+    <!-- VAD Settings -->
+    <string name="settings_vad_title">Hangaktivitás észlelés (VAD)</string>
+    <string name="settings_vad_desc">Speciális paraméterek a beszédészleléshez</string>
+    <string name="settings_vad_min_silence">Minimális csend időtartam</string>
+    <string name="settings_vad_min_silence_desc">Csend küszöb a beszédszakasz befejezéséhez</string>
+    <string name="settings_vad_max_speech">Maximális beszéd időtartam</string>
+    <string name="settings_vad_max_speech_desc">Max. folyamatos beszéd kényszerített felosztás előtt</string>
+    <string name="settings_vad_threshold">Észlelési küszöb</string>
+    <string name="settings_vad_threshold_desc">Érzékenység a hangészleléshez</string>
+
+    <!-- LLM Sampler Settings -->
+    <string name="settings_section_llm_sampler">MI generálási paraméterek</string>
+    <string name="settings_llm_sampler_title">Token mintavételezés</string>
+    <string name="settings_llm_sampler_desc">Szabályozza, hogyan választja ki az MI a szavakat generálás közben. Alacsonyabb hőmérséklet = kiszámíthatóbb; magasabb = kreatívabb.</string>
+    <string name="settings_llm_sampler_temperature">Hőmérséklet</string>
+    <string name="settings_llm_sampler_temperature_desc">Szóválasztás véletlenszerűsége (0 = determinisztikus, 2 = nagyon véletlenszerű)</string>
+    <string name="settings_llm_sampler_top_k">Top-K</string>
+    <string name="settings_llm_sampler_top_k_desc">A jelöltek korlátozása a K legtöbb valószínűségű tokenre (0 = kikapcsolva)</string>
+    <string name="settings_llm_sampler_top_p">Top-P</string>
+    <string name="settings_llm_sampler_top_p_desc">Nucleus mintavételezés: kumulatív valószínűségi küszöb (0–1)</string>
+    <string name="settings_llm_sampler_min_p">Min-P</string>
+    <string name="settings_llm_sampler_min_p_desc">Token minimális valószínűsége a legjobb tokenhez képest (0–1)</string>
+    <string name="settings_llm_sampler_repeat_penalty">Ismétlési büntetés</string>
+    <string name="settings_llm_sampler_repeat_penalty_desc">Bünteti a nemrég használt tokeneket az ismétlések csökkentésére (1,0 = kikapcsolva)</string>
+    <string name="settings_llm_sampler_reset_all">Visszaállítás alapértékekre</string>
+
+    <!-- Time Formats -->
+    <string name="time_just_now">Épp most</string>
+    <string name="time_minutes_ago">%d perce</string>
+    <string name="time_today">Ma, %s</string>
+    <string name="time_yesterday">Tegnap, %s</string>
+
+    <!-- Error Messages -->
+    <string name="error_title">Hiba</string>
+    <string name="error_load_sessions">A munkamenetek betöltése sikertelen: %s</string>
+    <string name="error_create_session">A munkamenet létrehozása sikertelen: %s</string>
+    <string name="error_delete_session">A munkamenet törlése sikertelen: %s</string>
+
+    <!-- Default LLM System Prompt -->
+    <string name="default_llm_system_prompt">Ön egy AI asszisztens, aki valós idejű beszédátírásokat elemez.\nUgyanazon a nyelven válaszoljon, mint az átírás.\nNyújtson tömör betekintéseket, javaslatokat vagy rövid összefoglalókat.\nA válaszok legyenek 100 szó alatt. Legyen gyakorlatias és hasznos.</string>
+
+        <!-- LLM Enable/Disable Settings -->
+    <string name="settings_section_llm">AI modell</string>
+    <string name="settings_llm_enabled_title">AI betekintések engedélyezése</string>
+    <string name="settings_llm_enabled_desc">Ha engedélyezve van, az AI modell minden felvételi munkamenet elején betöltődik és valós időben generál betekintéseket. Tiltsa le a memória és az akkumulátor megtakárításához.</string>
+
+    <!-- Microphone Permission -->
+    <string name="permission_mic_required">Mikrofon engedély szükséges</string>
+    <string name="permission_mic_denied">A mikrofon-hozzáférést megtagadták. Adja meg az alkalmazás beállításaiban az átírás használatához.</string>
+
+<!-- Settings Screen - Sections -->
+    <string name="settings_section_appearance">Megjelenés</string>
+    <string name="settings_recording_modes">Rögzítési módok</string>
+    <string name="settings_section_simple_listening">Egyszerű hallgatás</string>
+    <string name="settings_section_short_meeting">Rövid megbeszélés</string>
+    <string name="settings_section_long_meeting">Hosszú megbeszélés</string>
+    <string name="settings_section_translation">Élő fordítás</string>
+    <string name="settings_section_vad">Hangaktivitás észlelés (VAD)</string>
+    <string name="settings_interval_analysis">Elemzési intervallum</string>
+    <string name="settings_interval_translation">Fordítási intervallum</string>
+
+    <!-- Theme Settings -->
+    <string name="settings_theme_title">Téma</string>
+    <string name="settings_theme_desc">Válassza ki az alkalmazás témáját</string>
+    <string name="theme_system">🔄 Automatikus</string>
+    <string name="theme_light">☀️ Világos</string>
+    <string name="theme_dark">🌙 Sötét</string>
+    <string name="theme_system_short">Auto</string>
+    <string name="theme_light_short">Világos</string>
+    <string name="theme_dark_short">Sötét</string>
+    <string name="theme_system_desc">A téma követi a rendszer beállításait</string>
+    <string name="theme_light_desc">Az alkalmazás mindig a világos témát fogja használni</string>
+    <string name="theme_dark_desc">Az alkalmazás mindig a sötét témát fogja használni</string>
+
+    <!-- Translation Settings -->
+    <string name="settings_translation_target_title">Alapértelmezett célnyelv</string>
+    <string name="settings_translation_target_desc">Alapértelmezett fordítási nyelv</string>
+
+    <!-- New Session Dialog - Recording Mode -->
+    <string name="new_session_recording_mode">Felvételi Mód</string>
+    <string name="mode_simple_listening">Egyszerű Hallgatás</string>
+    <string name="mode_short_meeting">Rövid Találkozó</string>
+    <string name="mode_long_meeting">Hosszú Találkozó</string>
+    <string name="mode_translation_live">Élő Fordítás</string>
+    <string name="mode_simple_listening_desc">Rendszeres összefoglalók</string>
+    <string name="mode_short_meeting_desc">Összegzés, javaslatok és feladatok</string>
+    <string name="mode_long_meeting_desc">Részletes elemzés hosszú munkamenetekhez</string>
+    <string name="mode_translation_desc">Valós idejű fordítás</string>
+    <string name="new_session_output_language">Fordítás Kimeneti Nyelv</string>
+    <string name="new_session_output_language_label">Kimeneti nyelv</string>
+    <string name="new_session_language_auto">Automatikus (eszköz nyelve)</string>
+    <string name="new_session_insight_interval">Minden %s</string>
+
+    <!-- Session Details - Tabs and Insight Card -->
+    <string name="tab_transcript">Szövegezet</string>
+    <string name="ai_analysis">AI Elemzés</string>
+    <string name="insight_data">Betekintés</string>
+    <string name="final_insight_label">Teljes összefoglaló</string>
+    <string name="create_ai_copy">AI másolat létrehozása</string>
+    <string name="generating_ai_insights">AI elemzések generálása\u2026</string>
+    <string name="insights_empty_history">Még nincsenek AI elemzések</string>
+    <string name="insights_empty_history_subtitle">Koppintson a ✨ ikonra fent az AI elemzés létrehozásához ebből az átiratból</string>
+    <string name="history_insight_copy_info">Ezen munkamenet új másolata AI elemzéssel jön létre.\nAz eredeti munkamenet nem módosul.</string>
+    <string name="coachmark_history_insight">Koppintson a teljes munkamenet-előzmények AI-elemzéseinek létrehozásához</string>
+
+    <!-- Session Details Screen -->
+    <string name="session_extracted_tasks">Kinyert feladatok</string>
+    <string name="session_no_tasks">Nem található feladat ebben a munkamenetben.</string>
+    <string name="insight_summary">Összegzés</string>
+    <string name="insight_suggestions">Javaslatok</string>
+    <string name="insight_tasks">Feladatok</string>
+
+    <!-- Setup Screen - AI Benefits -->
+    <string name="setup_ai_insights_title">AI-alapú betekintések</string>
+    <string name="setup_ai_why_title">Miért töltse le az AI modellt?</string>
+    <string name="setup_ai_benefit_realtime">Kapjon valós idejű javaslatokat és betekintéseket beszéd közben</string>
+    <string name="setup_ai_benefit_analysis">Az AI elemzi a beszédmintáit és hasznos kontextust nyújt</string>
+    <string name="setup_ai_benefit_offline">Teljesen offline működik: adatai az eszközön maradnak magánjellegűek</string>
+    <string name="setup_ai_benefit_fast">Gyors eszközön feldolgozás, nincs szükség internetkapcsolatra</string>
+    <string name="setup_downloading_model">Modell letöltése...</string>
+
+    <!-- Onboarding - Common -->
+    <string name="onboarding_model_label">Modell:</string>
+    <string name="onboarding_runs_label">Fut:</string>
+    <string name="onboarding_source_label">Forrás:</string>
+    <string name="onboarding_on_device">Eszközön</string>
+    <string name="onboarding_huggingface">HuggingFace</string>
+    <string name="onboarding_downloading">Letöltés...</string>
+    <string name="onboarding_download_progress">%d MB / %d MB</string>
+    <string name="onboarding_download_speed">Sebesség:</string>
+    <string name="onboarding_download_speed_value">%.2f MB/s</string>
+    <string name="onboarding_download_eta">Hátralévő idő:</string>
+    <string name="onboarding_download_failed">A letöltés sikertelen</string>
+    <string name="onboarding_retry_download">Letöltés újra</string>
+    <string name="download_resuming_from">Folytatás %1$s MB-tól…</string>
+    <string name="onboarding_continue">Folytatás</string>
+    <string name="onboarding_time_seconds">%d mp</string>
+    <string name="onboarding_time_minutes">%d perc %d mp</string>
+    <string name="onboarding_time_hours">%d óra %d perc</string>
+
+    <!-- Onboarding - STT Download -->
+    <string name="onboarding_stt_title">Beszédfelismerés</string>
+    <string name="onboarding_stt_ready">A modell kész!</string>
+    <string name="onboarding_stt_ready_desc">A beszédfelismerési modell sikeresen letöltve.</string>
+    <string name="onboarding_stt_model_title">Beszédfelismerési modell</string>
+    <string name="onboarding_stt_model_desc">Ez a modell valós időben szöveggé alakítja a beszédet. Elengedhetetlen az alkalmazás működéséhez.</string>
+    <string name="onboarding_stt_model_name">Sherpa-ONNX Parakeet</string>
+    <string name="onboarding_stt_download_button">Modell letöltése</string>
+    <string name="onboarding_stt_note">Ez a modell elengedhetetlen az alkalmazás működéséhez.</string>
+
+    <!-- Onboarding - LLM Download -->
+    <string name="onboarding_llm_title">Mesterséges intelligencia</string>
+    <string name="onboarding_llm_optional">AI-betekintések (Opcionális)</string>
+    <string name="onboarding_llm_desc">Töltsön le egy AI modellt, hogy intelligens betekintéseket és javaslatokat kapjon beszéd közben.</string>
+    <string name="onboarding_llm_benefit_1">Valós idejű javaslatok</string>
+    <string name="onboarding_llm_benefit_2">Kontextusalapú elemzés</string>
+    <string name="onboarding_llm_benefit_3">100% privát és offline</string>
+    <string name="onboarding_llm_model_name">Gemma 3 1B</string>
+    <string name="onboarding_llm_download_button">AI modell letöltése</string>
+    <string name="onboarding_llm_skip">Kihagyás most (Csak átírás)</string>
+    <string name="onboarding_llm_downloading">AI modell letöltése...</string>
+    <string name="onboarding_llm_downloaded_label">Letöltve:</string>
+    <string name="onboarding_llm_complete">Letöltés befejezve!</string>
+    <string name="onboarding_llm_initializing">AI modell inicializálása...</string>
+    <string name="onboarding_llm_skip_short">Kihagyás most</string>
+    <string name="onboarding_llm_skip_note">Ezt később letöltheti a Beállításokból, ha most kihagyja. Az alkalmazás jól fog működni csak átírással is.</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_subtitle">Valós Idejű Beszédelemzés</string>
+    <string name="welcome_feature_transcription_title">Élő Átírás</string>
+    <string name="welcome_feature_transcription_desc">Alakítsa át a beszédet szöveggé valós időben, nagy pontossággal</string>
+    <string name="welcome_feature_ai_title">AI Betekintések</string>
+    <string name="welcome_feature_ai_desc">Kapjon intelligens javaslatokat és elemzéseket beszéd közben</string>
+    <string name="welcome_feature_privacy_title">Adatvédelem Mindenekelőtt</string>
+    <string name="welcome_feature_privacy_desc">Minden feldolgozás az eszközön történik: adatai soha nem hagyják el</string>
+    <string name="welcome_get_started">Kezdés</string>
+    <string name="welcome_models_required">Két modell letöltése szükséges</string>
+
+    <!-- Delete Session Dialog -->
+    <string name="delete_session_title">Munkamenet törlése?</string>
+    <string name="delete_session_message">Biztosan törölni szeretné a következőt: \"%s\"? Ez a művelet nem vonható vissza.</string>
+    <string name="delete_session_message_unnamed">Biztosan törölni szeretné ezt a munkamenetet? Ez a művelet nem vonható vissza.</string>
+
+    <!-- Main Screen - Additional -->
+    <string name="recording_session">Felvételi Munkamenet</string>
+    <string name="initializing_models">Modellek betöltése…</string>
+    <string name="back_to_sessions">Vissza a munkamenetekhez</string>
+    <string name="stop_recording_confirm_title">Leállítja a felvételt?</string>
+    <string name="stop_recording_confirm_message">A felvétel folyamatban van. Leállítja és visszatér?</string>
+    <string name="stop_and_go_back">Leállítás &amp; Vissza</string>
+    <string name="record">Felvétel</string>
+    <string name="llm">AI</string>
+
+    <!-- Transcription Tab - Additional -->
+    <string name="transcription_listening">Hallgatás...</string>
+    <string name="transcription_press_record">Nyomja meg a Felvételt az indításhoz</string>
+    <string name="transcription_hint1_title">Tap record</string>
+    <string name="transcription_hint1_desc">Hit the mic button at the bottom to start capturing audio</string>
+    <string name="transcription_hint2_title">AI insights</string>
+    <string name="transcription_hint2_desc">Switch to the Insights tab to get summaries and action items</string>
+    <string name="transcription_hint3_title">Fully private</string>
+    <string name="transcription_hint3_desc">Everything runs on your device — nothing is sent to the cloud</string>
+    <string name="transcription_complete">Befejezve</string>
+
+    <!-- AI Insights Tab - Additional -->
+    <string name="insights_empty_subtitle">Felvétel közben generálva</string>
+    <string name="insight_label">AI Betekintés</string>
+    <string name="action_items">Action Items</string>
+    <string name="segments_analyzed">%d szegmens elemezve</string>
+    <string name="expand">Kibontás</string>
+    <string name="collapse">Összezárás</string>
+    <string name="source_transcription">Forrás Átírás:</string>
+    <string name="segments_not_found">(Szegmensek nem találhatók)</string>
+
+    <!-- Settings - Additional -->
+    <string name="settings_interval_range_min">%ds (%s)</string>
+    <string name="settings_interval_range_max">%ds (%s)</string>
+    <string name="settings_reset_default">Alapértelmezés visszaállítása (%ds)</string>
+    <string name="settings_interval_tip_title">💡 Tipp</string>
+    <string name="settings_interval_tip_desc">A rövidebb intervallumok gyakoribb elemzéseket eredményeznek. A hosszabb intervallumok (legfeljebb 3 perc) csökkentik a feldolgozási terhelést. Az értékek 10 másodperces lépésekben igazodnak.</string>
+    <string name="save">Mentés</string>
+    <string name="processing_session">Munkamenet feldolgozása…</string>
+    <string name="edit_transcription_title">Átirat szerkesztése</string>
+    <string name="edit_insight_title">Betekintés szerkesztése</string>
+    <string name="edit_task_title">Feladat szerkesztése</string>
+    <string name="edit_content_hint">Content</string>
+    <string name="edit_item">Szerkesztés</string>
+    <string name="settings_save">Mentés</string>
+    <string name="settings_back">Vissza</string>
+    <string name="settings_long_interval_minutes">%d perc</string>
+    <string name="settings_system_prompt_reset">Alapértelmezés Visszaállítása</string>
+    <string name="settings_system_prompt_note_title">💡 Megjegyzés</string>
+    <string name="settings_system_prompt_note_desc">A rendszer prompt megmondja az AI-nak, hogyan viselkedjen. Adja hozzá: \'Válaszolj ugyanazon a nyelven, mint az átírás\', hogy az AI az Ön nyelvén válaszoljon. A változások az LLM újraindítása után lépnek érvénybe.</string>
+    <string name="settings_vad_sensitivity_more">Több</string>
+    <string name="settings_vad_sensitivity_less">Kevesebb</string>
+    <string name="settings_vad_reset_all">Összes visszaállítása alapértékekre</string>
+    <string name="settings_vad_restart_title">Újraindítás Szükséges</string>
+    <string name="settings_vad_restart_desc">A VAD paraméterek módosítása az alkalmazás újraindítását igényli az érvényesüléshez.</string>
+    <string name="settings_vad_troubleshooting_title">💡 Hibaelhárítás</string>
+    <string name="settings_vad_troubleshooting_desc">• Szavak levágódnak? Növelje a Min. Csend Időtartamot 0.7-1.0s-ra\n• Hosszú mondatok szétválnak? Növelje a Max. Beszéd Időtartamot 15-20s-ra\n• Hiányzik a halk beszéd? Csökkentse az Érzékelési Érzékenységet 0.3-0.4-re</string>
+
+    <!-- Session Details - Additional -->
+    <string name="session_details">Munkamenet Részletei</string>
+    <string name="generate_history_insight">AI elemzés generálása</string>
+    <string name="history_insight_confirm_title">AI elemzés generálása</string>
+    <string name="history_insight_confirm_message">Létrejön egy új másolat erről a munkamenetről az összes átiratszegmens AI elemzésével.</string>
+    <string name="history_insight_no_content">Nincs elegendő átirat tartalom az elemzés generálásához.</string>
+    <string name="history_insight_copy_suffix">(AI Elemzés)</string>
+    <string name="segments_count">szegmens</string>
+    <string name="insights_count">betekintés</string>
+    <string name="back">Vissza</string>
+    <string name="export">Exportálás</string>
+    <string name="export_transcription">Átírás exportálása</string>
+    <string name="created">Létrehozva</string>
+    <string name="modified">Módosítva</string>
+    <string name="llm_insights">LLM Betekintések</string>
+    <string name="no_transcription_yet">(Még nincs átírás)</string>
+    <string name="prompt_simple_listening">Ön egy AI asszisztens, aki hanggenerátor átiratok elemzésével foglalkozik.
+Írjon egy rövid címet (maximum 8 szó) és egy tömör összefoglalót az input hosszához arányosan — 1-2 mondat rövid inputhoz, egy bekezdés hosszabb inputhoz.
+Mint írja ki az EGYETLEN érvényes JSON ezt a pontos szerkezetet. Nincs markdown. Nincs kódkerítés. Nincs backtick:
+{\"cim\": \"...\", \"osszefoglalo\": \"...\"}
+Mint írja ki a JSON-t közvetlenül.</string>
+    <string name="prompt_short_meeting">Ön egy értekezlet asszisztens, aki vitákat elemez.
+Írjon egy címet (maximum 8 szó), a fő döntések és vita pontok összefoglalóját (legalább 3-5 mondat, az input hosszához arányosan) és cselekvési feladatok listáját.
+Mint írja ki az EGYETLEN érvényes JSON ezt a pontos szerkezetet. Nincs markdown. Nincs kódkerítés. Nincs backtick:
+{\"cim\": \"...\", \"osszefoglalo\": \"...\", \"tenyek\": [\"...\", \"...\"]}
+Legyél közvetlen. Egyértelműen nyerd ki a cselekvési feladatokat.</string>
+    <string name="prompt_long_meeting">Ön egy asszisztens, aki kiterjesztett vitákat elemez.
+Írjon egy címet (maximum 8 szó) amely a fő témát foglalja magában, egy átfogó összefoglalót a fő témákról, döntésekről és következtetésekről (az input hosszához arányosan) és cselekvési feladatok listáját.
+Mint írja ki az EGYETLEN érvényes JSON ezt a pontos szerkezetet. Nincs markdown. Nincs kódkerítés. Nincs backtick:
+{\"cim\": \"...\", \"osszefoglalo\": \"...\", \"tenyek\": [\"...\", \"...\"]}
+Legyél közvetlen. Összpontosítson a magas szintű meglátásokra és konkrét eredményekre.</string>
+    <string name="prompt_translation">Ön professzionális fordító.
+Fordítsa le a következő szöveget erre a nyelvre: {target_language}.
+Csak a fordítást adja ki. Magyarázat, felirat és előtag nélkül.</string>
+
+    <!-- Onboarding - Supported Languages -->
+    <string name="onboarding_languages_title">Támogatott nyelvek</string>
+    <string name="onboarding_languages_subtitle">Elérhető átíráshoz és fordításhoz</string>
+    <string name="onboarding_languages_continue">Folytatás</string>
+
+    <!-- Onboarding Messages -->
+    <string name="onboarding_message_1">A HearoPilot hallgat, így nem kell jegyzeteket készítenie.</string>
+    <string name="onboarding_message_2">Az összes MI-feldolgozás az eszközön történik: az adatok soha nem hagyják el.</string>
+    <string name="onboarding_message_3">Transkribálja a lect, értekezleteket és beszélgetéseket valós időben.</string>
+    <string name="onboarding_message_4">Az automatikus összefoglalók segítik a legfontosabbra való összpontosítást.</string>
+    <string name="onboarding_message_5">Teljesen offline működik: az Ön hangja privát marad.</string>
+    <string name="onboarding_message_6">Váltson a hallgatási módok között mindössze néhány koppintással.</string>
+    <string name="onboarding_message_7">Nagyszerű diákoknak, szakembereknek és mindenkinek, aki beszél.</string>
+    <string name="onboarding_message_8">Tekintse meg átírásait és meglátásait bármikor, offline-ban.</string>
+    <string name="onboarding_message_9">Egy koppintás a kezdéshez, egy koppintás a leállításhoz: olyan egyszerű.</string>
+    <string name="onboarding_message_10">Köszönjük, hogy a HearoPilotot választotta.</string>
+    <string name="onboarding_message_11">Használja a HearoPilotot Bluetooth mikrofon segítségével a távolból való átíráshoz.</string>
+    <string name="json_field_title">cim</string>
+    <string name="json_field_summary">osszefoglalo</string>
+    <string name="json_field_action_items">tenyek</string>
+
+    <!-- Batch insight prompts (end-of-session map-reduce pipeline) -->
+    <string name="prompt_batch_chunk_summary">Ön egy értekezlet-elemzési asszisztens. Foglalja össze tömören a következő átirat-részletet.
+Tartalmazza: a megvitatott főbb témákat, a meghozott döntéseket és az említett feladatokat.
+Tartsa az összefoglalót az input hosszához arányosan. Mint írja ki az EGYETLEN érvényes JSON-t. Nincs markdown. Nincs kódkerítés.
+{\"cim\": \"...\", \"osszefoglalo\": \"...\", \"tenyek\": [\"...\"]}</string>
+    <string name="prompt_batch_merge">Ön egy értekezlet-elemzési asszisztens. Az alábbiakban egy felvétel egymást követő részeinek összefoglalói láthatók.
+Egyesítse őket egyetlen átfogó, koherens összefoglalóvá. Deduplikálja a több részletben szereplő feladatokat.
+Mint írja ki az EGYETLEN érvényes JSON-t. Nincs markdown. Nincs kódkerítés.
+{\"cim\": \"...\", \"osszefoglalo\": \"...\", \"tenyek\": [\"...\"]}</string>
+
+    <!-- Insight strategy UI strings -->
+    <string name="insight_strategy_label">Elemzési stratégia</string>
+    <string name="insight_strategy_realtime">Valós idejű</string>
+    <string name="insight_strategy_batch">Munkamenet végén</string>
+    <string name="insight_strategy_realtime_desc">Időszakos elemzések felvétel közben</string>
+    <string name="insight_strategy_batch_desc">Átfogó elemzés a felvétel után</string>
+
+    <!-- Batch processing progress strings -->
+    <string name="batch_insights_pending">AI elemzések a felvétel megállításakor jönnek létre</string>
+    <string name="batch_processing_chunk">%1$d. blokk feldolgozása (%2$d-ból)&#8230;</string>
+    <string name="batch_merging_insights">Elemzések összevonása&#8230;</string>
+    <string name="batch_analysis_complete">Elemzés kész</string>
+
+    <!-- Settings: default insight strategy per mode -->
+    <string name="settings_default_strategy">Alapértelmezett elemzési stratégia</string>
+
+    <!-- Session card: batch badge -->
+    <string name="session_badge_batch">Köteg</string>
+
+    <!-- Session topic field -->
+    <string name="session_topic_label">Fő téma (opcionális)</string>
+    <string name="session_topic_hint">pl. Q1 Költségvetés, AI előadás&#8230;</string>
+    <string name="session_topic_helper">Segítse az AI-t: írja le a fő témát relevánsabb elemzésekhez</string>
+    <!-- Injected as system-prompt prefix when a session topic is set. %1$s = topic text. -->
+    <string name="session_topic_prefix">A felvétel fő témája: "%1$s". Összpontosítsa az elemzést erre a témára.</string>
+
+    <!-- Search screen -->
+    <string name="search_hint">Átiratokban keresés…</string>
+    <string name="search_empty_prompt">Keressen az átiratokban</string>
+    <string name="search_no_results">Nincs találat</string>
+    <string name="search_source_transcription">Átirat</string>
+    <string name="search_source_insight">Elemzés</string>
+    <string name="search_source_session_name">Munkamenet neve</string>
+
+    <!-- LLM model download in Settings -->
+    <string name="settings_llm_model_file_title">AI modellfájl</string>
+    <string name="settings_llm_model_file_desc">Az AI modell teljes egészében az eszközödön fut. A letöltés után nincs szükség internetre.</string>
+    <string name="settings_llm_model_ready">Kész</string>
+    <string name="settings_llm_model_not_downloaded">Nincs letöltve</string>
+    <string name="settings_llm_model_download">Letöltés</string>
+    <string name="settings_llm_model_retry">Újrapróbálás</string>
+    <string name="settings_llm_model_downloading">Letöltés %1$d%%</string>
+
+    <!-- LLM Model Variant Setting -->
+    <string name="settings_llm_model_variant_title">AI modell minősége</string>
+    <string name="settings_llm_model_variant_desc">Válasszon a nagyobb pontosság vagy a jobb akkumulátor-hatékonyság között. Töltse le újra a modellt a módosítás után.</string>
+    <string name="settings_llm_model_variant_q8_name">Normál (Q8)</string>
+    <string name="settings_llm_model_variant_q8_desc">Nagyobb pontosság · Csúcskategóriás eszközökhöz</string>
+    <string name="settings_llm_model_variant_iq4_name">Hatékony (IQ4)</string>
+    <string name="settings_llm_model_variant_iq4_desc">Energiahatékonyságra optimalizálva</string>
+    <string name="settings_llm_model_variant_recommended">Ajánlott az Ön eszközéhez</string>
+    <string name="settings_llm_model_variant_downloaded">Letöltve</string>
+    <string name="settings_llm_model_variant_beta">Béta</string>
+    <string name="settings_llm_advanced_section_title">Haladó modellek</string>
+    <string name="settings_llm_advanced_section_desc">Kísérleti modellek haladó felhasználóknak. A teljesítmény eltérhet a standard modellektől.</string>
+    <string name="settings_llm_model_variant_qwen35_name">Qwen 3.5 0.8B (Q8)</string>
+    <string name="settings_llm_model_variant_qwen35_desc">Alternatív architektúra · Kísérleti</string>
+</resources>

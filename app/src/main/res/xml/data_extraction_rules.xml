@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Data extraction rules for API 31+ (replaces fullBackupContent on Android 12+).
+    See https://developer.android.com/about/versions/12/backup-restore#xml-changes
+
+    Excludes DataStore preferences and model files for the same reasons as backup_rules.xml:
+    model paths are device-specific and restoring stale settings on a new device
+    would result in a broken first-launch experience.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Exclude DataStore preferences -->
+        <exclude domain="file" path="datastore" />
+        <!-- Exclude downloaded model files -->
+        <exclude domain="file" path="models" />
+    </cloud-backup>
+    <device-transfer>
+        <!-- Allow all other data (transcription sessions DB is safe to transfer) -->
+        <exclude domain="file" path="datastore" />
+        <exclude domain="file" path="models" />
+    </device-transfer>
+</data-extraction-rules>

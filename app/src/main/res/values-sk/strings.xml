@@ -1,0 +1,475 @@
+<resources>
+    <!-- App Info -->
+    <string name="app_name">HearoPilot</string>
+
+    <!-- Common Actions -->
+    <string name="start">Spustiť</string>
+    <string name="stop">Zastaviť</string>
+    <string name="copy">Kopírovať</string>
+    <string name="clear">Vymazať</string>
+    <string name="delete">Odstrániť</string>
+    <string name="dismiss">Zavrieť</string>
+    <string name="cancel">Zrušiť</string>
+    <string name="settings">Nastavenia</string>
+    <string name="reset">Resetovať</string>
+    <string name="rename">Premenovať</string>
+    <string name="rename_session_title">Premenovať reláciu</string>
+    <string name="rename_session_hint">Názov relácie</string>
+
+    <!-- Recording Notification -->
+    <string name="notification_channel_recording_name">Relácia nahrávania</string>
+    <string name="notification_channel_recording_description">Zobrazuje sa, keď je nahrávanie aktívne</string>
+    <string name="notification_recording_title">Nahrávanie aktívne</string>
+    <string name="notification_action_stop">Zastaviť</string>
+
+    <!-- Model Download Notification -->
+    <string name="notification_channel_download_name">Sťahovanie modelov</string>
+    <string name="notification_channel_download_description">Zobrazuje priebeh sťahovania AI modelov</string>
+    <string name="notification_download_title">Sťahovanie AI modelov</string>
+    <string name="notification_download_progress">%1$d %% stiahnuté</string>
+    <string name="notification_download_completing">Dokončovanie sťahovania…</string>
+
+    <!-- LLM Processing Notification -->
+    <string name="notification_channel_llm_processing_name">Spracovanie AI</string>
+    <string name="notification_channel_llm_processing_description">Zobrazuje sa, keď AI analyzuje váš prepis</string>
+    <string name="notification_llm_processing_title">Analýza prepisu</string>
+    <string name="notification_llm_processing_text">AI spracúva váš záznam…</string>
+
+    <!-- Sessions Screen -->
+    <string name="sessions_title">HearoPilot</string>
+    <string name="sessions_subtitle">Moje prepisy</string>
+    <string name="new_transcription">Nový prepis</string>
+    <string name="session_unnamed">(Bez názvu)</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_title">Pripravené na prepis</string>
+    <string name="empty_state_subtitle">Vytvorte reláciu a začnite nahrávanie.\nVšetko beží na zariadení, súkromne.</string>
+    <string name="empty_state_step1_title">Vytvorte reláciu</string>
+    <string name="empty_state_step1_desc">Klepnite na tlačidlo + nižšie pre začatie</string>
+    <string name="empty_state_step2_title">Nahrajte zvuk</string>
+    <string name="empty_state_step2_desc">Stlačte mikrofón na zachytenie reči v reálnom čase</string>
+    <string name="empty_state_step3_title">Získajte poznatky AI</string>
+    <string name="empty_state_step3_desc">AI analyzuje váš prepis automaticky</string>
+    <string name="empty_state_privacy">Všetko spracovanie prebieha na vašom zariadení</string>
+    <string name="empty_state_privacy_title">Všetko lokálne</string>
+    <string name="header_stat_sessions">relácií</string>
+    <string name="header_stat_duration">celkom</string>
+    <string name="header_stat_data">zostali súkromní</string>
+
+    <!-- New Session Dialog -->
+    <string name="new_session_dialog_title">Nový prepis</string>
+    <string name="new_session_name_label">Pomenujte tento prepis (voliteľné)</string>
+    <string name="new_session_name_hint">napr. Poznámky z porady</string>
+    <string name="new_session_name_tip">💡 Môžete to nechať prázdne a použijeme dátum/čas.</string>
+    <string name="new_session_recording_type">Typ nahrávania</string>
+    <string name="recording_type_short">Krátke nahrávanie</string>
+    <string name="recording_type_short_desc">≤10 min - Časté poznatky</string>
+    <string name="recording_type_long">Dlhé nahrávanie</string>
+    <string name="recording_type_long_desc">Až 3h - Konfigurovateľné intervaly</string>
+
+    <!-- Main Screen - Tabs -->
+    <string name="tab_transcription">Prepis</string>
+    <string name="tab_insights">Poznatky AI</string>
+    <string name="recording_active">Nahrávanie</string>
+    <string name="recording_paused">Pozastavené</string>
+
+    <!-- Transcription Tab -->
+    <string name="transcription_empty">Čakanie na reč…</string>
+    <string name="transcription_error">Chyba: %s</string>
+
+    <!-- AI Insights Tab -->
+    <string name="insights_disabled">AI prehľady sú deaktivované</string>
+    <string name="insights_disabled_subtitle">Aktivujte AI analýzu v Nastaveniach, aby ste mohli používať túto funkciu</string>
+    <string name="insights_empty">Poznatky AI sa zobrazia tu počas nahrávania.</string>
+    <string name="insights_model_unavailable">Model LLM nie je stiahnutý</string>
+    <string name="llm_model_not_downloaded_error">Model LLM nie je stiahnutý. Stiahnite ho v Nastaveniach.</string>
+    <string name="insights_download_prompt">Stiahnite model AI na povolenie poznatkov</string>
+    <string name="insights_download_button">Stiahnuť model</string>
+    <string name="insights_downloading">Sťahovanie: %d%%</string>
+    <string name="insights_download_speed">%s MB/s</string>
+    <string name="insights_download_eta">Zostávajúci čas: %s</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Nastavenia</string>
+    <string name="settings_section_short">Krátke nahrávania (≤10 min)</string>
+    <string name="settings_section_long">Dlhé nahrávania (až 3h)</string>
+    <string name="settings_section_ai">Konfigurácia asistenta AI</string>
+
+    <!-- Short Recording Settings -->
+    <string name="settings_short_interval_title">Interval generovania poznatkov</string>
+    <string name="settings_short_interval_desc">Ako často AI analyzuje váš prepis pri krátkych nahrávkach</string>
+    <string name="settings_interval_current">Aktuálny: %s</string>
+
+    <!-- Long Recording Settings -->
+    <string name="settings_long_interval_title">Interval generovania poznatkov</string>
+    <string name="settings_long_interval_desc">Ako často AI analyzuje váš prepis pri dlhých nahrávkach</string>
+
+    <!-- AI System Prompt Settings -->
+    <string name="settings_system_prompt_title">Systémová výzva</string>
+    <string name="settings_system_prompt_desc">Pokyny, ktoré riadia správanie a štýl odpovedí AI</string>
+    <string name="settings_system_prompt_hint">Zadajte vlastnú systémovú výzvu…</string>
+
+    <!-- VAD Settings -->
+    <string name="settings_vad_title">Detekcia hlasovej aktivity (VAD)</string>
+    <string name="settings_vad_desc">Pokročilé parametre pre detekciu reči</string>
+    <string name="settings_vad_min_silence">Minimálna dĺžka ticha</string>
+    <string name="settings_vad_min_silence_desc">Prah ticha na ukončenie rečového segmentu</string>
+    <string name="settings_vad_max_speech">Maximálna dĺžka reči</string>
+    <string name="settings_vad_max_speech_desc">Max. nepretržitá reč pred núteným rozdelením</string>
+    <string name="settings_vad_threshold">Prah detekcie</string>
+    <string name="settings_vad_threshold_desc">Citlivosť detekcie hlasu</string>
+
+    <!-- LLM Sampler Settings -->
+    <string name="settings_section_llm_sampler">Parametre generovania AI</string>
+    <string name="settings_llm_sampler_title">Vzorkovanie tokenov</string>
+    <string name="settings_llm_sampler_desc">Určuje, ako AI vyberá slová pri generovaní. Nižšia teplota = predvídateľnejšie; vyššia = kreatívnejšie.</string>
+    <string name="settings_llm_sampler_temperature">Teplota</string>
+    <string name="settings_llm_sampler_temperature_desc">Náhodnosť výberu slov (0 = deterministický, 2 = veľmi náhodný)</string>
+    <string name="settings_llm_sampler_top_k">Top-K</string>
+    <string name="settings_llm_sampler_top_k_desc">Obmedziť kandidátov na K najpravdepodobnejších tokenov (0 = vypnuté)</string>
+    <string name="settings_llm_sampler_top_p">Top-P</string>
+    <string name="settings_llm_sampler_top_p_desc">Nucleus vzorkovanie: kumulatívny prah pravdepodobnosti (0–1)</string>
+    <string name="settings_llm_sampler_min_p">Min-P</string>
+    <string name="settings_llm_sampler_min_p_desc">Minimálna pravdepodobnosť tokenu voči najlepšiemu tokenu (0–1)</string>
+    <string name="settings_llm_sampler_repeat_penalty">Penalizácia opakovania</string>
+    <string name="settings_llm_sampler_repeat_penalty_desc">Penalizuje nedávno použité tokeny na zníženie opakovania (1,0 = vypnuté)</string>
+    <string name="settings_llm_sampler_reset_all">Obnoviť predvolené nastavenia</string>
+
+    <!-- Time Formats -->
+    <string name="time_just_now">Práve teraz</string>
+    <string name="time_minutes_ago">pred %d minútami</string>
+    <string name="time_today">Dnes, %s</string>
+    <string name="time_yesterday">Včera, %s</string>
+
+    <!-- Error Messages -->
+    <string name="error_title">Chyba</string>
+    <string name="error_load_sessions">Načítanie relácií zlyhalo: %s</string>
+    <string name="error_create_session">Vytvorenie relácie zlyhalo: %s</string>
+    <string name="error_delete_session">Odstránenie relácie zlyhalo: %s</string>
+
+    <!-- Default LLM System Prompt -->
+    <string name="default_llm_system_prompt">Ste asistent AI analyzujúci prepisy reči v reálnom čase.\nOdpovedajte v rovnakom jazyku ako prepis.\nPoskytujte stručné poznatky, návrhy alebo krátke zhrnutia.\nOdpovede udržiavajte pod 100 slovami. Buďte praktickí a nápomocní.</string>
+
+        <!-- LLM Enable/Disable Settings -->
+    <string name="settings_section_llm">AI model</string>
+    <string name="settings_llm_enabled_title">Povoliť AI prehľady</string>
+    <string name="settings_llm_enabled_desc">Keď je povolené, model AI sa načíta na začiatku každej nahrávacej relácie a generuje prehľady v reálnom čase. Zakázať pre úspóru pamäte a batérie.</string>
+
+    <!-- Microphone Permission -->
+    <string name="permission_mic_required">Vyžaduje sa povolenie mikrófónu</string>
+    <string name="permission_mic_denied">Prístup k mikrófónu bol zamietnutý. Udeľte ho v nastaveníach aplikácie pre použitie prepisu.</string>
+
+<!-- Settings Screen - Sections -->
+    <string name="settings_section_appearance">Vzhľad</string>
+    <string name="settings_recording_modes">Režimy nahrávania</string>
+    <string name="settings_section_simple_listening">Jednoduché počúvanie</string>
+    <string name="settings_section_short_meeting">Krátka schôdzka</string>
+    <string name="settings_section_long_meeting">Dlhá schôdzka</string>
+    <string name="settings_section_translation">Živý preklad</string>
+    <string name="settings_section_vad">Detekcia hlasovej aktivity (VAD)</string>
+    <string name="settings_interval_analysis">Interval analýzy</string>
+    <string name="settings_interval_translation">Interval prekladu</string>
+
+    <!-- Theme Settings -->
+    <string name="settings_theme_title">Motív</string>
+    <string name="settings_theme_desc">Vyberte motív aplikácie</string>
+    <string name="theme_system">🔄 Automaticky</string>
+    <string name="theme_light">☀️ Svetlý</string>
+    <string name="theme_dark">🌙 Tmavý</string>
+    <string name="theme_system_short">Auto</string>
+    <string name="theme_light_short">Svetlý</string>
+    <string name="theme_dark_short">Tmavý</string>
+    <string name="theme_system_desc">Motív sleduje nastavenia systému</string>
+    <string name="theme_light_desc">Aplikácia bude vždy používať svetlý motív</string>
+    <string name="theme_dark_desc">Aplikácia bude vždy používať tmavý motív</string>
+
+    <!-- Translation Settings -->
+    <string name="settings_translation_target_title">Predvolený cieľový jazyk</string>
+    <string name="settings_translation_target_desc">Predvolený jazyk na preklad</string>
+
+    <!-- New Session Dialog - Recording Mode -->
+    <string name="new_session_recording_mode">Režim Zaznamenávania</string>
+    <string name="mode_simple_listening">Jednoduché Počúvanie</string>
+    <string name="mode_short_meeting">Krátka Schôdza</string>
+    <string name="mode_long_meeting">Dlhá Schôdza</string>
+    <string name="mode_translation_live">Živý Preklad</string>
+    <string name="mode_simple_listening_desc">Periodické zhrnutia</string>
+    <string name="mode_short_meeting_desc">Zhrnutie, návrhy a úlohy</string>
+    <string name="mode_long_meeting_desc">Hĺbková analýza pre dlhé relácie</string>
+    <string name="mode_translation_desc">Preklad v reálnom čase</string>
+    <string name="new_session_output_language">Výstupný Jazyk Prekladu</string>
+    <string name="new_session_output_language_label">Výstupný jazyk</string>
+    <string name="new_session_language_auto">Automaticky (jazyk zariadenia)</string>
+    <string name="new_session_insight_interval">Každých %s</string>
+
+    <!-- Session Details - Tabs and Insight Card -->
+    <string name="tab_transcript">Prepis</string>
+    <string name="ai_analysis">Analýza UI</string>
+    <string name="insight_data">Náhľad</string>
+    <string name="final_insight_label">Celkové zhrnutie</string>
+    <string name="create_ai_copy">Vytvoriť AI kópiu</string>
+    <string name="generating_ai_insights">Generovanie AI analýz\u2026</string>
+    <string name="insights_empty_history">Žiadne AI analýzy zatiaľ</string>
+    <string name="insights_empty_history_subtitle">Klepnite na ✨ hore pre generovanie AI analýzy tejto transkripcie</string>
+    <string name="history_insight_copy_info">Bude vytvorená nová kópia tejto relácie s AI analýzou.\nPôvodná relácia nebude zmenená.</string>
+    <string name="coachmark_history_insight">Klepnite pre generovanie AI prehľadov z celej histórie relácie</string>
+
+    <!-- Session Details Screen -->
+    <string name="session_extracted_tasks">Extrahované úlohy</string>
+    <string name="session_no_tasks">V tejto relácii neboli nájdené žiadne úlohy.</string>
+    <string name="insight_summary">Zhrnutie</string>
+    <string name="insight_suggestions">Návrhy</string>
+    <string name="insight_tasks">Úlohy</string>
+
+    <!-- Setup Screen - AI Benefits -->
+    <string name="setup_ai_insights_title">Poznatky poháňané AI</string>
+    <string name="setup_ai_why_title">Prečo si stiahnuť model AI?</string>
+    <string name="setup_ai_benefit_realtime">Získavajte návrhy a poznatky v reálnom čase počas rozhovoru</string>
+    <string name="setup_ai_benefit_analysis">AI analyzuje vaše vzory reči a poskytuje užitočný kontext</string>
+    <string name="setup_ai_benefit_offline">Funguje úplne v režime offline: vaše údaje zostávajú súkromné na vašom zariadení</string>
+    <string name="setup_ai_benefit_fast">Rýchle spracovanie na zariadení bez potreby internetového pripojenia</string>
+    <string name="setup_downloading_model">Sťahovanie modelu...</string>
+
+    <!-- Onboarding - Common -->
+    <string name="onboarding_model_label">Model:</string>
+    <string name="onboarding_runs_label">Beží:</string>
+    <string name="onboarding_source_label">Zdroj:</string>
+    <string name="onboarding_on_device">Na zariadení</string>
+    <string name="onboarding_huggingface">HuggingFace</string>
+    <string name="onboarding_downloading">Sťahovanie...</string>
+    <string name="onboarding_download_progress">%d MB / %d MB</string>
+    <string name="onboarding_download_speed">Rýchlosť:</string>
+    <string name="onboarding_download_speed_value">%.2f MB/s</string>
+    <string name="onboarding_download_eta">Zostávajúci čas:</string>
+    <string name="onboarding_download_failed">Sťahovanie zlyhalo</string>
+    <string name="onboarding_retry_download">Opakovať sťahovanie</string>
+    <string name="download_resuming_from">Pokračovanie od %1$s MB…</string>
+    <string name="onboarding_continue">Pokračovať</string>
+    <string name="onboarding_time_seconds">%d s</string>
+    <string name="onboarding_time_minutes">%d min %d s</string>
+    <string name="onboarding_time_hours">%d hod %d min</string>
+
+    <!-- Onboarding - STT Download -->
+    <string name="onboarding_stt_title">Rozpoznávanie reči</string>
+    <string name="onboarding_stt_ready">Model pripravený!</string>
+    <string name="onboarding_stt_ready_desc">Model rozpoznávania reči úspešne stiahnutý.</string>
+    <string name="onboarding_stt_model_title">Model rozpoznávania reči</string>
+    <string name="onboarding_stt_model_desc">Tento model prevádzal vašu reč na text v reálnom čase. Je nevyhnutný pre fungovanie aplikácie.</string>
+    <string name="onboarding_stt_model_name">Sherpa-ONNX Parakeet</string>
+    <string name="onboarding_stt_download_button">Stiahnuť model</string>
+    <string name="onboarding_stt_note">Tento model je nevyhnutný pre fungovanie aplikácie.</string>
+
+    <!-- Onboarding - LLM Download -->
+    <string name="onboarding_llm_title">Umelá inteligencia</string>
+    <string name="onboarding_llm_optional">Poznatky AI (Voliteľné)</string>
+    <string name="onboarding_llm_desc">Stiahnite si model AI a získajte inteligentné poznatky a návrhy pri rozprávaní.</string>
+    <string name="onboarding_llm_benefit_1">Návrhy v reálnom čase</string>
+    <string name="onboarding_llm_benefit_2">Kontextová analýza</string>
+    <string name="onboarding_llm_benefit_3">100% súkromné a offline</string>
+    <string name="onboarding_llm_model_name">Gemma 3 1B</string>
+    <string name="onboarding_llm_download_button">Stiahnuť model AI</string>
+    <string name="onboarding_llm_skip">Preskočiť teraz (Len prepis)</string>
+    <string name="onboarding_llm_downloading">Sťahovanie modelu AI...</string>
+    <string name="onboarding_llm_downloaded_label">Stiahnuté:</string>
+    <string name="onboarding_llm_complete">Sťahovanie dokončené!</string>
+    <string name="onboarding_llm_initializing">Inicializácia modelu AI...</string>
+    <string name="onboarding_llm_skip_short">Preskočiť teraz</string>
+    <string name="onboarding_llm_skip_note">Môžete to stiahnuť neskôr z Nastavení, ak to teraz preskočíte. Aplikácia bude fungovať dobre len s prepisom.</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_subtitle">Analýza Reči v Reálnom Čase</string>
+    <string name="welcome_feature_transcription_title">Prepis Naživo</string>
+    <string name="welcome_feature_transcription_desc">Prevádzajte reč na text v reálnom čase s vysokou presnosťou</string>
+    <string name="welcome_feature_ai_title">Poznatky AI</string>
+    <string name="welcome_feature_ai_desc">Získajte inteligentné návrhy a analýzy pri rozprávaní</string>
+    <string name="welcome_feature_privacy_title">Súkromie na Prvom Mieste</string>
+    <string name="welcome_feature_privacy_desc">Všetko spracovanie prebieha na vašom zariadení: vaše dáta ho nikdy neopustia</string>
+    <string name="welcome_get_started">Začať</string>
+    <string name="welcome_models_required">Vyžaduje sa stiahnutie dvoch modelov</string>
+
+    <!-- Delete Session Dialog -->
+    <string name="delete_session_title">Odstrániť reláciu?</string>
+    <string name="delete_session_message">Naozaj chcete odstrániť \"%s\"? Túto akciu nemožno vrátiť späť.</string>
+    <string name="delete_session_message_unnamed">Naozaj chcete odstrániť túto reláciu? Túto akciu nemožno vrátiť späť.</string>
+
+    <!-- Main Screen - Additional -->
+    <string name="recording_session">Nahrávacie Sedenie</string>
+    <string name="initializing_models">Načítavanie modelov…</string>
+    <string name="back_to_sessions">Späť na sedenia</string>
+    <string name="stop_recording_confirm_title">Zastaviť nahrávanie?</string>
+    <string name="stop_recording_confirm_message">Nahrávanie prebieha. Zastaviť a vrátiť sa?</string>
+    <string name="stop_and_go_back">Zastaviť a Späť</string>
+    <string name="record">Nahrávať</string>
+    <string name="llm">AI</string>
+
+    <!-- Transcription Tab - Additional -->
+    <string name="transcription_listening">Počúvam...</string>
+    <string name="transcription_press_record">Stlačte Nahrávať pre spustenie</string>
+    <string name="transcription_hint1_title">Tap record</string>
+    <string name="transcription_hint1_desc">Hit the mic button at the bottom to start capturing audio</string>
+    <string name="transcription_hint2_title">AI insights</string>
+    <string name="transcription_hint2_desc">Switch to the Insights tab to get summaries and action items</string>
+    <string name="transcription_hint3_title">Fully private</string>
+    <string name="transcription_hint3_desc">Everything runs on your device — nothing is sent to the cloud</string>
+    <string name="transcription_complete">Dokončené</string>
+
+    <!-- AI Insights Tab - Additional -->
+    <string name="insights_empty_subtitle">Generované počas nahrávania</string>
+    <string name="insight_label">AI Insight</string>
+    <string name="action_items">Action Items</string>
+    <string name="segments_analyzed">%d segmentov analyzovaných</string>
+    <string name="expand">Rozbaliť</string>
+    <string name="collapse">Zbaliť</string>
+    <string name="source_transcription">Zdrojová Transkripcia:</string>
+    <string name="segments_not_found">(Segmenty nenájdené)</string>
+
+    <!-- Settings - Additional -->
+    <string name="settings_interval_range_min">%ds (%s)</string>
+    <string name="settings_interval_range_max">%ds (%s)</string>
+    <string name="settings_reset_default">Obnoviť predvolené (%ds)</string>
+    <string name="settings_interval_tip_title">💡 Tip</string>
+    <string name="settings_interval_tip_desc">Kratšie intervaly poskytujú časté prehľady. Dlhšie intervaly (až 3 min) znižujú záťaž spracovania. Hodnoty sa zarovnávajú na 10-sekundové kroky.</string>
+    <string name="save">Uložiť</string>
+    <string name="processing_session">Spracovanie relácie…</string>
+    <string name="edit_transcription_title">Upraviť prepis</string>
+    <string name="edit_insight_title">Upraviť analýzu</string>
+    <string name="edit_task_title">Upraviť úlohu</string>
+    <string name="edit_content_hint">Content</string>
+    <string name="edit_item">Upraviť</string>
+    <string name="settings_save">Uložiť</string>
+    <string name="settings_back">Späť</string>
+    <string name="settings_long_interval_minutes">%d minút</string>
+    <string name="settings_system_prompt_reset">Obnoviť Predvolené</string>
+    <string name="settings_system_prompt_note_title">💡 Poznámka</string>
+    <string name="settings_system_prompt_note_desc">Systémový prompt hovorí AI, ako sa správať. Pridajte \'Odpovedajte v rovnakom jazyku ako transkripcia\', aby AI odpovedala vo vašom jazyku. Zmeny sa prejavia po reštarte LLM.</string>
+    <string name="settings_vad_sensitivity_more">Viac</string>
+    <string name="settings_vad_sensitivity_less">Menej</string>
+    <string name="settings_vad_reset_all">Obnoviť všetko na predvolené hodnoty</string>
+    <string name="settings_vad_restart_title">Vyžadovaný Reštart</string>
+    <string name="settings_vad_restart_desc">Zmeny parametrov VAD vyžadujú reštart aplikácie, aby sa prejavili.</string>
+    <string name="settings_vad_troubleshooting_title">💡 Riešenie Problémov</string>
+    <string name="settings_vad_troubleshooting_desc">• Slová sú odrezané? Zvýšte Min. Dobu Ticha na 0.7-1.0s\n• Dlhé frázy sa rozdeľujú? Zvýšte Max. Dobu Reči na 15-20s\n• Chýba tichá reč? Znížte Citlivosť Detekcie na 0.3-0.4</string>
+
+    <!-- Session Details - Additional -->
+    <string name="session_details">Detaily Sedenia</string>
+    <string name="generate_history_insight">Generovať AI analýzu</string>
+    <string name="history_insight_confirm_title">Generovať AI analýzu</string>
+    <string name="history_insight_confirm_message">Vytvorí sa nová kópia tejto relácie s AI analýzou všetkých segmentov prepisu.</string>
+    <string name="history_insight_no_content">Nedostatok obsahu prepisu na generovanie analýzy.</string>
+    <string name="history_insight_copy_suffix">(AI analýza)</string>
+    <string name="segments_count">segmentov</string>
+    <string name="insights_count">insightov</string>
+    <string name="back">Späť</string>
+    <string name="export">Exportovať</string>
+    <string name="export_transcription">Exportovať transkripciu</string>
+    <string name="created">Vytvorené</string>
+    <string name="modified">Upravené</string>
+    <string name="llm_insights">LLM Insighty</string>
+    <string name="no_transcription_yet">(Zatiaľ žiadna transkripcia)</string>
+    <string name="prompt_simple_listening">Ste asistent s umelou inteligenciou, ktorý analyzuje zvukové prepisy.
+Napíšte krátky nadpis (maximum 8 slov) a stručné zhrnutie úmerné dĺžke vstupu — 1-2 vety na krátky vstup, odsek na dlhší vstup.
+Vydajte ĽUBOVOĽNÝ platný JSON s touto presnou štruktúrou. Bez markdown. Bez code fence. Bez backticks:
+{\"nadpis\": \"...\", \"zhrnutie\": \"...\"}
+Vydajte JSON priamo.</string>
+    <string name="prompt_short_meeting">Ste asistent stretnutia, ktorý analyzuje diskusie.
+Napíšte nadpis (maximum 8 slov), zhrnutie kľúčových rozhodnutí a bodov diskusie (najmenej 3-5 viet, úmerné dĺžke vstupu) a zoznam akčných úloh.
+Vydajte ĽUBOVOĽNÝ platný JSON s touto presnou štruktúrou. Bez markdown. Bez code fence. Bez backticks:
+{\"nadpis\": \"...\", \"zhrnutie\": \"...\", \"akcie\": [\"...\", \"...\"]}
+Búďte priamy. Jasne extrahujte akčné úlohy.</string>
+    <string name="prompt_long_meeting">Ste asistent, ktorý analyzuje rozšírené diskusie.
+Napíšte nadpis (maximum 8 slov), ktorý zachytáva hlavnú tému, komplexné zhrnutie kľúčových tém, rozhodnutí a záverov (úmerné dĺžke vstupu) a zoznam akčných úloh.
+Vydajte ĽUBOVOĽNÝ platný JSON s touto presnou štruktúrou. Bez markdown. Bez code fence. Bez backticks:
+{\"nadpis\": \"...\", \"zhrnutie\": \"...\", \"akcie\": [\"...\", \"...\"]}
+Búďte priamy. Zamerajte sa na prehľady na vysokej úrovni a konkrétne výsledky.</string>
+    <string name="prompt_translation">Ste profesionálny prekladateľ.
+Preložte nasledujúci text do jazyka {target_language}.
+Vypíšte iba preklad. Žiadne vysvetlenia, žiadne označenia, žiadne predpony.</string>
+
+    <!-- Onboarding - Supported Languages -->
+    <string name="onboarding_languages_title">Podporované jazyky</string>
+    <string name="onboarding_languages_subtitle">Dostupné na prepis a preklad</string>
+    <string name="onboarding_languages_continue">Pokračovať</string>
+
+    <string name="onboarding_message_1">HearoPilot počúva, pretože vy nemusíte robiť poznámky.</string>
+    <string name="onboarding_message_2">Všetka spracovanie AI beží na vašom zariadení: žiadne údaje neodchádzajú.</string>
+    <string name="onboarding_message_3">Prepísujte prednášky, stretnutia a konverzácie v reálnom čase.</string>
+    <string name="onboarding_message_4">Automatické zhrnutia vám pomôžu zamerať sa na to, čo je dôležité.</string>
+    <string name="onboarding_message_5">Funguje úplne offline: váš hlas zostáva súkromný.</string>
+    <string name="onboarding_message_6">Prepínajte medzi režimami počúvania v niekoľkých klepnutiach.</string>
+    <string name="onboarding_message_7">Skvelé pre študentov, profesionálov a všetkých, ktorí hovoria.</string>
+    <string name="onboarding_message_8">Kedykoľvek si pozrite svoje prepisy a poznatky offline.</string>
+    <string name="onboarding_message_9">Jedno klepnutie na spustenie, jedno klepnutie na zastavenie: je to tak jednoduché.</string>
+    <string name="onboarding_message_10">Ďakujeme, že ste si vybrali HearoPilot.</string>
+    <string name="onboarding_message_11">Používajte HearoPilot s Bluetooth mikrofónom na prepis zo vzdialenosti.</string>
+    <string name="json_field_title">nadpis</string>
+    <string name="json_field_summary">zhrnutie</string>
+    <string name="json_field_action_items">akcie</string>
+
+    <!-- Batch insight prompts (end-of-session map-reduce pipeline) -->
+    <string name="prompt_batch_chunk_summary">Ste asistent analýzy stretnutí. Stručne zhrňte nasledujúci fragment prepisu.
+Zahrňte: kľúčové diskutované témy, prijaté rozhodnutia a zmienené úlohy.
+Zachovajte zhrnutie úmerné dĺžke vstupu. Vydajte ĽUBOVOĽNÝ platný JSON. Bez markdown. Bez code fence.
+{\"nadpis\": \"...\", \"zhrnutie\": \"...\", \"akcie\": [\"...\"]}</string>
+    <string name="prompt_batch_merge">Ste asistent analýzy stretnutí. Nižšie sú zhrnutia po sebe idúcich častí jedného záznamu.
+Zlúčte ich do jedného komplexného, koherentného zhrnutia. Deduplikujte úlohy, ktoré sa objavujú vo viacerých fragmentoch.
+Vydajte ĽUBOVOĽNÝ platný JSON. Bez markdown. Bez code fence.
+{\"nadpis\": \"...\", \"zhrnutie\": \"...\", \"akcie\": [\"...\"]}</string>
+
+    <!-- Insight strategy UI strings -->
+    <string name="insight_strategy_label">Stratégia analýzy</string>
+    <string name="insight_strategy_realtime">Reálny čas</string>
+    <string name="insight_strategy_batch">Koniec relácie</string>
+    <string name="insight_strategy_realtime_desc">Priebežné analýzy počas nahrávania</string>
+    <string name="insight_strategy_batch_desc">Komplexná analýza po nahrávaní</string>
+
+    <!-- Batch processing progress strings -->
+    <string name="batch_insights_pending">Analýzy AI budú vygenerované pri zastavení nahrávania</string>
+    <string name="batch_processing_chunk">Spracováva sa časť %1$d z %2$d&#8230;</string>
+    <string name="batch_merging_insights">Zlučovanie analýz&#8230;</string>
+    <string name="batch_analysis_complete">Analýza dokončená</string>
+
+    <!-- Settings: default insight strategy per mode -->
+    <string name="settings_default_strategy">Predvolená stratégia analýzy</string>
+
+    <!-- Session card: batch badge -->
+    <string name="session_badge_batch">Dávka</string>
+
+    <!-- Session topic field -->
+    <string name="session_topic_label">Hlavná téma (voliteľné)</string>
+    <string name="session_topic_hint">napr. prehľad Q1, prednáška AI&#8230;</string>
+    <string name="session_topic_helper">Pomôžte AI: popíšte hlavnú tému pre relevantnejšie analýzy</string>
+    <!-- Injected as system-prompt prefix when a session topic is set. %1$s = topic text. -->
+    <string name="session_topic_prefix">Hlavná téma tejto nahrávky: "%1$s". Zamerajte analýzu na túto tému.</string>
+
+    <!-- Search screen -->
+    <string name="search_hint">Hľadať v prepisoch…</string>
+    <string name="search_empty_prompt">Prehľadajte svoje prepisy</string>
+    <string name="search_no_results">Nenašli sa žiadne výsledky</string>
+    <string name="search_source_transcription">Prepis</string>
+    <string name="search_source_insight">Analýza</string>
+    <string name="search_source_session_name">Názov relácie</string>
+
+    <!-- LLM model download in Settings -->
+    <string name="settings_llm_model_file_title">Súbor AI modelu</string>
+    <string name="settings_llm_model_file_desc">AI model beží úplne na vašom zariadení. Po stiahnutí nie je potrebný internet.</string>
+    <string name="settings_llm_model_ready">Pripravené</string>
+    <string name="settings_llm_model_not_downloaded">Nestiahnuté</string>
+    <string name="settings_llm_model_download">Stiahnuť</string>
+    <string name="settings_llm_model_retry">Skúsiť znova</string>
+    <string name="settings_llm_model_downloading">Sťahovanie %1$d%%</string>
+
+    <!-- LLM Model Variant Setting -->
+    <string name="settings_llm_model_variant_title">Kvalita AI modelu</string>
+    <string name="settings_llm_model_variant_desc">Vyberte si medzi vyššou presnosťou alebo lepšou efektívnosťou batérie. Po zmene znova stiahnite model.</string>
+    <string name="settings_llm_model_variant_q8_name">Štandardný (Q8)</string>
+    <string name="settings_llm_model_variant_q8_desc">Vyššia presnosť · Pre vlajkové lode</string>
+    <string name="settings_llm_model_variant_iq4_name">Efektívny (IQ4)</string>
+    <string name="settings_llm_model_variant_iq4_desc">Optimalizované pre energetickú účinnosť</string>
+    <string name="settings_llm_model_variant_recommended">Odporúčané pre vaše zariadenie</string>
+    <string name="settings_llm_model_variant_downloaded">Stiahnuté</string>
+    <string name="settings_llm_model_variant_beta">Beta</string>
+    <string name="settings_llm_advanced_section_title">Pokročilé modely</string>
+    <string name="settings_llm_advanced_section_desc">Experimentálne modely pre pokročilých používateľov. Výkon sa môže líšiť od štandardných modelov.</string>
+    <string name="settings_llm_model_variant_qwen35_name">Qwen 3.5 0.8B (Q8)</string>
+    <string name="settings_llm_model_variant_qwen35_desc">Alternatívna architektúra · Experimentálny</string>
+</resources>

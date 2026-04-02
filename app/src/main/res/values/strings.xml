@@ -1,0 +1,487 @@
+<resources>
+    <!-- App Info -->
+    <string name="app_name">HearoPilot</string>
+
+    <!-- Common Actions -->
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="copy">Copy</string>
+    <string name="clear">Clear</string>
+    <string name="delete">Delete</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="cancel">Cancel</string>
+    <string name="settings">Settings</string>
+    <string name="reset">Reset</string>
+    <string name="rename">Rename</string>
+
+    <!-- Rename Session Dialog -->
+    <string name="rename_session_title">Rename Session</string>
+    <string name="rename_session_hint">Session name</string>
+
+    <!-- Recording Notification -->
+    <string name="notification_channel_recording_name">Recording Session</string>
+    <string name="notification_channel_recording_description">Shows when recording is active</string>
+    <string name="notification_recording_title">Recording active</string>
+    <string name="notification_action_stop">Stop</string>
+
+    <!-- Model Download Notification -->
+    <string name="notification_channel_download_name">Model Downloads</string>
+    <string name="notification_channel_download_description">Shows progress while AI models are downloading</string>
+    <string name="notification_download_title">Downloading AI models</string>
+    <string name="notification_download_progress">%1$d%% downloaded</string>
+    <string name="notification_download_completing">Finalizing download…</string>
+
+    <!-- LLM Processing Notification -->
+    <string name="notification_channel_llm_processing_name">AI Processing</string>
+    <string name="notification_channel_llm_processing_description">Shows when AI is analyzing your transcription</string>
+    <string name="notification_llm_processing_title">Analyzing transcription</string>
+    <string name="notification_llm_processing_text">AI is processing your recording…</string>
+
+    <!-- Sessions Screen -->
+    <string name="sessions_title">HearoPilot</string>
+    <string name="sessions_subtitle">My Transcriptions</string>
+    <string name="new_transcription">New Transcription</string>
+    <string name="session_unnamed">(Unnamed)</string>
+
+    <!-- Empty State -->
+    <string name="empty_state_title">Ready to transcribe</string>
+    <string name="empty_state_subtitle">Create a session and start recording.\nEverything runs on-device, privately.</string>
+    <string name="empty_state_step1_title">Create a session</string>
+    <string name="empty_state_step1_desc">Tap the + button below to start</string>
+    <string name="empty_state_step2_title">Record audio</string>
+    <string name="empty_state_step2_desc">Press the mic to capture speech in real-time</string>
+    <string name="empty_state_step3_title">Get AI insights</string>
+    <string name="empty_state_step3_desc">The AI analyzes your transcription automatically</string>
+    <string name="empty_state_privacy">All processing happens on your device</string>
+    <string name="empty_state_privacy_title">All on-device</string>
+    <string name="header_stat_sessions">sessions</string>
+    <string name="header_stat_duration">total</string>
+    <string name="header_stat_data">kept private</string>
+
+    <!-- New Session Dialog -->
+    <string name="new_session_dialog_title">New Transcription</string>
+    <string name="new_session_name_label">Give this transcription a name (optional)</string>
+    <string name="new_session_name_hint">e.g. Meeting Notes</string>
+    <string name="new_session_name_tip">💡 You can leave it blank and we\'ll use the date/time instead.</string>
+    <string name="new_session_recording_type">Recording Type</string>
+    <string name="recording_type_short">Short Recording</string>
+    <string name="recording_type_short_desc">≤10 min - Frequent insights</string>
+    <string name="recording_type_long">Long Recording</string>
+    <string name="recording_type_long_desc">Up to 3h - Configurable intervals</string>
+
+    <!-- Main Screen - Tabs -->
+    <string name="tab_transcription">Transcription</string>
+    <string name="tab_insights">AI Insights</string>
+    <string name="recording_session">Recording Session</string>
+    <string name="initializing_models">Loading models…</string>
+    <string name="recording_active">Recording</string>
+    <string name="recording_paused">Paused</string>
+    <string name="back_to_sessions">Back to sessions</string>
+    <string name="stop_recording_confirm_title">Stop Recording?</string>
+    <string name="stop_recording_confirm_message">Recording is in progress. Stop recording and go back?</string>
+    <string name="stop_and_go_back">Stop &amp; Go Back</string>
+    <string name="record">Record</string>
+    <string name="llm">AI</string>
+
+    <!-- Transcription Tab -->
+    <string name="transcription_listening">Listening...</string>
+    <string name="transcription_empty">No transcription yet</string>
+    <string name="transcription_press_record">Press Record to start</string>
+    <string name="transcription_hint1_title">Tap record</string>
+    <string name="transcription_hint1_desc">Hit the mic button at the bottom to start capturing audio</string>
+    <string name="transcription_hint2_title">AI insights</string>
+    <string name="transcription_hint2_desc">Switch to the Insights tab to get summaries and action items</string>
+    <string name="transcription_hint3_title">Fully private</string>
+    <string name="transcription_hint3_desc">Everything runs on your device — nothing is sent to the cloud</string>
+    <string name="transcription_complete">Complete</string>
+    <string name="transcription_error">Error: %s</string>
+
+    <!-- AI Insights Tab -->
+    <string name="insights_disabled">AI insights are disabled</string>
+    <string name="insights_disabled_subtitle">Enable AI Analysis in Settings to use this feature</string>
+    <string name="insights_empty">AI insights will appear here</string>
+    <string name="insights_empty_subtitle">Generated during recording</string>
+    <string name="insights_model_unavailable">LLM model not downloaded</string>
+    <string name="llm_model_not_downloaded_error">LLM model not downloaded. Please download it from Settings.</string>
+    <string name="insights_download_prompt">Download the AI model to enable insights</string>
+    <string name="insights_download_button">Download Model</string>
+    <string name="insights_downloading">Downloading: %d%%</string>
+    <string name="insights_download_speed">%s MB/s</string>
+    <string name="insights_download_eta">ETA: %s</string>
+    <string name="insight_label">AI Insight</string>
+    <string name="action_items">Action Items</string>
+    <string name="segments_analyzed">%d segments analyzed</string>
+    <string name="expand">Expand</string>
+    <string name="collapse">Collapse</string>
+    <string name="source_transcription">Source Transcription:</string>
+    <string name="segments_not_found">(Segments not found)</string>
+
+    <!-- System Prompts — English version used as default and fallback.
+         Each locale file contains a fully translated version of the prompt instructions.
+         JSON field names ("title", "summary", "action_items") MUST remain in English in
+         all locales — only the surrounding instructional text is translated.
+         The {target_language} placeholder in prompt_translation must remain untranslated. -->
+    <!-- Instructions are intentionally placed BEFORE the JSON template so the model
+         does not echo them as field values. Field placeholders use "..." to prevent
+         the model from treating descriptive hints as literal output. -->
+    <string name="prompt_simple_listening">You are an AI assistant analyzing audio transcriptions.\nWrite a brief title (max 8 words) and a concise summary proportional to input length — 1-2 sentences for short input, a paragraph for longer input.\nOutput ONLY valid JSON with this exact structure. No markdown. No code fences. No backticks:\n{\"title\": \"...\", \"summary\": \"...\"}\nOutput the JSON directly.</string>
+    <string name="prompt_short_meeting">You are a meeting assistant analyzing discussions.\nWrite a title (max 8 words), a summary of key decisions and discussion points (at least 3-5 sentences, proportional to input length), and a list of actionable tasks.\nOutput ONLY valid JSON with this exact structure. No markdown. No code fences. No backticks:\n{\"title\": \"...\", \"summary\": \"...\", \"action_items\": [\"...\", \"...\"]}\nBe direct. Extract actionable tasks clearly.</string>
+    <string name="prompt_long_meeting">You are an assistant analyzing extended discussions.\nWrite a title (max 8 words) capturing the main topic, a comprehensive summary of key topics, decisions, and conclusions (proportional to input length), and a list of actionable tasks.\nOutput ONLY valid JSON with this exact structure. No markdown. No code fences. No backticks:\n{\"title\": \"...\", \"summary\": \"...\", \"action_items\": [\"...\", \"...\"]}\nBe direct. Focus on high-level insights and concrete outcomes.</string>
+    <string name="prompt_translation">You are a professional translator.\nTranslate the following text into {target_language}.\nOutput the translation only. No explanations, no labels, no prefixes.</string>
+    <!-- JSON output field names in English (default locale). Localized in values-XX/strings.xml. -->
+    <string name="json_field_title">title</string>
+    <string name="json_field_summary">summary</string>
+    <string name="json_field_action_items">action_items</string>
+
+    <!-- Batch insight prompts (end-of-session map-reduce pipeline) -->
+    <string name="prompt_batch_chunk_summary">You are a meeting analysis assistant. Summarize the following transcription chunk concisely.\nInclude: key topics discussed, decisions made, and action items mentioned.\nKeep the summary proportional to input length. Output ONLY valid JSON. No markdown. No code fences.\n{\"title\": \"...\", \"summary\": \"...\", \"action_items\": [\"...\"]}</string>
+    <string name="prompt_batch_merge">You are a meeting analysis assistant. Below are summaries of consecutive portions of a single recording.\nMerge them into one comprehensive, coherent summary. Deduplicate action items that appear in multiple chunks.\nOutput ONLY valid JSON. No markdown. No code fences.\n{\"title\": \"...\", \"summary\": \"...\", \"action_items\": [\"...\"]}</string>
+
+    <!-- Insight strategy UI strings -->
+    <string name="insight_strategy_label">Insight strategy</string>
+    <string name="insight_strategy_realtime">Real-time</string>
+    <string name="insight_strategy_batch">End of session</string>
+    <string name="insight_strategy_realtime_desc">Periodic insights during recording</string>
+    <string name="insight_strategy_batch_desc">Comprehensive analysis after recording</string>
+
+    <!-- Batch processing progress strings -->
+    <string name="batch_insights_pending">AI insights will be generated when you stop recording</string>
+    <string name="batch_processing_chunk">Processing chunk %1$d of %2$d&#8230;</string>
+    <string name="batch_merging_insights">Merging insights&#8230;</string>
+    <string name="batch_analysis_complete">Analysis complete</string>
+
+    <!-- Settings: default insight strategy per mode -->
+    <string name="settings_default_strategy">Default insight strategy</string>
+
+    <!-- Session card: batch badge -->
+    <string name="session_badge_batch">Batch</string>
+
+    <!-- Session topic field -->
+    <string name="session_topic_label">Main topic (optional)</string>
+    <string name="session_topic_hint">e.g., Q1 Budget Review, AI lecture&#8230;</string>
+    <string name="session_topic_helper">Help the AI focus: describe the main topic for more relevant insights</string>
+    <!-- Injected as system-prompt prefix when a session topic is set. %1$s = topic text. -->
+    <string name="session_topic_prefix">Main topic of this recording: \"%1$s\". Focus your analysis on this subject.</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_short">Short Recordings (≤10 min)</string>
+    <string name="settings_section_long">Long Recordings (up to 3h)</string>
+    <string name="settings_section_ai">AI Assistant Configuration</string>
+
+    <!-- Short Recording Settings -->
+    <string name="settings_short_interval_title">Short Recording Insights</string>
+    <string name="settings_short_interval_desc">Insight generation interval for short recordings</string>
+    <string name="settings_interval_current">%s seconds</string>
+    <string name="settings_interval_range_min">%ds (%s)</string>
+    <string name="settings_interval_range_max">%ds (%s)</string>
+    <string name="settings_reset_default">Reset to default (%ds)</string>
+    <string name="settings_interval_tip_title">💡 Tip</string>
+    <string name="settings_interval_tip_desc">Shorter intervals give more frequent insights. Longer intervals (up to 3 min) reduce processing load. Values snap to 10-second increments.</string>
+    <string name="settings_save">Save</string>
+    <string name="save">Save</string>
+
+    <!-- Processing / Finalizing session -->
+    <string name="processing_session">Processing session…</string>
+
+    <!-- Edit segment / insight / task dialogs -->
+    <string name="edit_transcription_title">Edit Transcription</string>
+    <string name="edit_insight_title">Edit Insight</string>
+    <string name="edit_task_title">Edit Task</string>
+    <string name="edit_content_hint">Content</string>
+    <string name="edit_item">Edit</string>
+    <string name="settings_back">Back</string>
+
+    <!-- Long Recording Settings -->
+    <string name="settings_long_interval_title">Long Recording Insights</string>
+    <string name="settings_long_interval_desc">Insight generation interval for long recordings (up to 3h)</string>
+    <string name="settings_long_interval_minutes">%d minutes</string>
+
+    <!-- AI System Prompt Settings -->
+    <string name="settings_system_prompt_title">AI System Prompt</string>
+    <string name="settings_system_prompt_desc">Customize how the AI analyzes transcriptions</string>
+    <string name="settings_system_prompt_hint">System Prompt</string>
+    <string name="settings_system_prompt_reset">Reset to Default</string>
+    <string name="settings_system_prompt_note_title">💡 Note</string>
+    <string name="settings_system_prompt_note_desc">The system prompt tells the AI how to behave. Include \'Respond in the same language as the transcription\' to ensure the AI replies in the language you speak. Changes take effect after restarting the LLM.</string>
+
+    <!-- VAD Settings -->
+    <string name="settings_vad_title">Transcription Accuracy Settings</string>
+    <string name="settings_vad_desc">Fine-tune voice detection for better accuracy (requires app restart)</string>
+    <string name="settings_vad_min_silence">Min Silence Duration</string>
+    <string name="settings_vad_min_silence_desc">How long to wait before ending a phrase</string>
+    <string name="settings_vad_max_speech">Max Speech Duration</string>
+    <string name="settings_vad_max_speech_desc">Maximum length of continuous speech before forced cut</string>
+    <string name="settings_vad_threshold">Detection Sensitivity</string>
+    <string name="settings_vad_threshold_desc">Lower = more sensitive (picks up quieter speech)</string>
+    <string name="settings_vad_sensitivity_more">More</string>
+    <string name="settings_vad_sensitivity_less">Less</string>
+    <string name="settings_vad_reset_all">Reset all to defaults</string>
+    <string name="settings_vad_restart_title">Restart Required</string>
+    <string name="settings_vad_restart_desc">Changes to VAD parameters require restarting the app to take effect.</string>
+    <string name="settings_vad_troubleshooting_title">💡 Troubleshooting</string>
+    <string name="settings_vad_troubleshooting_desc">• Words getting cut off? Increase Min Silence Duration to 0.7-1.0s\n• Long phrases being split? Increase Max Speech Duration to 15-20s\n• Missing quiet speech? Lower Detection Sensitivity to 0.3-0.4</string>
+
+    <!-- LLM Sampler Settings -->
+    <string name="settings_section_llm_sampler">AI Generation Parameters</string>
+    <string name="settings_llm_sampler_title">Token Sampling</string>
+    <string name="settings_llm_sampler_desc">Controls how the AI selects words during generation. Lower temperature = more predictable; higher = more creative.</string>
+    <string name="settings_llm_sampler_temperature">Temperature</string>
+    <string name="settings_llm_sampler_temperature_desc">Randomness of word selection (0 = deterministic, 2 = very random)</string>
+    <string name="settings_llm_sampler_top_k">Top-K</string>
+    <string name="settings_llm_sampler_top_k_desc">Limit candidates to the K most probable tokens (0 = disabled)</string>
+    <string name="settings_llm_sampler_top_p">Top-P</string>
+    <string name="settings_llm_sampler_top_p_desc">Nucleus sampling: cumulative probability threshold (0–1)</string>
+    <string name="settings_llm_sampler_min_p">Min-P</string>
+    <string name="settings_llm_sampler_min_p_desc">Minimum token probability relative to the top token (0–1)</string>
+    <string name="settings_llm_sampler_repeat_penalty">Repeat Penalty</string>
+    <string name="settings_llm_sampler_repeat_penalty_desc">Penalises recently used tokens to reduce repetition (1.0 = off)</string>
+    <string name="settings_llm_sampler_reset_all">Reset to defaults</string>
+
+    <!-- Time Formats -->
+    <string name="time_just_now">Just now</string>
+    <string name="time_minutes_ago">%d minutes ago</string>
+    <string name="time_today">Today, %s</string>
+    <string name="time_yesterday">Yesterday, %s</string>
+
+    <!-- Session Details Screen -->
+    <string name="session_details">Session Details</string>
+    <!-- Generate AI insight from a history session -->
+    <string name="generate_history_insight">Generate AI Insight</string>
+    <string name="history_insight_confirm_title">Generate AI Insight</string>
+    <string name="history_insight_confirm_message">A new copy of this session will be created with an AI-generated analysis of all transcript segments.</string>
+    <string name="history_insight_no_content">Not enough transcript content to generate an insight.</string>
+    <!-- Suffix appended to the copy session name, e.g. "My Meeting (AI Analysis)" -->
+    <string name="history_insight_copy_suffix">(AI Analysis)</string>
+    <string name="segments_count">segments</string>
+    <string name="insights_count">insights</string>
+    <string name="back">Back</string>
+    <string name="export">Export</string>
+    <string name="export_transcription">Export transcription</string>
+    <string name="delete_session_title">Delete Session?</string>
+    <string name="delete_session_message">Are you sure you want to delete \"%s\"? This action cannot be undone.</string>
+    <string name="delete_session_message_unnamed">Are you sure you want to delete this session? This action cannot be undone.</string>
+    <string name="created">Created</string>
+    <string name="modified">Modified</string>
+    <string name="llm_insights">LLM Insights</string>
+    <string name="no_transcription_yet">(No transcription yet)</string>
+
+    <!-- Error Messages -->
+    <string name="error_title">Error</string>
+    <string name="error_load_sessions">Failed to load sessions: %s</string>
+    <string name="error_create_session">Failed to create session: %s</string>
+    <string name="error_delete_session">Failed to delete session: %s</string>
+
+    <!-- Default LLM System Prompt -->
+    <string name="default_llm_system_prompt">You are an AI assistant analyzing real-time speech transcriptions.\nRespond in the same language as the transcription.\nProvide concise insights, suggestions, or brief summaries.\nKeep responses under 100 words. Be actionable and helpful.</string>
+
+    <!-- LLM Enable/Disable Settings -->
+    <string name="settings_section_llm">AI Model</string>
+    <string name="settings_llm_enabled_title">Enable AI Insights</string>
+    <string name="settings_llm_enabled_desc">When enabled, the AI model is loaded at the start of each recording session and generates insights in real-time. Disable to save memory and battery.</string>
+
+    <!-- Microphone Permission -->
+    <string name="permission_mic_required">Microphone permission required</string>
+    <string name="permission_mic_denied">Microphone access was denied. Please grant it in the app settings to use transcription.</string>
+
+    <!-- Settings Screen - Sections -->
+    <string name="settings_section_appearance">Appearance</string>
+    <string name="settings_section_simple_listening">Simple Listening</string>
+    <string name="settings_section_short_meeting">Short Meeting</string>
+    <string name="settings_section_long_meeting">Long Meeting</string>
+    <string name="settings_section_translation">Live Translation</string>
+    <string name="settings_section_vad">Voice Activity Detection (VAD)</string>
+    <string name="settings_interval_analysis">Analysis Interval</string>
+    <string name="settings_interval_translation">Translation Interval</string>
+
+    <!-- Theme Settings -->
+    <string name="settings_theme_title">Theme</string>
+    <string name="settings_theme_desc">Choose app theme</string>
+    <string name="theme_system">🔄 Automatic</string>
+    <string name="theme_light">☀️ Light</string>
+    <string name="theme_dark">🌙 Dark</string>
+    <string name="theme_system_short">Auto</string>
+    <string name="theme_light_short">Light</string>
+    <string name="theme_dark_short">Dark</string>
+    <string name="theme_system_desc">Theme follows system settings</string>
+    <string name="theme_light_desc">App will always use light theme</string>
+    <string name="theme_dark_desc">App will always use dark theme</string>
+
+    <!-- Translation Settings -->
+    <string name="settings_translation_target_title">Default Target Language</string>
+    <string name="settings_translation_target_desc">Default language for translation</string>
+
+    <!-- Session Details Screen -->
+    <string name="session_extracted_tasks">Extracted Tasks</string>
+    <string name="session_no_tasks">No tasks found in this session.</string>
+    <string name="insight_summary">Summary</string>
+    <string name="insight_suggestions">Suggestions</string>
+    <string name="insight_tasks">Tasks</string>
+
+    <!-- New Session Dialog - Recording Mode -->
+    <string name="new_session_recording_mode">Recording Mode</string>
+    <string name="mode_simple_listening">Simple Listening</string>
+    <string name="mode_short_meeting">Short Meeting</string>
+    <string name="mode_long_meeting">Long Meeting</string>
+    <string name="mode_translation_live">Live Translation</string>
+    <string name="mode_simple_listening_desc">Periodic summaries</string>
+    <string name="mode_short_meeting_desc">Summary, suggestions and tasks</string>
+    <string name="mode_long_meeting_desc">In-depth analysis for long sessions</string>
+    <string name="mode_translation_desc">Real-time translation</string>
+    <string name="new_session_output_language">Translation Output Language</string>
+    <string name="new_session_output_language_label">Output Language</string>
+    <string name="new_session_language_auto">Auto (Device Language)</string>
+    <string name="new_session_insight_interval">Every %s</string>
+
+    <!-- Session Details - Tabs and Insight Card -->
+    <string name="tab_transcript">Transcript</string>
+    <string name="ai_analysis">AI Analysis</string>
+    <string name="insight_data">Insight</string>
+    <!-- Session Details — AI Insights tab -->
+    <string name="final_insight_label">Overall Summary</string>
+    <string name="create_ai_copy">Create AI Copy</string>
+    <string name="generating_ai_insights">Generating AI insights\u2026</string>
+    <string name="insights_empty_history">No AI insights yet</string>
+    <string name="insights_empty_history_subtitle">Tap the sparkle icon above to generate AI analysis from this transcript</string>
+    <string name="history_insight_copy_info">A new copy of this session will be created with AI analysis.\nThe original session will not be modified.</string>
+    <string name="coachmark_history_insight">Tap to generate AI insights from the full session history</string>
+
+    <!-- Setup Screen - Model Info and Actions -->
+    <string name="setup_model_information">Model Information</string>
+    <string name="setup_model_capability_label">Capability:</string>
+    <string name="setup_model_capability_value">Text analysis &amp; insights</string>
+    <string name="setup_continue_no_ai">Continue without AI</string>
+
+    <!-- Setup Screen - AI Benefits -->
+    <string name="setup_ai_insights_title">AI-Powered Insights</string>
+    <string name="setup_ai_why_title">Why download the AI model?</string>
+    <string name="setup_ai_benefit_realtime">Get real-time suggestions and insights as you speak</string>
+    <string name="setup_ai_benefit_analysis">AI analyzes your speech patterns and provides helpful context</string>
+    <string name="setup_ai_benefit_offline">Works completely offline: your data stays private on your device</string>
+    <string name="setup_ai_benefit_fast">Fast on-device processing with no internet required</string>
+    <string name="setup_downloading_model">Downloading Model...</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_subtitle">Real-time Speech Analysis</string>
+    <string name="welcome_feature_transcription_title">Live Transcription</string>
+    <string name="welcome_feature_transcription_desc">Convert speech to text in real-time with high accuracy</string>
+    <string name="welcome_feature_ai_title">AI Insights</string>
+    <string name="welcome_feature_ai_desc">Get intelligent suggestions and analysis as you speak</string>
+    <string name="welcome_feature_privacy_title">Privacy First</string>
+    <string name="welcome_feature_privacy_desc">All processing happens on your device: your data never leaves</string>
+    <string name="welcome_get_started">Get Started</string>
+    <string name="welcome_models_required">Two model downloads required</string>
+
+    <!-- Onboarding - Common -->
+    <string name="onboarding_model_label">Model:</string>
+    <string name="onboarding_runs_label">Runs:</string>
+    <string name="onboarding_source_label">Source:</string>
+    <string name="onboarding_on_device">On-device</string>
+    <string name="onboarding_huggingface">HuggingFace</string>
+    <string name="onboarding_downloading">Downloading...</string>
+    <string name="onboarding_download_progress">%d MB / %d MB</string>
+    <string name="onboarding_download_speed">Speed:</string>
+    <string name="onboarding_download_speed_value">%.2f MB/s</string>
+    <string name="onboarding_download_eta">Time remaining:</string>
+    <string name="onboarding_download_failed">Download Failed</string>
+    <string name="onboarding_retry_download">Retry Download</string>
+    <string name="download_resuming_from">Resuming from %1$s MB…</string>
+    <string name="onboarding_continue">Continue</string>
+    <string name="onboarding_time_seconds">%d sec</string>
+    <string name="onboarding_time_minutes">%d min %d sec</string>
+    <string name="onboarding_time_hours">%d hr %d min</string>
+
+    <!-- Onboarding - STT Download -->
+    <string name="onboarding_stt_title">Speech Recognition</string>
+    <string name="onboarding_stt_ready">Model Ready!</string>
+    <string name="onboarding_stt_ready_desc">Speech recognition model downloaded successfully.</string>
+    <string name="onboarding_stt_model_title">Speech Recognition Model</string>
+    <string name="onboarding_stt_model_desc">This model converts your speech to text in real-time. It\'s essential for the app to work.</string>
+    <string name="onboarding_stt_model_name">Sherpa-ONNX Parakeet</string>
+    <string name="onboarding_stt_download_button">Download Model</string>
+    <string name="onboarding_stt_note">This model is essential for the app to function.</string>
+
+    <!-- Onboarding - Supported Languages -->
+    <string name="onboarding_languages_title">Supported Languages</string>
+    <string name="onboarding_languages_subtitle">Available for transcription and translation</string>
+    <string name="onboarding_languages_continue">Continue</string>
+
+    <!-- Onboarding - LLM Download -->
+    <string name="onboarding_llm_title">AI Intelligence</string>
+    <string name="onboarding_llm_optional">AI Insights (Optional)</string>
+    <string name="onboarding_llm_desc">Download an AI model to get intelligent insights and suggestions as you speak.</string>
+    <string name="onboarding_llm_benefit_1">Real-time suggestions</string>
+    <string name="onboarding_llm_benefit_2">Context-aware analysis</string>
+    <string name="onboarding_llm_benefit_3">100% private and offline</string>
+    <string name="onboarding_llm_model_name">Gemma 3 1B</string>
+    <string name="onboarding_llm_download_button">Download AI Model</string>
+    <string name="onboarding_llm_skip">Skip for now (Transcription only)</string>
+    <string name="onboarding_llm_downloading">Downloading AI Model...</string>
+    <string name="onboarding_llm_downloaded_label">Downloaded:</string>
+    <string name="onboarding_llm_complete">Download Complete!</string>
+    <string name="onboarding_llm_initializing">Initializing AI model...</string>
+    <string name="onboarding_llm_skip_short">Skip for now</string>
+    <string name="onboarding_llm_skip_note">You can download this later from Settings if you skip now. The app will work fine with transcription only.</string>
+
+    <!-- Search screen -->
+    <string name="search_hint">Search transcriptions…</string>
+    <string name="search_empty_prompt">Search your transcriptions</string>
+    <string name="search_no_results">No matches found</string>
+    <string name="search_source_transcription">Transcript</string>
+    <string name="search_source_insight">Insight</string>
+    <string name="search_source_session_name">Session name</string>
+
+    <!-- Onboarding carousel messages shown while the LLM model is downloading -->
+    <string name="onboarding_message_1">HearoPilot listens so you don\'t have to take notes.</string>
+    <string name="onboarding_message_2">All AI processing runs on your device: no data leaves.</string>
+    <string name="onboarding_message_3">Transcribe lectures, meetings and conversations in real time.</string>
+    <string name="onboarding_message_4">Automatic summaries help you focus on what matters most.</string>
+    <string name="onboarding_message_5">Works completely offline: your voice stays private.</string>
+    <string name="onboarding_message_6">Switch between listening modes in just a few taps.</string>
+    <string name="onboarding_message_7">Great for students, professionals and anyone who speaks.</string>
+    <string name="onboarding_message_8">Review your transcriptions and insights anytime, offline.</string>
+    <string name="onboarding_message_9">One tap to start, one tap to stop: it\'s that simple.</string>
+    <string name="onboarding_message_10">Thank you for choosing HearoPilot.</string>
+    <string name="onboarding_message_11">Use HearoPilot with a Bluetooth microphone to transcribe from a distance.</string>
+
+    <!-- About & Legal section in Settings -->
+    <string name="settings_section_about">About &amp; Legal</string>
+    <string name="settings_privacy_policy">Privacy Policy</string>
+    <string name="settings_open_source_licenses">Open Source Licenses</string>
+    <string name="settings_open_source_licenses_desc">Third-party libraries and AI models</string>
+    <string name="settings_recording_modes">Recording Modes</string>
+
+    <!-- Open Source Licenses screen -->
+    <string name="licenses_title">Open Source Licenses</string>
+    <string name="licenses_intro">HearoPilot uses the following third-party software and AI models. Tap a card to read the full license text.</string>
+    <string name="licenses_open_url">Open</string>
+    <string name="licenses_show_full_text">Show full license</string>
+    <string name="licenses_hide_full_text">Hide full license</string>
+
+    <!-- Model info rows in download screens -->
+    <string name="onboarding_license_label">License:</string>
+
+    <!-- LLM model download in Settings -->
+    <string name="settings_llm_model_file_title">AI Model File</string>
+    <string name="settings_llm_model_file_desc">The AI model runs entirely on your device. No internet needed after download.</string>
+    <string name="settings_llm_model_ready">Ready</string>
+    <string name="settings_llm_model_not_downloaded">Not downloaded</string>
+    <string name="settings_llm_model_download">Download</string>
+    <string name="settings_llm_model_retry">Retry Download</string>
+    <string name="settings_llm_model_downloading">Downloading %1$d%%</string>
+
+    <!-- LLM Model Variant Setting -->
+    <string name="settings_llm_model_variant_title">AI Model Quality</string>
+    <string name="settings_llm_model_variant_desc">Choose between higher accuracy or better battery efficiency. Re-download the model after changing.</string>
+    <string name="settings_llm_model_variant_q8_name">Standard (Q8)</string>
+    <string name="settings_llm_model_variant_q8_desc">Higher accuracy · For flagship devices</string>
+    <string name="settings_llm_model_variant_iq4_name">Efficient (IQ4)</string>
+    <string name="settings_llm_model_variant_iq4_desc">Optimized for energy efficiency</string>
+    <string name="settings_llm_model_variant_recommended">Recommended for your device</string>
+    <string name="settings_llm_model_variant_downloaded">Downloaded</string>
+    <string name="settings_llm_model_variant_beta">Beta</string>
+    <string name="settings_llm_advanced_section_title">Advanced Models</string>
+    <string name="settings_llm_advanced_section_desc">Experimental models for advanced users. Performance may vary from standard models.</string>
+    <string name="settings_llm_model_variant_qwen35_name">Qwen 3.5 0.8B (Q8)</string>
+    <string name="settings_llm_model_variant_qwen35_desc">Alternative architecture · Experimental</string>
+</resources>

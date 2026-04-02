@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Backup rules for API 30 and below (fullBackupContent).
+    DataStore preferences contain app configuration (LLM/STT settings, onboarding state).
+    We exclude them from cloud backup: models are large files stored in filesDir and
+    must be re-downloaded on a new device anyway — backing up only the settings that
+    reference non-existent model paths would cause a broken first-launch state.
+    See https://developer.android.com/guide/topics/data/autobackup
+-->
+<full-backup-content>
+    <!-- Exclude DataStore preferences (app_settings, onboarding state) -->
+    <exclude domain="file" path="datastore" />
+    <!-- Exclude downloaded model files (too large and device-specific) -->
+    <exclude domain="file" path="models" />
+</full-backup-content>
