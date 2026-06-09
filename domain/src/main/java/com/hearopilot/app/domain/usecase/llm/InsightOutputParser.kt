@@ -71,28 +71,42 @@ object InsightOutputParser {
     }
 
     /**
-     * Strip <think>...</think> reasoning blocks emitted by hybrid thinking models
-     * (e.g. Qwen3.5) before parsing the JSON payload.
+     * Strip reasoning/thinking blocks before parsing the JSON payload.
      *
-     * NOTE: this is a *defensive fallback* only. The primary suppression happens at
-     * the C++ layer in ai_chat.cpp (processUserPrompt) by pre-filling an empty think
-     * block so the model never generates reasoning tokens in the first place.
-     * If that workaround is ever removed or a future model bypasses it, this strip
-     * prevents the raw <think> block from surfacing as insight content.
+     * Supported formats:
+     *  - Qwen3.5: <think>...</think>
+     *  - Gemma 4:  <|channel>thought\n...\n<channel|>
      *
-     * This must NOT be treated as the main solution: reasoning tokens still consume
-     * the token budget even when stripped here, degrading the quality of the JSON
-     * that follows them.
+     * NOTE: this is a *defensive fallback* only. The primary suppression for Qwen3.5
+     * happens at the C++ layer in ai_chat.cpp by pre-filling an empty think block.
+     * Gemma 4 thinking is stripped here because its Jinja2 template inserts <|think|>
+     * automatically; a C++ suppression equivalent is not yet implemented.
+     *
+     * Reasoning tokens still consume the token budget even when stripped here,
+     * degrading the quality of the JSON that follows them.
      */
     fun stripThinkingBlock(text: String): String {
-        val start = text.indexOf("<think>")
-        if (start == -1) return text
-        val end = text.indexOf("</think>", startIndex = start)
-        if (end == -1) {
-            // Unclosed think block (model was cut off mid-reasoning): discard everything.
-            return text.substring(0, start).trim()
+        // Qwen3.5: <think>...</think>
+        val qwenStart = text.indexOf("<think>")
+        if (qwenStart != -1) {
+            val qwenEnd = text.indexOf("</think>", startIndex = qwenStart)
+            return if (qwenEnd == -1) {
+                text.substring(0, qwenStart).trim()
+            } else {
+                (text.substring(0, qwenStart) + text.substring(qwenEnd + "</think>".length)).trim()
+            }
         }
-        return (text.substring(0, start) + text.substring(end + "</think>".length)).trim()
+        // Gemma 4: <|channel>thought\n...\n<channel|>
+        val gemmaStart = text.indexOf("<|channel>thought")
+        if (gemmaStart != -1) {
+            val gemmaEnd = text.indexOf("<channel|>", startIndex = gemmaStart)
+            return if (gemmaEnd == -1) {
+                text.substring(0, gemmaStart).trim()
+            } else {
+                (text.substring(0, gemmaStart) + text.substring(gemmaEnd + "<channel|>".length)).trim()
+            }
+        }
+        return text
     }
 
     /**

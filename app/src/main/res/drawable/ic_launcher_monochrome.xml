@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="4057"
@@ -12,24 +12,18 @@
     <group
         android:translateX="-1409"
         android:translateY="-1409">
-      <!-- Bar L3 (innermost left, 1949) -->
       <path
           android:pathData="M2382,2603 C2382,2525.68 2444.68,2463 2522,2463 L2534,2463 C2611.32,2463 2674,2525.68 2674,2603 L2674,4272 C2674,4349.32 2611.32,4412 2534,4412 L2522,4412 C2444.68,4412 2382,4349.32 2382,4272 Z"
           android:fillColor="#FFFFFF"
           android:fillType="evenOdd"/>
-      <!-- Bar L2 (mid left, 1299) -->
       <path
           android:pathData="M1896,2928 C1896,2850.68 1958.68,2788 2036,2788 L2048,2788 C2125.32,2788 2188,2850.68 2188,2928 L2188,3947 C2188,4024.32 2125.32,4087 2048,4087 L2036,4087 C1958.68,4087 1896,4024.32 1896,3947 Z"
           android:fillColor="#FFFFFF"
-          android:fillAlpha="0.88"
           android:fillType="evenOdd"/>
-      <!-- Bar L1 (outer left, 638) -->
       <path
           android:pathData="M1409,3188.48 C1409,3110.89 1471.89,3048 1549.48,3048 L1561.51,3048 C1639.09,3048 1701.99,3110.89 1701.99,3188.48 L1701.99,3686.52 C1701.99,3764.11 1639.09,3827 1561.51,3827 L1549.48,3827 C1471.89,3827 1409,3764.11 1409,3686.52 Z"
           android:fillColor="#FFFFFF"
-          android:fillAlpha="0.7"
           android:fillType="evenOdd"/>
-      <!-- AI sparkle, scale 1.2x around (3438, 3438) -->
       <group
           android:pivotX="3438"
           android:pivotY="3438"
@@ -37,20 +31,9 @@
           android:scaleY="1.2">
         <path
             android:pathData="M3438,2837.5 C3438,3138 3738,3438 4038.5,3438 C3738,3438 3438,3738 3438,4038.5 C3438,3738 3138,3438 2837.5,3438 C3138,3438 3438,3138 3438,2837.5 Z"
-            android:fillType="evenOdd">
-          <aapt:attr name="android:fillColor">
-            <gradient
-                android:type="radial"
-                android:centerX="3438"
-                android:centerY="3438"
-                android:gradientRadius="600">
-              <item android:offset="0" android:color="#FFFFFF"/>
-              <item android:offset="1" android:color="#EDE9FE"/>
-            </gradient>
-          </aapt:attr>
-        </path>
+            android:fillColor="#FFFFFF"
+            android:fillType="evenOdd"/>
       </group>
-      <!-- Bar R-inner (mirrored, 1949) -->
       <group
           android:translateX="4493"
           android:translateY="2463"
@@ -61,7 +44,6 @@
             android:fillColor="#FFFFFF"
             android:fillType="evenOdd"/>
       </group>
-      <!-- Bar R-mid (mirrored, 1299) -->
       <group
           android:translateX="4979"
           android:translateY="2788"
@@ -70,10 +52,8 @@
         <path
             android:pathData="M0,140.002 C0,62.681 62.6811,0 140.002,0 L151.998,0 C229.319,0 292,62.681 292,140.002 L292,1159 C292,1236.32 229.319,1299 151.998,1299 L140.002,1299 C62.6811,1299 0,1236.32 0,1159 Z"
             android:fillColor="#FFFFFF"
-            android:fillAlpha="0.88"
             android:fillType="evenOdd"/>
       </group>
-      <!-- Bar R-outer (mirrored, 779) -->
       <group
           android:translateX="5466"
           android:translateY="3048"
@@ -82,7 +62,6 @@
         <path
             android:pathData="M0,140.476 C0,62.8931 62.8932,0 140.476,0 L152.511,0 C230.094,0 292.987,62.8931 292.987,140.476 L292.987,638.524 C292.987,716.107 230.094,779 152.511,779 L140.476,779 C62.8932,779 0,716.107 0,638.524 Z"
             android:fillColor="#FFFFFF"
-            android:fillAlpha="0.7"
             android:fillType="evenOdd"/>
       </group>
     </group>

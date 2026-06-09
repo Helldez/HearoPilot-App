@@ -8,13 +8,13 @@ package com.hearopilot.app.domain.model
  */
 enum class LlmModelVariant {
     /**
-     * 8-bit quantization — higher accuracy, ~1 GB on disk.
+     * 8-bit quantization — higher accuracy, ~5 GB on disk.
      * Suited to flagship devices with ≥ 10 GB RAM and a modern CPU (Cortex-A78 / Oryon or newer).
      */
     Q8_0,
 
     /**
-     * 4-bit non-linear quantization — ~35 % smaller (~650 MB), lower CPU load and battery use.
+     * 4-bit non-linear quantization — ~3 GB on disk, lower CPU load and battery use.
      * Recommended for mid-range and older devices (e.g. Snapdragon 865 / Cortex-A77 era).
      */
     IQ4_NL,

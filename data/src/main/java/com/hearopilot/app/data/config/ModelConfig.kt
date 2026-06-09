@@ -27,7 +27,7 @@ private val STT_FILES = listOf(
 )
 
 /**
- * Q8_0 model configuration — higher accuracy, ~1 GB.
+ * Q8_0 model configuration — ~1 GB.
  * Recommended for flagship devices (≥ 10 GB RAM, Cortex-A78 / Oryon CPU or newer).
  *
  * LLM  : Gemma 3 1B Q8_0 (ggml-org, HuggingFace)
@@ -48,7 +48,7 @@ object DefaultModelConfig {
 }
 
 /**
- * IQ4_NL model configuration — ~35 % smaller (~650 MB), lower CPU load and battery use.
+ * IQ4_NL model configuration — ~650 MB, lower CPU load and battery use.
  * Recommended for mid-range and older devices (Cortex-A77 / Snapdragon 865 era and below).
  *
  * LLM  : Gemma 3 1B IQ4_NL (unsloth, HuggingFace)

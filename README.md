@@ -4,10 +4,6 @@
 [![Min SDK](https://img.shields.io/badge/Min%20SDK-API%2030-green.svg)](https://developer.android.com/about/versions/11/highlights)
 [![Build](https://github.com/Helldez/HearoPilot-App/actions/workflows/build.yml/badge.svg)](https://github.com/Helldez/HearoPilot-App/actions/workflows/build.yml)
 
-<a href="https://play.google.com/store/apps/details?id=com.hearopilot.app">
-  <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="60">
-</a>
-
 **On-device audio transcription and AI insights for Android**
 
 HearoPilot combines a local Speech-to-Text engine with a local Large Language Model to deliver
@@ -19,7 +15,7 @@ server.
 ## Features
 
 - **Real-time transcription** — streaming STT via Sherpa-ONNX (NeMo Parakeet TDT 0.6B Int8)
-- **On-device AI insights** — contextual analysis via local LLM, fully on-device
+- **On-device AI insights** — contextual analysis via llama.cpp (Gemma 3 1B Q6_K)
 - **100% offline** — privacy-first; no network calls during recording
 - **Four recording modes** — Simple Listening, Short Meeting, Long Meeting, Real-Time Translation
 - **25 UI languages** — full i18n including localized LLM system prompts
@@ -133,7 +129,7 @@ AudioRecord (16 kHz mono, PCM 16-bit, AudioSource.MIC)
 
 | Parameter | Value | Rationale |
 |---|---|---|
-| `AudioSource.MIC` | — | Delivers raw PCM; `VOICE_RECOGNITION` activates HAL noise reduction on some devices that degrades transducer accuracy |
+| `AudioSource.MIC` | — | Delivers raw PCM; `VOICE_RECOGNITION` activates HAL noise reduction on some devices (e.g. OnePlus) that degrades transducer accuracy |
 | Recording thread priority | `URGENT_AUDIO` | Prevents audio buffer drops under CPU load |
 | ADPF hint (VAD/ASR thread) | 50 ms target | Signals scheduler to prefer big cores on big.LITTLE SoCs; prevents ASR parking on efficiency cores |
 | VAD window size | 512 samples | Standard Silero-VAD frame size |
@@ -172,6 +168,9 @@ models to echo the wrapper keywords instead of translating.
 ### llama.cpp Optimizations (native layer — `ai_chat.cpp`)
 
 `libai-chat.so` is compiled from C++ source on every build (CMake, `externalNativeBuild`).
+The prebuilt `.so` was removed in commit `2380ef7`; always run `./gradlew assembleDebug` after
+changing any C++ parameter to pick up the new binary.
+
 | Optimization | Value / Setting | Rationale |
 |---|---|---|
 | Context size | 4096 tokens | Covers worst-case LONG_MEETING (~3968 tokens) while halving KV cache memory vs 8192 |
@@ -209,7 +208,7 @@ Token budget flows from `SyncSttLlmUseCase` → `LlmRepository` → `LlamaAndroi
 
 ### Indicative Targets
 
-- STT latency: < 200 ms per segment (high-end ARM device)
+- STT latency: < 200 ms per segment (Snapdragon 888)
 - LLM inference: 2–8 s per insight (varies by chip and mode)
 - Memory footprint: < 800 MB active (STT + LLM loaded)
 
@@ -254,7 +253,7 @@ git lfs install
 
 # 2. Clone (LFS objects are downloaded automatically)
 git clone https://github.com/Helldez/HearoPilot-App.git
-cd HearoPilot
+cd HearoPilot-App
 
 # 3. Configure Firebase
 #    Copy the example file and fill in your own Firebase project credentials.
@@ -285,6 +284,32 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 
 ---
 
+## Project History
+
+Key milestones from MVP to the current release:
+
+- Initial MVP — on-device STT + LLM, Clean Architecture
+- Foreground Service for screen-off recording
+- Room database for persistent sessions
+- Custom `ModelDownloadManager` with partial-file resume
+- VAD configurability (threshold, min silence, max speech)
+- GC-free audio buffer + min audio context gate
+- i18n: 25 languages with fully localized LLM system prompts
+- Material Design 3 + dark mode
+- Four recording modes (Simple, Short Meeting, Long Meeting, Real-Time Translation)
+- R8 full-mode + ProGuard
+- Stateless LLM inference + power optimizations
+- LLM system prompt KV cache reuse
+- Adaptive LLM unload/reload for Long Meeting (kswapd ANR fix)
+- Global transcription search (full-text, highlighted snippets)
+- Inline editing of segments, insights, and tasks
+- Dual LLM variant support (Q8\_0 / IQ4\_NL) with auto device-tier detection
+- Foreground services for model download and LLM batch processing
+- Adaptive conservative-thread logic with persisted learning
+- `libai-chat.so` compiled from source via CMake (no prebuilt)
+
+---
+
 ## Localization
 
 Supported locales (25): `en`, `bg`, `cs`, `da`, `de`, `el`, `es`, `et`, `fi`, `fr`, `hr`, `hu`,
@@ -296,6 +321,34 @@ consistent JSON parsing.
 
 ---
 
+## Troubleshooting
+
+**App crashes on launch**
+→ Check that `RECORD_AUDIO` permission is granted
+→ Run `./gradlew.bat clean assembleDebug` and verify zero errors
+
+**STT produces no output**
+→ Confirm the STT model is downloaded (check Settings)
+→ Test on a physical device — emulator audio capture is unreliable
+→ `adb logcat | grep SherpaOnnx`
+
+**AI Insights not generated**
+→ Confirm the LLM model is downloaded
+→ Device needs ~1.5 GB free RAM with the LLM model loaded
+→ Check the status chip in the TopBar shows "Ready"
+→ `adb logcat | grep "LlamaAndroid\|SyncSttLlm"`
+
+**Download stuck or slow**
+→ Downloads resume from where they stopped — just retry
+→ Ensure stable Wi-Fi; models are large (STT ~670 MB, LLM ~1 GB)
+
+**Transcription inaccurate**
+→ Speak clearly at ~30 cm from the microphone
+→ Reduce background noise
+→ Do **not** use `VOICE_RECOGNITION` audio source (OnePlus HAL issue)
+
+---
+
 ## Roadmap
 
 - [x] Global transcription search (full-text, highlighted snippets)
@@ -304,6 +357,7 @@ consistent JSON parsing.
 - [ ] Export sessions (TXT / JSON / PDF)
 - [ ] Speaker diarization
 - [ ] Home screen widget for quick record
+- [ ] Optional end-to-end-encrypted cloud sync
 - [ ] Kotlin Multiplatform (iOS support)
 
 ---

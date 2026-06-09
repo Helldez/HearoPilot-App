@@ -49,6 +49,13 @@ static common_sampler                   * g_sampler;
 // cannot rewind the recurrent memory state to an earlier position.
 static bool                               g_model_has_mrope = false;
 
+// Whether the loaded model's chat template should emit extended thinking tokens.
+// Set to false for models whose template supports enable_thinking (currently Gemma 4)
+// so the Jinja template omits <|think|> from the system turn and automatically
+// appends the thinking-suppression prefix in the generation prompt.
+// For all other models the parameter is a no-op in their template.
+static bool                               g_model_enable_thinking = true;
+
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_arm_aichat_internal_InferenceEngineImpl_init(JNIEnv *env, jobject /*unused*/, jstring nativeLibDir) {
@@ -175,6 +182,15 @@ Java_com_arm_aichat_internal_InferenceEngineImpl_prepare(JNIEnv * /*env*/, jobje
     const auto rope_type = llama_model_rope_type(g_model);
     g_model_has_mrope = (rope_type == LLAMA_ROPE_TYPE_MROPE || rope_type == LLAMA_ROPE_TYPE_IMROPE);
     LOGi("prepare: rope_type=%d has_mrope=%s", (int) rope_type, g_model_has_mrope ? "true" : "false");
+
+    // Detect models whose chat template supports enable_thinking (currently Gemma 4).
+    // For these models we disable thinking via enable_thinking=false so the Jinja template
+    // suppresses reasoning tokens automatically, keeping the full output budget for JSON.
+    char arch_buf[32] = {};
+    const int arch_len = llama_model_meta_val_str(g_model, "general.architecture", arch_buf, sizeof(arch_buf));
+    const std::string arch_str = (arch_len > 0) ? std::string(arch_buf) : "";
+    g_model_enable_thinking = (arch_str != "gemma4");
+    LOGi("prepare: arch=%s enable_thinking=%s", arch_buf, g_model_enable_thinking ? "true" : "false");
 
     return 0;
 }
@@ -346,11 +362,33 @@ static void shift_context() {
 }
 
 static std::string chat_add_and_format(const std::string &role, const std::string &content) {
-    common_chat_msg new_msg;
-    new_msg.role = role;
-    new_msg.content = content;
-    auto formatted = common_chat_format_single(
-            g_chat_templates.get(), chat_msgs, new_msg, role == ROLE_USER, /* use_jinja */ false);
+    common_chat_msg new_msg{role, content};
+
+    // Use common_chat_templates_apply directly (rather than common_chat_format_single) so we
+    // can pass enable_thinking. For most models the parameter is a no-op in their template;
+    // for Gemma 4 it makes the Jinja template omit <|think|> from the system turn and
+    // automatically append the thinking-suppression prefix in the generation prompt.
+    common_chat_templates_inputs inputs;
+    inputs.use_jinja       = true;
+    inputs.enable_thinking = g_model_enable_thinking;
+
+    // Compute the already-formatted prefix to extract only the new message diff.
+    std::string fmt_past;
+    if (!chat_msgs.empty()) {
+        inputs.messages              = chat_msgs;
+        inputs.add_generation_prompt = false;
+        fmt_past = common_chat_templates_apply(g_chat_templates.get(), inputs).prompt;
+    }
+
+    inputs.messages = chat_msgs;
+    inputs.messages.push_back(new_msg);
+    inputs.add_generation_prompt = (role == ROLE_USER);
+    const auto fmt_new = common_chat_templates_apply(g_chat_templates.get(), inputs).prompt;
+
+    const auto diff = fmt_new.substr(fmt_past.size());
+    // Preserve leading newline when past text ends with '\n' (mirrors common_chat_format_single).
+    const auto formatted = (!fmt_past.empty() && fmt_past.back() == '\n') ? "\n" + diff : diff;
+
     chat_msgs.push_back(new_msg);
     LOGi("%s: Formatted and added %s message: \n%s\n", __func__, role.c_str(), formatted.c_str());
     return formatted;
@@ -551,12 +589,8 @@ Java_com_arm_aichat_internal_InferenceEngineImpl_processUserPrompt(
     // support / default to thinking mode. Standard attention-only models
     // (Gemma3 → NEOX=2, Llama → NORM=0) are unaffected.
     //
-    // TODO / future consideration: if a future model uses M-RoPE but does NOT
-    // have thinking mode (or if thinking mode becomes desirable for long-form
-    // analysis tasks where quality matters more than token budget), this block
-    // should be gated on a separate g_model_has_thinking flag detected at
-    // prepare() time rather than reusing g_model_has_mrope. For now the two
-    // properties are perfectly correlated for every model we support.
+    // Note: Gemma 4 also has thinking mode but uses a different token format
+    // (<|channel>thought ... <channel|>) and is handled in the block below.
     //
     // Upstream reference: llama.cpp --reasoning off / enable_thinking=false in
     // the Jinja chat template (models/templates/Qwen-Qwen3-0.6B.jinja:82-84).
@@ -567,6 +601,11 @@ Java_com_arm_aichat_internal_InferenceEngineImpl_processUserPrompt(
         LOGi("%s: M-RoPE thinking model — pre-filled empty <think> block to suppress reasoning",
              __func__);
     }
+
+    // For models with enable_thinking support (e.g. Gemma 4) the suppression is handled
+    // transparently in chat_add_and_format via g_model_enable_thinking=false, which
+    // makes the Jinja template append the thinking-suppression prefix automatically.
+    // No additional step is needed here.
 
     // Decode formatted user prompts
     auto user_tokens = common_tokenize(g_context, formatted_user_prompt, has_chat_template, has_chat_template);

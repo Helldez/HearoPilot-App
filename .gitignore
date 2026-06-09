@@ -41,3 +41,6 @@ CLAUDE.md
 
 # Build artifacts
 build_log.txt
+
+# Local Claude Code config (never publish)
+.claude/

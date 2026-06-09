@@ -45,12 +45,15 @@ target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
         ${LLAMA_SRC}
         ${LLAMA_SRC}/common
+        ${LLAMA_SRC}/vendor
         ${LLAMA_SRC}/include
         ${LLAMA_SRC}/ggml/include
         ${LLAMA_SRC}/ggml/src)
 
 target_link_libraries(${CMAKE_PROJECT_NAME}
         llama
-        common
+        # The common utils library was renamed from `common` to `llama-common`
+        # upstream (llama.cpp ~b9xxx); it transitively pulls in llama-common-base.
+        llama-common
         android
         log)

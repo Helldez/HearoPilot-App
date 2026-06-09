@@ -30,9 +30,9 @@ jobs:
         run: |
           echo "y" | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager "ndk;29.0.13113456"
 
-      - name: Clone llama.cpp (pinned to b8390)
+      - name: Clone llama.cpp (pinned to b9574)
         run: |
-          git clone --depth 1 --branch b8390 https://github.com/ggerganov/llama.cpp.git $GITHUB_WORKSPACE/../llama.cpp-master
+          git clone --depth 1 --branch b9574 https://github.com/ggerganov/llama.cpp.git $GITHUB_WORKSPACE/../llama.cpp-master
 
       - name: Remove prebuilt native libs (compiled from source in CI)
         run: rm -rf lib-llama-android/src/main/jniLibs
